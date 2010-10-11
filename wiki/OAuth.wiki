@@ -14,3 +14,5 @@ One you have you OAuth consumer key and secret, edit your `config.php` file and 
     'oauth_consumer_key'    => 'anonymous',
     'oauth_consumer_secret' => 'anonymous',
 }}}
+
+Next, read about [ConnectingToBuzz Connecting to Buzz] (or other services)
