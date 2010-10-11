@@ -5,6 +5,7 @@ Now that you've got a copy of the library, and included the files in your script
 
 First you need to initiate the client, and buzz service, which you do by:
 
+{{{
 $apiClient = new apiClient();
 $buzz = new apiBuzzService($apiClient);
 And then you need to authenticate the user using the OAuth flow, which you do by:
@@ -16,10 +17,14 @@ if (isset($_SESSION['auth_token'])) {
   // In a real application this would be stored in a database, and not in the session!
   $_SESSION['auth_token'] = $apiClient->authenticate();
 }
+}}}
+
 Do note you should replace the session storage of the OAuth key with a real storage (on disk, in your mysql database, etc) before releasing your app.
 
 And you're ready to start making calls, for instance to get the consumption stream (activities from the people you follow) in Buzz, you can call:
 
+{{{
 activities = $buzz->listActivities('@consumption', '@me');
+}}}
 
 Next you should read how to get [OAuth OAuth keys] for your application
