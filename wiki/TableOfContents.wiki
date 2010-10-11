@@ -1,6 +1,7 @@
 #summary Documentation Table of Contents
 == Documentation ==
   * [GettingStarted Getting Started]
+  * [OAuth Getting and configuring OAuth keys]
   * [ConnectingToBuzz Connecting to Buzz]
   * [Samples Included samples]
   * [BecomingAContributor Contributing]
