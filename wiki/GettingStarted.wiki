@@ -29,9 +29,9 @@ After checking out the code, you will have a new `google-api-php-client` directo
 
 = What to do with the files =
 
-After obtaining the library in either of the ways described above, you will have a directory named `google-api-php-client` somewhere on your filesystem, containing the library files.  Specifically, you will need to include the file `src/buzz.php` inside of your scripts.
+After obtaining the library in either of the ways described above, you will have a directory named `google-api-php-client` somewhere on your filesystem, containing the library files.  Specifically, you will need to include the file `src/apiCLient.php` and `src/contrib/apiBuzzService.php` inside of your scripts.
 
-To be able to include `buzz.php` inside of your PHP scripts, you will need to tell PHP where it can find the client library.  Listed below are some suggested ways of doing this.
+To be able to include these files inside of your PHP scripts, you will need to tell PHP where it can find the client library.  Listed below are some suggested ways of doing this.
 
 == Copy the `google-api-php-client` directory into your project ==
 
@@ -43,8 +43,8 @@ You can make a copy of the `buzz-client-php` directory for each PHP project you 
 
 Copy the `google-api-php-client` directory into the `myproject` directory.  You can add the following code to `myproject.php` to include the client library:
 {{{
-  require_once "/apiClient.php";
-  require_once "/contrib/apiBuzzService.php";
+  require_once "google-api-php-client/src/apiClient.php";
+  require_once "google-api-php-client/src/contrib/apiBuzzService.php";
 }}}
 
 == Setting `include_path` by editing `php.ini` ==
