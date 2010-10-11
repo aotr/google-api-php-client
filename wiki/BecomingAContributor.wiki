@@ -1,0 +1,25 @@
+#summary How to become a contributor and submit patches
+#labels Featured
+#sidebar TableOfContents
+
+=How to become a contributor and submit patches=
+
+==Contributor License Agreements==
+
+We'd love to accept your code patches! However, before we can take them, we have to jump a couple of legal hurdles.
+
+Please fill out either the individual or corporate Contributor License Agreement.
+
+  * If you are an individual writing original source code and you're sure you own the intellectual property, then you'll need to sign an [http://code.google.com/legal/individual-cla-v1.0.html individual CLA].
+  * If you work for a company that wants to allow you to contribute your work to this client library, then you'll need to sign a [http://code.google.com/legal/corporate-cla-v1.0.html corporate CLA].
+
+Follow either of the two links above to access the appropriate CLA and instructions for how to sign and return it. Once we receive it, we'll add you to the official list of contributors and be able to accept your patches.
+
+==Submitting Patches==
+
+  # Join [http://groups.google.com/group/google-buzz-api our discussion group] (seriously, we want to talk to you!)
+  # Decide which code you want to submit. A submission should be a set of changes that addresses one issue in the [http://code.google.com/p/google-api-php-client/issues/list issue tracker].  Please file one change per issue, and address one issue per change. If you want to make a change that doesn't have a corresponding issue in the issue tracker, please file a new ticket!
+  # Ensure that your code adheres to [http://framework.zend.com/manual/en/coding-standard.html standard PHP conventions].
+  # Ensure that there are unit tests for your code.
+  # Sign a Contributor License Agreement (see above).
+  # Attach the code (including unit tests) to the issue it addresses. For brand new files, attach the whole file. For patches to existing files, attach a Subversion diff (that is, svn diff from the project root).  If you want to be really cool, [http://codereview.appspot.com/ request a code review of your patch] on the mailing list.
