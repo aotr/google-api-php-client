@@ -1,4 +1,4 @@
-#summary Downloading and installing the Buzz PHP client library.
+#summary Downloading and installing the Google API PHP client library.
 #labels Featured
 #sidebar TableOfContents
 
