@@ -56,7 +56,7 @@ The line that configures `include_path` will contain some existing paths on your
   include_path=".:/usr/local/share/pear:/usr/local/PEAR"
 }}}
 
-Add a colon, followed by the path to your `osapi` directory: 
+Add a colon, followed by the path to your `google-api-php-client` directory: 
 {{{
   include_path=".:/usr/local/share/pear:/usr/local/PEAR:/path/to/google-api-php-client/src"
 }}}
