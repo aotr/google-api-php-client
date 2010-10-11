@@ -1,3 +1,10 @@
+#summary Connecting to Google Buzz (and other API services)
+#sidebar TableOfContents
+
+Connecting to Google Buzz and making API calls
+
+<wiki:toc />
+
 Now that you've got a copy of the library, and included the files in your script, you're ready to start using it!
 
 First you need to initiate the client, and buzz service, which you do by:
