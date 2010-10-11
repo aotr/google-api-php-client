@@ -1,4 +1,4 @@
-#summary Buzz PHP Client samples
+#summary Google API Client samples
 #sidebar TableOfContents
 
 There are a number of samples included in the Google API PHP Client library that demonstrate the basic functions using the Google Buzz API, as well as doing high-fidelity rendering of buzz posts, you can find these in the google-api-php-client/examples directory. 
