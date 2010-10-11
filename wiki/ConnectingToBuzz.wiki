@@ -1,7 +1,5 @@
-#summary Connecting to Google Buzz (and other API services)
+#summary Connecting to Google Buzz and making API calls
 #sidebar TableOfContents
-
-Connecting to Google Buzz and making API calls
 
 <wiki:toc />
 
