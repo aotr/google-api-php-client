@@ -31,3 +31,5 @@ And you're ready to start making calls, for instance to get the consumption stre
 {{{
 activities = $buzz->listActivities('@consumption', '@me');
 }}}
+
+To learn what else you can do with the API Client, check out the [Samples Samples]
