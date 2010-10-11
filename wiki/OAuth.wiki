@@ -1,0 +1,16 @@
+#summary Getting and configuring your OAuth keys
+#labels Featured
+#sidebar TableOfContents
+
+= Getting and configuring your own OAuth keys =
+
+If you register your application, you will be able to make more API calls per day, as well as showing your icon and app name in the authentication screen, which increases the amount of people who complete the progress.
+
+You can get your own keys by going to [http://code.google.com/apis/accounts/docs/RegistrationForWebAppsAuto.html RegistrationForWebApps] page, and clicking the [https://www.google.com/accounts/ManageDomains Manage Your Domains] link.
+
+One you have you OAuth consumer key and secret, edit your `config.php` file and enter your key and secret in the following configuration variables:
+{{{
+
+    'oauth_consumer_key'    => 'anonymous',
+    'oauth_consumer_secret' => 'anonymous',
+}}}
