@@ -4,7 +4,8 @@
   * [UsingTheLibrary Using the library]
   * [OAuth Getting and configuring OAuth keys]
   * [ConnectingToBuzz Connecting to Buzz]
-  * [Samples Included samples]
+  * [Samples Included examples]
+  * [AdvancedConfiguration Advanced configuration & customization]
   * [BecomingAContributor Contributing]
 
 If you'd like to see more examples or want more information about how to use the library, please file a feature request in [http://code.google.com/p/google-api-php-client/issues/list our issue tracker] explaining what you'd like to see.
