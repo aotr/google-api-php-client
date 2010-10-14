@@ -14,5 +14,6 @@
     // In a real application this would be stored in a database, and not in the session!
     $_SESSION['auth_token'] = $apiClient->authenticate();
   }
+
   $activities = $buzz->listActivities('@consumption', '@me');
 }}}
