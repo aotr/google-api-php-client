@@ -1,4 +1,5 @@
 #summary Advanced configuration and customization of the library
+#sidebar TableOfContents
 
 = Introduction =
 
