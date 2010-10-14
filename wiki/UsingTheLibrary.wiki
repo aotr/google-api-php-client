@@ -1,5 +1,4 @@
 #summary Using the Apiary PHP Client library.
-#labels Featured
 #sidebar TableOfContents
 
 Now that you've got a copy of the library, and included the files in your script, you're ready to start using it!
