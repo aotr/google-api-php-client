@@ -42,4 +42,4 @@ abstract class apiCache {
 }
 }}}
 
-You can see an example how to implement a different methodigy for one of these classes is the [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/cache/apiMemcacheCache.php apiMemcacheCache.php memcache cache class] and the [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/cache/apiApcCache.php APC cache class].
+You can see an example how to implement a different methodigy for one of these classes is the [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/cache/apiMemcacheCache.php memcache cache class] implementation and the [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/cache/apiApcCache.php APC cache class] implementation.
