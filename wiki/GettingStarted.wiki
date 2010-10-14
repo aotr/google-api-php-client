@@ -68,7 +68,8 @@ Add a colon, followed by the path to your `google-api-php-client` directory:
 
 Once you restart your web server, you can include the library by using the following line in your PHP scripts:
 {{{
-  require_once "buzz.php";
+  require_once "apiClient.php";
+  require_once "contrib/apiBuzzService.php
 }}}
 
 == Setting `include_path` dynamically inside of your code ==
