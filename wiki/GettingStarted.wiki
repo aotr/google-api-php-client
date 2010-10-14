@@ -6,6 +6,11 @@ This client library helps you work with Google Buzz data from your web server.  
 
 <wiki:toc />
 
+= Requirements = 
+
+  * PHP 5.2.x or higher
+  * PHP Curl extension
+
 = Obtaining the client library =
 
 There are two options for obtaining the files for the client library.  
