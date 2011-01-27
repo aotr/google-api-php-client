@@ -6,3 +6,43 @@ There are a number of samples included in the Google API PHP Client library that
 You can also view a live version of these samples at [http://www.buzz-demos.com buzz-demos.com]
 
 [http://code.google.com/p/google-api-php-client/source/browse/#svn/trunk/examples Examples source]
+
+Additional sample code is available for a number of APIs, as listed below.
+<wiki:toc />
+
+
+== Google Buzz API ==
+
+|| [http://code.google.com/apis/buzz/docs Documentation] | [https://code.google.com/apis/buzz/forum.html Help Forum] ||
+|| *Samples:* [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiBuzzService.php v1-json-buzz-sample] ||
+
+== Google Diacritize API ==
+
+|| [http://code.google.com/apis/language/diacritize/v1/getting_started.html Documentation] | [https://groups.google.com/group/Google-AJAX-Search-API Help Forum] ||
+|| *Samples:* [hhttp://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiDiacritizeService.php v1-json-diacritize-sample] ||
+
+== Google Latitude API ==
+
+|| [http://code.google.com/apis/latitude Documentation] | [https://groups.google.com/group/google-latitude-api Help Forum] ||
+|| *Samples:* [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiLatitudeService.php v1-json-latitude-sample] ||
+
+== Google Moderator API ==
+
+|| [http://code.google.com/apis/moderator Documentation] | [https://groups.google.com/group/google-moderator-api Help Forum] ||
+|| *Samples:* [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiModeratorService.php v1-json-moderator-sample] ||
+
+== Google Prediction API ==
+
+|| [http://code.google.com/apis/predict Documentation] | [https://groups.google.com/group/prediction-api-discuss Help Forum] ||
+|| *Samples:* [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiPredictionService.php v1.1-json-prediction-sample] ||
+
+
+== Google Translate API ==
+
+|| [http://code.google.com/apis/language/translate/v2/getting_started.html Documentation] | [https://groups.google.com/group/Google-AJAX-Search-API Help Forum] ||
+|| *Samples:* [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiTranslateService.php v2-json-translate-sample] ||
+
+==  Google URL Shortener API ==
+
+|| [http://code.google.com/apis/urlshortener/ Documentation] | [https://groups.google.com/group/google-url-shortener Help Forum] ||
+|| *Samples:* [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiUrlshortenerService.php v1-json-urlshortener-sample] ||
