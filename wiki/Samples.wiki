@@ -19,7 +19,7 @@ Additional sample code is available for a number of APIs, as listed below.
 == Google Diacritize API ==
 
 || [http://code.google.com/apis/language/diacritize/v1/getting_started.html Documentation] | [https://groups.google.com/group/Google-AJAX-Search-API Help Forum] ||
-|| *Samples:* [hhttp://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiDiacritizeService.php v1-json-diacritize-sample] ||
+|| *Samples:* [http://code.google.com/p/google-api-php-client/source/browse/trunk/src/contrib/apiDiacritizeService.php v1-json-diacritize-sample] ||
 
 == Google Latitude API ==
 
