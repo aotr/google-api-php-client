@@ -1,13 +1,12 @@
 #summary OAuth 2.0 in the client library
 
 = Overview =
-  * For information about using OAuth 2.0 in various flows with Google APIs, see [http://code.google.com/apis/accounts/docs/OAuth2.html Using OAuth 2.0 to Access Google APIs].
   * [http://oauth.net/2/ OAuth 2.0] is an emerging standard for
 accessing protected resources on the web. Google APIs and the 
 google-api-php-client library support OAuth 2.0. 
 
 == Further Reading ==
-
+  * For information about using OAuth 2.0 in various flows with Google APIs, see [http://code.google.com/apis/accounts/docs/OAuth2.html Using OAuth 2.0 to Access Google APIs].
   * For general information about OAuth 2.0, see the [http://tools.ietf.org/html/draft-ietf-oauth-v2 OAuth 2.0 draft specification].
 
 = Registering =
