@@ -15,10 +15,7 @@ Before you can use OAuth 2.0, you must register your application using the  [htt
 
   http://google-api-python-client.googlecode.com/hg/static/Credentials.png
 
-If you're writing a web application, then make sure the Redirect URI matches the URI you will use in your application to 
-handle the redirect. For example, the sample below uses the path
-`/auth_return`, so if the sample application were hosted at example.com, then
-you would set the Redirect URI in the APIs Console to be `http://example.com/auth_return`.
+If you're writing a web application, then make sure the Redirect URI matches the URI you will use in your application to  handle the redirect. For example, the sample below uses the path `/oauth2callback`, so if the sample application were hosted at example.com, then you would set the Redirect URI in the APIs Console to be `http://example.com/oauth2callback`.
 
 = Sample =
 
@@ -53,6 +50,5 @@ if ($client->getAccessToken()) {
   $ident = '<img src="%s"> <a href="%s">%s</a>';
   printf($ident, $me['thumbnailUrl'], $me['profileUrl'], $me['displayName']);
 }
-
 ?>
 }}}
