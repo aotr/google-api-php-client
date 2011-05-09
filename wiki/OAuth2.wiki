@@ -19,3 +19,40 @@ If you're writing a web application, then make sure the Redirect URI matches the
 handle the redirect. For example, the sample below uses the path
 `/auth_return`, so if the sample application were hosted at example.com, then
 you would set the Redirect URI in the APIs Console to be `http://example.com/auth_return`.
+
+= Sample =
+
+== Web Application ==
+Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [http://code.google.com/p/google-api-php-client/source/browse/ full code for this sample] is in the repository.
+{{{
+<?php
+// In a real application this would use a database, and not a session!
+session_start();
+
+require_once '../../src/apiClient.php';
+require_once '../../src/contrib/apiBuzzService.php';
+
+global $apiConfig;
+
+$client = new apiClient();
+$buzz = new apiBuzzService($client);
+
+// Visit https://code.google.com/apis/console to
+// generate your oauth2_client_id, oauth2_client_secret, and to
+// register your oauth2_redirect_uri.
+$apiConfig['oauth2_client_id'] = 'YOUR CLIENT ID HERE';
+$apiConfig['oauth2_client_secret'] = 'YOUR CLIENT SECRET HERE';
+
+// The oauth2_redirect_uri is typically the path to where you host this PHP file.
+$apiConfig['oauth2_redirect_uri'] = 'http://example.com/oauth2callback';
+$apiconfig['authClass'] = 'apiOAuth2';
+
+// Make an authenticated request to the Buzz API.
+if ($client->getAccessToken()) {
+  $me = $buzz->getPeople('@me');
+  $ident = '<img src="%s"> <a href="%s">%s</a>';
+  printf($ident, $me['thumbnailUrl'], $me['profileUrl'], $me['displayName']);
+}
+
+?>
+}}}
