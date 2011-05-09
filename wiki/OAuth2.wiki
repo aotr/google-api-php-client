@@ -1,7 +1,7 @@
 #summary OAuth 2.0 in the client library
 
 = Overview =
-  * [http://oauth.net/2/ OAuth 2.0] is an emerging standard for
+[http://oauth.net/2/ OAuth 2.0] is an emerging standard for
 accessing protected resources on the web. Google APIs and the 
 google-api-php-client library support OAuth 2.0. 
 
