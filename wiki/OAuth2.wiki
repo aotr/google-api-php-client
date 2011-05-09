@@ -2,7 +2,7 @@
 
 = Overview =
   * For information about using OAuth 2.0 in various flows with Google APIs, see [http://code.google.com/apis/accounts/docs/OAuth2.html Using OAuth 2.0 to Access Google APIs].
-[http://oauth.net/2/ OAuth 2.0] is an emerging standard for
+  * [http://oauth.net/2/ OAuth 2.0] is an emerging standard for
 accessing protected resources on the web. Google APIs and the 
 google-api-php-client library support OAuth 2.0. 
 
