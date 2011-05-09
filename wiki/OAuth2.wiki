@@ -20,7 +20,7 @@ If you're writing a web application, then make sure the Redirect URI matches the
 = Sample =
 
 == Web Application ==
-Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [http://code.google.com/p/google-api-php-client/source/browse/ full code for this sample] is in the repository.
+Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples full code for this sample] is in the repository.
 {{{
 <?php
 // In a real application this would use a database, and not a session!
