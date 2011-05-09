@@ -29,20 +29,20 @@ session_start();
 require_once '../../src/apiClient.php';
 require_once '../../src/contrib/apiBuzzService.php';
 
-global $apiConfig;
-
-$client = new apiClient();
-$buzz = new apiBuzzService($client);
-
 // Visit https://code.google.com/apis/console to
 // generate your oauth2_client_id, oauth2_client_secret, and to
 // register your oauth2_redirect_uri.
+global $apiConfig;
+
 $apiConfig['oauth2_client_id'] = 'YOUR CLIENT ID HERE';
 $apiConfig['oauth2_client_secret'] = 'YOUR CLIENT SECRET HERE';
 
 // The oauth2_redirect_uri is typically the path to where you host this PHP file.
 $apiConfig['oauth2_redirect_uri'] = 'http://example.com/oauth2callback';
 $apiconfig['authClass'] = 'apiOAuth2';
+
+$client = new apiClient();
+$buzz = new apiBuzzService($client);
 
 // Make an authenticated request to the Buzz API.
 if ($client->getAccessToken()) {
