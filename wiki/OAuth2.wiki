@@ -15,7 +15,7 @@ Before you can use OAuth 2.0, you must register your application using the  [htt
 
   http://google-api-python-client.googlecode.com/hg/static/Credentials.png
 
-If you're writing a web application, make sure the Redirect URI matches the URI used in your application to handle the redirect. For example, the sample below uses the path `/oauth2callback`, so if the sample application were hosted at example.com, then you would set the Redirect URI in the APIs Console to be `http://example.com/oauth2callback`.
+If you are writing a web application, make sure you register a `Redirect URI` in the Google API Console.  The value of `$apiConfig['oauth2_redirect_uri']` in your application will need to match the URI you just registered in the Google API Console.  If you are using the sample code below, the value of `$apiConfig['oauth2_redirect_uri']` will be the path to where you host the PHP file.
 
 = Sample =
 
@@ -38,7 +38,7 @@ $apiConfig['oauth2_client_id'] = 'YOUR CLIENT ID HERE';
 $apiConfig['oauth2_client_secret'] = 'YOUR CLIENT SECRET HERE';
 
 // The oauth2_redirect_uri is typically the path to where you host this PHP file.
-$apiConfig['oauth2_redirect_uri'] = 'http://example.com/oauth2callback';
+$apiConfig['oauth2_redirect_uri'] = 'http://example.com/path/to/myapp.php';
 $apiconfig['authClass'] = 'apiOAuth2';
 
 $client = new apiClient();
