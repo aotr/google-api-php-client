@@ -11,7 +11,7 @@ google-api-php-client library support OAuth 2.0.
 
 = Registering =
 
-Before you can use OAuth 2.0, you must register your application using the  [https://code.google.com/apis/console/ Google APIs Console]. After you've registered, go to the [https://code.google.com/apis/console/#:overview:access API Access] tab and copy the "Client ID" and "Client secret" values, which you'll need later.
+Before you can use OAuth 2.0, you must register your application using the  [https://code.google.com/apis/console/#access Google APIs Console]. After you've registered, go to the [https://code.google.com/apis/console/#:overview:access API Access] tab and copy the "Client ID" and "Client secret" values, which you'll need later.
 
   http://google-api-php-client.googlecode.com/svn/trunk/static/Credentials.png
 
