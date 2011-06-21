@@ -29,7 +29,7 @@ Do note you should replace the session storage of the OAuth key with a real stor
 And you're ready to start making calls, for instance to get the consumption stream (activities from the people you follow) in Buzz, you can call:
 
 {{{
-activities = $buzz->listActivities('@consumption', '@me');
+activities = $buzz->activities->listActivities('@consumption', '@me');
 }}}
 
 To learn what else you can do with the API Client, check out the [Samples Samples]
