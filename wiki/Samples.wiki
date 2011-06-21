@@ -14,3 +14,6 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 
 ==Google Buzz API==
 || [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fbuzz sample] || A web-application that uses the Buzz API ||
+
+==Google Tasks API==
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/tasks/index.php sample] || A web-application that uses the Tasks API ||
