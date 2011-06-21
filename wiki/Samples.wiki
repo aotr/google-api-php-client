@@ -17,3 +17,8 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 
 ==Google Tasks API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/tasks/index.php sample] || A web-application that uses the Tasks API ||
+
+=Technologies=
+
+==OAuth 2.0==
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/oauth2 sample] || A sample web-application that uses OAuth 2.0 ||
