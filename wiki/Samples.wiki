@@ -9,3 +9,8 @@ You can also view a live version of these samples at [http://www.buzz-demos.com 
 
 === Helper code ===
 The Google API Client Library for PHP also provides convenience wrapper code for a number of APIs. The wrappers make accessing these APIs even more intuitive.  Visit the [http://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fsrc%2Fcontrib contrib directory] to see if wrapper code is available for the API you are using.
+
+=APIs=
+
+==Google Buzz API==
+|| [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fbuzz sample] || A web-application that uses the Buzz API ||
