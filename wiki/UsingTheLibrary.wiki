@@ -3,12 +3,12 @@
 
 Now that you've got a copy of the library, and included the files in your script, you're ready to start using it!
 
-First you need to initiate the client, and buzz service, which you do by:
+First you need to initiate the client, and buzz service:
 
 {{{
 $apiClient = new apiClient();
 $buzz = new apiBuzzService($apiClient);
-And then you need to authenticate the user using the OAuth flow, which you do by:
+//And then you need to authenticate the user using the OAuth flow, which you do by:
 
 // If a oauth token was stored in the session, use that- and otherwise go through the oauth dance
 if (isset($_SESSION['auth_token'])) {
