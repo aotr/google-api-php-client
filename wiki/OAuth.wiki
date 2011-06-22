@@ -1,5 +1,4 @@
 #summary Getting and configuring your OAuth keys
-#labels Featured
 #sidebar TableOfContents
 
 = Getting and configuring your own OAuth keys =
