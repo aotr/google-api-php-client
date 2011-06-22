@@ -1,4 +1,5 @@
 #summary OAuth 2.0 in the client library
+#labels Featured
 
 = Overview =
 [http://oauth.net/2/ OAuth 2.0] is an emerging standard for
