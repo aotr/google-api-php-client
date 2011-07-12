@@ -63,3 +63,5 @@ if ($client->getAccessToken()) {
 }
 ?>
 }}}
+
+<g:plusone size="medium"></g:plusone>
