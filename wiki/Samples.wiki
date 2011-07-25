@@ -22,3 +22,5 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 
 ==OAuth 2.0==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/oauth2 sample] || A sample web-application that uses OAuth 2.0 ||
+
+<g:plusone size="medium"></g:plusone>
