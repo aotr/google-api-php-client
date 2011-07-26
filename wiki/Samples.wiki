@@ -1,3 +1,4 @@
+<wiki:toc/>
 #summary Google API Client samples
 #sidebar TableOfContents
 
