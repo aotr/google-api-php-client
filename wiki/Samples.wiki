@@ -1,11 +1,12 @@
 #summary Google API Client samples
+#labels Featured
 #sidebar TableOfContents
 
 <wiki:toc/>
 
 There are a number of samples included in the Google API Client Library for PHP that demonstrate the basic functions using the Google Buzz API, as well as doing high-fidelity rendering of buzz posts, you can find these in the google-api-php-client/examples directory. 
 
-You can also view a live version of these samples at [http://www.buzz-demos.com buzz-demos.com]
+You can also view a live version of these samples at [http://googphpexamples.appspot.com/books/index.php googphpexamples.appspot.com]
 
 [http://code.google.com/p/google-api-php-client/source/browse/#svn/trunk/examples Examples source]
 
@@ -15,6 +16,16 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 =APIs=
 ==Google Buzz API==
 || [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fbuzz sample] || A web-application that uses the Buzz API ||
+
+
+==Google Books API==
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/books/index.php sample] || A web-application that uses the Books API ||
+
+==Google Latitude API==
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/latitude/index.php sample] || A web-application that uses the Latitude API ||
+
+==Google Page Speed API==
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/pagespeed/index.php sample] || A web-application that uses the Page Speed API ||
 
 ==Google Tasks API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/tasks/index.php sample] || A web-application that uses the Tasks API ||
