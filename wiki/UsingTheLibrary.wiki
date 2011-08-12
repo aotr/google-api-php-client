@@ -27,4 +27,4 @@ And you're ready to start making calls, for instance to get the consumption stre
 $activities = $buzz->activities->listActivities('@me', '@consumption');
 }}}
 
-Next you should read how to get [OAuth OAuth keys] for your application
+Next you should read how to use [OAuth2 OAuth2] in your application.
