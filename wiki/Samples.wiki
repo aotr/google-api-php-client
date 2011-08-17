@@ -30,6 +30,9 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 ==Google Tasks API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/tasks/index.php sample] || A web-application that uses the Tasks API ||
 
+==Google URL Shortener API==
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/urlshortener/index.php sample] || A web-application that uses the Google URL Shortener API ||
+
 =Technologies=
 
 ==OAuth 2.0==
