@@ -14,23 +14,22 @@ You can also view a live version of these samples at [http://googphpexamples.app
 The Google API Client Library for PHP also provides convenience wrapper code for a number of APIs. The wrappers make accessing these APIs even more intuitive.  Visit the [http://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fsrc%2Fcontrib contrib directory] to see if wrapper code is available for the API you are using.
 
 =APIs=
-==Google Buzz API==
+==Buzz API==
 || [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fbuzz sample] || A web-application that uses the Buzz API ||
 
-
-==Google Books API==
+==Books API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/books/index.php sample] || A web-application that uses the Books API ||
 
 ==Google Latitude API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/latitude/index.php sample] || A web-application that uses the Latitude API ||
 
-==Google Page Speed API==
+==Page Speed Online API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/pagespeed/index.php sample] || A web-application that uses the Page Speed API ||
 
-==Google Tasks API==
+==Tasks API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/tasks/index.php sample] || A web-application that uses the Tasks API ||
 
-==Google URL Shortener API==
+==URL Shortener API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/urlshortener/index.php sample] || A web-application that uses the Google URL Shortener API ||
 
 =Technologies=
