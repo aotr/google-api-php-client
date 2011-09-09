@@ -17,7 +17,7 @@ Follow either of the two links above to access the appropriate CLA and instructi
 
 ==Submitting Patches==
 
-  # Join [http://groups.google.com/group/google-buzz-api our discussion group] (seriously, we want to talk to you!)
+  # Join [https://groups.google.com/forum/#!forum/google-api-php-client our discussion group] (seriously, we want to talk to you!)
   # Decide which code you want to submit. A submission should be a set of changes that addresses one issue in the [http://code.google.com/p/google-api-php-client/issues/list issue tracker].  Please file one change per issue, and address one issue per change. If you want to make a change that doesn't have a corresponding issue in the issue tracker, please file a new ticket!
   # Ensure that your code adheres to [http://framework.zend.com/manual/en/coding-standard.html standard PHP conventions].
   # Ensure that there are unit tests for your code.
