@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<channel version="1.0" xmlns="http://pear.php.net/channel-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/channel-1.0 http://pear.php.net/dtd/channel-1.0.xsd">
+    <name>google-api-php-client.googlecode.com</name>
+    <summary>Google APIs Client Library for PHP</summary>
+    <suggestedalias>google-api-php-client</suggestedalias>
+    <servers>
+        <primary>
+            <rest>
+                <baseurl type="REST1.0">http://google-api-php-client.googlecode.com/svn/pear/rest/</baseurl>
+                <baseurl type="REST1.1">http://google-api-php-client.googlecode.com/svn/pear/rest/</baseurl>
+                <baseurl type="REST1.2">http://google-api-php-client.googlecode.com/svn/pear/rest/</baseurl>
+                <baseurl type="REST1.3">http://google-api-php-client.googlecode.com/svn/pear/rest/</baseurl>
+            </rest>
+        </primary>
+    </servers>
+</channel>

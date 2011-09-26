@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<server>
+  <name>google-api-php-client.googlecode.com</name>
+  <summary>Google APIs Client Library for PHP</summary>
+  <alias>google-api-php-client</alias>
+  <url>http://google-api-php-client.googlecode.com/svn/pear</url>
+</server>

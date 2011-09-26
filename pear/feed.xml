@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://google-api-php-client.googlecode.com/svn/pear</id>
+    <updated>2011-09-26T13:50:05-07:00</updated>
+    <title>Google APIs Client Library for PHP Latest Releases</title>
+    <link href="http://google-api-php-client.googlecode.com/svn/pear/feed.xml" rel="self" />
+    <author>
+        <name>http://google-api-php-client.googlecode.com/svn/pear</name>
+    </author>
+</feed>
