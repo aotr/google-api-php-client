@@ -1,6 +1,7 @@
 #summary FAQ for the Google APIs Client Library for PHP
 
-Sections: <wiki:toc max_depth="1"/>
+Sections:
+<wiki:toc max_depth="1"/>
 
 == SSL certificate problem, verify that the CA cert is OK ==
 
