@@ -15,10 +15,10 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 
 =APIs=
 ==Google+ API==
-|| [http://code.google.com/p/google-plus-php-starter/ sample] || A web-application that uses the Google+ API ||
+|| [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fplus sample] || A web-application that uses the Google+ API ||
 
 ==Buzz API==
-|| [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fplus  sample] || A web-application that uses the Buzz API ||
+|| [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fbuzz sample] || A web-application that uses the Buzz API ||
 
 ==Books API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/books/index.php sample] || A web-application that uses the Books API ||
