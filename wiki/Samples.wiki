@@ -6,8 +6,6 @@
 
 There are a number of samples included in the Google API Client Library for PHP that demonstrate the basic functions using the Google+ API, as well as doing high-fidelity rendering of Google+ posts, you can find these in the google-api-php-client/examples directory. 
 
-You can also view a live version of these samples at [http://googphpexamples.appspot.com/books/index.php googphpexamples.appspot.com]
-
 [http://code.google.com/p/google-api-php-client/source/browse/#svn/trunk/examples Examples source]
 
 = Helper code =
@@ -20,11 +18,14 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 ==Books API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/books/index.php sample] || A web-application that uses the Books API ||
 
-==Google Latitude API==
+==Latitude API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/latitude/index.php sample] || A web-application that uses the Latitude API ||
 
 ==Page Speed Online API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/pagespeed/index.php sample] || A web-application that uses the Page Speed API ||
+
+==Analytics API==
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples#examples%2Fanalytics sample] || A web-application that uses the Analytics API ||
 
 ==Adsense API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples#examples%2Fadsense sample] || A web-application that uses the Adsense API ||
