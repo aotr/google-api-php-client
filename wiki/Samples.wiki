@@ -25,7 +25,7 @@ The Google API Client Library for PHP also provides convenience wrapper code for
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/pagespeed/index.php sample] || A web-application that uses the Page Speed API ||
 
 ==Analytics API==
-|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples#examples%2Fanalytics sample] || A web-application that uses the Analytics API ||
+|| [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/analytics/simple.php sample] || A web-application that uses the Analytics API ||
 
 ==Adsense API==
 || [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples#examples%2Fadsense sample] || A web-application that uses the Adsense API ||
