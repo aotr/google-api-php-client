@@ -110,6 +110,9 @@ Lets you manage your tasks and task lists.
 Lets you create, inspect, and manage goo.gl short URLs
 || *v1* | [http://code.google.com/apis/urlshortener/v1/getting_started.html URL Shortener API Documentation] |  [https://code.google.com/apis/explorer/#_s=urlshortener&_v=v1 APIs Explorer] ||
 
+*Samples*
+  * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/urlshortener/index.php PHP URL Shortener Sample]
+
 ----
 == http://www.google.com/images/icons/product/search-32.gif chromewebstore ==
 Chrome Web Store Authorization API
