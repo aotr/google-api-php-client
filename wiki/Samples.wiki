@@ -15,6 +15,23 @@ Follow the general [http://code.google.com/p/google-api-php-client/ setup] instr
 
 = Google APIs =
 
+----
+== http://www.google.com/images/icons/product/gplus-16.png Google+ API ==
+The Google+ API enables developers to build on top of the Google+ platform.
+|| *v1* | [http://developers.google.com/+/api/ Google+ API Documentation] |  [https://code.google.com/apis/explorer/#_s=plus&_v=v1 APIs Explorer] ||
+
+*Samples*
+  * [http://code.google.com/p/google-plus-php-starter/ Google+ PHP Starter]
+
+----
+== http://www.google.com/images/icons/product/translate-16.png Google Translate API ==
+Lets you translate text from one language to another.
+|| *v2* | [http://code.google.com/apis/language/translate/v2/using_rest.html Google Translate API Documentation] |  [https://code.google.com/apis/explorer/#_s=translate&_v=v2 APIs Explorer] ||
+
+*Samples*
+  * [http://code.google.com/p/google-plus-php-starter/ Google+ PHP Starter]
+
+
 == http://www.google.com/images/icons/product/adsense-16.png !AdSense Management API ==
 Gives !AdSense publishers access to their inventory and the ability to generate reports
 || *v1.1* | [https://code.google.com/apis/adsense/management/ AdSense Management API Documentation] |  [https://code.google.com/apis/explorer/#_s=adsense&_v=v1.1 APIs Explorer] ||
@@ -69,13 +86,6 @@ Lets you read and update your current location and work with your location histo
 Lets you programatically verify ownership of websites or domains with Google.
 || *v1* | [http://code.google.com/apis/siteverification/ Google Site Verification API Documentation] |  [https://code.google.com/apis/explorer/#_s=siteVerification&_v=v1 APIs Explorer] ||
 
-----
-== http://www.google.com/images/icons/product/gplus-16.png Google+ API ==
-The Google+ API enables developers to build on top of the Google+ platform.
-|| *v1* | [http://developers.google.com/+/api/ Google+ API Documentation] |  [https://code.google.com/apis/explorer/#_s=plus&_v=v1 APIs Explorer] ||
-
-*Samples*
-  * [http://code.google.com/p/google-plus-php-starter/ Google+ PHP Starter]
 
 ----
 == http://www.google.com/images/icons/product/search-16.gif Moderator API ==
