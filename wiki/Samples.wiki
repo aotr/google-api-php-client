@@ -130,3 +130,11 @@ OAuth2 API
 
 *Samples*
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/userinfo/index.php PHP UserInfo Sample]
+
+----
+== http://www.google.com/images/icons/feature/font_api-32.gif webfonts ==
+WebFonts API
+|| *v2* | [https://code.google.com/apis/explorer/#_s=webfonts&_v=v1 APIs Explorer] ||
+
+*Samples*
+  * [https://google-api-php-client.googlecode.com/svn/trunk/examples/webfonts/simple.php PHP WebFonts Sample]
