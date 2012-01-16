@@ -15,7 +15,7 @@ Follow the general [http://code.google.com/p/google-api-php-client/ setup] instr
 
 = Google APIs =
 
-== http://www.google.com/images/icons/product/adsense-32.png !AdSense Management API ==
+== http://www.google.com/images/icons/product/adsense-16.png !AdSense Management API ==
 Gives !AdSense publishers access to their inventory and the ability to generate reports
 || *v1.1* | [https://code.google.com/apis/adsense/management/ AdSense Management API Documentation] |  [https://code.google.com/apis/explorer/#_s=adsense&_v=v1.1 APIs Explorer] ||
 
@@ -23,12 +23,12 @@ Gives !AdSense publishers access to their inventory and the ability to generate 
   * [http://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fadsense PHP Adsense Sample]
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif !BigQuery API ==
+== http://www.google.com/images/icons/product/search-16.gif !BigQuery API ==
 A data platform for customers to create, manage, share and query data.
 || *v2* | [https://code.google.com/apis/bigquery/docs/v2/ BigQuery API Documentation] |  [https://code.google.com/apis/explorer/#_s=bigquery&_v=v2 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/ebooks-32.png Books API ==
+== http://www.google.com/images/icons/product/ebooks-16.png Books API ==
 Lets you search for books and manage your Google Books library.
 || *v1* | [https://code.google.com/apis/books/docs/v1/getting_started.html Books API Documentation] |  [https://code.google.com/apis/explorer/#_s=books&_v=v1 APIs Explorer] ||
 
@@ -36,7 +36,7 @@ Lets you search for books and manage your Google Books library.
   * [http://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fbooks Books PHP Sample]
 
 ----
-== http://www.google.com/images/icons/product/calendar-32.png Calendar API ==
+== http://www.google.com/images/icons/product/calendar-16.png Calendar API ==
 Lets you manipulate events and other calendar data.
 || *v3* | [http://code.google.com/apis/calendar/v3/using.html Calendar API Documentation] |  [https://code.google.com/apis/explorer/#_s=calendar&_v=v3 APIs Explorer] ||
 
@@ -44,12 +44,12 @@ Lets you manipulate events and other calendar data.
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/calendar/simple.php Calendar PHP Sample]
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif !CustomSearch API ==
+== http://www.google.com/images/icons/product/search-16.gif !CustomSearch API ==
 Lets you search over a website or collection of websites
 || *v1* | [http://code.google.com/apis/customsearch/v1/using_rest.html CustomSearch API Documentation] |  [https://code.google.com/apis/explorer/#_s=customsearch&_v=v1 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/analytics-32.png Google Analytics API ==
+== http://www.google.com/images/icons/product/analytics-16.png Google Analytics API ==
 View and manage your Google Analytics data
 || *v3* | [http://code.google.com/apis/analytics Google Analytics API Documentation] |  [https://code.google.com/apis/explorer/#_s=analytics&_v=v3 APIs Explorer] ||
 
@@ -57,7 +57,7 @@ View and manage your Google Analytics data
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/analytics/simple.php Analytics PHP Sample]
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif Google Latitude API ==
+== http://www.google.com/images/icons/product/search-16.gif Google Latitude API ==
 Lets you read and update your current location and work with your location history
 || *v1* | [http://code.google.com/apis/latitude/v1/using_rest.html Google Latitude API Documentation] |  [https://code.google.com/apis/explorer/#_s=latitude&_v=v1 APIs Explorer] ||
 
@@ -65,12 +65,12 @@ Lets you read and update your current location and work with your location histo
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/latitude/index.php Latitude PHP Sample]
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif Google Site Verification API ==
+== http://www.google.com/images/icons/product/search-16.gif Google Site Verification API ==
 Lets you programatically verify ownership of websites or domains with Google.
 || *v1* | [http://code.google.com/apis/siteverification/ Google Site Verification API Documentation] |  [https://code.google.com/apis/explorer/#_s=siteVerification&_v=v1 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/gplus-32.png Google+ API ==
+== http://www.google.com/images/icons/product/gplus-16.png Google+ API ==
 The Google+ API enables developers to build on top of the Google+ platform.
 || *v1* | [http://developers.google.com/+/api/ Google+ API Documentation] |  [https://code.google.com/apis/explorer/#_s=plus&_v=v1 APIs Explorer] ||
 
@@ -78,27 +78,27 @@ The Google+ API enables developers to build on top of the Google+ platform.
   * [http://code.google.com/p/google-plus-php-starter/ Google+ PHP Starter]
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif Moderator API ==
+== http://www.google.com/images/icons/product/search-16.gif Moderator API ==
 Moderator API
 || *v1* | [http://code.google.com/apis/moderator/v1/using_rest.html Moderator API Documentation] |  [https://code.google.com/apis/explorer/#_s=moderator&_v=v1 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/feature/predictionapi-32.png Prediction API ==
+== http://www.google.com/images/icons/feature/predictionapi-16.png Prediction API ==
 Lets you access a cloud hosted machine learning service that makes it easy to build smart apps
 || *v1.4* | [http://code.google.com/apis/predict/docs/developer-guide.html Prediction API Documentation] |  [https://code.google.com/apis/explorer/#_s=prediction&_v=v1.4 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif Search API for Shopping ==
+== http://www.google.com/images/icons/product/search-16.gif Search API for Shopping ==
 Lets you search over product data
 || *v1* | [http://code.google.com/apis/shopping/search/v1/getting_started.html Search API for Shopping Documentation] |  [https://code.google.com/apis/explorer/#_s=shopping&_v=v1 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif !TaskQueue API ==
+== http://www.google.com/images/icons/product/search-16.gif !TaskQueue API ==
 Lets you access a Google App Engine Pull Task Queue over REST.
 || *v1beta1* | [http://code.google.com/appengine/docs/python/taskqueue/rest.html TaskQueue API Documentation] |  [https://code.google.com/apis/explorer/#_s=taskqueue&_v=v1beta1 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/tasks-32.png Tasks API ==
+== http://www.google.com/images/icons/product/tasks-16.png Tasks API ==
 Lets you manage your tasks and task lists.
 || *v1* | [http://code.google.com/apis/tasks/v1/using.html Tasks API Documentation] |  [https://code.google.com/apis/explorer/#_s=tasks&_v=v1 APIs Explorer] ||
 
@@ -106,7 +106,7 @@ Lets you manage your tasks and task lists.
   * [http://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Ftasks PHP Tasks Sample]
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif URL Shortener API ==
+== http://www.google.com/images/icons/product/search-16.gif URL Shortener API ==
 Lets you create, inspect, and manage goo.gl short URLs
 || *v1* | [http://code.google.com/apis/urlshortener/v1/getting_started.html URL Shortener API Documentation] |  [https://code.google.com/apis/explorer/#_s=urlshortener&_v=v1 APIs Explorer] ||
 
@@ -114,17 +114,17 @@ Lets you create, inspect, and manage goo.gl short URLs
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/urlshortener/index.php PHP URL Shortener Sample]
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif chromewebstore ==
+== http://www.google.com/images/icons/product/search-16.gif chromewebstore ==
 Chrome Web Store Authorization API
 || *v1* | [https://code.google.com/apis/explorer/#_s=chromewebstore&_v=v1 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif groupssettings ==
+== http://www.google.com/images/icons/product/search-16.gif groupssettings ==
 Groups Settings API
 || *v1* | [https://code.google.com/apis/explorer/#_s=groupssettings&_v=v1 APIs Explorer] ||
 
 ----
-== http://www.google.com/images/icons/product/search-32.gif oauth2 ==
+== http://www.google.com/images/icons/product/search-16.gif oauth2 ==
 OAuth2 API
 || *v2* | [https://code.google.com/apis/explorer/#_s=oauth2&_v=v2 APIs Explorer] ||
 
@@ -132,7 +132,7 @@ OAuth2 API
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/userinfo/index.php PHP UserInfo Sample]
 
 ----
-== http://www.google.com/images/icons/feature/font_api-32.gif webfonts ==
+== http://www.google.com/images/icons/feature/font_api-16.gif webfonts ==
 !WebFonts API
 || *v1* | [https://code.google.com/apis/explorer/#_s=webfonts&_v=v1 APIs Explorer] ||
 
