@@ -29,7 +29,7 @@ Lets you translate text from one language to another.
 || *v2* | [http://code.google.com/apis/language/translate/v2/using_rest.html Google Translate API Documentation] |  [https://code.google.com/apis/explorer/#_s=translate&_v=v2 APIs Explorer] ||
 
 *Samples*
-  * [http://code.google.com/p/google-plus-php-starter/ Google Translate PHP Sample]
+  * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/translate/simple.php Google Translate PHP Sample]
 
 
 == http://www.google.com/images/icons/product/adsense-16.png !AdSense Management API ==
