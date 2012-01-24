@@ -102,6 +102,9 @@ Lets you access a cloud hosted machine learning service that makes it easy to bu
 Lets you search over product data
 || *v1* | [http://code.google.com/apis/shopping/search/v1/getting_started.html Search API for Shopping Documentation] |  [https://code.google.com/apis/explorer/#_s=shopping&_v=v1 APIs Explorer] ||
 
+*Samples*
+  * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/shopping/simple.php Google Shopping PHP Sample]
+
 ----
 == http://www.google.com/images/icons/product/search-16.gif !TaskQueue API ==
 Lets you access a Google App Engine Pull Task Queue over REST.
