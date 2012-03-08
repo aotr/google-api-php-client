@@ -95,7 +95,11 @@ Moderator API
 ----
 == http://www.google.com/images/icons/feature/predictionapi-16.png Prediction API ==
 Lets you access a cloud hosted machine learning service that makes it easy to build smart apps
-|| *v1.4* | [http://code.google.com/apis/predict/docs/developer-guide.html Prediction API Documentation] |  [https://code.google.com/apis/explorer/#_s=prediction&_v=v1.4 APIs Explorer] ||
+|| *v1.5* | [http://code.google.com/apis/predict/docs/developer-guide.html Prediction API Documentation] |  [https://code.google.com/apis/explorer/#_s=prediction&_v=v1.5 APIs Explorer] ||
+
+
+*Samples*
+  * [http://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples%2Fprediction PHP Prediction Sample]
 
 ----
 == http://www.google.com/images/icons/product/search-16.gif Search API for Shopping ==
