@@ -65,6 +65,9 @@ Lets you manipulate events and other calendar data.
 Lets you search over a website or collection of websites
 || *v1* | [http://code.google.com/apis/customsearch/v1/using_rest.html CustomSearch API Documentation] |  [https://code.google.com/apis/explorer/#_s=customsearch&_v=v1 APIs Explorer] ||
 
+*Samples*
+  * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/customSearch/index.php Custom Search PHP Sample]
+
 ----
 == http://www.google.com/images/icons/product/analytics-16.png Google Analytics API ==
 View and manage your Google Analytics data
