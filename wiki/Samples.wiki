@@ -26,7 +26,7 @@ The Google+ API enables developers to build on top of the Google+ platform.
 ----
 == http://www.google.com/images/icons/product/doubleclick-16.gif Ad Exchange Buyer API ==
 Lets you manage your Ad Exchange Buyer account.
-|| *v1* | [https://developers.google.com/ad-exchange/buyer-rest Ad Exchange Buyer API Documentation] |  [https://code.google.com/apis/explorer/#_s= adexchangebuyer&_v=v1 APIs Explorer] ||
+|| *v1* | [https://developers.google.com/ad-exchange/buyer-rest Ad Exchange Buyer API Documentation] |  [https://code.google.com/apis/explorer/#_s=adexchangebuyer&_v=v1 APIs Explorer] ||
 
 *Samples*
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/adexchangebuyer Ad Exchange Buyer API PHP Sample]
