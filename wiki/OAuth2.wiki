@@ -22,41 +22,27 @@ If you are writing a web application, make sure you register a `Redirect URI` co
 
 == Web Application ==
 Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples full code for this sample] is in the repository.
+
+
+= Service Accounts =
+Service Accounts provide certificate-based authentication for server-to-server interactions. This means, for example, that a request from a web application to Google Cloud Storage can be authenticated via a certificate instead of a shared key. Certificates offer better security properties than shared keys and passwords, largely because they are not human-readable or guessable.
+
+To use Service account from PHP, you will need to call apiClient->setAssertionCredentials with your assertion credentials.
 {{{
-<?php
-// In a real application this would use a database, and not a session!
-session_start();
-
-require_once '../../src/apiClient.php';
-require_once '../../src/contrib/apiBuzzService.php';
-
+// Load the key in PKCS 12 format (you need to download this from the
+// Google API Console when the service account was created.
 $client = new apiClient();
-// Visit https://code.google.com/apis/console to generate your
-// oauth2_client_id, oauth2_client_secret, and to register your oauth2_redirect_uri.
-// $client->setClientId('insert_your_oauth2_client_id');
-// $client->setClientSecret('insert_your_oauth2_client_secret');
-// $client->setRedirectUri('http://example.com/path/to/myapp.php');
-// $client->setApplicationName("OAuth2_Example_App");
-$buzz = new apiBuzzService($client);
-
-if (isset($_SESSION['access_token'])) {
-  $client->setAccessToken($_SESSION['access_token']);
-} else {
-  $client->setAccessToken($client->authenticate());
-}
-$_SESSION['access_token'] = $client->getAccessToken();
-
-if (isset($_GET['code'])) {
-  header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);
-}
-
-// Make an authenticated request to the Buzz API.
-if ($client->getAccessToken()) {
-  $me = $buzz->getPeople('@me');
-  $ident = '<img src="%s"> <a href="%s">%s</a>';
-  printf($ident, $me['thumbnailUrl'], $me['profileUrl'], $me['displayName']);
-}
-?>
+...
+$key = file_get_contents(KEY_FILE);
+$client->setAssertionCredentials(new apiAssertionCredentials(
+  SERVICE_ACCOUNT_NAME,
+  array('https://www.googleapis.com/auth/prediction'),
+  $key)
+);
 }}}
+
+There is a [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/prediction/serviceAccount.php full sample of using the Prediction API with a Service account].
+
+Learn more about Service accounts from the [http://googledevelopers.blogspot.com/2012/03/service-accounts-have-arrived.html announcement].
 
 <g:plusone size="medium"></g:plusone>
