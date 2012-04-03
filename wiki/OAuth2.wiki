@@ -29,11 +29,22 @@ Service Accounts provide certificate-based authentication for server-to-server i
 
 To use Service account from PHP, you will need to call apiClient->setAssertionCredentials with your assertion credentials.
 {{{
+// Set your client id, service account name, and the path to your private key.
+// For more information about obtaining these keys, visit:
+// https://developers.google.com/console/help/#service_accounts
+const CLIENT_ID = 'insert_your_client_id';
+const SERVICE_ACCOUNT_NAME = 'insert_your_service_account_name';
+
+// Make sure you keep your key.p12 file in a secure location, and isn't
+// readable by others.
+const KEY_FILE = '/super/secret/path/to/key.p12';
+
 // Load the key in PKCS 12 format (you need to download this from the
 // Google API Console when the service account was created.
 $client = new apiClient();
 ...
 $key = file_get_contents(KEY_FILE);
+$client->setClientId(CLIENT_ID);
 $client->setAssertionCredentials(new apiAssertionCredentials(
   SERVICE_ACCOUNT_NAME,
   array('https://www.googleapis.com/auth/prediction'),
