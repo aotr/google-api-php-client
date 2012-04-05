@@ -7,6 +7,8 @@
 accessing protected resources on the web. The Google APIs and the 
 google-api-php-client library support OAuth 2.0. 
 
+<wiki:toc/>
+
 
 == Further Reading ==
   * For information about using OAuth 2.0 in various flows with Google APIs, see [http://code.google.com/apis/accounts/docs/OAuth2.html Using OAuth 2.0 to Access Google APIs].
