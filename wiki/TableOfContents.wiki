@@ -2,6 +2,7 @@
 == Documentation ==
   * [GettingStarted Getting Started]
   * [UsingTheLibrary Using the library]
+  * [OAuth2 OAuth 2.0 support]
   * [Samples Included examples]
   * [AdvancedConfiguration Advanced configuration & customization]
   * [BecomingAContributor Contributing]
