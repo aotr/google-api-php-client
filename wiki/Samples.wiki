@@ -79,7 +79,7 @@ Lets you search over a website or collection of websites
 
 
 ----
-== http://www.google.com/images/icons/product/search-16.gif !Drive API ==
+== http://www.google.com/images/icons/product/search-16.gif Drive API ==
 Lets you search over a website or collection of websites
 || *v1* | [https://developers.google.com/drive/ Drive API Documentation] |  [https://code.google.com/apis/explorer/#_s=drive&_v=v1 APIs Explorer] ||
 
