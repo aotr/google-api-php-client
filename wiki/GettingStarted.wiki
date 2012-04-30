@@ -8,7 +8,7 @@ This client library helps you work with Google Plus data from your web server.  
 
 = Requirements = 
 
-  * PHP 5.2.x or higher
+  * [http://php.net/ PHP 5.3.x or higher]
   * PHP Curl extension
 
 = Obtaining the client library =
