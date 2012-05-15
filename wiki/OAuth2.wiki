@@ -14,8 +14,11 @@ google-api-php-client library support OAuth 2.0.
   * For information about using OAuth 2.0 in various flows with Google APIs, see [http://code.google.com/apis/accounts/docs/OAuth2.html Using OAuth 2.0 to Access Google APIs].
   * For general information about OAuth 2.0, see the [http://tools.ietf.org/html/draft-ietf-oauth-v2 OAuth 2.0 draft specification].
 
+
+
 = Overview =
 Use OAuth 2.0 to access to protected data through the Google APIs. Google APIs support a variety of flows designed to support different types of client applications. With all of these flows the client application requests an access token that is associated with only your client application and the owner of the protected data being accessed. The access token is also associated with a limited scope that define the kind of data the your client application has access to (for example "Manage your tasks"). An important goal for OAuth 2.0 is to provide secure and convenient access to the protected data, while minimizing the potential impact if an access token is stolen.
+
 
 
 = Google APIs Console =
@@ -25,6 +28,7 @@ Before you can use OAuth 2.0, you must register your application using the  [htt
   http://google-api-php-client.googlecode.com/svn/trunk/static/Credentials.png
 
 If you are writing a web application, make sure you register a `Redirect URI` containing a fully qualified domain name in the Google API Console.  You will need to set `$client->setRedirectUri('redirect_uri')` with the URI you just registered in the Google API Console. 
+
 
 
 = Sample =
