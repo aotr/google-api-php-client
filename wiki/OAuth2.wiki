@@ -14,7 +14,11 @@ google-api-php-client library support OAuth 2.0.
   * For information about using OAuth 2.0 in various flows with Google APIs, see [http://code.google.com/apis/accounts/docs/OAuth2.html Using OAuth 2.0 to Access Google APIs].
   * For general information about OAuth 2.0, see the [http://tools.ietf.org/html/draft-ietf-oauth-v2 OAuth 2.0 draft specification].
 
-= Registering =
+= Overview =
+Use OAuth 2.0 to access to protected data through the Google APIs. Google APIs support a variety of flows designed to support different types of client applications. With all of these flows the client application requests an access token that is associated with only your client application and the owner of the protected data being accessed. The access token is also associated with a limited scope that define the kind of data the your client application has access to (for example "Manage your tasks"). An important goal for OAuth 2.0 is to provide secure and convenient access to the protected data, while minimizing the potential impact if an access token is stolen.
+
+
+= Google APIs Console =
 
 Before you can use OAuth 2.0, you must register your application using the  [https://code.google.com/apis/console/#access Google APIs Console]. After you've registered, go to the [https://code.google.com/apis/console/#:overview:access API Access] tab and copy the "Client ID" and "Client secret" values, which you'll need later.
 
@@ -28,11 +32,24 @@ If you are writing a web application, make sure you register a `Redirect URI` co
 == Web Application ==
 Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples full code for this sample] is in the repository.
 
+{{{
+<?php
+require_once 'path/to/apiClient.php';
+
+$client = new apiClient();
+
+$client->setClientId('insert_your_oauth2_client_id');
+$client->setClientSecret('insert_your_oauth2_client_secret');
+$client->setRedirectUri('insert_your_oauth2_redirect_uri');
+$client->setDeveloperKey('insert_your_developer_key');
+
+}}}
+
 
 = Service Accounts =
 Service Accounts provide certificate-based authentication for server-to-server interactions. This means, for example, that a request from a web application to Google Cloud Storage can be authenticated via a certificate instead of a shared key. Certificates offer better security properties than shared keys and passwords, largely because they are not human-readable or guessable.
 
-To use Service account from PHP, you will need to call apiClient->setAssertionCredentials with your assertion credentials.
+To use Service account from PHP, you will need to call `$apiClient->setAssertionCredentials(...)` with your assertion credentials.
 {{{
 // Set your client id, service account name, and the path to your private key.
 // For more information about obtaining these keys, visit:
