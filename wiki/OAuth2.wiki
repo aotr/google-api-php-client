@@ -41,7 +41,7 @@ Visit the [https://code.google.com/apis/console/?api=plus Google API Console] to
 
 == Web Application ==
 
-Now that you've registered your application with the Google APIs Console, you can now create a web application that uses OAuth 2.0. Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples full code for this sample] is in the repository.
+Now that you've registered your application with the Google APIs Console, you can now create a web application that uses OAuth 2.0. Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [//code.google.com/p/google-api-php-client/source/browse/trunk/examples/plus/index.php full code for this sample] is in the repository.
 
 {{{
 <?php
