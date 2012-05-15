@@ -23,25 +23,31 @@ Use OAuth 2.0 to access to protected data through the Google APIs. Google APIs s
 
 = Google APIs Console =
 
-Before you can use OAuth 2.0, you must register your application using the  [https://code.google.com/apis/console/#access Google APIs Console]. After you've registered, go to the [https://code.google.com/apis/console/#:overview:access API Access] tab and copy the "Client ID" and "Client secret" values, which you'll need later.
+Before you can use OAuth 2.0, you must register your application using the  [https://code.google.com/apis/console/#access Google APIs Console].
+
+Visit the [https://code.google.com/apis/console/?api=plus Google API Console] to generate your developer key, OAuth2 client id, OAuth2 client secret, and register your OAuth2 redirect uri. Copy their values since your will need to input them in your application.
+    * From the "Services" screen, activate access to the API you want to use.
+    * Click on "API Access" in the left column
+    * Click the button labeled "Create an OAuth2 client ID"
+    * Give your application a name and click "Next"
+    * Select your "Application type"
+    * Click "Create client ID"
+    * Click "Edit..." for your new client ID
+    * Under the callback URL, enter the fully qualified URL for your PHP application (example http://localhost/googleplus/index.php).
 
   http://google-api-php-client.googlecode.com/svn/trunk/static/Credentials.png
-
-If you are writing a web application, make sure you register a `Redirect URI` containing a fully qualified domain name in the Google API Console.  You will need to set `$client->setRedirectUri('redirect_uri')` with the URI you just registered in the Google API Console. 
-
-
 
 = Sample =
 
 == Web Application ==
-Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples full code for this sample] is in the repository.
+
+Now that you've registered your application with the Google APIs Console, you can now create a web application that uses OAuth 2.0. Here is an example demonstrating how to do authentication with OAuth 2.0 in a web application.  The [https://code.google.com/p/google-api-php-client/source/browse/#svn%2Ftrunk%2Fexamples full code for this sample] is in the repository.
 
 {{{
 <?php
 require_once 'path/to/apiClient.php';
 
 $client = new apiClient();
-
 $client->setClientId('insert_your_oauth2_client_id');
 $client->setClientSecret('insert_your_oauth2_client_secret');
 $client->setRedirectUri('insert_your_oauth2_redirect_uri');
