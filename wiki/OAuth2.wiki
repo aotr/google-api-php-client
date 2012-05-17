@@ -59,7 +59,35 @@ $client->setDeveloperKey('insert_your_developer_key');
 = Service Accounts =
 Service Accounts provide certificate-based authentication for server-to-server interactions. This means, for example, that a request from a web application to Google Cloud Storage can be authenticated via a certificate instead of a shared key. Certificates offer better security properties than shared keys and passwords, largely because they are not human-readable or guessable.
 
-To use Service account from PHP, you will need to call `$apiClient->setAssertionCredentials(...)` with your assertion credentials.
+To get started
+
+I would recommend starting from the beginning and going through these steps:
+    # Visit https://code.google.com/apis/console
+    # Press the down arrow in the left panel (under the Google apis logo)
+    # Press create.
+    # Name your project "Prediction Test Project".
+    # Press create project.
+    # Now a list of APIs should appear. You want to find "Prediction API" and switch that API to "ON".
+    # Select the API Access tab on the left side.
+    # Press "Create OAuth 2.0 Client" and create your client.
+    # Select Service Account as the application type.
+    # Press Download private key.
+
+
+Now open the examples [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/prediction/serviceAccount.php /prediction/serviceAccount.php] sample application in your editor.
+    * Make sure you have a recent version of the Google APIs PHP Client checked out from [http://code.google.com/p/google-api-php-client/source/checkout trunk].
+    * Replace CLIENT_ID with your newly generated clientId. It should look like:
+{{{
+xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
+}}}
+
+    * Replace SERVICE_ACCOUNT_NAME with the email address. It should look like:
+{{{
+xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@developer.gserviceaccount.com
+}}}
+
+    * Replace KEY_FILE with the path to your private key. Make sure it is saved in a safe place, and readable the sample app.
+
 {{{
 // Set your client id, service account name, and the path to your private key.
 // For more information about obtaining these keys, visit:
