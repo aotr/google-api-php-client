@@ -37,7 +37,6 @@ Visit the [https://code.google.com/apis/console/?api=plus Google API Console] to
 
   http://google-api-php-client.googlecode.com/svn/trunk/static/Credentials.png
 
-= Sample =
 
 == Web Application ==
 
@@ -55,6 +54,7 @@ $client->setDeveloperKey('insert_your_developer_key');
 
 }}}
 
+----
 
 = Service Accounts =
 Service Accounts provide certificate-based authentication for server-to-server interactions. This means, for example, that a request from a web application to Google Cloud Storage can be authenticated via a certificate instead of a shared key. Certificates offer better security properties than shared keys and passwords, largely because they are not human-readable or guessable.
