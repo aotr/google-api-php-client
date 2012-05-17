@@ -62,7 +62,7 @@ Service Accounts provide certificate-based authentication for server-to-server i
 To get started:
 
     # Visit https://code.google.com/apis/console
-    # Press the down arrow in the left panel (under the Google apis logo)
+    # Press the down arrow in the left panel (under the Google apis logo).
     # Press create.
     # Name your project "Prediction Test Project".
     # Press create project.
