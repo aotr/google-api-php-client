@@ -51,8 +51,17 @@ $client->setClientId('insert_your_oauth2_client_id');
 $client->setClientSecret('insert_your_oauth2_client_secret');
 $client->setRedirectUri('insert_your_oauth2_redirect_uri');
 $client->setDeveloperKey('insert_your_developer_key');
-
 }}}
+
+If the user has been redirected back to our page with an authorization code, exchange the code for an access token.
+{{{
+if (isset($_GET['code'])) {
+  $client->authenticate();
+  $_SESSION['token'] = $client->getAccessToken();
+  header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);
+}
+}}}
+
 
 ----
 
