@@ -7,7 +7,7 @@ First you need to initialize the client, and Google Plus service:
 
 {{{
 $client = new apiClient();
-$client = new apiPlusService($client);
+$plus = new apiPlusService($client);
 // And then you need to authenticate the user using the OAuth flow, which you do by:
 
 // If a oauth token was stored in the session, use that- and otherwise go through the oauth dance
