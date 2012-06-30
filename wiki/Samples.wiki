@@ -70,9 +70,9 @@ Lets you manipulate events and other calendar data.
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/calendar/simple.php Calendar PHP Sample]
 
 ----
-= http://www.google.com/images/icons/product/compute_engine-16.png Compute Engine API =
+== http://www.google.com/images/icons/product/compute_engine-16.png Compute Engine API =
 API for the Google Compute Engine service.
-|| v1beta12 [https://developers.google.com/compute/docs/reference/v1beta12 Compute Engine API Documentation] | [DeveloperGuide Client Library Developer's Guide] | [https://developers.google.com/apis-explorer/#p/compute/v1beta12/ APIs Explorer] | [https://code.google.com/apis/console/?api=compute APIs Console] ||
+|| v1beta12 | [https://developers.google.com/compute/docs/reference/v1beta12 Compute Engine API Documentation] | [DeveloperGuide Client Library Developer's Guide] | [https://developers.google.com/apis-explorer/#p/compute/v1beta12/ APIs Explorer] | [https://code.google.com/apis/console/?api=compute APIs Console] ||
 
 ----
 == http://www.google.com/images/icons/product/search-16.gif !CustomSearch API ==
