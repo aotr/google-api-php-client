@@ -69,6 +69,11 @@ if (isset($_GET['code'])) {
 Service Accounts provide certificate-based authentication for server-to-server interactions. This means, for example, that a request from a web application to Google Cloud Storage can be authenticated via a certificate instead of a shared key. Certificates offer better security properties than shared keys and passwords, largely because they are not human-readable or guessable.
 
 *Warning*: Very few Google APIs currently support Service Accounts.
+Service accounts are currently supported by the following Google developer services:
+  * Google Cloud Storage
+  * Google Prediction API
+  * Google URL Shortener
+  * Google OAuth 2.0 Authorization Server
 
 To get started:
 
