@@ -94,7 +94,7 @@ The API to interact with Drive
 
 ----
 == http://www.google.com/images/icons/product/analytics-16.png Google Analytics API ==
-View and manage your Google Analytics data
+View and manage your Google Analytics data 
 || *v3* | [http://code.google.com/apis/analytics Google Analytics API Documentation] |  [https://code.google.com/apis/explorer/#_s=analytics&_v=v3 APIs Explorer] ||
 
 *Samples*
