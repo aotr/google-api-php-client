@@ -132,3 +132,6 @@ There is a [http://code.google.com/p/google-api-php-client/source/browse/trunk/e
 Learn more about Service accounts from the [http://googledevelopers.blogspot.com/2012/03/service-accounts-have-arrived.html announcement].
 
 <g:plusone size="medium"></g:plusone>
+
+===Solving `invalid_grant` errors===
+Make sure your server's clock is in sync with NTP.
