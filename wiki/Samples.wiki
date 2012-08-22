@@ -91,6 +91,10 @@ The API to interact with Drive
 *Samples*
   * [https://developers.google.com/drive/examples/php Google Drive PHP Sample]
 
+----
+== http://www.google.com/images/icons/product/search-16.gif Enterprise License Manager API ==
+Licensing API to view and manage license for your domain.
+|| *v1* | [https://developers.google.com/google-apps/licensing/ Enterprise License Manager API Documentation] |  [https://code.google.com/apis/explorer/#_s=licensing&_v=v1 APIs Explorer] ||
 
 ----
 == http://www.google.com/images/icons/product/analytics-16.png Google Analytics API ==
