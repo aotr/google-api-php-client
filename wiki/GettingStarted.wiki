@@ -40,7 +40,7 @@ To be able to include these files inside of your PHP scripts, you will need to t
 
 == Copy the `google-api-php-client` directory into your project ==
 
-You can make a copy of the `buzz-client-php` directory for each PHP project you write.  For example, if your project structure looks like this:
+If your project structure looks like this:
 {{{
   myproject/
     |- myproject.php
