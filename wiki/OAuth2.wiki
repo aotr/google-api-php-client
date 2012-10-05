@@ -74,7 +74,7 @@ Service accounts are currently supported by the following Google developer servi
   * Google Prediction API
   * Google URL Shortener
   * Google OAuth 2.0 Authorization Server
-  * Google Big Query
+  * Google BigQuery
 
 To get started:
 
