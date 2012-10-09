@@ -91,7 +91,7 @@ To get started:
 
 
 Now open the examples [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/prediction/serviceAccount.php /prediction/serviceAccount.php] sample application in your editor.
-    * Make sure you have a recent version of the Google APIs PHP Client checked out from [http://code.google.com/p/google-api-php-client/source/checkout trunk].
+    * Make sure you have a recent version of the Google APIs PHP Client downloaded from [http://code.google.com/p/google-api-php-client/downloads/list here].
     * Replace CLIENT_ID with your newly generated clientId. It should look like:
 {{{
 xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
