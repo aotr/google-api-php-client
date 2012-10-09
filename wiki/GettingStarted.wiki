@@ -34,7 +34,7 @@ After checking out the code, you will have a new `google-api-php-client` directo
 
 = What to do with the files =
 
-After obtaining the library in either of the ways described above, you will have a directory named `google-api-php-client` somewhere on your filesystem, containing the library files.  Specifically, you will need to include the file `src/apiClient.php` and `src/contrib/apiPlusService.php` inside of your scripts.
+After obtaining the library in either of the ways described above, you will have a directory named `google-api-php-client` somewhere on your filesystem, containing the library files.  Specifically, you will need to include the file `src/Google_Client.php` and `src/contrib/Google_PlusService.php` inside of your scripts.
 
 To be able to include these files inside of your PHP scripts, you will need to tell PHP where it can find the client library.  Listed below are some suggested ways of doing this.
 
@@ -48,8 +48,8 @@ If your project structure looks like this:
 
 Copy the `google-api-php-client` directory into the `myproject` directory.  You can add the following code to `myproject.php` to include the client library:
 {{{
-  require_once "google-api-php-client/src/apiClient.php";
-  require_once "google-api-php-client/src/contrib/apiPlusService.php";
+  require_once "google-api-php-client/src/Google_Client.php";
+  require_once "google-api-php-client/src/contrib/Google_PlusService.php";
 }}}
 
 == Setting `include_path` by editing `php.ini` ==
@@ -68,8 +68,8 @@ Add a colon, followed by the path to your `google-api-php-client` directory:
 
 Once you restart your web server, you can include the library by using the following line in your PHP scripts:
 {{{
-  require_once "apiClient.php";
-  require_once "contrib/apiPlusService.php
+  require_once "Google_Client.php";
+  require_once "contrib/Google_PlusService.php
 }}}
 
 == Setting `include_path` dynamically inside of your code ==
@@ -77,8 +77,8 @@ Once you restart your web server, you can include the library by using the follo
 If you are unable to edit your `php.ini` file, you can still adjust the value of `include_path` inside of your PHP scripts.  Just include the following code:
 {{{
   set_include_path(get_include_path() . PATH_SEPARATOR . '/path/to/google-api-php-client/src');
-  require_once "/apiClient.php";
-  require_once "/contrib/apiPlusService.php";
+  require_once "/Google_Client.php";
+  require_once "/contrib/Google_PlusService.php";
 }}}
 
 Next read about [UsingTheLibrary using the library]
