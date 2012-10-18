@@ -44,9 +44,9 @@ Now that you've registered your application with the Google APIs Console, you ca
 
 {{{
 <?php
-require_once 'path/to/apiClient.php';
+require_once 'path/to/Google_Client.php';
 
-$client = new apiClient();
+$client = new Google_Client();
 $client->setClientId('insert_your_oauth2_client_id');
 $client->setClientSecret('insert_your_oauth2_client_secret');
 $client->setRedirectUri('insert_your_oauth2_redirect_uri');
