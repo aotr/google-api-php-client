@@ -162,6 +162,15 @@ Lets you create, inspect, and manage goo.gl short URLs
   * [http://code.google.com/p/google-api-php-client/source/browse/trunk/examples/urlshortener/index.php PHP URL Shortener Sample]
 
 ----
+== http://www.google.com/images/icons/product/search-16.gif !YouTube Data API ==
+YouTube Data API
+|| *v3* | [https://code.google.com/apis/explorer/#_s=youtube&_v=v3 APIs Explorer] ||
+
+*Samples*
+  * [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/youtube/search.php Search Sample]
+  * [https://code.google.com/p/google-api-php-client/source/browse/trunk/examples/youtube/my_uploads.php My Uploads Sample]
+
+----
 == http://www.google.com/images/icons/product/search-16.gif chromewebstore ==
 Chrome Web Store Authorization API
 || *v1* | [https://code.google.com/apis/explorer/#_s=chromewebstore&_v=v1 APIs Explorer] ||
