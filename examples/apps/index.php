@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-require_once '../../src/Google_Client.php';
+require_once '../Google_Client.php';
 
 session_start();
 
@@ -53,27 +53,27 @@ if ($client->getAccessToken()) {
   // Retrieving a Single User in a Domain:
   $domain = "example.com";
   $user = rawurlencode("user@domain.com");
-  $req = new Google_HttpRequest("https://apps-apis.google.com/a/feeds/$domain/$user/2.0");
+  $req = new Google_Http_Request("https://apps-apis.google.com/a/feeds/$domain/$user/2.0");
   $resp = $client::getIo()->authenticatedRequest($req);
   print "<h1>Single User</h1>: <pre>" . $resp->getResponseBody() . "</pre>";
 
   //Retrieving All User Aliases for a User
   $domain = "example.com";
   $user = rawurlencode("user@domain.com");
-  $req = new Google_HttpRequest("https://apps-apis.google.com/a/feeds/alias/2.0/$domain?userEmail=$user");
+  $req = new Google_Http_Request("https://apps-apis.google.com/a/feeds/alias/2.0/$domain?userEmail=$user");
   $resp = $client::getIo()->authenticatedRequest($req);
   print "<h1>All User Aliases for User</h1>: <pre>" . $resp->getResponseBody() . "</pre>";
 
   // Deleting a User Alias from a Domain (Experimental)
   $domain = "example.com";
   $user = rawurlencode("user@domain.com");
-  $req = new Google_HttpRequest("https://apps-apis.google.com/a/feeds/alias/2.0/$domain/$user", 'DELETE');
+  $req = new Google_Http_Request("https://apps-apis.google.com/a/feeds/alias/2.0/$domain/$user", 'DELETE');
   $resp = $client::getIo()->authenticatedRequest($req);
   print "<h1>Deleting a User Alias from a Domain</h1>: <pre>" . $resp->getResponseBody() . "</pre>";
 
 
   // Retrieving List of 100 Nicknames
-  $req = new Google_HttpRequest("https://apps-apis.google.com/a/feeds/domain/nickname/2.0");
+  $req = new Google_Http_Request("https://apps-apis.google.com/a/feeds/domain/nickname/2.0");
   $resp = $client::getIo()->authenticatedRequest($req);
   print "<h1>Retrieving List of 100 Nicknames</h1>: <pre>" . $resp->getResponseBody() . "</pre>";
 

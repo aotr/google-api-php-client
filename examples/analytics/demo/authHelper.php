@@ -81,7 +81,7 @@ class AuthHelper {
         header("Location: $this->controllerUrl");
       }
 
-    } catch (Google_AuthException $e) {
+    } catch (Google_Auth_Exception $e) {
       $this->errorMsg = $e->getMessage();
     }
   }
@@ -99,7 +99,7 @@ class AuthHelper {
       try {
         $this->client->revokeToken($tokenObj->refresh_token);
         $this->storage->delete();
-      } catch (Google_AuthException $e) {
+      } catch (Google_Auth_Exception $e) {
         $this->errorMsg = $e->getMessage();
       }
     }
