@@ -15,23 +15,28 @@
  * limitations under the License.
  */
 
+require_once 'Google/Client.php';
+require_once 'Google/Http/Request.php';
+require_once 'Google/Service/Exception.php';
+require_once 'external/URITemplateParser.php';
+
 /**
  * This class implements the RESTful transport of apiServiceRequest()'s
  *
  * @author Chris Chabot <chabotc@google.com>
  * @author Chirag Shah <chirags@google.com>
  */
-class Google_REST {
+class Google_Http_REST {
   /**
    * Executes a apiServiceRequest using a RESTful call by transforming it into
    * an apiHttpRequest, and executed via apiIO::authenticatedRequest().
    *
-   * @param Google_HttpRequest $req
+   * @param Google_Http_Request $req
    * @return array decoded result
-   * @throws Google_ServiceException on server side error (ie: not authenticated,
+   * @throws Google_Service_Exception on server side error (ie: not authenticated,
    *  invalid or malformed post body, invalid url)
    */
-  static public function execute(Google_HttpRequest $req) {
+  static public function execute(Google_Http_Request $req) {
     $httpRequest = Google_Client::$io->makeRequest($req);
     $decodedResponse = self::decodeHttpResponse($httpRequest);
     $ret = isset($decodedResponse['data'])
@@ -43,8 +48,8 @@ class Google_REST {
   /**
    * Decode an HTTP Response.
    * @static
-   * @throws Google_ServiceException
-   * @param Google_HttpRequest $response The http response to be decoded.
+   * @throws Google_Service_Exception
+   * @param Google_Http_Request $response The http response to be decoded.
    * @return mixed|null
    */
   public static function decodeHttpResponse($response) {
@@ -63,14 +68,14 @@ class Google_REST {
         $err .= ": ($code) $body";
       }
 
-      throw new Google_ServiceException($err, $code, null, $decoded['error']['errors']);
+      throw new Google_Service_Exception($err, $code, null, $decoded['error']['errors']);
     }
     
     // Only attempt to decode the response, if the response code wasn't (204) 'no content'
     if ($code != '204') {
       $decoded = json_decode($body, true);
       if ($decoded === null || $decoded === "") {
-        throw new Google_ServiceException("Invalid json in service response: $body");
+        throw new Google_Service_Exception("Invalid json in service response: $body");
       }
     }
     return $decoded;

@@ -22,7 +22,7 @@
    *   $taskqueues = $taskqueueService->taskqueues;
    *  </code>
    */
-  class Google_TaskqueuesServiceResource extends Google_ServiceResource {
+  class Google_TaskqueuesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -55,7 +55,7 @@
    *   $tasks = $taskqueueService->tasks;
    *  </code>
    */
-  class Google_TasksServiceResource extends Google_ServiceResource {
+  class Google_TasksServiceResource extends Google_Service_Resource {
 
 
     /**

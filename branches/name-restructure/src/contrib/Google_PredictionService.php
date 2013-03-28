@@ -22,7 +22,7 @@
    *   $trainedmodels = $predictionService->trainedmodels;
    *  </code>
    */
-  class Google_TrainedmodelsServiceResource extends Google_ServiceResource {
+  class Google_TrainedmodelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -117,7 +117,7 @@
    *   $hostedmodels = $predictionService->hostedmodels;
    *  </code>
    */
-  class Google_HostedmodelsServiceResource extends Google_ServiceResource {
+  class Google_HostedmodelsServiceResource extends Google_Service_Resource {
 
 
     /**

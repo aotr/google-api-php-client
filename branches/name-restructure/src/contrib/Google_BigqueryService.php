@@ -22,7 +22,7 @@
    *   $tables = $bigqueryService->tables;
    *  </code>
    */
-  class Google_TablesServiceResource extends Google_ServiceResource {
+  class Google_TablesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -151,7 +151,7 @@
    *   $datasets = $bigqueryService->datasets;
    *  </code>
    */
-  class Google_DatasetsServiceResource extends Google_ServiceResource {
+  class Google_DatasetsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -282,7 +282,7 @@
    *   $jobs = $bigqueryService->jobs;
    *  </code>
    */
-  class Google_JobsServiceResource extends Google_ServiceResource {
+  class Google_JobsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -395,7 +395,7 @@
    *   $tabledata = $bigqueryService->tabledata;
    *  </code>
    */
-  class Google_TabledataServiceResource extends Google_ServiceResource {
+  class Google_TabledataServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -431,7 +431,7 @@
    *   $projects = $bigqueryService->projects;
    *  </code>
    */
-  class Google_ProjectsServiceResource extends Google_ServiceResource {
+  class Google_ProjectsServiceResource extends Google_Service_Resource {
 
 
     /**

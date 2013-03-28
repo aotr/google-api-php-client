@@ -22,7 +22,7 @@
    *   $licenseAssignments = $licensingService->licenseAssignments;
    *  </code>
    */
-  class Google_LicenseAssignmentsServiceResource extends Google_ServiceResource {
+  class Google_LicenseAssignmentsServiceResource extends Google_Service_Resource {
 
 
     /**

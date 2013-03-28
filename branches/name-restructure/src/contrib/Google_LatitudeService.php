@@ -22,7 +22,7 @@
    *   $currentLocation = $latitudeService->currentLocation;
    *  </code>
    */
-  class Google_CurrentLocationServiceResource extends Google_ServiceResource {
+  class Google_CurrentLocationServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -81,7 +81,7 @@
    *   $location = $latitudeService->location;
    *  </code>
    */
-  class Google_LocationServiceResource extends Google_ServiceResource {
+  class Google_LocationServiceResource extends Google_Service_Resource {
 
 
     /**

@@ -22,7 +22,7 @@
    *   $advertisers = $ganService->advertisers;
    *  </code>
    */
-  class Google_AdvertisersServiceResource extends Google_ServiceResource {
+  class Google_AdvertisersServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -84,7 +84,7 @@
    *   $ccOffers = $ganService->ccOffers;
    *  </code>
    */
-  class Google_CcOffersServiceResource extends Google_ServiceResource {
+  class Google_CcOffersServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -117,7 +117,7 @@
    *   $events = $ganService->events;
    *  </code>
    */
-  class Google_EventsServiceResource extends Google_ServiceResource {
+  class Google_EventsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -165,7 +165,7 @@
    *   $links = $ganService->links;
    *  </code>
    */
-  class Google_LinksServiceResource extends Google_ServiceResource {
+  class Google_LinksServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -250,7 +250,7 @@
    *   $publishers = $ganService->publishers;
    *  </code>
    */
-  class Google_PublishersServiceResource extends Google_ServiceResource {
+  class Google_PublishersServiceResource extends Google_Service_Resource {
 
 
     /**

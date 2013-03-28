@@ -34,7 +34,8 @@ if (! ini_get('date.timezone') && function_exists('date_default_timezone_set')) 
 }
 
 // hack around with the include paths a bit so the library 'just works'
-set_include_path(dirname(__FILE__) . PATH_SEPARATOR . get_include_path());
+set_include_path(dirname(dirname(__FILE__))
+ . PATH_SEPARATOR . get_include_path());
 
 require_once "config.php";
 // If a local configuration file is found, merge it's values with the default configuration
@@ -44,19 +45,13 @@ if (file_exists(dirname(__FILE__)  . '/local_config.php')) {
   $apiConfig = array_merge($defaultConfig, $apiConfig);
 }
 
-// Include the top level classes, they each include their own dependencies
-require_once 'service/Google_Model.php';
-require_once 'service/Google_Service.php';
-require_once 'service/Google_ServiceResource.php';
-require_once 'auth/Google_AssertionCredentials.php';
-require_once 'auth/Google_Signer.php';
-require_once 'auth/Google_P12Signer.php';
-require_once 'service/Google_BatchRequest.php';
-require_once 'external/URITemplateParser.php';
-require_once 'auth/Google_Auth.php';
-require_once 'cache/Google_Cache.php';
-require_once 'io/Google_IO.php';
-require_once('service/Google_MediaFileUpload.php');
+require_once 'Google/Auth/AssertionCredentials.php';
+require_once 'Google/Cache/File.php';
+require_once 'Google/Exception.php';
+require_once 'Google/IO/Curl.php';
+require_once 'Google/Model.php';
+require_once 'Google/Service.php';
+require_once 'Google/Service/Resource.php';
 
 /**
  * The Google API Client
@@ -68,19 +63,19 @@ require_once('service/Google_MediaFileUpload.php');
 class Google_Client {
   /**
    * @static
-   * @var Google_Auth $auth
+   * @var Google_Auth_Abstract $auth
    */
   static $auth;
 
   /**
    * @static
-   * @var Google_IO $io
+   * @var Google_IO_Interface $io
    */
   static $io;
 
   /**
    * @static
-   * @var Google_Cache $cache
+   * @var Google_Cache_Abstract $cache
    */
   static $cache;
 
@@ -318,20 +313,20 @@ class Google_Client {
   /**
    * Revoke an OAuth2 access token or refresh token. This method will revoke the current access
    * token, if a token isn't provided.
-   * @throws Google_AuthException
+   * @throws Google_Auth_Exception
    * @param string|null $token The token (access token or a refresh token) that should be revoked.
    * @return boolean Returns True if the revocation was successful, otherwise False.
    */
   public function revokeToken($token = null) {
-    self::$auth->revokeToken($token);
+    return self::$auth->revokeToken($token);
   }
 
   /**
    * Verify an id_token. This method will verify the current id_token, if one
    * isn't provided.
-   * @throws Google_AuthException
+   * @throws Google_Auth_Exception
    * @param string|null $token The token (id_token) that should be verified.
-   * @return Google_LoginTicket Returns an apiLoginTicket if the verification was
+   * @return Google_Auth_LoginTicket Returns an apiLoginTicket if the verification was
    * successful.
    */
   public function verifyIdToken($token = null) {
@@ -339,10 +334,10 @@ class Google_Client {
   }
 
   /**
-   * @param Google_AssertionCredentials $creds
+   * @param Google_Auth_AssertionCredentials $creds
    * @return void
    */
-  public function setAssertionCredentials(Google_AssertionCredentials $creds) {
+  public function setAssertionCredentials(Google_Auth_AssertionCredentials $creds) {
     self::$auth->setAssertionCredentials($creds);
   }
 
@@ -403,7 +398,7 @@ class Google_Client {
 
   /**
    * @static
-   * @return Google_Auth the implementation of apiAuth.
+   * @return Google_Auth_Abstract Authentication implementation
    */
   public static function getAuth() {
     return Google_Client::$auth;
@@ -411,65 +406,16 @@ class Google_Client {
 
   /**
    * @static
-   * @return Google_IO the implementation of apiIo.
+   * @return Google_IO_Interface IO implementation
    */
   public static function getIo() {
     return Google_Client::$io;
   }
 
   /**
-   * @return Google_Cache the implementation of apiCache.
+   * @return Google_Cache_Abstract Cache implementation
    */
   public function getCache() {
     return Google_Client::$cache;
-  }
-}
-
-// Exceptions that the Google PHP API Library can throw
-class Google_Exception extends Exception {}
-class Google_AuthException extends Google_Exception {}
-class Google_CacheException extends Google_Exception {}
-class Google_IOException extends Google_Exception {}
-class Google_ServiceException extends Google_Exception {
-  /**
-   * Optional list of errors returned in a JSON body of an HTTP error response.
-   */
-  protected $errors = array();
-
-  /**
-   * Override default constructor to add ability to set $errors.
-   *
-   * @param string $message
-   * @param int $code
-   * @param Exception|null $previous
-   * @param [{string, string}] errors List of errors returned in an HTTP
-   * response.  Defaults to [].
-   */
-  public function __construct($message, $code = 0, Exception $previous = null,
-                              $errors = array()) {
-    if(version_compare(PHP_VERSION, '5.3.0') >= 0) {
-      parent::__construct($message, $code, $previous);
-    } else {
-      parent::__construct($message, $code);
-    }
-
-    $this->errors = $errors;
-  }
-
-  /**
-   * An example of the possible errors returned.
-   *
-   * {
-   *   "domain": "global",
-   *   "reason": "authError",
-   *   "message": "Invalid Credentials",
-   *   "locationType": "header",
-   *   "location": "Authorization",
-   * }
-   *
-   * @return [{string, string}] List of errors return in an HTTP response or [].
-   */
-  public function getErrors() {
-    return $this->errors;
   }
 }

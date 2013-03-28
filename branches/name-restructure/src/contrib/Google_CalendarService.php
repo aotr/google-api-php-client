@@ -22,7 +22,7 @@
    *   $freebusy = $calendarService->freebusy;
    *  </code>
    */
-  class Google_FreebusyServiceResource extends Google_ServiceResource {
+  class Google_FreebusyServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -52,7 +52,7 @@
    *   $settings = $calendarService->settings;
    *  </code>
    */
-  class Google_SettingsServiceResource extends Google_ServiceResource {
+  class Google_SettingsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -98,7 +98,7 @@
    *   $calendarList = $calendarService->calendarList;
    *  </code>
    */
-  class Google_CalendarListServiceResource extends Google_ServiceResource {
+  class Google_CalendarListServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -221,7 +221,7 @@
    *   $calendars = $calendarService->calendars;
    *  </code>
    */
-  class Google_CalendarsServiceResource extends Google_ServiceResource {
+  class Google_CalendarsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -329,7 +329,7 @@
    *   $acl = $calendarService->acl;
    *  </code>
    */
-  class Google_AclServiceResource extends Google_ServiceResource {
+  class Google_AclServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -446,7 +446,7 @@
    *   $colors = $calendarService->colors;
    *  </code>
    */
-  class Google_ColorsServiceResource extends Google_ServiceResource {
+  class Google_ColorsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -475,7 +475,7 @@
    *   $events = $calendarService->events;
    *  </code>
    */
-  class Google_EventsServiceResource extends Google_ServiceResource {
+  class Google_EventsServiceResource extends Google_Service_Resource {
 
 
     /**

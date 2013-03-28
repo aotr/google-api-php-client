@@ -15,11 +15,17 @@
  * limitations under the License.
  */
 
+require_once 'Google/Client.php';
+require_once 'Google/Exception.php';
+require_once 'Google/Utils.php';
+require_once 'Google/Http/Request.php';
+require_once 'Google/Http/REST.php';
+
 /**
  * @author Chirag Shah <chirags@google.com>
  *
  */
-class Google_MediaFileUpload {
+class Google_Http_MediaFileUpload {
   const UPLOAD_MEDIA_TYPE = 'media';
   const UPLOAD_MULTIPART_TYPE = 'multipart';
   const UPLOAD_RESUMABLE_TYPE = 'resumable';
@@ -175,7 +181,7 @@ class Google_MediaFileUpload {
    */
   public static function getUploadType($meta, &$payload, &$params) {
     if (isset($params['mediaUpload'])
-        && get_class($params['mediaUpload']['value']) == 'Google_MediaFileUpload') {
+        && get_class($params['mediaUpload']['value']) == 'Google_Http_MediaFileUpload') {
       $upload = $params['mediaUpload']['value'];
       unset($params['mediaUpload']);
       $payload['content-type'] = $upload->mimeType;
@@ -209,7 +215,7 @@ class Google_MediaFileUpload {
   }
 
 
-  public function nextChunk(Google_HttpRequest $req, $chunk=false) {
+  public function nextChunk(Google_Http_Request $req, $chunk=false) {
     if (false == $this->resumeUri) {
       $this->resumeUri = $this->getResumeUri($req);
     }
@@ -226,7 +232,7 @@ class Google_MediaFileUpload {
       'expect' => '',
     );
 
-    $httpRequest = new Google_HttpRequest($this->resumeUri, 'PUT', $headers, $chunk);
+    $httpRequest = new Google_Http_Request($this->resumeUri, 'PUT', $headers, $chunk);
     $response = Google_Client::$io->authenticatedRequest($httpRequest);
     $code = $response->getResponseHttpCode();
     if (308 == $code) {
@@ -234,11 +240,11 @@ class Google_MediaFileUpload {
       $this->progress = $range[1] + 1;
       return false;
     } else {
-      return Google_REST::decodeHttpResponse($response);
+      return Google_Http_REST::decodeHttpResponse($response);
     }
   }
 
-  private function getResumeUri(Google_HttpRequest $httpRequest) {
+  private function getResumeUri(Google_Http_Request $httpRequest) {
     $result = null;
     $body = $httpRequest->getPostBody();
     if ($body) {

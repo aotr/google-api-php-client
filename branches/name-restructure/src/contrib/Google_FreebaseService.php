@@ -22,7 +22,7 @@
    *   $text = $freebaseService->text;
    *  </code>
    */
-  class Google_TextServiceResource extends Google_ServiceResource {
+  class Google_TextServiceResource extends Google_Service_Resource {
 
 
     /**

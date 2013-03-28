@@ -22,7 +22,7 @@
    *   $url = $urlshortenerService->url;
    *  </code>
    */
-  class Google_UrlServiceResource extends Google_ServiceResource {
+  class Google_UrlServiceResource extends Google_Service_Resource {
 
 
     /**

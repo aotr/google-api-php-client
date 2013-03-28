@@ -22,7 +22,7 @@
    *   $cse = $customsearchService->cse;
    *  </code>
    */
-  class Google_CseServiceResource extends Google_ServiceResource {
+  class Google_CseServiceResource extends Google_Service_Resource {
 
 
     /**

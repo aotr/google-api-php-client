@@ -15,12 +15,17 @@
  * limitations under the License.
  */
 
+require_once "Google/Auth/Abstract.php";
+require_once "Google/Http/Request.php";
+
 /**
- * Do-nothing authentication implementation, use this if you want to make un-authenticated calls
+ * Simple API access implementation. Can either be used to make requests 
+ * completely unauthenticated, or by using a Simple API Access developer 
+ * key.
  * @author Chris Chabot <chabotc@google.com>
  * @author Chirag Shah <chirags@google.com>
  */
-class Google_AuthNone extends Google_Auth {
+class Google_Auth_Simple extends Google_Auth_Abstract {
   public $key = null;
 
   public function __construct() {
@@ -38,7 +43,7 @@ class Google_AuthNone extends Google_Auth {
   public function refreshToken($refreshToken) {/* noop*/}
   public function revokeToken() {/* noop*/}
 
-  public function sign(Google_HttpRequest $request) {
+  public function sign(Google_Http_Request $request) {
     if ($this->key) {
       $request->setUrl($request->getUrl() . ((strpos($request->getUrl(), '?') === false) ? '?' : '&')
           . 'key='.urlencode($this->key));

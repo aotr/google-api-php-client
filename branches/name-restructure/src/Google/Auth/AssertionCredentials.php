@@ -15,12 +15,16 @@
  * limitations under the License.
  */
 
+require_once "Google/Auth/OAuth2.php"; 
+require_once "Google/Signer/P12.php";
+require_once "Google/Utils.php";
+
 /**
  * Credentials object used for OAuth 2.0 Signed JWT assertion grants.
  *
  * @author Chirag Shah <chirags@google.com>
  */
-class Google_AssertionCredentials {
+class Google_Auth_AssertionCredentials {
   const MAX_TOKEN_LIFETIME_SECS = 3600;
 
   public $serviceAccountName;
@@ -58,7 +62,7 @@ class Google_AssertionCredentials {
     $now = time();
 
     $jwtParams = array(
-          'aud' => Google_OAuth2::OAUTH2_TOKEN_URI,
+          'aud' => Google_Auth_OAuth2::OAUTH2_TOKEN_URI,
           'scope' => $this->scopes,
           'iat' => $now,
           'exp' => $now + self::MAX_TOKEN_LIFETIME_SECS,
@@ -86,7 +90,7 @@ class Google_AssertionCredentials {
     );
 
     $signingInput = implode('.', $segments);
-    $signer = new Google_P12Signer($this->privateKey, $this->privateKeyPassword);
+    $signer = new Google_Signer_P12($this->privateKey, $this->privateKeyPassword);
     $signature = $signer->sign($signingInput);
     $segments[] = Google_Utils::urlSafeB64Encode($signature);
 

@@ -15,6 +15,9 @@
  * limitations under the License.
  */
 
+require_once "Google/Cache/Abstract.php";
+require_once "Google/Cache/Exception.php";
+
 /**
  * A persistent storage class based on the memcache, which is not
  * really very persistent, as soon as you restart your memcache daemon
@@ -23,18 +26,18 @@
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-class Google_MemcacheCache extends Google_Cache {
+class Google_Cache_Memcache extends Google_Cache_Abstract {
   private $connection = false;
 
   public function __construct() {
     global $apiConfig;
     if (! function_exists('memcache_connect')) {
-      throw new Google_CacheException("Memcache functions not available");
+      throw new Google_Cache_Exception("Memcache functions not available");
     }
     $this->host = $apiConfig['ioMemCacheCache_host'];
     $this->port = $apiConfig['ioMemCacheCache_port'];
     if (empty($this->host) || empty($this->port)) {
-      throw new Google_CacheException("You need to supply a valid memcache host and port");
+      throw new Google_Cache_Exception("You need to supply a valid memcache host and port");
     }
   }
 
@@ -79,7 +82,7 @@ class Google_MemcacheCache extends Google_Cache {
   // so this potentially saves a lot of overhead
   private function connect() {
     if (! $this->connection = @memcache_pconnect($this->host, $this->port)) {
-      throw new Google_CacheException("Couldn't connect to memcache server");
+      throw new Google_Cache_Exception("Couldn't connect to memcache server");
     }
   }
 
@@ -108,14 +111,14 @@ class Google_MemcacheCache extends Google_Cache {
    * @inheritDoc
    * @param string $key
    * @param string $value
-   * @throws Google_CacheException
+   * @throws Google_Cache_Exception
    */
   public function set($key, $value) {
     $this->check();
     // we store it with the cache_time default expiration so objects will at least get cleaned eventually.
     if (@memcache_set($this->connection, $key, array('time' => time(),
         'data' => $value), false) == false) {
-      throw new Google_CacheException("Couldn't store data in cache");
+      throw new Google_Cache_Exception("Couldn't store data in cache");
     }
   }
 

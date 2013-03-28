@@ -22,7 +22,7 @@
    *   $userinfo = $oauth2Service->userinfo;
    *  </code>
    */
-  class Google_UserinfoServiceResource extends Google_ServiceResource {
+  class Google_UserinfoServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -51,7 +51,7 @@
    *   $v2 = $oauth2Service->v2;
    *  </code>
    */
-  class Google_UserinfoV2ServiceResource extends Google_ServiceResource {
+  class Google_UserinfoV2ServiceResource extends Google_Service_Resource {
 
 
   }
@@ -64,7 +64,7 @@
    *   $me = $oauth2Service->me;
    *  </code>
    */
-  class Google_UserinfoV2MeServiceResource extends Google_ServiceResource {
+  class Google_UserinfoV2MeServiceResource extends Google_Service_Resource {
 
 
     /**

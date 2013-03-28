@@ -18,6 +18,10 @@
  * under the License.
  */
 
+require_once 'Google/Client.php';
+require_once 'Google/Auth/Exception.php';
+require_once 'Google/Auth/Simple.php';
+
 class TestApiClient extends Google_Client {
   public function prepareService() {
     return parent::prepareService();
@@ -84,13 +88,13 @@ class ApiClientTest extends BaseTest {
     $this->assertEquals('object', gettype($client->getIo()));
 
 
-    $client->setAuthClass('Google_AuthNone');
-    $client->setAuthClass('Google_OAuth2');
+    $client->setAuthClass('Google_Auth_Simple');
+    $client->setAuthClass('Google_Auth_OAuth2');
 
     try {
       $client->setAccessToken(null);
-      die('Should have thrown an Google_AuthException.');
-    } catch(Google_AuthException $e) {
+      die('Should have thrown an Google_Auth_Exception.');
+    } catch(Google_Auth_Exception $e) {
       $this->assertEquals('Could not json decode the token', $e->getMessage());
     }
 

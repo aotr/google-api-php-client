@@ -22,7 +22,7 @@
    *   $layers = $booksService->layers;
    *  </code>
    */
-  class Google_LayersServiceResource extends Google_ServiceResource {
+  class Google_LayersServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -78,7 +78,7 @@
    *   $annotationData = $booksService->annotationData;
    *  </code>
    */
-  class Google_LayersAnnotationDataServiceResource extends Google_ServiceResource {
+  class Google_LayersAnnotationDataServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -146,7 +146,7 @@
    *   $volumeAnnotations = $booksService->volumeAnnotations;
    *  </code>
    */
-  class Google_LayersVolumeAnnotationsServiceResource extends Google_ServiceResource {
+  class Google_LayersVolumeAnnotationsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -212,7 +212,7 @@
    *   $bookshelves = $booksService->bookshelves;
    *  </code>
    */
-  class Google_BookshelvesServiceResource extends Google_ServiceResource {
+  class Google_BookshelvesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -264,7 +264,7 @@
    *   $volumes = $booksService->volumes;
    *  </code>
    */
-  class Google_BookshelvesVolumesServiceResource extends Google_ServiceResource {
+  class Google_BookshelvesVolumesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -300,7 +300,7 @@
    *   $myconfig = $booksService->myconfig;
    *  </code>
    */
-  class Google_MyconfigServiceResource extends Google_ServiceResource {
+  class Google_MyconfigServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -380,7 +380,7 @@
    *   $volumes = $booksService->volumes;
    *  </code>
    */
-  class Google_VolumesServiceResource extends Google_ServiceResource {
+  class Google_VolumesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -445,7 +445,7 @@
    *   $associated = $booksService->associated;
    *  </code>
    */
-  class Google_VolumesAssociatedServiceResource extends Google_ServiceResource {
+  class Google_VolumesAssociatedServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -482,7 +482,7 @@
    *   $mylibrary = $booksService->mylibrary;
    *  </code>
    */
-  class Google_MylibraryServiceResource extends Google_ServiceResource {
+  class Google_MylibraryServiceResource extends Google_Service_Resource {
 
 
   }
@@ -495,7 +495,7 @@
    *   $bookshelves = $booksService->bookshelves;
    *  </code>
    */
-  class Google_MylibraryBookshelvesServiceResource extends Google_ServiceResource {
+  class Google_MylibraryBookshelvesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -606,7 +606,7 @@
    *   $volumes = $booksService->volumes;
    *  </code>
    */
-  class Google_MylibraryBookshelvesVolumesServiceResource extends Google_ServiceResource {
+  class Google_MylibraryBookshelvesVolumesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -643,7 +643,7 @@
    *   $readingpositions = $booksService->readingpositions;
    *  </code>
    */
-  class Google_MylibraryReadingpositionsServiceResource extends Google_ServiceResource {
+  class Google_MylibraryReadingpositionsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -693,7 +693,7 @@
    *   $annotations = $booksService->annotations;
    *  </code>
    */
-  class Google_MylibraryAnnotationsServiceResource extends Google_ServiceResource {
+  class Google_MylibraryAnnotationsServiceResource extends Google_Service_Resource {
 
 
     /**

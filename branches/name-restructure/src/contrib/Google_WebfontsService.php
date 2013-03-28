@@ -22,7 +22,7 @@
    *   $webfonts = $webfontsService->webfonts;
    *  </code>
    */
-  class Google_WebfontsServiceResource extends Google_ServiceResource {
+  class Google_WebfontsServiceResource extends Google_Service_Resource {
 
 
     /**

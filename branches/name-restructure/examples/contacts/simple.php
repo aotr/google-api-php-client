@@ -46,7 +46,7 @@ if (isset($_REQUEST['logout'])) {
 }
 
 if ($client->getAccessToken()) {
-  $req = new Google_HttpRequest("https://www.google.com/m8/feeds/contacts/default/full");
+  $req = new Google_Http_Request("https://www.google.com/m8/feeds/contacts/default/full");
   $val = $client->getIo()->authenticatedRequest($req);
 
   // The contacts api only returns XML responses.

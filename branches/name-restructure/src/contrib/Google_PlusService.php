@@ -22,7 +22,7 @@
    *   $activities = $plusService->activities;
    *  </code>
    */
-  class Google_ActivitiesServiceResource extends Google_ServiceResource {
+  class Google_ActivitiesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -95,7 +95,7 @@
    *   $comments = $plusService->comments;
    *  </code>
    */
-  class Google_CommentsServiceResource extends Google_ServiceResource {
+  class Google_CommentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -146,7 +146,7 @@
    *   $moments = $plusService->moments;
    *  </code>
    */
-  class Google_MomentsServiceResource extends Google_ServiceResource {
+  class Google_MomentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -216,7 +216,7 @@
    *   $people = $plusService->people;
    *  </code>
    */
-  class Google_PeopleServiceResource extends Google_ServiceResource {
+  class Google_PeopleServiceResource extends Google_Service_Resource {
 
 
     /**

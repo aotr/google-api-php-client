@@ -15,6 +15,13 @@
  * limitations under the License.
  */
 
+require_once 'Google/Client.php'; 
+require_once 'Google/Exception.php';
+require_once 'Google/Utils.php';
+require_once 'Google/Http/Request.php';
+require_once 'Google/Http/MediaFileUpload.php';
+require_once 'Google/Http/REST.php';
+
 /**
  * Implements the actual methods/resources of the discovered Google API using magic function
  * calling overloading (__call()), which on call will see if the method name (plus.activities.list)
@@ -24,7 +31,7 @@
  * @author Chirag Shah <chirags@google.com>
  *
  */
-class Google_ServiceResource {
+class Google_Service_Resource {
   // Valid query parameters that work, but don't appear in discovery.
   private $stackParameters = array(
       'alt' => array('type' => 'string', 'location' => 'query'),
@@ -63,7 +70,7 @@ class Google_ServiceResource {
   /**
    * @param $name
    * @param $arguments
-   * @return Google_HttpRequest|array
+   * @return Google_Http_Request|array
    * @throws Google_Exception
    */
   public function __call($name, $arguments) {
@@ -142,7 +149,7 @@ class Google_ServiceResource {
     // Process Media Request
     $contentType = false;
     if (isset($method['mediaUpload'])) {
-      $media = Google_MediaFileUpload::process($postBody, $parameters);
+      $media = Google_Http_MediaFileUpload::process($postBody, $parameters);
       if ($media) {
         $contentType = isset($media['content-type']) ? $media['content-type']: null;
         $postBody = isset($media['postBody']) ? $media['postBody'] : null;
@@ -151,8 +158,8 @@ class Google_ServiceResource {
       }
     }
 
-    $url = Google_REST::createRequestUri($servicePath, $method['path'], $parameters);
-    $httpRequest = new Google_HttpRequest($url, $method['httpMethod'], null, $postBody);
+    $url = Google_Http_REST::createRequestUri($servicePath, $method['path'], $parameters);
+    $httpRequest = new Google_Http_Request($url, $method['httpMethod'], null, $postBody);
     if ($postBody) {
       $contentTypeHeader = array();
       if (isset($contentType) && $contentType) {
@@ -171,7 +178,7 @@ class Google_ServiceResource {
 
     // Terminate immediately if this is a resumable request.
     if (isset($parameters['uploadType']['value'])
-        && Google_MediaFileUpload::UPLOAD_RESUMABLE_TYPE == $parameters['uploadType']['value']) {
+        && Google_Http_MediaFileUpload::UPLOAD_RESUMABLE_TYPE == $parameters['uploadType']['value']) {
       $contentTypeHeader = array();
       if (isset($contentType) && $contentType) {
         $contentTypeHeader['content-type'] = $contentType;
@@ -183,7 +190,7 @@ class Google_ServiceResource {
       return $httpRequest;
     }
 
-    return Google_REST::execute($httpRequest);
+    return Google_Http_REST::execute($httpRequest);
   }
 
   public  function useObjects() {

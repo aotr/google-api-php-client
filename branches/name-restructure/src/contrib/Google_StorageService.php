@@ -22,7 +22,7 @@
    *   $objectAccessControls = $storageService->objectAccessControls;
    *  </code>
    */
-  class Google_ObjectAccessControlsServiceResource extends Google_ServiceResource {
+  class Google_ObjectAccessControlsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -148,7 +148,7 @@
    *   $bucketAccessControls = $storageService->bucketAccessControls;
    *  </code>
    */
-  class Google_BucketAccessControlsServiceResource extends Google_ServiceResource {
+  class Google_BucketAccessControlsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -268,7 +268,7 @@
    *   $objects = $storageService->objects;
    *  </code>
    */
-  class Google_ObjectsServiceResource extends Google_ServiceResource {
+  class Google_ObjectsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -400,7 +400,7 @@
    *   $buckets = $storageService->buckets;
    *  </code>
    */
-  class Google_BucketsServiceResource extends Google_ServiceResource {
+  class Google_BucketsServiceResource extends Google_Service_Resource {
 
 
     /**

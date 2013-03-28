@@ -22,7 +22,7 @@
    *   $about = $driveService->about;
    *  </code>
    */
-  class Google_AboutServiceResource extends Google_ServiceResource {
+  class Google_AboutServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -55,7 +55,7 @@
    *   $apps = $driveService->apps;
    *  </code>
    */
-  class Google_AppsServiceResource extends Google_ServiceResource {
+  class Google_AppsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -101,7 +101,7 @@
    *   $changes = $driveService->changes;
    *  </code>
    */
-  class Google_ChangesServiceResource extends Google_ServiceResource {
+  class Google_ChangesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -153,7 +153,7 @@
    *   $children = $driveService->children;
    *  </code>
    */
-  class Google_ChildrenServiceResource extends Google_ServiceResource {
+  class Google_ChildrenServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -236,7 +236,7 @@
    *   $comments = $driveService->comments;
    *  </code>
    */
-  class Google_CommentsServiceResource extends Google_ServiceResource {
+  class Google_CommentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -360,7 +360,7 @@
    *   $files = $driveService->files;
    *  </code>
    */
-  class Google_FilesServiceResource extends Google_ServiceResource {
+  class Google_FilesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -590,7 +590,7 @@
    *   $parents = $driveService->parents;
    *  </code>
    */
-  class Google_ParentsServiceResource extends Google_ServiceResource {
+  class Google_ParentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -669,7 +669,7 @@
    *   $permissions = $driveService->permissions;
    *  </code>
    */
-  class Google_PermissionsServiceResource extends Google_ServiceResource {
+  class Google_PermissionsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -788,7 +788,7 @@
    *   $replies = $driveService->replies;
    *  </code>
    */
-  class Google_RepliesServiceResource extends Google_ServiceResource {
+  class Google_RepliesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -917,7 +917,7 @@
    *   $revisions = $driveService->revisions;
    *  </code>
    */
-  class Google_RevisionsServiceResource extends Google_ServiceResource {
+  class Google_RevisionsServiceResource extends Google_Service_Resource {
 
 
     /**

@@ -15,16 +15,19 @@
  * limitations under the License.
  */
 
+require_once 'Google/Utils.php';
+
 /**
- * HTTP Request to be executed by apiIO classes. Upon execution, the
+ * HTTP Request to be executed by IO classes. Upon execution, the
  * responseHttpCode, responseHeaders and responseBody will be filled in.
  *
  * @author Chris Chabot <chabotc@google.com>
  * @author Chirag Shah <chirags@google.com>
  *
  */
-class Google_HttpRequest {
-  const USER_AGENT_SUFFIX = "google-api-php-client/0.6.0";
+class Google_Http_Request {
+  // TODO(ianbarber): This should be defined on release.
+  const USER_AGENT_SUFFIX = "google-api-php-client/0.7.0";
   private $batchHeaders = array(
     'Content-Type' => 'application/http',
     'Content-Transfer-Encoding' => 'binary',

@@ -14,18 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-require_once "Google_AuthNone.php";
-require_once "Google_OAuth2.php";
+require_once "Google/Http/Request.php";
 
 /**
  * Abstract class for the Authentication in the API client
  * @author Chris Chabot <chabotc@google.com>
  *
  */
-abstract class Google_Auth {
+abstract class Google_Auth_Abstract {
   abstract public function authenticate($service);
-  abstract public function sign(Google_HttpRequest $request);
+  abstract public function sign(Google_Http_Request $request);
   abstract public function createAuthUrl($scope);
 
   abstract public function getAccessToken();

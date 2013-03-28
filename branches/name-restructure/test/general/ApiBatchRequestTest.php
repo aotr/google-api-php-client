@@ -19,8 +19,8 @@
  */
 
 require_once 'BaseTest.php';
-require_once '../src/contrib/Google_PlusService.php';
-require_once '../src/service/Google_BatchRequest.php';
+require_once 'contrib/Google_PlusService.php';
+require_once 'Google/Http/Batch.php';
 
 class ApiBatchRequestTest extends BaseTest {
   public $plus;
@@ -30,7 +30,7 @@ class ApiBatchRequestTest extends BaseTest {
   }
 
   public function testBatchRequest() {
-    $batch = new Google_BatchRequest();
+    $batch = new Google_Http_Batch();
 
     BaseTest::$client->setUseBatch(true);
     $batch->add($this->plus->people->get('me'), 'key1');

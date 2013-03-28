@@ -22,7 +22,7 @@
    *   $webResource = $siteVerificationService->webResource;
    *  </code>
    */
-  class Google_WebResourceServiceResource extends Google_ServiceResource {
+  class Google_WebResourceServiceResource extends Google_Service_Resource {
 
 
     /**

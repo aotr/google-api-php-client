@@ -22,7 +22,7 @@
    *   $accounts = $adsenseService->accounts;
    *  </code>
    */
-  class Google_AccountsServiceResource extends Google_ServiceResource {
+  class Google_AccountsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -73,7 +73,7 @@
    *   $adclients = $adsenseService->adclients;
    *  </code>
    */
-  class Google_AccountsAdclientsServiceResource extends Google_ServiceResource {
+  class Google_AccountsAdclientsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -105,7 +105,7 @@
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
-  class Google_AccountsAdunitsServiceResource extends Google_ServiceResource {
+  class Google_AccountsAdunitsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -159,7 +159,7 @@
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
-  class Google_AccountsAdunitsCustomchannelsServiceResource extends Google_ServiceResource {
+  class Google_AccountsAdunitsCustomchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -193,7 +193,7 @@
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
-  class Google_AccountsCustomchannelsServiceResource extends Google_ServiceResource {
+  class Google_AccountsCustomchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -248,7 +248,7 @@
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
-  class Google_AccountsCustomchannelsAdunitsServiceResource extends Google_ServiceResource {
+  class Google_AccountsCustomchannelsAdunitsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -283,7 +283,7 @@
    *   $reports = $adsenseService->reports;
    *  </code>
    */
-  class Google_AccountsReportsServiceResource extends Google_ServiceResource {
+  class Google_AccountsReportsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -326,7 +326,7 @@
    *   $saved = $adsenseService->saved;
    *  </code>
    */
-  class Google_AccountsReportsSavedServiceResource extends Google_ServiceResource {
+  class Google_AccountsReportsSavedServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -381,7 +381,7 @@
    *   $savedadstyles = $adsenseService->savedadstyles;
    *  </code>
    */
-  class Google_AccountsSavedadstylesServiceResource extends Google_ServiceResource {
+  class Google_AccountsSavedadstylesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -431,7 +431,7 @@
    *   $urlchannels = $adsenseService->urlchannels;
    *  </code>
    */
-  class Google_AccountsUrlchannelsServiceResource extends Google_ServiceResource {
+  class Google_AccountsUrlchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -465,7 +465,7 @@
    *   $adclients = $adsenseService->adclients;
    *  </code>
    */
-  class Google_AdclientsServiceResource extends Google_ServiceResource {
+  class Google_AdclientsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -497,7 +497,7 @@
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
-  class Google_AdunitsServiceResource extends Google_ServiceResource {
+  class Google_AdunitsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -549,7 +549,7 @@
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
-  class Google_AdunitsCustomchannelsServiceResource extends Google_ServiceResource {
+  class Google_AdunitsCustomchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -583,7 +583,7 @@
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
-  class Google_CustomchannelsServiceResource extends Google_ServiceResource {
+  class Google_CustomchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -635,7 +635,7 @@
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
-  class Google_CustomchannelsAdunitsServiceResource extends Google_ServiceResource {
+  class Google_CustomchannelsAdunitsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -670,7 +670,7 @@
    *   $reports = $adsenseService->reports;
    *  </code>
    */
-  class Google_ReportsServiceResource extends Google_ServiceResource {
+  class Google_ReportsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -713,7 +713,7 @@
    *   $saved = $adsenseService->saved;
    *  </code>
    */
-  class Google_ReportsSavedServiceResource extends Google_ServiceResource {
+  class Google_ReportsSavedServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -767,7 +767,7 @@
    *   $savedadstyles = $adsenseService->savedadstyles;
    *  </code>
    */
-  class Google_SavedadstylesServiceResource extends Google_ServiceResource {
+  class Google_SavedadstylesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -816,7 +816,7 @@
    *   $urlchannels = $adsenseService->urlchannels;
    *  </code>
    */
-  class Google_UrlchannelsServiceResource extends Google_ServiceResource {
+  class Google_UrlchannelsServiceResource extends Google_Service_Resource {
 
 
     /**

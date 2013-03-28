@@ -17,9 +17,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-require_once '../src/contrib/Google_PlusService.php';
+require_once 'contrib/Google_PlusService.php';
+require_once 'Google/Utils.php';
+require_once 'Google/Service/Resource.php';
 
-class AnimalServiceResource extends Google_ServiceResource {
+class AnimalServiceResource extends Google_Service_Resource {
   public function stripNull($o) {
     return parent::stripNull($o);
   }

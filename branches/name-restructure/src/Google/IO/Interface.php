@@ -15,30 +15,28 @@
  * limitations under the License.
  */
 
-require_once 'io/Google_HttpRequest.php';
-require_once 'io/Google_CurlIO.php';
-require_once 'io/Google_REST.php';
+require_once 'Google/Http/Request.php';
 
 /**
- * Abstract IO class
+ * IO class interface
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-interface Google_IO {
+interface Google_IO_Interface {
   /**
    * An utility function that first calls $this->auth->sign($request) and then executes makeRequest()
    * on that signed request. Used for when a request should be authenticated
-   * @param Google_HttpRequest $request
-   * @return Google_HttpRequest $request
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request $request
    */
-  public function authenticatedRequest(Google_HttpRequest $request);
+  public function authenticatedRequest(Google_Http_Request $request);
 
   /**
-   * Executes a apIHttpRequest and returns the resulting populated httpRequest
-   * @param Google_HttpRequest $request
-   * @return Google_HttpRequest $request
+   * Executes a Google_Http_Request and returns the resulting populated Google_Http_Request
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request $request
    */
-  public function makeRequest(Google_HttpRequest $request);
+  public function makeRequest(Google_Http_Request $request);
 
   /**
    * Set options that update the transport implementation's behavior.

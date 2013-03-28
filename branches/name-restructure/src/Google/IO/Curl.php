@@ -22,9 +22,12 @@
  * @author Chirag Shah <chirags@google.com>
  */
 
-require_once 'Google_CacheParser.php';
+require_once 'Google/Client.php';
+require_once 'Google/IO/Interface.php';
+require_once 'Google/Http/CacheParser.php';
+require_once 'Google/Http/Request.php';
 
-class Google_CurlIO implements Google_IO {
+class Google_IO_Curl implements Google_IO_Interface {
   const CONNECTION_ESTABLISHED = "HTTP/1.0 200 Connection established\r\n\r\n";
   const FORM_URLENCODED = 'application/x-www-form-urlencoded';
 
@@ -48,28 +51,28 @@ class Google_CurlIO implements Google_IO {
    * (which can modify the request in what ever way fits the auth mechanism)
    * and then calls apiCurlIO::makeRequest on the signed request
    *
-   * @param Google_HttpRequest $request
-   * @return Google_HttpRequest The resulting HTTP response including the
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request The resulting HTTP response including the
    * responseHttpCode, responseHeaders and responseBody.
    */
-  public function authenticatedRequest(Google_HttpRequest $request) {
+  public function authenticatedRequest(Google_Http_Request $request) {
     $request = Google_Client::$auth->sign($request);
     return $this->makeRequest($request);
   }
 
   /**
-   * Execute a apiHttpRequest
+   * Execute an HTTP request
    *
-   * @param Google_HttpRequest $request the http request to be executed
-   * @return Google_HttpRequest http request with the response http code, response
+   * @param Google_Http_Request $request the http request to be executed
+   * @return Google_Http_Request http request with the response http code, response
    * headers and response body filled in
-   * @throws Google_IOException on curl or IO error
+   * @throws Google_IO_Exception on curl or IO error
    */
-  public function makeRequest(Google_HttpRequest $request) {
+  public function makeRequest(Google_Http_Request $request) {
     // First, check to see if we have a valid cached version.
     $cached = $this->getCachedRequest($request);
     if ($cached !== false) {
-      if (Google_CacheParser::mustRevalidate($cached)) {
+      if (Google_Http_CacheParser::mustRevalidate($cached)) {
         $addHeaders = array();
         if ($cached->getResponseHeader('etag')) {
           // [13.3.4] If an entity tag has been provided by the origin server,
@@ -125,7 +128,7 @@ class Google_CurlIO implements Google_IO {
     $curlError = curl_error($ch);
     curl_close($ch);
     if ($curlErrorNum != CURLE_OK) {
-      throw new Google_IOException("HTTP Error: ($respHttpCode) $curlError");
+      throw new Google_IO_Exception("HTTP Error: ($respHttpCode) $curlError");
     }
 
     // Parse out the raw response into usable bits
@@ -165,13 +168,13 @@ class Google_CurlIO implements Google_IO {
   /**
    * @visible for testing.
    * Cache the response to an HTTP request if it is cacheable.
-   * @param Google_HttpRequest $request
+   * @param Google_Http_Request $request
    * @return bool Returns true if the insertion was successful.
    * Otherwise, return false.
    */
-  public function setCachedRequest(Google_HttpRequest $request) {
+  public function setCachedRequest(Google_Http_Request $request) {
     // Determine if the request is cacheable.
-    if (Google_CacheParser::isResponseCacheable($request)) {
+    if (Google_Http_CacheParser::isResponseCacheable($request)) {
       Google_Client::$cache->set($request->getCacheKey(), $request);
       return true;
     }
@@ -181,12 +184,12 @@ class Google_CurlIO implements Google_IO {
 
   /**
    * @visible for testing.
-   * @param Google_HttpRequest $request
-   * @return Google_HttpRequest|bool Returns the cached object or
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request|bool Returns the cached object or
    * false if the operation was unsuccessful.
    */
-  public function getCachedRequest(Google_HttpRequest $request) {
-    if (false == Google_CacheParser::isRequestCacheable($request)) {
+  public function getCachedRequest(Google_Http_Request $request) {
+    if (false == Google_Http_CacheParser::isRequestCacheable($request)) {
       false;
     }
 
@@ -235,10 +238,10 @@ class Google_CurlIO implements Google_IO {
   /**
    * @visible for testing
    * Process an http request that contains an enclosed entity.
-   * @param Google_HttpRequest $request
-   * @return Google_HttpRequest Processed request with the enclosed entity.
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request Processed request with the enclosed entity.
    */
-  public function processEntityRequest(Google_HttpRequest $request) {
+  public function processEntityRequest(Google_Http_Request $request) {
     $postBody = $request->getPostBody();
     $contentType = $request->getRequestHeader("content-type");
 
