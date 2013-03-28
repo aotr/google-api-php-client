@@ -105,7 +105,7 @@ class AuthTest extends BaseTest {
         "iat" => time(),
         "exp" => time() + 3600));
     $certs = $this->getSignonCerts();
-    $oauth2 = new Google_OAuth2();
+    $oauth2 = new Google_Auth_OAuth2();
     $ticket = $oauth2->verifySignedJwtWithCerts($id_token, $certs, "client_id");
     $this->assertEquals(self::USER_ID, $ticket->getUserId());
     // Check that payload and envelope got filled in.
@@ -117,7 +117,7 @@ class AuthTest extends BaseTest {
   // Checks that the id token fails to verify with the expected message.
   private function checkIdTokenFailure($id_token, $msg) {
     $certs = $this->getSignonCerts();
-    $oauth2 = new Google_OAuth2();
+    $oauth2 = new Google_Auth_OAuth2();
     try {
       $oauth2->verifySignedJwtWithCerts($id_token, $certs, "client_id");
       $this->fail("Should have thrown for $id_token");

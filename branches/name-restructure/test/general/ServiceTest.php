@@ -22,7 +22,7 @@ require_once 'Google/Utils.php';
 require_once 'Google/Service/Resource.php';
 
 class AnimalServiceResource extends Google_Service_Resource {
-  public function stripNull($o) {
+  public function stripNull(&$o) {
     return parent::stripNull($o);
   }
 }

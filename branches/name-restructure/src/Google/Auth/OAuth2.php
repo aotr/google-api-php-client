@@ -399,7 +399,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
     // Check signature
     $verified = false;
     foreach ($certs as $keyName => $pem) {
-      $public_key = new Google_Verified_Pem($pem);
+      $public_key = new Google_Verifier_Pem($pem);
       if ($public_key->verify($signed, $signature)) {
         $verified = true;
         break;
