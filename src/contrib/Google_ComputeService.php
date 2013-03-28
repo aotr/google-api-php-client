@@ -22,7 +22,7 @@
    *   $disks = $computeService->disks;
    *  </code>
    */
-  class Google_DisksServiceResource extends Google_ServiceResource {
+  class Google_DisksServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -117,7 +117,7 @@
    *   $firewalls = $computeService->firewalls;
    *  </code>
    */
-  class Google_FirewallsServiceResource extends Google_ServiceResource {
+  class Google_FirewallsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -245,7 +245,7 @@
    *   $globalOperations = $computeService->globalOperations;
    *  </code>
    */
-  class Google_GlobalOperationsServiceResource extends Google_ServiceResource {
+  class Google_GlobalOperationsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -311,7 +311,7 @@
    *   $images = $computeService->images;
    *  </code>
    */
-  class Google_ImagesServiceResource extends Google_ServiceResource {
+  class Google_ImagesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -420,7 +420,7 @@
    *   $instances = $computeService->instances;
    *  </code>
    */
-  class Google_InstancesServiceResource extends Google_ServiceResource {
+  class Google_InstancesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -615,7 +615,7 @@
    *   $kernels = $computeService->kernels;
    *  </code>
    */
-  class Google_KernelsServiceResource extends Google_ServiceResource {
+  class Google_KernelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -667,7 +667,7 @@
    *   $machineTypes = $computeService->machineTypes;
    *  </code>
    */
-  class Google_MachineTypesServiceResource extends Google_ServiceResource {
+  class Google_MachineTypesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -720,7 +720,7 @@
    *   $networks = $computeService->networks;
    *  </code>
    */
-  class Google_NetworksServiceResource extends Google_ServiceResource {
+  class Google_NetworksServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -809,7 +809,7 @@
    *   $projects = $computeService->projects;
    *  </code>
    */
-  class Google_ProjectsServiceResource extends Google_ServiceResource {
+  class Google_ProjectsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -858,7 +858,7 @@
    *   $snapshots = $computeService->snapshots;
    *  </code>
    */
-  class Google_SnapshotsServiceResource extends Google_ServiceResource {
+  class Google_SnapshotsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -948,7 +948,7 @@
    *   $zoneOperations = $computeService->zoneOperations;
    *  </code>
    */
-  class Google_ZoneOperationsServiceResource extends Google_ServiceResource {
+  class Google_ZoneOperationsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -1017,7 +1017,7 @@
    *   $zones = $computeService->zones;
    *  </code>
    */
-  class Google_ZonesServiceResource extends Google_ServiceResource {
+  class Google_ZonesServiceResource extends Google_Service_Resource {
 
 
     /**

@@ -22,7 +22,7 @@
    *   $pagespeedapi = $pagespeedonlineService->pagespeedapi;
    *  </code>
    */
-  class Google_PagespeedapiServiceResource extends Google_ServiceResource {
+  class Google_PagespeedapiServiceResource extends Google_Service_Resource {
 
 
     /**

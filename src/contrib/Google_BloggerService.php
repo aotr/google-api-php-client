@@ -22,7 +22,7 @@
    *   $blogs = $bloggerService->blogs;
    *  </code>
    */
-  class Google_BlogsServiceResource extends Google_ServiceResource {
+  class Google_BlogsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -89,7 +89,7 @@
    *   $posts = $bloggerService->posts;
    *  </code>
    */
-  class Google_PostsServiceResource extends Google_ServiceResource {
+  class Google_PostsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -254,7 +254,7 @@
    *   $pages = $bloggerService->pages;
    *  </code>
    */
-  class Google_PagesServiceResource extends Google_ServiceResource {
+  class Google_PagesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -304,7 +304,7 @@
    *   $comments = $bloggerService->comments;
    *  </code>
    */
-  class Google_CommentsServiceResource extends Google_ServiceResource {
+  class Google_CommentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -360,7 +360,7 @@
    *   $users = $bloggerService->users;
    *  </code>
    */
-  class Google_UsersServiceResource extends Google_ServiceResource {
+  class Google_UsersServiceResource extends Google_Service_Resource {
 
 
     /**

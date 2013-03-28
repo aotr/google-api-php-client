@@ -22,7 +22,7 @@
    *   $activities = $youtubeService->activities;
    *  </code>
    */
-  class Google_ActivitiesServiceResource extends Google_ServiceResource {
+  class Google_ActivitiesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -84,7 +84,7 @@
    *   $channels = $youtubeService->channels;
    *  </code>
    */
-  class Google_ChannelsServiceResource extends Google_ServiceResource {
+  class Google_ChannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -123,7 +123,7 @@
    *   $guideCategories = $youtubeService->guideCategories;
    *  </code>
    */
-  class Google_GuideCategoriesServiceResource extends Google_ServiceResource {
+  class Google_GuideCategoriesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -158,7 +158,7 @@
    *   $liveBroadcasts = $youtubeService->liveBroadcasts;
    *  </code>
    */
-  class Google_LiveBroadcastsServiceResource extends Google_ServiceResource {
+  class Google_LiveBroadcastsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -284,7 +284,7 @@
    *   $liveStreams = $youtubeService->liveStreams;
    *  </code>
    */
-  class Google_LiveStreamsServiceResource extends Google_ServiceResource {
+  class Google_LiveStreamsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -369,7 +369,7 @@
    *   $playlistItems = $youtubeService->playlistItems;
    *  </code>
    */
-  class Google_PlaylistItemsServiceResource extends Google_ServiceResource {
+  class Google_PlaylistItemsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -460,7 +460,7 @@
    *   $playlists = $youtubeService->playlists;
    *  </code>
    */
-  class Google_PlaylistsServiceResource extends Google_ServiceResource {
+  class Google_PlaylistsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -551,7 +551,7 @@
    *   $search = $youtubeService->search;
    *  </code>
    */
-  class Google_SearchServiceResource extends Google_ServiceResource {
+  class Google_SearchServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -605,7 +605,7 @@
    *   $subscriptions = $youtubeService->subscriptions;
    *  </code>
    */
-  class Google_SubscriptionsServiceResource extends Google_ServiceResource {
+  class Google_SubscriptionsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -675,7 +675,7 @@
    *   $videoCategories = $youtubeService->videoCategories;
    *  </code>
    */
-  class Google_VideoCategoriesServiceResource extends Google_ServiceResource {
+  class Google_VideoCategoriesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -709,7 +709,7 @@
    *   $videos = $youtubeService->videos;
    *  </code>
    */
-  class Google_VideosServiceResource extends Google_ServiceResource {
+  class Google_VideosServiceResource extends Google_Service_Resource {
 
 
     /**

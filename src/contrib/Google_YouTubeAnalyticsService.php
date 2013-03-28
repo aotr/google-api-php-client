@@ -22,7 +22,7 @@
    *   $reports = $youtubeAnalyticsService->reports;
    *  </code>
    */
-  class Google_ReportsServiceResource extends Google_ServiceResource {
+  class Google_ReportsServiceResource extends Google_Service_Resource {
 
 
     /**

@@ -15,22 +15,23 @@
  * limitations under the License.
  */
 
-require_once "io/Google_REST.php";
+require_once "Google/Http/Request.php";
+require_once "Google/Http/REST.php";
 
 class RestTest extends BaseTest {
   /**
-   * @var Google_Rest $rest
+   * @var Google_Http_REST $rest
    */
   private $rest;
   
   public function setUp() {
-    $this->rest = new Google_REST();
+    $this->rest = new Google_Http_REST();
   }
 
   public function testDecodeResponse() {
     $url = 'http://localhost';
     
-    $response = new Google_HttpRequest($url);
+    $response = new Google_Http_Request($url);
     $response->setResponseHttpCode(204);
     $decoded = $this->rest->decodeHttpResponse($response);
     $this->assertEquals(null, $decoded);
@@ -38,7 +39,7 @@ class RestTest extends BaseTest {
 
     foreach (array(200, 201) as $code) {
       $headers = array('foo', 'bar');
-      $response = new Google_HttpRequest($url, 'GET', $headers);
+      $response = new Google_Http_Request($url, 'GET', $headers);
       $response->setResponseBody('{"a": 1}');
 
       $response->setResponseHttpCode($code);
@@ -46,7 +47,7 @@ class RestTest extends BaseTest {
       $this->assertEquals(array("a" => 1), $decoded);
     }
 
-    $response = new Google_HttpRequest($url);
+    $response = new Google_Http_Request($url);
     $response->setResponseHttpCode(500);
 
     $error = "";
@@ -63,7 +64,7 @@ class RestTest extends BaseTest {
   public function testDecodeEmptyResponse() {
     $url = 'http://localhost';
 
-    $response = new Google_HttpRequest($url, 'GET', array());
+    $response = new Google_Http_Request($url, 'GET', array());
     $response->setResponseBody('{}');
 
     $response->setResponseHttpCode(200);

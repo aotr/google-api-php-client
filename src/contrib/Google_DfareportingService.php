@@ -22,7 +22,7 @@
    *   $dimensionValues = $dfareportingService->dimensionValues;
    *  </code>
    */
-  class Google_DimensionValuesServiceResource extends Google_ServiceResource {
+  class Google_DimensionValuesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -56,7 +56,7 @@
    *   $files = $dfareportingService->files;
    *  </code>
    */
-  class Google_FilesServiceResource extends Google_ServiceResource {
+  class Google_FilesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -91,7 +91,7 @@
    *   $reports = $dfareportingService->reports;
    *  </code>
    */
-  class Google_ReportsServiceResource extends Google_ServiceResource {
+  class Google_ReportsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -233,7 +233,7 @@
    *   $files = $dfareportingService->files;
    *  </code>
    */
-  class Google_ReportsFilesServiceResource extends Google_ServiceResource {
+  class Google_ReportsFilesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -288,7 +288,7 @@
    *   $userProfiles = $dfareportingService->userProfiles;
    *  </code>
    */
-  class Google_UserProfilesServiceResource extends Google_ServiceResource {
+  class Google_UserProfilesServiceResource extends Google_Service_Resource {
 
 
     /**

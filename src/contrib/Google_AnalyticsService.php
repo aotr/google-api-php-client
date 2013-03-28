@@ -22,7 +22,7 @@
    *   $management = $analyticsService->management;
    *  </code>
    */
-  class Google_ManagementServiceResource extends Google_ServiceResource {
+  class Google_ManagementServiceResource extends Google_Service_Resource {
 
 
   }
@@ -35,7 +35,7 @@
    *   $dailyUploads = $analyticsService->dailyUploads;
    *  </code>
    */
-  class Google_ManagementDailyUploadsServiceResource extends Google_ServiceResource {
+  class Google_ManagementDailyUploadsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -111,7 +111,7 @@
    *   $segments = $analyticsService->segments;
    *  </code>
    */
-  class Google_ManagementSegmentsServiceResource extends Google_ServiceResource {
+  class Google_ManagementSegmentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -142,7 +142,7 @@
    *   $profiles = $analyticsService->profiles;
    *  </code>
    */
-  class Google_ManagementProfilesServiceResource extends Google_ServiceResource {
+  class Google_ManagementProfilesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -175,7 +175,7 @@
    *   $customDataSources = $analyticsService->customDataSources;
    *  </code>
    */
-  class Google_ManagementCustomDataSourcesServiceResource extends Google_ServiceResource {
+  class Google_ManagementCustomDataSourcesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -208,7 +208,7 @@
    *   $goals = $analyticsService->goals;
    *  </code>
    */
-  class Google_ManagementGoalsServiceResource extends Google_ServiceResource {
+  class Google_ManagementGoalsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -242,7 +242,7 @@
    *   $accounts = $analyticsService->accounts;
    *  </code>
    */
-  class Google_ManagementAccountsServiceResource extends Google_ServiceResource {
+  class Google_ManagementAccountsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -273,7 +273,7 @@
    *   $webproperties = $analyticsService->webproperties;
    *  </code>
    */
-  class Google_ManagementWebpropertiesServiceResource extends Google_ServiceResource {
+  class Google_ManagementWebpropertiesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -306,7 +306,7 @@
    *   $data = $analyticsService->data;
    *  </code>
    */
-  class Google_DataServiceResource extends Google_ServiceResource {
+  class Google_DataServiceResource extends Google_Service_Resource {
 
 
   }
@@ -319,7 +319,7 @@
    *   $mcf = $analyticsService->mcf;
    *  </code>
    */
-  class Google_DataMcfServiceResource extends Google_ServiceResource {
+  class Google_DataMcfServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -357,7 +357,7 @@
    *   $ga = $analyticsService->ga;
    *  </code>
    */
-  class Google_DataGaServiceResource extends Google_ServiceResource {
+  class Google_DataGaServiceResource extends Google_Service_Resource {
 
 
     /**

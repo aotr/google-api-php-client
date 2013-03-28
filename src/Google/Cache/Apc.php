@@ -14,6 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ 
+require_once "Google/Cache/Abstract.php";
+require_once "Google/Cache/Exception.php"; 
 
 /**
  * A persistent storage class based on the APC cache, which is not
@@ -23,11 +26,11 @@
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-class googleApcCache extends Google_Cache {
+class Google_Cache_Apc extends Google_Cache_Abstract {
 
   public function __construct() {
     if (! function_exists('apc_add')) {
-      throw new Google_CacheException("Apc functions not available");
+      throw new Google_Cache_Exception("Apc functions not available");
     }
   }
 
@@ -84,7 +87,7 @@ class googleApcCache extends Google_Cache {
    */
   public function set($key, $value) {
     if (@apc_store($key, array('time' => time(), 'data' => serialize($value))) == false) {
-      throw new Google_CacheException("Couldn't store data");
+      throw new Google_Cache_Exception("Couldn't store data");
     }
   }
 

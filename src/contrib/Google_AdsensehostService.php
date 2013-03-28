@@ -22,7 +22,7 @@
    *   $accounts = $adsensehostService->accounts;
    *  </code>
    */
-  class Google_AccountsServiceResource extends Google_ServiceResource {
+  class Google_AccountsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -69,7 +69,7 @@
    *   $adclients = $adsensehostService->adclients;
    *  </code>
    */
-  class Google_AccountsAdclientsServiceResource extends Google_ServiceResource {
+  class Google_AccountsAdclientsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -120,7 +120,7 @@
    *   $adunits = $adsensehostService->adunits;
    *  </code>
    */
-  class Google_AccountsAdunitsServiceResource extends Google_ServiceResource {
+  class Google_AccountsAdunitsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -273,7 +273,7 @@
    *   $reports = $adsensehostService->reports;
    *  </code>
    */
-  class Google_AccountsReportsServiceResource extends Google_ServiceResource {
+  class Google_AccountsReportsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -315,7 +315,7 @@
    *   $adclients = $adsensehostService->adclients;
    *  </code>
    */
-  class Google_AdclientsServiceResource extends Google_ServiceResource {
+  class Google_AdclientsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -364,7 +364,7 @@
    *   $associationsessions = $adsensehostService->associationsessions;
    *  </code>
    */
-  class Google_AssociationsessionsServiceResource extends Google_ServiceResource {
+  class Google_AssociationsessionsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -417,7 +417,7 @@
    *   $customchannels = $adsensehostService->customchannels;
    *  </code>
    */
-  class Google_CustomchannelsServiceResource extends Google_ServiceResource {
+  class Google_CustomchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -542,7 +542,7 @@
    *   $reports = $adsensehostService->reports;
    *  </code>
    */
-  class Google_ReportsServiceResource extends Google_ServiceResource {
+  class Google_ReportsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -583,7 +583,7 @@
    *   $urlchannels = $adsensehostService->urlchannels;
    *  </code>
    */
-  class Google_UrlchannelsServiceResource extends Google_ServiceResource {
+  class Google_UrlchannelsServiceResource extends Google_Service_Resource {
 
 
     /**

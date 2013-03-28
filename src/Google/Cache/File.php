@@ -15,6 +15,9 @@
  * limitations under the License.
  */
 
+require_once "Google/Cache/Abstract.php";
+require_once "Google/Cache/Exception.php";
+
 /*
  * This class implements a basic on disk storage. While that does
  * work quite well it's not the most elegant and scalable solution.
@@ -24,7 +27,7 @@
  *
  * @author Chris Chabot <chabotc@google.com>
  */
-class Google_FileCache extends Google_Cache {
+class Google_Cache_File extends Google_Cache_Abstract {
   private $path;
 
   public function __construct() {
@@ -44,7 +47,7 @@ class Google_FileCache extends Google_Cache {
       if (! @mkdir($storageDir, 0755, true)) {
         // make sure the failure isn't because of a concurrency issue
         if (! is_dir($storageDir)) {
-          throw new Google_CacheException("Could not create storage directory: $storageDir");
+          throw new Google_Cache_Exception("Could not create storage directory: $storageDir");
         }
       }
       // @codeCoverageIgnoreEnd
@@ -114,7 +117,7 @@ class Google_FileCache extends Google_Cache {
     }
     if (! is_dir($storageDir)) {
       if (! @mkdir($storageDir, 0755, true)) {
-        throw new Google_CacheException("Could not create storage directory: $storageDir");
+        throw new Google_Cache_Exception("Could not create storage directory: $storageDir");
       }
     }
     // we serialize the whole request object, since we don't only want the
@@ -123,7 +126,7 @@ class Google_FileCache extends Google_Cache {
     $this->createLock($storageFile);
     if (! @file_put_contents($storageFile, $data)) {
       $this->removeLock($storageFile);
-      throw new Google_CacheException("Could not store data in the file");
+      throw new Google_Cache_Exception("Could not store data in the file");
     }
     $this->removeLock($storageFile);
   }
@@ -131,7 +134,7 @@ class Google_FileCache extends Google_Cache {
   public function delete($key) {
     $file = $this->getCacheFile(md5($key));
     if (! @unlink($file)) {
-      throw new Google_CacheException("Cache file could not be deleted");
+      throw new Google_Cache_Exception("Cache file could not be deleted");
     }
   }
 }

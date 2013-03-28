@@ -15,10 +15,15 @@
  * limitations under the License.
  */
 
+require_once 'Google/Client.php';
+require_once 'Google/IO/Curl.php';
+require_once 'Google/Http/Request.php';
+require_once 'Google/Http/REST.php';
+
 /**
  * @author Chirag Shah <chirags@google.com>
  */
-class Google_BatchRequest {
+class Google_Http_Batch {
   /** @var string Multipart Boundary. */
   private $boundary;
 
@@ -30,7 +35,7 @@ class Google_BatchRequest {
     $this->boundary = str_replace('"', '', $boundary);
   }
 
-  public function add(Google_HttpRequest $request, $key = false) {
+  public function add(Google_Http_Request $request, $key = false) {
     if (false == $key) {
       $key = mt_rand();
     }
@@ -41,7 +46,7 @@ class Google_BatchRequest {
   public function execute() {
     $body = '';
 
-    /** @var Google_HttpRequest $req */
+    /** @var Google_Http_Request $req */
     foreach($this->requests as $key => $req) {
       $body .= "--{$this->boundary}\n";
       $body .= $req->toBatchString($key) . "\n";
@@ -52,7 +57,7 @@ class Google_BatchRequest {
 
     global $apiConfig;
     $url = $apiConfig['basePath'] . '/batch';
-    $httpRequest = new Google_HttpRequest($url, 'POST');
+    $httpRequest = new Google_Http_Request($url, 'POST');
     $httpRequest->setRequestHeaders(array(
         'Content-Type' => 'multipart/mixed; boundary=' . $this->boundary));
 
@@ -63,7 +68,7 @@ class Google_BatchRequest {
     return $response;
   }
 
-  public function parseResponse(Google_HttpRequest $response) {
+  public function parseResponse(Google_Http_Request $response) {
     $contentType = $response->getResponseHeader('content-type');
     $contentType = explode(';', $contentType);
     $boundary = false;
@@ -84,18 +89,18 @@ class Google_BatchRequest {
         $part = trim($part);
         if (!empty($part)) {
           list($metaHeaders, $part) = explode("\r\n\r\n", $part, 2);
-          $metaHeaders = Google_CurlIO::parseResponseHeaders($metaHeaders);
+          $metaHeaders = Google_IO_Curl::parseResponseHeaders($metaHeaders);
 
           $status = substr($part, 0, strpos($part, "\n"));
           $status = explode(" ", $status);
           $status = $status[1];
 
-          list($partHeaders, $partBody) = Google_CurlIO::parseHttpResponse($part, false);
-          $response = new Google_HttpRequest("");
+          list($partHeaders, $partBody) = Google_IO_Curl::parseHttpResponse($part, false);
+          $response = new Google_Http_Request("");
           $response->setResponseHttpCode($status);
           $response->setResponseHeaders($partHeaders);
           $response->setResponseBody($partBody);
-          $response = Google_REST::decodeHttpResponse($response);
+          $response = Google_Http_REST::decodeHttpResponse($response);
 
           // Need content id.
           $responses[$metaHeaders['content-id']] = $response;

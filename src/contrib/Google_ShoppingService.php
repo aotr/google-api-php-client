@@ -22,7 +22,7 @@
    *   $products = $shoppingService->products;
    *  </code>
    */
-  class Google_ProductsServiceResource extends Google_ServiceResource {
+  class Google_ProductsServiceResource extends Google_Service_Resource {
 
 
     /**

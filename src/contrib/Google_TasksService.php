@@ -22,7 +22,7 @@
    *   $tasks = $tasksService->tasks;
    *  </code>
    */
-  class Google_TasksServiceResource extends Google_ServiceResource {
+  class Google_TasksServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -190,7 +190,7 @@
    *   $tasklists = $tasksService->tasklists;
    *  </code>
    */
-  class Google_TasklistsServiceResource extends Google_ServiceResource {
+  class Google_TasklistsServiceResource extends Google_Service_Resource {
 
 
     /**

@@ -22,7 +22,7 @@
    *   $communityMembers = $orkutService->communityMembers;
    *  </code>
    */
-  class Google_CommunityMembersServiceResource extends Google_ServiceResource {
+  class Google_CommunityMembersServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -110,7 +110,7 @@
    *   $activities = $orkutService->activities;
    *  </code>
    */
-  class Google_ActivitiesServiceResource extends Google_ServiceResource {
+  class Google_ActivitiesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -157,7 +157,7 @@
    *   $communityPollComments = $orkutService->communityPollComments;
    *  </code>
    */
-  class Google_CommunityPollCommentsServiceResource extends Google_ServiceResource {
+  class Google_CommunityPollCommentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -211,7 +211,7 @@
    *   $communityPolls = $orkutService->communityPolls;
    *  </code>
    */
-  class Google_CommunityPollsServiceResource extends Google_ServiceResource {
+  class Google_CommunityPollsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -265,7 +265,7 @@
    *   $communityMessages = $orkutService->communityMessages;
    *  </code>
    */
-  class Google_CommunityMessagesServiceResource extends Google_ServiceResource {
+  class Google_CommunityMessagesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -333,7 +333,7 @@
    *   $communityTopics = $orkutService->communityTopics;
    *  </code>
    */
-  class Google_CommunityTopicsServiceResource extends Google_ServiceResource {
+  class Google_CommunityTopicsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -420,7 +420,7 @@
    *   $comments = $orkutService->comments;
    *  </code>
    */
-  class Google_CommentsServiceResource extends Google_ServiceResource {
+  class Google_CommentsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -504,7 +504,7 @@
    *   $acl = $orkutService->acl;
    *  </code>
    */
-  class Google_AclServiceResource extends Google_ServiceResource {
+  class Google_AclServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -530,7 +530,7 @@
    *   $communityRelated = $orkutService->communityRelated;
    *  </code>
    */
-  class Google_CommunityRelatedServiceResource extends Google_ServiceResource {
+  class Google_CommunityRelatedServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -562,7 +562,7 @@
    *   $scraps = $orkutService->scraps;
    *  </code>
    */
-  class Google_ScrapsServiceResource extends Google_ServiceResource {
+  class Google_ScrapsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -592,7 +592,7 @@
    *   $communityPollVotes = $orkutService->communityPollVotes;
    *  </code>
    */
-  class Google_CommunityPollVotesServiceResource extends Google_ServiceResource {
+  class Google_CommunityPollVotesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -624,7 +624,7 @@
    *   $communities = $orkutService->communities;
    *  </code>
    */
-  class Google_CommunitiesServiceResource extends Google_ServiceResource {
+  class Google_CommunitiesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -677,7 +677,7 @@
    *   $communityFollow = $orkutService->communityFollow;
    *  </code>
    */
-  class Google_CommunityFollowServiceResource extends Google_ServiceResource {
+  class Google_CommunityFollowServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -721,7 +721,7 @@
    *   $activityVisibility = $orkutService->activityVisibility;
    *  </code>
    */
-  class Google_ActivityVisibilityServiceResource extends Google_ServiceResource {
+  class Google_ActivityVisibilityServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -788,7 +788,7 @@
    *   $badges = $orkutService->badges;
    *  </code>
    */
-  class Google_BadgesServiceResource extends Google_ServiceResource {
+  class Google_BadgesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -836,7 +836,7 @@
    *   $counters = $orkutService->counters;
    *  </code>
    */
-  class Google_CountersServiceResource extends Google_ServiceResource {
+  class Google_CountersServiceResource extends Google_Service_Resource {
 
 
     /**

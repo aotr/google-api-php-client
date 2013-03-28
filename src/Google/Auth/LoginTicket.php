@@ -15,12 +15,14 @@
  * limitations under the License.
  */
 
+require_once "Google/Auth/Exception.php";
+
 /**
  * Class to hold information about an authenticated login.
  *
  * @author Brian Eaton <beaton@google.com>
  */
-class Google_LoginTicket {
+class Google_Auth_LoginTicket {
   const USER_ATTR = "id";
 
   // Information from id token envelope.
@@ -42,14 +44,14 @@ class Google_LoginTicket {
 
   /**
    * Returns the numeric identifier for the user.
-   * @throws Google_AuthException
+   * @throws Google_Auth_Exception
    * @return
    */
   public function getUserId() {
     if (array_key_exists(self::USER_ATTR, $this->payload)) {
       return $this->payload[self::USER_ATTR];
     }
-    throw new Google_AuthException("No user_id in token");
+    throw new Google_Auth_Exception("No user_id in token");
   }
 
   /**

@@ -17,10 +17,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ 
+require_once 'Google/Http/Request.php';
+require_once 'Google/IO/Curl.php';
 
 class IoTest extends BaseTest {
   public function testParseHttpResponseBody() {
-    $io = new Google_CurlIO();
+    $io = new Google_IO_Curl();
 
     $rawHeaders = "HTTP/1.1 200 OK\r\n"
         . "Expires: Sun, 22 Jan 2012 09:00:56 GMT\r\n"
@@ -46,7 +49,7 @@ class IoTest extends BaseTest {
     $size = strlen($rawHeaders);
     $rawBody = "{}";
 
-    $rawResponse = Google_CurlIO::CONNECTION_ESTABLISHED
+    $rawResponse = Google_IO_Curl::CONNECTION_ESTABLISHED
           . "$rawHeaders\r\n$rawBody";
     list($headers, $body) = $io->parseHttpResponse($rawResponse, $size);
     $this->assertEquals(1, sizeof($headers));
@@ -54,8 +57,8 @@ class IoTest extends BaseTest {
   }
 
   public function testProcessEntityRequest() {
-    $io = new Google_CurlIO();
-    $req = new Google_HttpRequest("http://localhost.com");
+    $io = new Google_IO_Curl();
+    $req = new Google_Http_Request("http://localhost.com");
     $req->setRequestMethod("POST");
 
     // Verify that the content-length is calculated.
@@ -77,7 +80,7 @@ class IoTest extends BaseTest {
     $req->setPostBody(array("a" => "1", "b" => 2));
     $io->processEntityRequest($req);
     $this->assertEquals(7, $req->getRequestHeader("content-length"));
-    $this->assertEquals(Google_CurlIO::FORM_URLENCODED,
+    $this->assertEquals(Google_IO_Curl::FORM_URLENCODED,
         $req->getRequestHeader("content-type"));
     $this->assertEquals("a=1&b=2", $req->getPostBody());
 
@@ -92,11 +95,11 @@ class IoTest extends BaseTest {
   }
 
   public function testCacheHit() {
-    $io = new Google_CurlIO();
+    $io = new Google_IO_Curl();
     $url = "http://www.googleapis.com";
     // Create a cacheable request/response.
     // Should not be revalidated.
-    $cacheReq = new Google_HttpRequest($url, "GET");
+    $cacheReq = new Google_Http_Request($url, "GET");
     $cacheReq->setRequestHeaders(array(
       "Accept" => "*/*",
     ));
@@ -114,17 +117,17 @@ class IoTest extends BaseTest {
     $io->setCachedRequest($cacheReq);
 
     // Execute the same mock request, and expect a cache hit.
-    $res = $io->makeRequest(new Google_HttpRequest($url, "GET"));
+    $res = $io->makeRequest(new Google_Http_Request($url, "GET"));
     $this->assertEquals("{\"a\": \"foo\"}", $res->getResponseBody());
     $this->assertEquals(200, $res->getResponseHttpCode());
   }
 
   public function testAuthCache() {
-    $io = new Google_CurlIO();
+    $io = new Google_IO_Curl();
     $url = "http://www.googleapis.com/protected/resource";
 
     // Create a cacheable request/response, but it should not be cached.
-    $cacheReq = new Google_HttpRequest($url, "GET");
+    $cacheReq = new Google_Http_Request($url, "GET");
     $cacheReq->setRequestHeaders(array(
       "Accept" => "*/*",
       "Authorization" => "Bearer Foo"

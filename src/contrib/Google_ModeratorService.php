@@ -22,7 +22,7 @@
    *   $votes = $moderatorService->votes;
    *  </code>
    */
-  class Google_VotesServiceResource extends Google_ServiceResource {
+  class Google_VotesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -145,7 +145,7 @@
    *   $responses = $moderatorService->responses;
    *  </code>
    */
-  class Google_ResponsesServiceResource extends Google_ServiceResource {
+  class Google_ResponsesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -208,7 +208,7 @@
    *   $tags = $moderatorService->tags;
    *  </code>
    */
-  class Google_TagsServiceResource extends Google_ServiceResource {
+  class Google_TagsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -273,7 +273,7 @@
    *   $series = $moderatorService->series;
    *  </code>
    */
-  class Google_SeriesServiceResource extends Google_ServiceResource {
+  class Google_SeriesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -376,7 +376,7 @@
    *   $submissions = $moderatorService->submissions;
    *  </code>
    */
-  class Google_SeriesSubmissionsServiceResource extends Google_ServiceResource {
+  class Google_SeriesSubmissionsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -415,7 +415,7 @@
    *   $responses = $moderatorService->responses;
    *  </code>
    */
-  class Google_SeriesResponsesServiceResource extends Google_ServiceResource {
+  class Google_SeriesResponsesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -452,7 +452,7 @@
    *   $topics = $moderatorService->topics;
    *  </code>
    */
-  class Google_TopicsServiceResource extends Google_ServiceResource {
+  class Google_TopicsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -542,7 +542,7 @@
    *   $submissions = $moderatorService->submissions;
    *  </code>
    */
-  class Google_TopicsSubmissionsServiceResource extends Google_ServiceResource {
+  class Google_TopicsSubmissionsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -582,7 +582,7 @@
    *   $global = $moderatorService->global;
    *  </code>
    */
-  class Google_ModeratorGlobalServiceResource extends Google_ServiceResource {
+  class Google_ModeratorGlobalServiceResource extends Google_Service_Resource {
 
 
   }
@@ -595,7 +595,7 @@
    *   $series = $moderatorService->series;
    *  </code>
    */
-  class Google_ModeratorGlobalSeriesServiceResource extends Google_ServiceResource {
+  class Google_ModeratorGlobalSeriesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -628,7 +628,7 @@
    *   $profiles = $moderatorService->profiles;
    *  </code>
    */
-  class Google_ProfilesServiceResource extends Google_ServiceResource {
+  class Google_ProfilesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -692,7 +692,7 @@
    *   $featured = $moderatorService->featured;
    *  </code>
    */
-  class Google_FeaturedServiceResource extends Google_ServiceResource {
+  class Google_FeaturedServiceResource extends Google_Service_Resource {
 
 
   }
@@ -705,7 +705,7 @@
    *   $series = $moderatorService->series;
    *  </code>
    */
-  class Google_FeaturedSeriesServiceResource extends Google_ServiceResource {
+  class Google_FeaturedSeriesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -734,7 +734,7 @@
    *   $myrecent = $moderatorService->myrecent;
    *  </code>
    */
-  class Google_MyrecentServiceResource extends Google_ServiceResource {
+  class Google_MyrecentServiceResource extends Google_Service_Resource {
 
 
   }
@@ -747,7 +747,7 @@
    *   $series = $moderatorService->series;
    *  </code>
    */
-  class Google_MyrecentSeriesServiceResource extends Google_ServiceResource {
+  class Google_MyrecentSeriesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -776,7 +776,7 @@
    *   $my = $moderatorService->my;
    *  </code>
    */
-  class Google_MyServiceResource extends Google_ServiceResource {
+  class Google_MyServiceResource extends Google_Service_Resource {
 
 
   }
@@ -789,7 +789,7 @@
    *   $series = $moderatorService->series;
    *  </code>
    */
-  class Google_MySeriesServiceResource extends Google_ServiceResource {
+  class Google_MySeriesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -818,7 +818,7 @@
    *   $submissions = $moderatorService->submissions;
    *  </code>
    */
-  class Google_SubmissionsServiceResource extends Google_ServiceResource {
+  class Google_SubmissionsServiceResource extends Google_Service_Resource {
 
 
     /**

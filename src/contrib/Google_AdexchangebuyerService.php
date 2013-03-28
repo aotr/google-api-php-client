@@ -24,7 +24,7 @@
    *   $accounts = $adexchangebuyerService->accounts;
    *  </code>
    */
-  class google_AccountsServiceResource extends Google_ServiceResource {
+  class google_AccountsServiceResource extends Google_Service_Resource {
 
 
     /**

@@ -22,7 +22,7 @@
    *   $languages = $translateService->languages;
    *  </code>
    */
-  class Google_LanguagesServiceResource extends Google_ServiceResource {
+  class Google_LanguagesServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -53,7 +53,7 @@
    *   $detections = $translateService->detections;
    *  </code>
    */
-  class Google_DetectionsServiceResource extends Google_ServiceResource {
+  class Google_DetectionsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -83,7 +83,7 @@
    *   $translations = $translateService->translations;
    *  </code>
    */
-  class Google_TranslationsServiceResource extends Google_ServiceResource {
+  class Google_TranslationsServiceResource extends Google_Service_Resource {
 
 
     /**

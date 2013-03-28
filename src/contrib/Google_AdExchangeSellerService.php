@@ -22,7 +22,7 @@
    *   $adclients = $adexchangesellerService->adclients;
    *  </code>
    */
-  class Google_AdclientsServiceResource extends Google_ServiceResource {
+  class Google_AdclientsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -54,7 +54,7 @@
    *   $adunits = $adexchangesellerService->adunits;
    *  </code>
    */
-  class Google_AdunitsServiceResource extends Google_ServiceResource {
+  class Google_AdunitsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -106,7 +106,7 @@
    *   $customchannels = $adexchangesellerService->customchannels;
    *  </code>
    */
-  class Google_AdunitsCustomchannelsServiceResource extends Google_ServiceResource {
+  class Google_AdunitsCustomchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -140,7 +140,7 @@
    *   $customchannels = $adexchangesellerService->customchannels;
    *  </code>
    */
-  class Google_CustomchannelsServiceResource extends Google_ServiceResource {
+  class Google_CustomchannelsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -192,7 +192,7 @@
    *   $adunits = $adexchangesellerService->adunits;
    *  </code>
    */
-  class Google_CustomchannelsAdunitsServiceResource extends Google_ServiceResource {
+  class Google_CustomchannelsAdunitsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -227,7 +227,7 @@
    *   $reports = $adexchangesellerService->reports;
    *  </code>
    */
-  class Google_ReportsServiceResource extends Google_ServiceResource {
+  class Google_ReportsServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -268,7 +268,7 @@
    *   $saved = $adexchangesellerService->saved;
    *  </code>
    */
-  class Google_ReportsSavedServiceResource extends Google_ServiceResource {
+  class Google_ReportsSavedServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -322,7 +322,7 @@
    *   $urlchannels = $adexchangesellerService->urlchannels;
    *  </code>
    */
-  class Google_UrlchannelsServiceResource extends Google_ServiceResource {
+  class Google_UrlchannelsServiceResource extends Google_Service_Resource {
 
 
     /**

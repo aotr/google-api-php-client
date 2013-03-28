@@ -22,7 +22,7 @@
    *   $column = $fusiontablesService->column;
    *  </code>
    */
-  class Google_ColumnServiceResource extends Google_ServiceResource {
+  class Google_ColumnServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -143,7 +143,7 @@
    *   $query = $fusiontablesService->query;
    *  </code>
    */
-  class Google_QueryServiceResource extends Google_ServiceResource {
+  class Google_QueryServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -196,7 +196,7 @@
    *   $style = $fusiontablesService->style;
    *  </code>
    */
-  class Google_StyleServiceResource extends Google_ServiceResource {
+  class Google_StyleServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -316,7 +316,7 @@
    *   $template = $fusiontablesService->template;
    *  </code>
    */
-  class Google_TemplateServiceResource extends Google_ServiceResource {
+  class Google_TemplateServiceResource extends Google_Service_Resource {
 
 
     /**
@@ -436,7 +436,7 @@
    *   $table = $fusiontablesService->table;
    *  </code>
    */
-  class Google_TableServiceResource extends Google_ServiceResource {
+  class Google_TableServiceResource extends Google_Service_Resource {
 
 
     /**
