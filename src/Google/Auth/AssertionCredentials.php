@@ -32,7 +32,7 @@ class Google_Auth_AssertionCredentials {
   public $privateKey;
   public $privateKeyPassword;
   public $assertionType;
-  public $prn;
+  public $sub;
 
   /**
    * @param $serviceAccountName
@@ -40,7 +40,7 @@ class Google_Auth_AssertionCredentials {
    * @param $privateKey
    * @param string $privateKeyPassword
    * @param string $assertionType
-   * @param bool|string $prn The email address of the user for which the
+   * @param bool|string $sub The email address of the user for which the
    *               application is requesting delegated access.
    */
   public function __construct(
@@ -49,13 +49,13 @@ class Google_Auth_AssertionCredentials {
       $privateKey,
       $privateKeyPassword = 'notasecret',
       $assertionType = 'http://oauth.net/grant_type/jwt/1.0/bearer',
-      $prn = false) {
+      $sub = false) {
     $this->serviceAccountName = $serviceAccountName;
     $this->scopes = is_string($scopes) ? $scopes : implode(' ', $scopes);
     $this->privateKey = $privateKey;
     $this->privateKeyPassword = $privateKeyPassword;
     $this->assertionType = $assertionType;
-    $this->prn = $prn;
+    $this->sub = $sub;
   }
 
   public function generateAssertion() {
@@ -69,8 +69,8 @@ class Google_Auth_AssertionCredentials {
           'iss' => $this->serviceAccountName,
     );
 
-    if ($this->prn !== false) {
-      $jwtParams['prn'] = $this->prn;
+    if ($this->sub !== false) {
+      $jwtParams['sub'] = $this->sub;
     }
 
     return $this->makeSignedJwt($jwtParams);
