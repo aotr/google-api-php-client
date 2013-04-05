@@ -28,11 +28,6 @@ class Google_AssertionCredentials {
   public $privateKey;
   public $privateKeyPassword;
   public $assertionType;
-  public $sub;
-  /**
-   * @deprecated
-   * @link http://tools.ietf.org/html/draft-ietf-oauth-json-web-token-06
-   */
   public $prn;
 
   /**
@@ -41,7 +36,7 @@ class Google_AssertionCredentials {
    * @param $privateKey
    * @param string $privateKeyPassword
    * @param string $assertionType
-   * @param bool|string $sub The email address of the user for which the
+   * @param bool|string $prn The email address of the user for which the
    *               application is requesting delegated access.
    */
   public function __construct(
@@ -50,14 +45,13 @@ class Google_AssertionCredentials {
       $privateKey,
       $privateKeyPassword = 'notasecret',
       $assertionType = 'http://oauth.net/grant_type/jwt/1.0/bearer',
-      $sub = false) {
+      $prn = false) {
     $this->serviceAccountName = $serviceAccountName;
     $this->scopes = is_string($scopes) ? $scopes : implode(' ', $scopes);
     $this->privateKey = $privateKey;
     $this->privateKeyPassword = $privateKeyPassword;
     $this->assertionType = $assertionType;
-    $this->sub = $sub;
-    $this->prn = $sub;
+    $this->prn = $prn;
   }
 
   public function generateAssertion() {
@@ -71,9 +65,7 @@ class Google_AssertionCredentials {
           'iss' => $this->serviceAccountName,
     );
 
-    if ($this->sub !== false) {
-      $jwtParams['sub'] = $this->sub;
-    } else if ($this->prn !== false) {
+    if ($this->prn !== false) {
       $jwtParams['prn'] = $this->prn;
     }
 

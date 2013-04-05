@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2010 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -20,11 +18,11 @@
    * The "accounts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangebuyerService = new google_AdexchangebuyerService(...);
+   *   $adexchangebuyerService = new Google_AdexchangebuyerService(...);
    *   $accounts = $adexchangebuyerService->accounts;
    *  </code>
    */
-  class google_AccountsServiceResource extends Google_ServiceResource {
+  class Google_AccountsServiceResource extends Google_ServiceResource {
 
 
     /**
@@ -32,14 +30,14 @@
      *
      * @param int $id The account id
      * @param array $optParams Optional parameters.
-     * @return google_Account
+     * @return Google_Account
      */
     public function get($id, $optParams = array()) {
       $params = array('id' => $id);
       $params = array_merge($params, $optParams);
       $data = $this->__call('get', array($params));
       if ($this->useObjects()) {
-        return new google_Account($data);
+        return new Google_Account($data);
       } else {
         return $data;
       }
@@ -48,14 +46,14 @@
      * Retrieves the authenticated user's list of accounts. (accounts.list)
      *
      * @param array $optParams Optional parameters.
-     * @return google_AccountsList
+     * @return Google_AccountsList
      */
     public function listAccounts($optParams = array()) {
       $params = array();
       $params = array_merge($params, $optParams);
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
-        return new google_AccountsList($data);
+        return new Google_AccountsList($data);
       } else {
         return $data;
       }
@@ -64,16 +62,16 @@
      * Updates an existing account. This method supports patch semantics. (accounts.patch)
      *
      * @param int $id The account id
-     * @param google_Account $postBody
+     * @param Google_Account $postBody
      * @param array $optParams Optional parameters.
-     * @return google_Account
+     * @return Google_Account
      */
-    public function patch($id, google_Account $postBody, $optParams = array()) {
+    public function patch($id, Google_Account $postBody, $optParams = array()) {
       $params = array('id' => $id, 'postBody' => $postBody);
       $params = array_merge($params, $optParams);
       $data = $this->__call('patch', array($params));
       if ($this->useObjects()) {
-        return new google_Account($data);
+        return new Google_Account($data);
       } else {
         return $data;
       }
@@ -82,16 +80,16 @@
      * Updates an existing account. (accounts.update)
      *
      * @param int $id The account id
-     * @param google_Account $postBody
+     * @param Google_Account $postBody
      * @param array $optParams Optional parameters.
-     * @return google_Account
+     * @return Google_Account
      */
-    public function update($id, google_Account $postBody, $optParams = array()) {
+    public function update($id, Google_Account $postBody, $optParams = array()) {
       $params = array('id' => $id, 'postBody' => $postBody);
       $params = array_merge($params, $optParams);
       $data = $this->__call('update', array($params));
       if ($this->useObjects()) {
-        return new google_Account($data);
+        return new Google_Account($data);
       } else {
         return $data;
       }
@@ -102,11 +100,11 @@
    * The "creatives" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangebuyerService = new google_AdexchangebuyerService(...);
+   *   $adexchangebuyerService = new Google_AdexchangebuyerService(...);
    *   $creatives = $adexchangebuyerService->creatives;
    *  </code>
    */
-  class google_CreativesServiceResource extends Google_ServiceResource {
+  class Google_CreativesServiceResource extends Google_ServiceResource {
 
 
     /**
@@ -115,14 +113,14 @@
      * @param int $accountId The id for the account that will serve this creative.
      * @param string $buyerCreativeId The buyer-specific id for this creative.
      * @param array $optParams Optional parameters.
-     * @return google_Creative
+     * @return Google_Creative
      */
     public function get($accountId, $buyerCreativeId, $optParams = array()) {
       $params = array('accountId' => $accountId, 'buyerCreativeId' => $buyerCreativeId);
       $params = array_merge($params, $optParams);
       $data = $this->__call('get', array($params));
       if ($this->useObjects()) {
-        return new google_Creative($data);
+        return new Google_Creative($data);
       } else {
         return $data;
       }
@@ -130,16 +128,16 @@
     /**
      * Submit a new creative. (creatives.insert)
      *
-     * @param google_Creative $postBody
+     * @param Google_Creative $postBody
      * @param array $optParams Optional parameters.
-     * @return google_Creative
+     * @return Google_Creative
      */
-    public function insert(google_Creative $postBody, $optParams = array()) {
+    public function insert(Google_Creative $postBody, $optParams = array()) {
       $params = array('postBody' => $postBody);
       $params = array_merge($params, $optParams);
       $data = $this->__call('insert', array($params));
       if ($this->useObjects()) {
-        return new google_Creative($data);
+        return new Google_Creative($data);
       } else {
         return $data;
       }
@@ -149,17 +147,17 @@
      *
      * @param array $optParams Optional parameters.
      *
-     * @opt_param string statusFilter When specified, only creatives having the given status are returned.
-     * @opt_param string pageToken A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. Optional.
      * @opt_param string maxResults Maximum number of entries returned on one result page. If not set, the default is 100. Optional.
-     * @return google_CreativesList
+     * @opt_param string pageToken A continuation token, used to page through ad clients. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. Optional.
+     * @opt_param string statusFilter When specified, only creatives having the given status are returned.
+     * @return Google_CreativesList
      */
     public function listCreatives($optParams = array()) {
       $params = array();
       $params = array_merge($params, $optParams);
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
-        return new google_CreativesList($data);
+        return new Google_CreativesList($data);
       } else {
         return $data;
       }
@@ -170,11 +168,11 @@
    * The "directDeals" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangebuyerService = new google_AdexchangebuyerService(...);
+   *   $adexchangebuyerService = new Google_AdexchangebuyerService(...);
    *   $directDeals = $adexchangebuyerService->directDeals;
    *  </code>
    */
-  class google_DirectDealsServiceResource extends Google_ServiceResource {
+  class Google_DirectDealsServiceResource extends Google_ServiceResource {
 
 
     /**
@@ -182,14 +180,14 @@
      *
      * @param string $id The direct deal id
      * @param array $optParams Optional parameters.
-     * @return google_DirectDeal
+     * @return Google_DirectDeal
      */
     public function get($id, $optParams = array()) {
       $params = array('id' => $id);
       $params = array_merge($params, $optParams);
       $data = $this->__call('get', array($params));
       if ($this->useObjects()) {
-        return new google_DirectDeal($data);
+        return new Google_DirectDeal($data);
       } else {
         return $data;
       }
@@ -198,14 +196,14 @@
      * Retrieves the authenticated user's list of direct deals. (directDeals.list)
      *
      * @param array $optParams Optional parameters.
-     * @return google_DirectDealsList
+     * @return Google_DirectDealsList
      */
     public function listDirectDeals($optParams = array()) {
       $params = array();
       $params = array_merge($params, $optParams);
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
-        return new google_DirectDealsList($data);
+        return new Google_DirectDealsList($data);
       } else {
         return $data;
       }
@@ -213,7 +211,7 @@
   }
 
 /**
- * Service definition for google_Adexchangebuyer (v1.2).
+ * Service definition for Google_Adexchangebuyer (v1.1).
  *
  * <p>
  * Lets you manage your Ad Exchange Buyer account.
@@ -226,7 +224,7 @@
  *
  * @author Google, Inc.
  */
-class google_AdexchangebuyerService extends Google_Service {
+class Google_AdexchangebuyerService extends Google_Service {
   public $accounts;
   public $creatives;
   public $directDeals;
@@ -236,20 +234,20 @@ class google_AdexchangebuyerService extends Google_Service {
    * @param Google_Client $client
    */
   public function __construct(Google_Client $client) {
-    $this->servicePath = 'adexchangebuyer/v1.2/';
-    $this->version = 'v1.2';
+    $this->servicePath = 'adexchangebuyer/v1.1/';
+    $this->version = 'v1.1';
     $this->serviceName = 'adexchangebuyer';
 
     $client->addService($this->serviceName, $this->version);
-    $this->accounts = new google_AccountsServiceResource($this, $this->serviceName, 'accounts', json_decode('{"methods": {"patch": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "parameters": {"id": {"location": "path", "required": true, "type": "integer", "format": "int32"}}, "request": {"$ref": "Account"}, "response": {"$ref": "Account"}, "httpMethod": "PATCH", "path": "accounts/{id}", "id": "adexchangebuyer.accounts.patch"}, "list": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "id": "adexchangebuyer.accounts.list", "httpMethod": "GET", "path": "accounts", "response": {"$ref": "AccountsList"}}, "update": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "parameters": {"id": {"location": "path", "required": true, "type": "integer", "format": "int32"}}, "request": {"$ref": "Account"}, "response": {"$ref": "Account"}, "httpMethod": "PUT", "path": "accounts/{id}", "id": "adexchangebuyer.accounts.update"}, "get": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "parameters": {"id": {"location": "path", "required": true, "type": "integer", "format": "int32"}}, "response": {"$ref": "Account"}, "httpMethod": "GET", "path": "accounts/{id}", "id": "adexchangebuyer.accounts.get"}}}', true));
-    $this->creatives = new google_CreativesServiceResource($this, $this->serviceName, 'creatives', json_decode('{"methods": {"insert": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "request": {"$ref": "Creative"}, "id": "adexchangebuyer.creatives.insert", "httpMethod": "POST", "path": "creatives", "response": {"$ref": "Creative"}}, "list": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "parameters": {"statusFilter": {"enum": ["approved", "disapproved", "not_checked"], "type": "string", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "maxResults": {"format": "uint32", "maximum": "1000", "minimum": "1", "location": "query", "type": "integer"}}, "id": "adexchangebuyer.creatives.list", "httpMethod": "GET", "path": "creatives", "response": {"$ref": "CreativesList"}}, "get": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "parameters": {"buyerCreativeId": {"required": true, "type": "string", "location": "path"}, "accountId": {"location": "path", "required": true, "type": "integer", "format": "int32"}}, "response": {"$ref": "Creative"}, "httpMethod": "GET", "path": "creatives/{accountId}/{buyerCreativeId}", "id": "adexchangebuyer.creatives.get"}}}', true));
-    $this->directDeals = new google_DirectDealsServiceResource($this, $this->serviceName, 'directDeals', json_decode('{"methods": {"list": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "id": "adexchangebuyer.directDeals.list", "httpMethod": "GET", "path": "directdeals", "response": {"$ref": "DirectDealsList"}}, "get": {"scopes": ["https://www.googleapis.com/auth/adexchange.buyer"], "parameters": {"id": {"location": "path", "required": true, "type": "string", "format": "int64"}}, "response": {"$ref": "DirectDeal"}, "httpMethod": "GET", "path": "directdeals/{id}", "id": "adexchangebuyer.directDeals.get"}}}', true));
+    $this->accounts = new Google_AccountsServiceResource($this, $this->serviceName, 'accounts', json_decode('{"methods": {"get": {"id": "adexchangebuyer.accounts.get", "path": "accounts/{id}", "httpMethod": "GET", "parameters": {"id": {"type": "integer", "required": true, "format": "int32", "location": "path"}}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "list": {"id": "adexchangebuyer.accounts.list", "path": "accounts", "httpMethod": "GET", "response": {"$ref": "AccountsList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "patch": {"id": "adexchangebuyer.accounts.patch", "path": "accounts/{id}", "httpMethod": "PATCH", "parameters": {"id": {"type": "integer", "required": true, "format": "int32", "location": "path"}}, "request": {"$ref": "Account"}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "update": {"id": "adexchangebuyer.accounts.update", "path": "accounts/{id}", "httpMethod": "PUT", "parameters": {"id": {"type": "integer", "required": true, "format": "int32", "location": "path"}}, "request": {"$ref": "Account"}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
+    $this->creatives = new Google_CreativesServiceResource($this, $this->serviceName, 'creatives', json_decode('{"methods": {"get": {"id": "adexchangebuyer.creatives.get", "path": "creatives/{accountId}/{buyerCreativeId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "integer", "required": true, "format": "int32", "location": "path"}, "buyerCreativeId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Creative"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "insert": {"id": "adexchangebuyer.creatives.insert", "path": "creatives", "httpMethod": "POST", "request": {"$ref": "Creative"}, "response": {"$ref": "Creative"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "list": {"id": "adexchangebuyer.creatives.list", "path": "creatives", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "uint32", "minimum": "1", "maximum": "1000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "statusFilter": {"type": "string", "enum": ["approved", "disapproved", "not_checked"], "location": "query"}}, "response": {"$ref": "CreativesList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
+    $this->directDeals = new Google_DirectDealsServiceResource($this, $this->serviceName, 'directDeals', json_decode('{"methods": {"get": {"id": "adexchangebuyer.directDeals.get", "path": "directdeals/{id}", "httpMethod": "GET", "parameters": {"id": {"type": "string", "required": true, "format": "int64", "location": "path"}}, "response": {"$ref": "DirectDeal"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "list": {"id": "adexchangebuyer.directDeals.list", "path": "directdeals", "httpMethod": "GET", "response": {"$ref": "DirectDealsList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
 
   }
 }
 
-class google_Account extends Google_Model {
-  protected $__bidderLocationType = 'google_AccountBidderLocation';
+class Google_Account extends Google_Model {
+  protected $__bidderLocationType = 'Google_AccountBidderLocation';
   protected $__bidderLocationDataType = 'array';
   public $bidderLocation;
   public $cookieMatchingNid;
@@ -257,8 +255,8 @@ class google_Account extends Google_Model {
   public $id;
   public $kind;
   public $maximumTotalQps;
-  public function setBidderLocation(/* array(google_AccountBidderLocation) */ $bidderLocation) {
-    $this->assertIsArray($bidderLocation, 'google_AccountBidderLocation', __METHOD__);
+  public function setBidderLocation(/* array(Google_AccountBidderLocation) */ $bidderLocation) {
+    $this->assertIsArray($bidderLocation, 'Google_AccountBidderLocation', __METHOD__);
     $this->bidderLocation = $bidderLocation;
   }
   public function getBidderLocation() {
@@ -296,7 +294,7 @@ class google_Account extends Google_Model {
   }
 }
 
-class google_AccountBidderLocation extends Google_Model {
+class Google_AccountBidderLocation extends Google_Model {
   public $maximumQps;
   public $region;
   public $url;
@@ -320,13 +318,13 @@ class google_AccountBidderLocation extends Google_Model {
   }
 }
 
-class google_AccountsList extends Google_Model {
-  protected $__itemsType = 'google_Account';
+class Google_AccountsList extends Google_Model {
+  protected $__itemsType = 'Google_Account';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
-  public function setItems(/* array(google_Account) */ $items) {
-    $this->assertIsArray($items, 'google_Account', __METHOD__);
+  public function setItems(/* array(Google_Account) */ $items) {
+    $this->assertIsArray($items, 'Google_Account', __METHOD__);
     $this->items = $items;
   }
   public function getItems() {
@@ -340,17 +338,14 @@ class google_AccountsList extends Google_Model {
   }
 }
 
-class google_Creative extends Google_Model {
+class Google_Creative extends Google_Model {
   public $HTMLSnippet;
   public $accountId;
   public $advertiserId;
   public $advertiserName;
-  public $agencyId;
   public $attribute;
   public $buyerCreativeId;
   public $clickThroughUrl;
-  protected $__disapprovalReasonsType = 'google_CreativeDisapprovalReasons';
-  protected $__disapprovalReasonsDataType = 'array';
   public $disapprovalReasons;
   public $height;
   public $kind;
@@ -372,8 +367,7 @@ class google_Creative extends Google_Model {
   public function getAccountId() {
     return $this->accountId;
   }
-  public function setAdvertiserId(/* array(google_string) */ $advertiserId) {
-    $this->assertIsArray($advertiserId, 'google_string', __METHOD__);
+  public function setAdvertiserId($advertiserId) {
     $this->advertiserId = $advertiserId;
   }
   public function getAdvertiserId() {
@@ -385,14 +379,7 @@ class google_Creative extends Google_Model {
   public function getAdvertiserName() {
     return $this->advertiserName;
   }
-  public function setAgencyId($agencyId) {
-    $this->agencyId = $agencyId;
-  }
-  public function getAgencyId() {
-    return $this->agencyId;
-  }
-  public function setAttribute(/* array(google_int) */ $attribute) {
-    $this->assertIsArray($attribute, 'google_int', __METHOD__);
+  public function setAttribute($attribute) {
     $this->attribute = $attribute;
   }
   public function getAttribute() {
@@ -404,15 +391,13 @@ class google_Creative extends Google_Model {
   public function getBuyerCreativeId() {
     return $this->buyerCreativeId;
   }
-  public function setClickThroughUrl(/* array(google_string) */ $clickThroughUrl) {
-    $this->assertIsArray($clickThroughUrl, 'google_string', __METHOD__);
+  public function setClickThroughUrl($clickThroughUrl) {
     $this->clickThroughUrl = $clickThroughUrl;
   }
   public function getClickThroughUrl() {
     return $this->clickThroughUrl;
   }
-  public function setDisapprovalReasons(/* array(google_CreativeDisapprovalReasons) */ $disapprovalReasons) {
-    $this->assertIsArray($disapprovalReasons, 'google_CreativeDisapprovalReasons', __METHOD__);
+  public function setDisapprovalReasons($disapprovalReasons) {
     $this->disapprovalReasons = $disapprovalReasons;
   }
   public function getDisapprovalReasons() {
@@ -430,15 +415,13 @@ class google_Creative extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setProductCategories(/* array(google_int) */ $productCategories) {
-    $this->assertIsArray($productCategories, 'google_int', __METHOD__);
+  public function setProductCategories($productCategories) {
     $this->productCategories = $productCategories;
   }
   public function getProductCategories() {
     return $this->productCategories;
   }
-  public function setSensitiveCategories(/* array(google_int) */ $sensitiveCategories) {
-    $this->assertIsArray($sensitiveCategories, 'google_int', __METHOD__);
+  public function setSensitiveCategories($sensitiveCategories) {
     $this->sensitiveCategories = $sensitiveCategories;
   }
   public function getSensitiveCategories() {
@@ -450,8 +433,7 @@ class google_Creative extends Google_Model {
   public function getStatus() {
     return $this->status;
   }
-  public function setVendorType(/* array(google_int) */ $vendorType) {
-    $this->assertIsArray($vendorType, 'google_int', __METHOD__);
+  public function setVendorType($vendorType) {
     $this->vendorType = $vendorType;
   }
   public function getVendorType() {
@@ -471,32 +453,14 @@ class google_Creative extends Google_Model {
   }
 }
 
-class google_CreativeDisapprovalReasons extends Google_Model {
-  public $details;
-  public $reason;
-  public function setDetails(/* array(google_string) */ $details) {
-    $this->assertIsArray($details, 'google_string', __METHOD__);
-    $this->details = $details;
-  }
-  public function getDetails() {
-    return $this->details;
-  }
-  public function setReason($reason) {
-    $this->reason = $reason;
-  }
-  public function getReason() {
-    return $this->reason;
-  }
-}
-
-class google_CreativesList extends Google_Model {
-  protected $__itemsType = 'google_Creative';
+class Google_CreativesList extends Google_Model {
+  protected $__itemsType = 'Google_Creative';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setItems(/* array(google_Creative) */ $items) {
-    $this->assertIsArray($items, 'google_Creative', __METHOD__);
+  public function setItems(/* array(Google_Creative) */ $items) {
+    $this->assertIsArray($items, 'Google_Creative', __METHOD__);
     $this->items = $items;
   }
   public function getItems() {
@@ -516,7 +480,7 @@ class google_CreativesList extends Google_Model {
   }
 }
 
-class google_DirectDeal extends Google_Model {
+class Google_DirectDeal extends Google_Model {
   public $accountId;
   public $advertiser;
   public $currencyCode;
@@ -524,7 +488,6 @@ class google_DirectDeal extends Google_Model {
   public $fixedCpm;
   public $id;
   public $kind;
-  public $privateExchangeMinCpm;
   public $sellerNetwork;
   public $startTime;
   public function setAccountId($accountId) {
@@ -569,12 +532,6 @@ class google_DirectDeal extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setPrivateExchangeMinCpm($privateExchangeMinCpm) {
-    $this->privateExchangeMinCpm = $privateExchangeMinCpm;
-  }
-  public function getPrivateExchangeMinCpm() {
-    return $this->privateExchangeMinCpm;
-  }
   public function setSellerNetwork($sellerNetwork) {
     $this->sellerNetwork = $sellerNetwork;
   }
@@ -589,13 +546,13 @@ class google_DirectDeal extends Google_Model {
   }
 }
 
-class google_DirectDealsList extends Google_Model {
-  protected $__directDealsType = 'google_DirectDeal';
+class Google_DirectDealsList extends Google_Model {
+  protected $__directDealsType = 'Google_DirectDeal';
   protected $__directDealsDataType = 'array';
   public $directDeals;
   public $kind;
-  public function setDirectDeals(/* array(google_DirectDeal) */ $directDeals) {
-    $this->assertIsArray($directDeals, 'google_DirectDeal', __METHOD__);
+  public function setDirectDeals(/* array(Google_DirectDeal) */ $directDeals) {
+    $this->assertIsArray($directDeals, 'Google_DirectDeal', __METHOD__);
     $this->directDeals = $directDeals;
   }
   public function getDirectDeals() {
