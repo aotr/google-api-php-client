@@ -103,13 +103,11 @@ class Google_Model {
    * Verify if $obj is an array.
    * @throws Google_Exception Thrown if $obj isn't an array.
    * @param array $obj Items that should be validated.
-   * @param string $type Array items should be of this type.
    * @param string $method Method expecting an array as an argument.
    */
-  public function assertIsArray($obj, $type, $method) {
+  public function assertIsArray($obj, $method) {
     if ($obj && !is_array($obj)) {
-      throw new Google_Exception("Incorrect parameter type passed to $method(), expected an"
-          . " array containing items of type $type.");
+      throw new Google_Exception("Incorrect parameter type passed to $method(), expected an array.");
     }
   }
 }
