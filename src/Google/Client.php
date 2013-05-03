@@ -47,6 +47,7 @@ if (file_exists(dirname(__FILE__)  . '/local_config.php')) {
 
 require_once 'Google/Auth/AssertionCredentials.php';
 require_once 'Google/Cache/File.php';
+require_once 'Google/Collection.php';
 require_once 'Google/Exception.php';
 require_once 'Google/IO/Curl.php';
 require_once 'Google/Model.php';

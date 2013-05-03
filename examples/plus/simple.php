@@ -1,6 +1,6 @@
 <?php
-require_once '../Google_Client.php';
-require_once '../contrib/Google_PlusService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Plus.php';
 session_start();
 
 $client = new Google_Client();
@@ -11,8 +11,18 @@ $client->setApplicationName("Google+ PHP Starter Application");
 // $client->setClientId('insert_your_oauth2_client_id');
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
-// $client->setDeveloperKey('insert_your_developer_key');
-$plus = new Google_PlusService($client);
+$client->setDeveloperKey('AIzaSyCPymQBrnZEBGEHTERisHtW_RyY82CUSnc');
+$plus = new Google_Service_Plus($client);
+
+$params = array(
+   'orderBy' => 'best',
+   'maxResults' => '20',
+ );
+$results = $plus->activities->search('Google+ API', $params);
+foreach($results['items'] as $result) {
+  print "Search Result: <pre>{$result['object']['content']}</pre>\n";
+}
+exit;
 
 if (isset($_GET['logout'])) {
   unset($_SESSION['token']);
