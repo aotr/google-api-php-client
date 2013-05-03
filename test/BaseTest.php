@@ -30,7 +30,7 @@ class BaseTest extends PHPUnit_Framework_TestCase {
 
       BaseTest::$client = new Google_Client();
       if (!BaseTest::$client->getAccessToken()) {
-        //BaseTest::$client->setAccessToken($apiConfig['oauth_test_token']);
+        BaseTest::$client->setAccessToken($apiConfig['oauth_test_token']);
       }
     }
   }
