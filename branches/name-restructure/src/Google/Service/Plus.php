@@ -13,16 +13,54 @@
  * the License.
  */
 
+/**
+ * Service definition for Plus (v1).
+ *
+ * <p>
+ * The Google+ API enables developers to build on top of the Google+ platform.
+ * </p>
+ *
+ * <p>
+ * For more information about this service, see the
+ * <a href="https://developers.google.com/+/api/" target="_blank">API Documentation</a>
+ * </p>
+ *
+ * @author Google, Inc.
+ */
+class Google_Service_Plus extends Google_Service {
+  public $activities;
+  public $comments;
+  public $moments;
+  public $people;
+  /**
+   * Constructs the internal representation of the Plus service.
+   *
+   * @param Google_Client $client
+   */
+  public function __construct(Google_Client $client) {
+    $this->servicePath = 'plus/v1/';
+    $this->version = 'v1';
+    $this->serviceName = 'plus';
+
+    $client->addService($this->serviceName, $this->version);
+    $this->activities = new Google_Service_Plus_Activities_Resource($this, $this->serviceName, 'activities', json_decode('{"methods": {"get": {"id": "plus.activities.get", "path": "activities/{activityId}", "httpMethod": "GET", "parameters": {"activityId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Activity"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "list": {"id": "plus.activities.list", "path": "people/{userId}/activities/{collection}", "httpMethod": "GET", "parameters": {"collection": {"type": "string", "required": true, "enum": ["public"], "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ActivityFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "search": {"id": "plus.activities.search", "path": "activities", "httpMethod": "GET", "parameters": {"language": {"type": "string", "default": "en-US", "location": "query"}, "maxResults": {"type": "integer", "default": "10", "format": "uint32", "minimum": "1", "maximum": "20", "location": "query"}, "orderBy": {"type": "string", "default": "recent", "enum": ["best", "recent"], "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}}, "response": {"$ref": "ActivityFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}}}', true));
+    $this->comments = new Google_Service_Plus_Comments_Resource($this, $this->serviceName, 'comments', json_decode('{"methods": {"get": {"id": "plus.comments.get", "path": "comments/{commentId}", "httpMethod": "GET", "parameters": {"commentId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Comment"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "list": {"id": "plus.comments.list", "path": "activities/{activityId}/comments", "httpMethod": "GET", "parameters": {"activityId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "sortOrder": {"type": "string", "default": "ascending", "enum": ["ascending", "descending"], "location": "query"}}, "response": {"$ref": "CommentFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}}}', true));
+    $this->moments = new Google_Service_Plus_Moments_Resource($this, $this->serviceName, 'moments', json_decode('{"methods": {"insert": {"id": "plus.moments.insert", "path": "people/{userId}/moments/{collection}", "httpMethod": "POST", "parameters": {"collection": {"type": "string", "required": true, "enum": ["vault"], "location": "path"}, "debug": {"type": "boolean", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Moment"}, "response": {"$ref": "Moment"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "list": {"id": "plus.moments.list", "path": "people/{userId}/moments/{collection}", "httpMethod": "GET", "parameters": {"collection": {"type": "string", "required": true, "enum": ["vault"], "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "targetUrl": {"type": "string", "location": "query"}, "type": {"type": "string", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MomentsFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "remove": {"id": "plus.moments.remove", "path": "moments/{id}", "httpMethod": "DELETE", "parameters": {"id": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
+    $this->people = new Google_Service_Plus_People_Resource($this, $this->serviceName, 'people', json_decode('{"methods": {"get": {"id": "plus.people.get", "path": "people/{userId}", "httpMethod": "GET", "parameters": {"userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Person"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "list": {"id": "plus.people.list", "path": "people/{userId}/people/{collection}", "httpMethod": "GET", "parameters": {"collection": {"type": "string", "required": true, "enum": ["visible"], "location": "path"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "orderBy": {"type": "string", "enum": ["alphabetical", "best"], "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "PeopleFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "listByActivity": {"id": "plus.people.listByActivity", "path": "activities/{activityId}/people/{collection}", "httpMethod": "GET", "parameters": {"activityId": {"type": "string", "required": true, "location": "path"}, "collection": {"type": "string", "required": true, "enum": ["plusoners", "resharers"], "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "PeopleFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "search": {"id": "plus.people.search", "path": "people", "httpMethod": "GET", "parameters": {"language": {"type": "string", "default": "en-US", "location": "query"}, "maxResults": {"type": "integer", "default": "10", "format": "uint32", "minimum": "1", "maximum": "20", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}}, "response": {"$ref": "PeopleFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}}}', true));
+
+  }
+}
+
 
   /**
    * The "activities" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new google_PlusService(...);
    *   $activities = $plusService->activities;
    *  </code>
    */
-  class Google_ActivitiesServiceResource extends Google_Service_Resource {
+  class Google_Service_Plus_Activities_Resource extends Google_Service_Resource {
 
 
     /**
@@ -30,14 +68,14 @@
      *
      * @param string $activityId The ID of the activity to get.
      * @param array $optParams Optional parameters.
-     * @return Google_Activity
+     * @return Google_Service_Plus_Activity
      */
     public function get($activityId, $optParams = array()) {
       $params = array('activityId' => $activityId);
       $params = array_merge($params, $optParams);
       $data = $this->__call('get', array($params));
       if ($this->useObjects()) {
-        return new Google_Activity($data);
+        return new Google_Service_Plus_Activity($data);
       } else {
         return $data;
       }
@@ -51,14 +89,14 @@
      *
      * @opt_param string maxResults The maximum number of activities to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
      * @opt_param string pageToken The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_ActivityFeed
+     * @return Google_Service_Plus_ActivityFeed
      */
     public function listActivities($userId, $collection, $optParams = array()) {
       $params = array('userId' => $userId, 'collection' => $collection);
       $params = array_merge($params, $optParams);
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
-        return new Google_ActivityFeed($data);
+        return new Google_Service_Plus_ActivityFeed($data);
       } else {
         return $data;
       }
@@ -73,14 +111,14 @@
      * @opt_param string maxResults The maximum number of activities to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
      * @opt_param string orderBy Specifies how to order search results.
      * @opt_param string pageToken The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response. This token can be of any length.
-     * @return Google_ActivityFeed
+     * @return Google_Service_Plus_ActivityFeed
      */
     public function search($query, $optParams = array()) {
       $params = array('query' => $query);
       $params = array_merge($params, $optParams);
       $data = $this->__call('search', array($params));
       if ($this->useObjects()) {
-        return new Google_ActivityFeed($data);
+        return new Google_Service_Plus_ActivityFeed($data);
       } else {
         return $data;
       }
@@ -91,11 +129,11 @@
    * The "comments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new google_PlusService(...);
    *   $comments = $plusService->comments;
    *  </code>
    */
-  class Google_CommentsServiceResource extends Google_Service_Resource {
+  class Google_Service_Plus_Comments_Resource extends Google_Service_Resource {
 
 
     /**
@@ -103,14 +141,14 @@
      *
      * @param string $commentId The ID of the comment to get.
      * @param array $optParams Optional parameters.
-     * @return Google_Comment
+     * @return Google_Service_Plus_Comment
      */
     public function get($commentId, $optParams = array()) {
       $params = array('commentId' => $commentId);
       $params = array_merge($params, $optParams);
       $data = $this->__call('get', array($params));
       if ($this->useObjects()) {
-        return new Google_Comment($data);
+        return new Google_Service_Plus_Comment($data);
       } else {
         return $data;
       }
@@ -124,14 +162,14 @@
      * @opt_param string maxResults The maximum number of comments to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
      * @opt_param string pageToken The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
      * @opt_param string sortOrder The order in which to sort the list of comments.
-     * @return Google_CommentFeed
+     * @return Google_Service_Plus_CommentFeed
      */
     public function listComments($activityId, $optParams = array()) {
       $params = array('activityId' => $activityId);
       $params = array_merge($params, $optParams);
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
-        return new Google_CommentFeed($data);
+        return new Google_Service_Plus_CommentFeed($data);
       } else {
         return $data;
       }
@@ -142,11 +180,11 @@
    * The "moments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new google_PlusService(...);
    *   $moments = $plusService->moments;
    *  </code>
    */
-  class Google_MomentsServiceResource extends Google_Service_Resource {
+  class Google_Service_Plus_Moments_Resource extends Google_Service_Resource {
 
 
     /**
@@ -155,18 +193,18 @@
      *
      * @param string $userId The ID of the user to record activities for. The only valid values are "me" and the ID of the authenticated user.
      * @param string $collection The collection to which to write moments.
-     * @param Google_Moment $postBody
+     * @param google_Moment $postBody
      * @param array $optParams Optional parameters.
      *
      * @opt_param bool debug Return the moment as written. Should be used only for debugging.
-     * @return Google_Moment
+     * @return Google_Service_Plus_Moment
      */
-    public function insert($userId, $collection, Google_Moment $postBody, $optParams = array()) {
+    public function insert($userId, $collection, Google_Service_Plus_Moment $postBody, $optParams = array()) {
       $params = array('userId' => $userId, 'collection' => $collection, 'postBody' => $postBody);
       $params = array_merge($params, $optParams);
       $data = $this->__call('insert', array($params));
       if ($this->useObjects()) {
-        return new Google_Moment($data);
+        return new Google_Service_Plus_Moment($data);
       } else {
         return $data;
       }
@@ -182,14 +220,14 @@
      * @opt_param string pageToken The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
      * @opt_param string targetUrl Only moments containing this targetUrl will be returned.
      * @opt_param string type Only moments of this type will be returned.
-     * @return Google_MomentsFeed
+     * @return Google_Service_Plus_MomentsFeed
      */
     public function listMoments($userId, $collection, $optParams = array()) {
       $params = array('userId' => $userId, 'collection' => $collection);
       $params = array_merge($params, $optParams);
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
-        return new Google_MomentsFeed($data);
+        return new Google_Service_Plus_MomentsFeed($data);
       } else {
         return $data;
       }
@@ -212,11 +250,11 @@
    * The "people" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new google_PlusService(...);
    *   $people = $plusService->people;
    *  </code>
    */
-  class Google_PeopleServiceResource extends Google_Service_Resource {
+  class Google_Service_Plus_People_Resource extends Google_Service_Resource {
 
 
     /**
@@ -225,14 +263,14 @@
      *
      * @param string $userId The ID of the person to get the profile for. The special value "me" can be used to indicate the authenticated user.
      * @param array $optParams Optional parameters.
-     * @return Google_Person
+     * @return Google_Service_Plus_Person
      */
     public function get($userId, $optParams = array()) {
       $params = array('userId' => $userId);
       $params = array_merge($params, $optParams);
       $data = $this->__call('get', array($params));
       if ($this->useObjects()) {
-        return new Google_Person($data);
+        return new Google_Service_Plus_Person($data);
       } else {
         return $data;
       }
@@ -247,14 +285,14 @@
      * @opt_param string maxResults The maximum number of people to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
      * @opt_param string orderBy The order to return people in.
      * @opt_param string pageToken The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_PeopleFeed
+     * @return Google_Service_Plus_PeopleFeed
      */
     public function listPeople($userId, $collection, $optParams = array()) {
       $params = array('userId' => $userId, 'collection' => $collection);
       $params = array_merge($params, $optParams);
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
-        return new Google_PeopleFeed($data);
+        return new Google_Service_Plus_PeopleFeed($data);
       } else {
         return $data;
       }
@@ -269,14 +307,14 @@
      *
      * @opt_param string maxResults The maximum number of people to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
      * @opt_param string pageToken The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
-     * @return Google_PeopleFeed
+     * @return Google_Service_Plus_PeopleFeed
      */
     public function listByActivity($activityId, $collection, $optParams = array()) {
       $params = array('activityId' => $activityId, 'collection' => $collection);
       $params = array_merge($params, $optParams);
       $data = $this->__call('listByActivity', array($params));
       if ($this->useObjects()) {
-        return new Google_PeopleFeed($data);
+        return new Google_Service_Plus_PeopleFeed($data);
       } else {
         return $data;
       }
@@ -290,61 +328,27 @@
      * @opt_param string language Specify the preferred language to search with. See search language codes for available values.
      * @opt_param string maxResults The maximum number of people to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
      * @opt_param string pageToken The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response. This token can be of any length.
-     * @return Google_PeopleFeed
+     * @return Google_Service_Plus_PeopleFeed
      */
     public function search($query, $optParams = array()) {
       $params = array('query' => $query);
       $params = array_merge($params, $optParams);
       $data = $this->__call('search', array($params));
       if ($this->useObjects()) {
-        return new Google_PeopleFeed($data);
+        return new Google_Service_Plus_PeopleFeed($data);
       } else {
         return $data;
       }
     }
   }
 
-/**
- * Service definition for Google_Plus (v1).
- *
- * <p>
- * The Google+ API enables developers to build on top of the Google+ platform.
- * </p>
- *
- * <p>
- * For more information about this service, see the
- * <a href="https://developers.google.com/+/api/" target="_blank">API Documentation</a>
- * </p>
- *
- * @author Google, Inc.
- */
-class Google_PlusService extends Google_Service {
-  public $activities;
-  public $comments;
-  public $moments;
-  public $people;
-  /**
-   * Constructs the internal representation of the Plus service.
-   *
-   * @param Google_Client $client
-   */
-  public function __construct(Google_Client $client) {
-    $this->servicePath = 'plus/v1/';
-    $this->version = 'v1';
-    $this->serviceName = 'plus';
 
-    $client->addService($this->serviceName, $this->version);
-    $this->activities = new Google_ActivitiesServiceResource($this, $this->serviceName, 'activities', json_decode('{"methods": {"get": {"id": "plus.activities.get", "path": "activities/{activityId}", "httpMethod": "GET", "parameters": {"activityId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Activity"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "list": {"id": "plus.activities.list", "path": "people/{userId}/activities/{collection}", "httpMethod": "GET", "parameters": {"collection": {"type": "string", "required": true, "enum": ["public"], "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ActivityFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "search": {"id": "plus.activities.search", "path": "activities", "httpMethod": "GET", "parameters": {"language": {"type": "string", "default": "en-US", "location": "query"}, "maxResults": {"type": "integer", "default": "10", "format": "uint32", "minimum": "1", "maximum": "20", "location": "query"}, "orderBy": {"type": "string", "default": "recent", "enum": ["best", "recent"], "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}}, "response": {"$ref": "ActivityFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}}}', true));
-    $this->comments = new Google_CommentsServiceResource($this, $this->serviceName, 'comments', json_decode('{"methods": {"get": {"id": "plus.comments.get", "path": "comments/{commentId}", "httpMethod": "GET", "parameters": {"commentId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Comment"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "list": {"id": "plus.comments.list", "path": "activities/{activityId}/comments", "httpMethod": "GET", "parameters": {"activityId": {"type": "string", "required": true, "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "sortOrder": {"type": "string", "default": "ascending", "enum": ["ascending", "descending"], "location": "query"}}, "response": {"$ref": "CommentFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}}}', true));
-    $this->moments = new Google_MomentsServiceResource($this, $this->serviceName, 'moments', json_decode('{"methods": {"insert": {"id": "plus.moments.insert", "path": "people/{userId}/moments/{collection}", "httpMethod": "POST", "parameters": {"collection": {"type": "string", "required": true, "enum": ["vault"], "location": "path"}, "debug": {"type": "boolean", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Moment"}, "response": {"$ref": "Moment"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "list": {"id": "plus.moments.list", "path": "people/{userId}/moments/{collection}", "httpMethod": "GET", "parameters": {"collection": {"type": "string", "required": true, "enum": ["vault"], "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "targetUrl": {"type": "string", "location": "query"}, "type": {"type": "string", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MomentsFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "remove": {"id": "plus.moments.remove", "path": "moments/{id}", "httpMethod": "DELETE", "parameters": {"id": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
-    $this->people = new Google_PeopleServiceResource($this, $this->serviceName, 'people', json_decode('{"methods": {"get": {"id": "plus.people.get", "path": "people/{userId}", "httpMethod": "GET", "parameters": {"userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Person"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "list": {"id": "plus.people.list", "path": "people/{userId}/people/{collection}", "httpMethod": "GET", "parameters": {"collection": {"type": "string", "required": true, "enum": ["visible"], "location": "path"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "orderBy": {"type": "string", "enum": ["alphabetical", "best"], "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "userId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "PeopleFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "listByActivity": {"id": "plus.people.listByActivity", "path": "activities/{activityId}/people/{collection}", "httpMethod": "GET", "parameters": {"activityId": {"type": "string", "required": true, "location": "path"}, "collection": {"type": "string", "required": true, "enum": ["plusoners", "resharers"], "location": "path"}, "maxResults": {"type": "integer", "default": "20", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "PeopleFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}, "search": {"id": "plus.people.search", "path": "people", "httpMethod": "GET", "parameters": {"language": {"type": "string", "default": "en-US", "location": "query"}, "maxResults": {"type": "integer", "default": "10", "format": "uint32", "minimum": "1", "maximum": "20", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}}, "response": {"$ref": "PeopleFeed"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me"]}}}', true));
 
-  }
-}
 
-class Google_Acl extends Google_Model {
+class Google_Service_Plus_Acl 
+    extends Google_Collection {
   public $description;
-  protected $__itemsType = 'Google_PlusAclentryResource';
+  protected $__itemsType = 'Google_Service_Plus_PlusAclentryResource';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -354,8 +358,7 @@ class Google_Acl extends Google_Model {
   public function getDescription() {
     return $this->description;
   }
-  public function setItems(/* array(Google_PlusAclentryResource) */ $items) {
-    $this->assertIsArray($items, 'Google_PlusAclentryResource', __METHOD__);
+  public function setItems($items) {
     $this->items = $items;
   }
   public function getItems() {
@@ -369,11 +372,12 @@ class Google_Acl extends Google_Model {
   }
 }
 
-class Google_Activity extends Google_Model {
-  protected $__accessType = 'Google_Acl';
+class Google_Service_Plus_Activity 
+    extends Google_Model {
+  protected $__accessType = 'Google_Service_Plus_Acl';
   protected $__accessDataType = '';
   public $access;
-  protected $__actorType = 'Google_ActivityActor';
+  protected $__actorType = 'Google_Service_Plus_ActivityActor';
   protected $__actorDataType = '';
   public $actor;
   public $address;
@@ -383,12 +387,15 @@ class Google_Activity extends Google_Model {
   public $geocode;
   public $id;
   public $kind;
-  protected $__objectType = 'Google_ActivityObject';
+  protected $__locationType = 'Google_Service_Plus_Place';
+  protected $__locationDataType = '';
+  public $location;
+  protected $__objectType = 'Google_Service_Plus_ActivityObject';
   protected $__objectDataType = '';
   public $object;
   public $placeId;
   public $placeName;
-  protected $__providerType = 'Google_ActivityProvider';
+  protected $__providerType = 'Google_Service_Plus_ActivityProvider';
   protected $__providerDataType = '';
   public $provider;
   public $published;
@@ -397,13 +404,13 @@ class Google_Activity extends Google_Model {
   public $updated;
   public $url;
   public $verb;
-  public function setAccess(Google_Acl $access) {
+  public function setAccess(Google_Service_Plus_Acl$access) {
     $this->access = $access;
   }
   public function getAccess() {
     return $this->access;
   }
-  public function setActor(Google_ActivityActor $actor) {
+  public function setActor(Google_Service_Plus_ActivityActor$actor) {
     $this->actor = $actor;
   }
   public function getActor() {
@@ -451,7 +458,13 @@ class Google_Activity extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setObject(Google_ActivityObject $object) {
+  public function setLocation(Google_Service_Plus_Place$location) {
+    $this->location = $location;
+  }
+  public function getLocation() {
+    return $this->location;
+  }
+  public function setObject(Google_Service_Plus_ActivityObject$object) {
     $this->object = $object;
   }
   public function getObject() {
@@ -469,7 +482,7 @@ class Google_Activity extends Google_Model {
   public function getPlaceName() {
     return $this->placeName;
   }
-  public function setProvider(Google_ActivityProvider $provider) {
+  public function setProvider(Google_Service_Plus_ActivityProvider$provider) {
     $this->provider = $provider;
   }
   public function getProvider() {
@@ -513,13 +526,14 @@ class Google_Activity extends Google_Model {
   }
 }
 
-class Google_ActivityActor extends Google_Model {
+class Google_Service_Plus_ActivityActor 
+    extends Google_Model {
   public $displayName;
   public $id;
-  protected $__imageType = 'Google_ActivityActorImage';
+  protected $__imageType = 'Google_Service_Plus_ActivityActorImage';
   protected $__imageDataType = '';
   public $image;
-  protected $__nameType = 'Google_ActivityActorName';
+  protected $__nameType = 'Google_Service_Plus_ActivityActorName';
   protected $__nameDataType = '';
   public $name;
   public $url;
@@ -535,13 +549,13 @@ class Google_ActivityActor extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setImage(Google_ActivityActorImage $image) {
+  public function setImage(Google_Service_Plus_ActivityActorImage$image) {
     $this->image = $image;
   }
   public function getImage() {
     return $this->image;
   }
-  public function setName(Google_ActivityActorName $name) {
+  public function setName(Google_Service_Plus_ActivityActorName$name) {
     $this->name = $name;
   }
   public function getName() {
@@ -555,7 +569,8 @@ class Google_ActivityActor extends Google_Model {
   }
 }
 
-class Google_ActivityActorImage extends Google_Model {
+class Google_Service_Plus_ActivityActorImage 
+    extends Google_Model {
   public $url;
   public function setUrl($url) {
     $this->url = $url;
@@ -565,7 +580,8 @@ class Google_ActivityActorImage extends Google_Model {
   }
 }
 
-class Google_ActivityActorName extends Google_Model {
+class Google_Service_Plus_ActivityActorName 
+    extends Google_Model {
   public $familyName;
   public $givenName;
   public function setFamilyName($familyName) {
@@ -582,10 +598,11 @@ class Google_ActivityActorName extends Google_Model {
   }
 }
 
-class Google_ActivityFeed extends Google_Model {
+class Google_Service_Plus_ActivityFeed 
+    extends Google_Collection {
   public $etag;
   public $id;
-  protected $__itemsType = 'Google_Activity';
+  protected $__itemsType = 'Google_Service_Plus_Activity';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -606,8 +623,7 @@ class Google_ActivityFeed extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setItems(/* array(Google_Activity) */ $items) {
-    $this->assertIsArray($items, 'Google_Activity', __METHOD__);
+  public function setItems($items) {
     $this->items = $items;
   }
   public function getItems() {
@@ -651,35 +667,35 @@ class Google_ActivityFeed extends Google_Model {
   }
 }
 
-class Google_ActivityObject extends Google_Model {
-  protected $__actorType = 'Google_ActivityObjectActor';
+class Google_Service_Plus_ActivityObject 
+    extends Google_Collection {
+  protected $__actorType = 'Google_Service_Plus_ActivityObjectActor';
   protected $__actorDataType = '';
   public $actor;
-  protected $__attachmentsType = 'Google_ActivityObjectAttachments';
+  protected $__attachmentsType = 'Google_Service_Plus_ActivityObjectAttachments';
   protected $__attachmentsDataType = 'array';
   public $attachments;
   public $content;
   public $id;
   public $objectType;
   public $originalContent;
-  protected $__plusonersType = 'Google_ActivityObjectPlusoners';
+  protected $__plusonersType = 'Google_Service_Plus_ActivityObjectPlusoners';
   protected $__plusonersDataType = '';
   public $plusoners;
-  protected $__repliesType = 'Google_ActivityObjectReplies';
+  protected $__repliesType = 'Google_Service_Plus_ActivityObjectReplies';
   protected $__repliesDataType = '';
   public $replies;
-  protected $__resharersType = 'Google_ActivityObjectResharers';
+  protected $__resharersType = 'Google_Service_Plus_ActivityObjectResharers';
   protected $__resharersDataType = '';
   public $resharers;
   public $url;
-  public function setActor(Google_ActivityObjectActor $actor) {
+  public function setActor(Google_Service_Plus_ActivityObjectActor$actor) {
     $this->actor = $actor;
   }
   public function getActor() {
     return $this->actor;
   }
-  public function setAttachments(/* array(Google_ActivityObjectAttachments) */ $attachments) {
-    $this->assertIsArray($attachments, 'Google_ActivityObjectAttachments', __METHOD__);
+  public function setAttachments($attachments) {
     $this->attachments = $attachments;
   }
   public function getAttachments() {
@@ -709,19 +725,19 @@ class Google_ActivityObject extends Google_Model {
   public function getOriginalContent() {
     return $this->originalContent;
   }
-  public function setPlusoners(Google_ActivityObjectPlusoners $plusoners) {
+  public function setPlusoners(Google_Service_Plus_ActivityObjectPlusoners$plusoners) {
     $this->plusoners = $plusoners;
   }
   public function getPlusoners() {
     return $this->plusoners;
   }
-  public function setReplies(Google_ActivityObjectReplies $replies) {
+  public function setReplies(Google_Service_Plus_ActivityObjectReplies$replies) {
     $this->replies = $replies;
   }
   public function getReplies() {
     return $this->replies;
   }
-  public function setResharers(Google_ActivityObjectResharers $resharers) {
+  public function setResharers(Google_Service_Plus_ActivityObjectResharers$resharers) {
     $this->resharers = $resharers;
   }
   public function getResharers() {
@@ -735,10 +751,11 @@ class Google_ActivityObject extends Google_Model {
   }
 }
 
-class Google_ActivityObjectActor extends Google_Model {
+class Google_Service_Plus_ActivityObjectActor 
+    extends Google_Model {
   public $displayName;
   public $id;
-  protected $__imageType = 'Google_ActivityObjectActorImage';
+  protected $__imageType = 'Google_Service_Plus_ActivityObjectActorImage';
   protected $__imageDataType = '';
   public $image;
   public $url;
@@ -754,7 +771,7 @@ class Google_ActivityObjectActor extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setImage(Google_ActivityObjectActorImage $image) {
+  public function setImage(Google_Service_Plus_ActivityObjectActorImage$image) {
     $this->image = $image;
   }
   public function getImage() {
@@ -768,7 +785,8 @@ class Google_ActivityObjectActor extends Google_Model {
   }
 }
 
-class Google_ActivityObjectActorImage extends Google_Model {
+class Google_Service_Plus_ActivityObjectActorImage 
+    extends Google_Model {
   public $url;
   public function setUrl($url) {
     $this->url = $url;
@@ -778,21 +796,22 @@ class Google_ActivityObjectActorImage extends Google_Model {
   }
 }
 
-class Google_ActivityObjectAttachments extends Google_Model {
+class Google_Service_Plus_ActivityObjectAttachments 
+    extends Google_Collection {
   public $content;
   public $displayName;
-  protected $__embedType = 'Google_ActivityObjectAttachmentsEmbed';
+  protected $__embedType = 'Google_Service_Plus_ActivityObjectAttachmentsEmbed';
   protected $__embedDataType = '';
   public $embed;
-  protected $__fullImageType = 'Google_ActivityObjectAttachmentsFullImage';
+  protected $__fullImageType = 'Google_Service_Plus_ActivityObjectAttachmentsFullImage';
   protected $__fullImageDataType = '';
   public $fullImage;
   public $id;
-  protected $__imageType = 'Google_ActivityObjectAttachmentsImage';
+  protected $__imageType = 'Google_Service_Plus_ActivityObjectAttachmentsImage';
   protected $__imageDataType = '';
   public $image;
   public $objectType;
-  protected $__thumbnailsType = 'Google_ActivityObjectAttachmentsThumbnails';
+  protected $__thumbnailsType = 'Google_Service_Plus_ActivityObjectAttachmentsThumbnails';
   protected $__thumbnailsDataType = 'array';
   public $thumbnails;
   public $url;
@@ -808,13 +827,13 @@ class Google_ActivityObjectAttachments extends Google_Model {
   public function getDisplayName() {
     return $this->displayName;
   }
-  public function setEmbed(Google_ActivityObjectAttachmentsEmbed $embed) {
+  public function setEmbed(Google_Service_Plus_ActivityObjectAttachmentsEmbed$embed) {
     $this->embed = $embed;
   }
   public function getEmbed() {
     return $this->embed;
   }
-  public function setFullImage(Google_ActivityObjectAttachmentsFullImage $fullImage) {
+  public function setFullImage(Google_Service_Plus_ActivityObjectAttachmentsFullImage$fullImage) {
     $this->fullImage = $fullImage;
   }
   public function getFullImage() {
@@ -826,7 +845,7 @@ class Google_ActivityObjectAttachments extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setImage(Google_ActivityObjectAttachmentsImage $image) {
+  public function setImage(Google_Service_Plus_ActivityObjectAttachmentsImage$image) {
     $this->image = $image;
   }
   public function getImage() {
@@ -838,8 +857,7 @@ class Google_ActivityObjectAttachments extends Google_Model {
   public function getObjectType() {
     return $this->objectType;
   }
-  public function setThumbnails(/* array(Google_ActivityObjectAttachmentsThumbnails) */ $thumbnails) {
-    $this->assertIsArray($thumbnails, 'Google_ActivityObjectAttachmentsThumbnails', __METHOD__);
+  public function setThumbnails($thumbnails) {
     $this->thumbnails = $thumbnails;
   }
   public function getThumbnails() {
@@ -853,7 +871,8 @@ class Google_ActivityObjectAttachments extends Google_Model {
   }
 }
 
-class Google_ActivityObjectAttachmentsEmbed extends Google_Model {
+class Google_Service_Plus_ActivityObjectAttachmentsEmbed 
+    extends Google_Model {
   public $type;
   public $url;
   public function setType($type) {
@@ -870,7 +889,8 @@ class Google_ActivityObjectAttachmentsEmbed extends Google_Model {
   }
 }
 
-class Google_ActivityObjectAttachmentsFullImage extends Google_Model {
+class Google_Service_Plus_ActivityObjectAttachmentsFullImage 
+    extends Google_Model {
   public $height;
   public $type;
   public $url;
@@ -901,7 +921,8 @@ class Google_ActivityObjectAttachmentsFullImage extends Google_Model {
   }
 }
 
-class Google_ActivityObjectAttachmentsImage extends Google_Model {
+class Google_Service_Plus_ActivityObjectAttachmentsImage 
+    extends Google_Model {
   public $height;
   public $type;
   public $url;
@@ -932,9 +953,10 @@ class Google_ActivityObjectAttachmentsImage extends Google_Model {
   }
 }
 
-class Google_ActivityObjectAttachmentsThumbnails extends Google_Model {
+class Google_Service_Plus_ActivityObjectAttachmentsThumbnails 
+    extends Google_Model {
   public $description;
-  protected $__imageType = 'Google_ActivityObjectAttachmentsThumbnailsImage';
+  protected $__imageType = 'Google_Service_Plus_ActivityObjectAttachmentsThumbnailsImage';
   protected $__imageDataType = '';
   public $image;
   public $url;
@@ -944,7 +966,7 @@ class Google_ActivityObjectAttachmentsThumbnails extends Google_Model {
   public function getDescription() {
     return $this->description;
   }
-  public function setImage(Google_ActivityObjectAttachmentsThumbnailsImage $image) {
+  public function setImage(Google_Service_Plus_ActivityObjectAttachmentsThumbnailsImage$image) {
     $this->image = $image;
   }
   public function getImage() {
@@ -958,7 +980,8 @@ class Google_ActivityObjectAttachmentsThumbnails extends Google_Model {
   }
 }
 
-class Google_ActivityObjectAttachmentsThumbnailsImage extends Google_Model {
+class Google_Service_Plus_ActivityObjectAttachmentsThumbnailsImage 
+    extends Google_Model {
   public $height;
   public $type;
   public $url;
@@ -989,7 +1012,8 @@ class Google_ActivityObjectAttachmentsThumbnailsImage extends Google_Model {
   }
 }
 
-class Google_ActivityObjectPlusoners extends Google_Model {
+class Google_Service_Plus_ActivityObjectPlusoners 
+    extends Google_Model {
   public $selfLink;
   public $totalItems;
   public function setSelfLink($selfLink) {
@@ -1006,7 +1030,8 @@ class Google_ActivityObjectPlusoners extends Google_Model {
   }
 }
 
-class Google_ActivityObjectReplies extends Google_Model {
+class Google_Service_Plus_ActivityObjectReplies 
+    extends Google_Model {
   public $selfLink;
   public $totalItems;
   public function setSelfLink($selfLink) {
@@ -1023,7 +1048,8 @@ class Google_ActivityObjectReplies extends Google_Model {
   }
 }
 
-class Google_ActivityObjectResharers extends Google_Model {
+class Google_Service_Plus_ActivityObjectResharers 
+    extends Google_Model {
   public $selfLink;
   public $totalItems;
   public function setSelfLink($selfLink) {
@@ -1040,7 +1066,8 @@ class Google_ActivityObjectResharers extends Google_Model {
   }
 }
 
-class Google_ActivityProvider extends Google_Model {
+class Google_Service_Plus_ActivityProvider 
+    extends Google_Model {
   public $title;
   public function setTitle($title) {
     $this->title = $title;
@@ -1050,27 +1077,28 @@ class Google_ActivityProvider extends Google_Model {
   }
 }
 
-class Google_Comment extends Google_Model {
-  protected $__actorType = 'Google_CommentActor';
+class Google_Service_Plus_Comment 
+    extends Google_Collection {
+  protected $__actorType = 'Google_Service_Plus_CommentActor';
   protected $__actorDataType = '';
   public $actor;
   public $etag;
   public $id;
-  protected $__inReplyToType = 'Google_CommentInReplyTo';
+  protected $__inReplyToType = 'Google_Service_Plus_CommentInReplyTo';
   protected $__inReplyToDataType = 'array';
   public $inReplyTo;
   public $kind;
-  protected $__objectType = 'Google_CommentObject';
+  protected $__objectType = 'Google_Service_Plus_CommentObject';
   protected $__objectDataType = '';
   public $object;
-  protected $__plusonersType = 'Google_CommentPlusoners';
+  protected $__plusonersType = 'Google_Service_Plus_CommentPlusoners';
   protected $__plusonersDataType = '';
   public $plusoners;
   public $published;
   public $selfLink;
   public $updated;
   public $verb;
-  public function setActor(Google_CommentActor $actor) {
+  public function setActor(Google_Service_Plus_CommentActor$actor) {
     $this->actor = $actor;
   }
   public function getActor() {
@@ -1088,8 +1116,7 @@ class Google_Comment extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setInReplyTo(/* array(Google_CommentInReplyTo) */ $inReplyTo) {
-    $this->assertIsArray($inReplyTo, 'Google_CommentInReplyTo', __METHOD__);
+  public function setInReplyTo($inReplyTo) {
     $this->inReplyTo = $inReplyTo;
   }
   public function getInReplyTo() {
@@ -1101,13 +1128,13 @@ class Google_Comment extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setObject(Google_CommentObject $object) {
+  public function setObject(Google_Service_Plus_CommentObject$object) {
     $this->object = $object;
   }
   public function getObject() {
     return $this->object;
   }
-  public function setPlusoners(Google_CommentPlusoners $plusoners) {
+  public function setPlusoners(Google_Service_Plus_CommentPlusoners$plusoners) {
     $this->plusoners = $plusoners;
   }
   public function getPlusoners() {
@@ -1139,10 +1166,11 @@ class Google_Comment extends Google_Model {
   }
 }
 
-class Google_CommentActor extends Google_Model {
+class Google_Service_Plus_CommentActor 
+    extends Google_Model {
   public $displayName;
   public $id;
-  protected $__imageType = 'Google_CommentActorImage';
+  protected $__imageType = 'Google_Service_Plus_CommentActorImage';
   protected $__imageDataType = '';
   public $image;
   public $url;
@@ -1158,7 +1186,7 @@ class Google_CommentActor extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setImage(Google_CommentActorImage $image) {
+  public function setImage(Google_Service_Plus_CommentActorImage$image) {
     $this->image = $image;
   }
   public function getImage() {
@@ -1172,7 +1200,8 @@ class Google_CommentActor extends Google_Model {
   }
 }
 
-class Google_CommentActorImage extends Google_Model {
+class Google_Service_Plus_CommentActorImage 
+    extends Google_Model {
   public $url;
   public function setUrl($url) {
     $this->url = $url;
@@ -1182,10 +1211,11 @@ class Google_CommentActorImage extends Google_Model {
   }
 }
 
-class Google_CommentFeed extends Google_Model {
+class Google_Service_Plus_CommentFeed 
+    extends Google_Collection {
   public $etag;
   public $id;
-  protected $__itemsType = 'Google_Comment';
+  protected $__itemsType = 'Google_Service_Plus_Comment';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1205,8 +1235,7 @@ class Google_CommentFeed extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setItems(/* array(Google_Comment) */ $items) {
-    $this->assertIsArray($items, 'Google_Comment', __METHOD__);
+  public function setItems($items) {
     $this->items = $items;
   }
   public function getItems() {
@@ -1244,7 +1273,8 @@ class Google_CommentFeed extends Google_Model {
   }
 }
 
-class Google_CommentInReplyTo extends Google_Model {
+class Google_Service_Plus_CommentInReplyTo 
+    extends Google_Model {
   public $id;
   public $url;
   public function setId($id) {
@@ -1261,7 +1291,8 @@ class Google_CommentInReplyTo extends Google_Model {
   }
 }
 
-class Google_CommentObject extends Google_Model {
+class Google_Service_Plus_CommentObject 
+    extends Google_Model {
   public $content;
   public $objectType;
   public $originalContent;
@@ -1285,7 +1316,8 @@ class Google_CommentObject extends Google_Model {
   }
 }
 
-class Google_CommentPlusoners extends Google_Model {
+class Google_Service_Plus_CommentPlusoners 
+    extends Google_Model {
   public $totalItems;
   public function setTotalItems($totalItems) {
     $this->totalItems = $totalItems;
@@ -1295,39 +1327,40 @@ class Google_CommentPlusoners extends Google_Model {
   }
 }
 
-class Google_ItemScope extends Google_Model {
-  protected $__aboutType = 'Google_ItemScope';
+class Google_Service_Plus_ItemScope 
+    extends Google_Collection {
+  protected $__aboutType = 'Google_Service_Plus_ItemScope';
   protected $__aboutDataType = '';
   public $about;
   public $additionalName;
-  protected $__addressType = 'Google_ItemScope';
+  protected $__addressType = 'Google_Service_Plus_ItemScope';
   protected $__addressDataType = '';
   public $address;
   public $addressCountry;
   public $addressLocality;
   public $addressRegion;
-  protected $__associated_mediaType = 'Google_ItemScope';
+  protected $__associated_mediaType = 'Google_Service_Plus_ItemScope';
   protected $__associated_mediaDataType = 'array';
   public $associated_media;
   public $attendeeCount;
-  protected $__attendeesType = 'Google_ItemScope';
+  protected $__attendeesType = 'Google_Service_Plus_ItemScope';
   protected $__attendeesDataType = 'array';
   public $attendees;
-  protected $__audioType = 'Google_ItemScope';
+  protected $__audioType = 'Google_Service_Plus_ItemScope';
   protected $__audioDataType = '';
   public $audio;
-  protected $__authorType = 'Google_ItemScope';
+  protected $__authorType = 'Google_Service_Plus_ItemScope';
   protected $__authorDataType = 'array';
   public $author;
   public $bestRating;
   public $birthDate;
-  protected $__byArtistType = 'Google_ItemScope';
+  protected $__byArtistType = 'Google_Service_Plus_ItemScope';
   protected $__byArtistDataType = '';
   public $byArtist;
   public $caption;
   public $contentSize;
   public $contentUrl;
-  protected $__contributorType = 'Google_ItemScope';
+  protected $__contributorType = 'Google_Service_Plus_ItemScope';
   protected $__contributorDataType = 'array';
   public $contributor;
   public $dateCreated;
@@ -1339,40 +1372,40 @@ class Google_ItemScope extends Google_Model {
   public $endDate;
   public $familyName;
   public $gender;
-  protected $__geoType = 'Google_ItemScope';
+  protected $__geoType = 'Google_Service_Plus_ItemScope';
   protected $__geoDataType = '';
   public $geo;
   public $givenName;
   public $height;
   public $id;
   public $image;
-  protected $__inAlbumType = 'Google_ItemScope';
+  protected $__inAlbumType = 'Google_Service_Plus_ItemScope';
   protected $__inAlbumDataType = '';
   public $inAlbum;
   public $kind;
   public $latitude;
-  protected $__locationType = 'Google_ItemScope';
+  protected $__locationType = 'Google_Service_Plus_ItemScope';
   protected $__locationDataType = '';
   public $location;
   public $longitude;
   public $name;
-  protected $__partOfTVSeriesType = 'Google_ItemScope';
+  protected $__partOfTVSeriesType = 'Google_Service_Plus_ItemScope';
   protected $__partOfTVSeriesDataType = '';
   public $partOfTVSeries;
-  protected $__performersType = 'Google_ItemScope';
+  protected $__performersType = 'Google_Service_Plus_ItemScope';
   protected $__performersDataType = 'array';
   public $performers;
   public $playerType;
   public $postOfficeBoxNumber;
   public $postalCode;
   public $ratingValue;
-  protected $__reviewRatingType = 'Google_ItemScope';
+  protected $__reviewRatingType = 'Google_Service_Plus_ItemScope';
   protected $__reviewRatingDataType = '';
   public $reviewRating;
   public $startDate;
   public $streetAddress;
   public $text;
-  protected $__thumbnailType = 'Google_ItemScope';
+  protected $__thumbnailType = 'Google_Service_Plus_ItemScope';
   protected $__thumbnailDataType = '';
   public $thumbnail;
   public $thumbnailUrl;
@@ -1381,20 +1414,19 @@ class Google_ItemScope extends Google_Model {
   public $url;
   public $width;
   public $worstRating;
-  public function setAbout(Google_ItemScope $about) {
+  public function setAbout(Google_Service_Plus_ItemScope$about) {
     $this->about = $about;
   }
   public function getAbout() {
     return $this->about;
   }
-  public function setAdditionalName(/* array(Google_string) */ $additionalName) {
-    $this->assertIsArray($additionalName, 'Google_string', __METHOD__);
+  public function setAdditionalName($additionalName) {
     $this->additionalName = $additionalName;
   }
   public function getAdditionalName() {
     return $this->additionalName;
   }
-  public function setAddress(Google_ItemScope $address) {
+  public function setAddress(Google_Service_Plus_ItemScope$address) {
     $this->address = $address;
   }
   public function getAddress() {
@@ -1418,8 +1450,7 @@ class Google_ItemScope extends Google_Model {
   public function getAddressRegion() {
     return $this->addressRegion;
   }
-  public function setAssociated_media(/* array(Google_ItemScope) */ $associated_media) {
-    $this->assertIsArray($associated_media, 'Google_ItemScope', __METHOD__);
+  public function setAssociated_media($associated_media) {
     $this->associated_media = $associated_media;
   }
   public function getAssociated_media() {
@@ -1431,21 +1462,19 @@ class Google_ItemScope extends Google_Model {
   public function getAttendeeCount() {
     return $this->attendeeCount;
   }
-  public function setAttendees(/* array(Google_ItemScope) */ $attendees) {
-    $this->assertIsArray($attendees, 'Google_ItemScope', __METHOD__);
+  public function setAttendees($attendees) {
     $this->attendees = $attendees;
   }
   public function getAttendees() {
     return $this->attendees;
   }
-  public function setAudio(Google_ItemScope $audio) {
+  public function setAudio(Google_Service_Plus_ItemScope$audio) {
     $this->audio = $audio;
   }
   public function getAudio() {
     return $this->audio;
   }
-  public function setAuthor(/* array(Google_ItemScope) */ $author) {
-    $this->assertIsArray($author, 'Google_ItemScope', __METHOD__);
+  public function setAuthor($author) {
     $this->author = $author;
   }
   public function getAuthor() {
@@ -1463,7 +1492,7 @@ class Google_ItemScope extends Google_Model {
   public function getBirthDate() {
     return $this->birthDate;
   }
-  public function setByArtist(Google_ItemScope $byArtist) {
+  public function setByArtist(Google_Service_Plus_ItemScope$byArtist) {
     $this->byArtist = $byArtist;
   }
   public function getByArtist() {
@@ -1487,8 +1516,7 @@ class Google_ItemScope extends Google_Model {
   public function getContentUrl() {
     return $this->contentUrl;
   }
-  public function setContributor(/* array(Google_ItemScope) */ $contributor) {
-    $this->assertIsArray($contributor, 'Google_ItemScope', __METHOD__);
+  public function setContributor($contributor) {
     $this->contributor = $contributor;
   }
   public function getContributor() {
@@ -1548,7 +1576,7 @@ class Google_ItemScope extends Google_Model {
   public function getGender() {
     return $this->gender;
   }
-  public function setGeo(Google_ItemScope $geo) {
+  public function setGeo(Google_Service_Plus_ItemScope$geo) {
     $this->geo = $geo;
   }
   public function getGeo() {
@@ -1578,7 +1606,7 @@ class Google_ItemScope extends Google_Model {
   public function getImage() {
     return $this->image;
   }
-  public function setInAlbum(Google_ItemScope $inAlbum) {
+  public function setInAlbum(Google_Service_Plus_ItemScope$inAlbum) {
     $this->inAlbum = $inAlbum;
   }
   public function getInAlbum() {
@@ -1596,7 +1624,7 @@ class Google_ItemScope extends Google_Model {
   public function getLatitude() {
     return $this->latitude;
   }
-  public function setLocation(Google_ItemScope $location) {
+  public function setLocation(Google_Service_Plus_ItemScope$location) {
     $this->location = $location;
   }
   public function getLocation() {
@@ -1614,14 +1642,13 @@ class Google_ItemScope extends Google_Model {
   public function getName() {
     return $this->name;
   }
-  public function setPartOfTVSeries(Google_ItemScope $partOfTVSeries) {
+  public function setPartOfTVSeries(Google_Service_Plus_ItemScope$partOfTVSeries) {
     $this->partOfTVSeries = $partOfTVSeries;
   }
   public function getPartOfTVSeries() {
     return $this->partOfTVSeries;
   }
-  public function setPerformers(/* array(Google_ItemScope) */ $performers) {
-    $this->assertIsArray($performers, 'Google_ItemScope', __METHOD__);
+  public function setPerformers($performers) {
     $this->performers = $performers;
   }
   public function getPerformers() {
@@ -1651,7 +1678,7 @@ class Google_ItemScope extends Google_Model {
   public function getRatingValue() {
     return $this->ratingValue;
   }
-  public function setReviewRating(Google_ItemScope $reviewRating) {
+  public function setReviewRating(Google_Service_Plus_ItemScope$reviewRating) {
     $this->reviewRating = $reviewRating;
   }
   public function getReviewRating() {
@@ -1675,7 +1702,7 @@ class Google_ItemScope extends Google_Model {
   public function getText() {
     return $this->text;
   }
-  public function setThumbnail(Google_ItemScope $thumbnail) {
+  public function setThumbnail(Google_Service_Plus_ItemScope$thumbnail) {
     $this->thumbnail = $thumbnail;
   }
   public function getThumbnail() {
@@ -1719,14 +1746,15 @@ class Google_ItemScope extends Google_Model {
   }
 }
 
-class Google_Moment extends Google_Model {
+class Google_Service_Plus_Moment 
+    extends Google_Model {
   public $id;
   public $kind;
-  protected $__resultType = 'Google_ItemScope';
+  protected $__resultType = 'Google_Service_Plus_ItemScope';
   protected $__resultDataType = '';
   public $result;
   public $startDate;
-  protected $__targetType = 'Google_ItemScope';
+  protected $__targetType = 'Google_Service_Plus_ItemScope';
   protected $__targetDataType = '';
   public $target;
   public $type;
@@ -1742,7 +1770,7 @@ class Google_Moment extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setResult(Google_ItemScope $result) {
+  public function setResult(Google_Service_Plus_ItemScope$result) {
     $this->result = $result;
   }
   public function getResult() {
@@ -1754,7 +1782,7 @@ class Google_Moment extends Google_Model {
   public function getStartDate() {
     return $this->startDate;
   }
-  public function setTarget(Google_ItemScope $target) {
+  public function setTarget(Google_Service_Plus_ItemScope$target) {
     $this->target = $target;
   }
   public function getTarget() {
@@ -1768,9 +1796,10 @@ class Google_Moment extends Google_Model {
   }
 }
 
-class Google_MomentsFeed extends Google_Model {
+class Google_Service_Plus_MomentsFeed 
+    extends Google_Collection {
   public $etag;
-  protected $__itemsType = 'Google_Moment';
+  protected $__itemsType = 'Google_Service_Plus_Moment';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1785,8 +1814,7 @@ class Google_MomentsFeed extends Google_Model {
   public function getEtag() {
     return $this->etag;
   }
-  public function setItems(/* array(Google_Moment) */ $items) {
-    $this->assertIsArray($items, 'Google_Moment', __METHOD__);
+  public function setItems($items) {
     $this->items = $items;
   }
   public function getItems() {
@@ -1830,9 +1858,10 @@ class Google_MomentsFeed extends Google_Model {
   }
 }
 
-class Google_PeopleFeed extends Google_Model {
+class Google_Service_Plus_PeopleFeed 
+    extends Google_Collection {
   public $etag;
-  protected $__itemsType = 'Google_Person';
+  protected $__itemsType = 'Google_Service_Plus_Person';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1846,8 +1875,7 @@ class Google_PeopleFeed extends Google_Model {
   public function getEtag() {
     return $this->etag;
   }
-  public function setItems(/* array(Google_Person) */ $items) {
-    $this->assertIsArray($items, 'Google_Person', __METHOD__);
+  public function setItems($items) {
     $this->items = $items;
   }
   public function getItems() {
@@ -1885,48 +1913,48 @@ class Google_PeopleFeed extends Google_Model {
   }
 }
 
-class Google_Person extends Google_Model {
+class Google_Service_Plus_Person 
+    extends Google_Collection {
   public $aboutMe;
-  protected $__ageRangeType = 'Google_PersonAgeRange';
+  protected $__ageRangeType = 'Google_Service_Plus_PersonAgeRange';
   protected $__ageRangeDataType = '';
   public $ageRange;
   public $birthday;
   public $braggingRights;
   public $circledByCount;
-  protected $__coverType = 'Google_PersonCover';
+  protected $__coverType = 'Google_Service_Plus_PersonCover';
   protected $__coverDataType = '';
   public $cover;
   public $currentLocation;
   public $displayName;
-  protected $__emailsType = 'Google_PersonEmails';
+  protected $__emailsType = 'Google_Service_Plus_PersonEmails';
   protected $__emailsDataType = 'array';
   public $emails;
   public $etag;
   public $gender;
-  public $hasApp;
   public $id;
-  protected $__imageType = 'Google_PersonImage';
+  protected $__imageType = 'Google_Service_Plus_PersonImage';
   protected $__imageDataType = '';
   public $image;
   public $isPlusUser;
   public $kind;
   public $language;
-  protected $__nameType = 'Google_PersonName';
+  protected $__nameType = 'Google_Service_Plus_PersonName';
   protected $__nameDataType = '';
   public $name;
   public $nickname;
   public $objectType;
-  protected $__organizationsType = 'Google_PersonOrganizations';
+  protected $__organizationsType = 'Google_Service_Plus_PersonOrganizations';
   protected $__organizationsDataType = 'array';
   public $organizations;
-  protected $__placesLivedType = 'Google_PersonPlacesLived';
+  protected $__placesLivedType = 'Google_Service_Plus_PersonPlacesLived';
   protected $__placesLivedDataType = 'array';
   public $placesLived;
   public $plusOneCount;
   public $relationshipStatus;
   public $tagline;
   public $url;
-  protected $__urlsType = 'Google_PersonUrls';
+  protected $__urlsType = 'Google_Service_Plus_PersonUrls';
   protected $__urlsDataType = 'array';
   public $urls;
   public $verified;
@@ -1936,7 +1964,7 @@ class Google_Person extends Google_Model {
   public function getAboutMe() {
     return $this->aboutMe;
   }
-  public function setAgeRange(Google_PersonAgeRange $ageRange) {
+  public function setAgeRange(Google_Service_Plus_PersonAgeRange$ageRange) {
     $this->ageRange = $ageRange;
   }
   public function getAgeRange() {
@@ -1960,7 +1988,7 @@ class Google_Person extends Google_Model {
   public function getCircledByCount() {
     return $this->circledByCount;
   }
-  public function setCover(Google_PersonCover $cover) {
+  public function setCover(Google_Service_Plus_PersonCover$cover) {
     $this->cover = $cover;
   }
   public function getCover() {
@@ -1978,8 +2006,7 @@ class Google_Person extends Google_Model {
   public function getDisplayName() {
     return $this->displayName;
   }
-  public function setEmails(/* array(Google_PersonEmails) */ $emails) {
-    $this->assertIsArray($emails, 'Google_PersonEmails', __METHOD__);
+  public function setEmails($emails) {
     $this->emails = $emails;
   }
   public function getEmails() {
@@ -1997,19 +2024,13 @@ class Google_Person extends Google_Model {
   public function getGender() {
     return $this->gender;
   }
-  public function setHasApp($hasApp) {
-    $this->hasApp = $hasApp;
-  }
-  public function getHasApp() {
-    return $this->hasApp;
-  }
   public function setId($id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setImage(Google_PersonImage $image) {
+  public function setImage(Google_Service_Plus_PersonImage$image) {
     $this->image = $image;
   }
   public function getImage() {
@@ -2033,7 +2054,7 @@ class Google_Person extends Google_Model {
   public function getLanguage() {
     return $this->language;
   }
-  public function setName(Google_PersonName $name) {
+  public function setName(Google_Service_Plus_PersonName$name) {
     $this->name = $name;
   }
   public function getName() {
@@ -2051,15 +2072,13 @@ class Google_Person extends Google_Model {
   public function getObjectType() {
     return $this->objectType;
   }
-  public function setOrganizations(/* array(Google_PersonOrganizations) */ $organizations) {
-    $this->assertIsArray($organizations, 'Google_PersonOrganizations', __METHOD__);
+  public function setOrganizations($organizations) {
     $this->organizations = $organizations;
   }
   public function getOrganizations() {
     return $this->organizations;
   }
-  public function setPlacesLived(/* array(Google_PersonPlacesLived) */ $placesLived) {
-    $this->assertIsArray($placesLived, 'Google_PersonPlacesLived', __METHOD__);
+  public function setPlacesLived($placesLived) {
     $this->placesLived = $placesLived;
   }
   public function getPlacesLived() {
@@ -2089,8 +2108,7 @@ class Google_Person extends Google_Model {
   public function getUrl() {
     return $this->url;
   }
-  public function setUrls(/* array(Google_PersonUrls) */ $urls) {
-    $this->assertIsArray($urls, 'Google_PersonUrls', __METHOD__);
+  public function setUrls($urls) {
     $this->urls = $urls;
   }
   public function getUrls() {
@@ -2104,7 +2122,8 @@ class Google_Person extends Google_Model {
   }
 }
 
-class Google_PersonAgeRange extends Google_Model {
+class Google_Service_Plus_PersonAgeRange 
+    extends Google_Model {
   public $max;
   public $min;
   public function setMax($max) {
@@ -2121,21 +2140,22 @@ class Google_PersonAgeRange extends Google_Model {
   }
 }
 
-class Google_PersonCover extends Google_Model {
-  protected $__coverInfoType = 'Google_PersonCoverCoverInfo';
+class Google_Service_Plus_PersonCover 
+    extends Google_Model {
+  protected $__coverInfoType = 'Google_Service_Plus_PersonCoverCoverInfo';
   protected $__coverInfoDataType = '';
   public $coverInfo;
-  protected $__coverPhotoType = 'Google_PersonCoverCoverPhoto';
+  protected $__coverPhotoType = 'Google_Service_Plus_PersonCoverCoverPhoto';
   protected $__coverPhotoDataType = '';
   public $coverPhoto;
   public $layout;
-  public function setCoverInfo(Google_PersonCoverCoverInfo $coverInfo) {
+  public function setCoverInfo(Google_Service_Plus_PersonCoverCoverInfo$coverInfo) {
     $this->coverInfo = $coverInfo;
   }
   public function getCoverInfo() {
     return $this->coverInfo;
   }
-  public function setCoverPhoto(Google_PersonCoverCoverPhoto $coverPhoto) {
+  public function setCoverPhoto(Google_Service_Plus_PersonCoverCoverPhoto$coverPhoto) {
     $this->coverPhoto = $coverPhoto;
   }
   public function getCoverPhoto() {
@@ -2149,7 +2169,8 @@ class Google_PersonCover extends Google_Model {
   }
 }
 
-class Google_PersonCoverCoverInfo extends Google_Model {
+class Google_Service_Plus_PersonCoverCoverInfo 
+    extends Google_Model {
   public $leftImageOffset;
   public $topImageOffset;
   public function setLeftImageOffset($leftImageOffset) {
@@ -2166,7 +2187,8 @@ class Google_PersonCoverCoverInfo extends Google_Model {
   }
 }
 
-class Google_PersonCoverCoverPhoto extends Google_Model {
+class Google_Service_Plus_PersonCoverCoverPhoto 
+    extends Google_Model {
   public $height;
   public $url;
   public $width;
@@ -2190,7 +2212,8 @@ class Google_PersonCoverCoverPhoto extends Google_Model {
   }
 }
 
-class Google_PersonEmails extends Google_Model {
+class Google_Service_Plus_PersonEmails 
+    extends Google_Model {
   public $primary;
   public $type;
   public $value;
@@ -2214,7 +2237,8 @@ class Google_PersonEmails extends Google_Model {
   }
 }
 
-class Google_PersonImage extends Google_Model {
+class Google_Service_Plus_PersonImage 
+    extends Google_Model {
   public $url;
   public function setUrl($url) {
     $this->url = $url;
@@ -2224,7 +2248,8 @@ class Google_PersonImage extends Google_Model {
   }
 }
 
-class Google_PersonName extends Google_Model {
+class Google_Service_Plus_PersonName 
+    extends Google_Model {
   public $familyName;
   public $formatted;
   public $givenName;
@@ -2269,7 +2294,8 @@ class Google_PersonName extends Google_Model {
   }
 }
 
-class Google_PersonOrganizations extends Google_Model {
+class Google_Service_Plus_PersonOrganizations 
+    extends Google_Model {
   public $department;
   public $description;
   public $endDate;
@@ -2335,7 +2361,8 @@ class Google_PersonOrganizations extends Google_Model {
   }
 }
 
-class Google_PersonPlacesLived extends Google_Model {
+class Google_Service_Plus_PersonPlacesLived 
+    extends Google_Model {
   public $primary;
   public $value;
   public function setPrimary($primary) {
@@ -2352,15 +2379,16 @@ class Google_PersonPlacesLived extends Google_Model {
   }
 }
 
-class Google_PersonUrls extends Google_Model {
-  public $primary;
+class Google_Service_Plus_PersonUrls 
+    extends Google_Model {
+  public $label;
   public $type;
   public $value;
-  public function setPrimary($primary) {
-    $this->primary = $primary;
+  public function setLabel($label) {
+    $this->label = $label;
   }
-  public function getPrimary() {
-    return $this->primary;
+  public function getLabel() {
+    return $this->label;
   }
   public function setType($type) {
     $this->type = $type;
@@ -2376,7 +2404,73 @@ class Google_PersonUrls extends Google_Model {
   }
 }
 
-class Google_PlusAclentryResource extends Google_Model {
+class Google_Service_Plus_Place 
+    extends Google_Model {
+  protected $__addressType = 'Google_Service_Plus_PlaceAddress';
+  protected $__addressDataType = '';
+  public $address;
+  public $displayName;
+  public $kind;
+  protected $__positionType = 'Google_Service_Plus_PlacePosition';
+  protected $__positionDataType = '';
+  public $position;
+  public function setAddress(Google_Service_Plus_PlaceAddress$address) {
+    $this->address = $address;
+  }
+  public function getAddress() {
+    return $this->address;
+  }
+  public function setDisplayName($displayName) {
+    $this->displayName = $displayName;
+  }
+  public function getDisplayName() {
+    return $this->displayName;
+  }
+  public function setKind($kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setPosition(Google_Service_Plus_PlacePosition$position) {
+    $this->position = $position;
+  }
+  public function getPosition() {
+    return $this->position;
+  }
+}
+
+class Google_Service_Plus_PlaceAddress 
+    extends Google_Model {
+  public $formatted;
+  public function setFormatted($formatted) {
+    $this->formatted = $formatted;
+  }
+  public function getFormatted() {
+    return $this->formatted;
+  }
+}
+
+class Google_Service_Plus_PlacePosition 
+    extends Google_Model {
+  public $latitude;
+  public $longitude;
+  public function setLatitude($latitude) {
+    $this->latitude = $latitude;
+  }
+  public function getLatitude() {
+    return $this->latitude;
+  }
+  public function setLongitude($longitude) {
+    $this->longitude = $longitude;
+  }
+  public function getLongitude() {
+    return $this->longitude;
+  }
+}
+
+class Google_Service_Plus_PlusAclentryResource 
+    extends Google_Model {
   public $displayName;
   public $id;
   public $type;
