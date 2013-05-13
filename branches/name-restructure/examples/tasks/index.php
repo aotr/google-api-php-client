@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 session_start();
-require_once '../Google_Client.php';
-require_once '../contrib/Google_TasksService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Tasks.php';
 
 $client = new Google_Client();
 // Visit https://code.google.com/apis/console to generate your

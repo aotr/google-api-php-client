@@ -1,7 +1,6 @@
 <?php
-require_once '../src/Google/Client.php';
-require_once '../src/Google/Service/Plus.php';
-session_start();
+require_once '../../src/Google/Client.php';
+require_once '../../src/Google/Service/Plus.php';
 
 $client = new Google_Client();
 $client->setApplicationName("Google+ PHP Starter Application");
@@ -9,6 +8,7 @@ $client->setApplicationName("Google+ PHP Starter Application");
 // Visit https://code.google.com/apis/console?api=plus to generate your
 // developer key for simple API access.
 // $client->setDeveloperKey('insert_your_developer_key_here');
+
 $plus = new Google_Service_Plus($client);
 
 $params = array(

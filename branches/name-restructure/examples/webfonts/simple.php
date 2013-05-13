@@ -1,6 +1,6 @@
 <?php
-require_once '../Google_Client.php';
-require_once '../contrib/Google_WebfontsService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Webfonts.php';
 
 $client = new Google_Client();
 $client->setApplicationName("Google WebFonts PHP Starter Application");

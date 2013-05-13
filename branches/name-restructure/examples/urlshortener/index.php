@@ -15,17 +15,16 @@
  * limitations under the License.
  */
 session_start();
-
-require_once '../Google_Client.php';
-require_once '../contrib/Google_UrlshortenerService.php';
+require_once '../../src/Google/Client.php';
+require_once '../../src/Google/Service/Urlshortener.php';
 
 // Visit https://code.google.com/apis/console to
 // generate your client id, client secret, and redirect uri.
 $client = new Google_Client();
-//$client->setClientId('insert_your_oauth2_client_id');
-//$client->setClientSecret('insert_your_oauth2_client_secret');
-//$client->setRedirectUri('insert_your_oauth2_redirect_uri');
-$service = new Google_UrlshortenerService($client);
+// $client->setClientId('insert_your_oauth2_client_id');
+// $client->setClientSecret('insert_your_oauth2_client_secret');
+// $client->setRedirectUri('insert_your_oauth2_redirect_uri');
+$service = new Google_Service_Urlshortener($client);
 
 if (isset($_REQUEST['logout'])) {
   unset($_SESSION['access_token']);
@@ -46,7 +45,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 
 if ($client->getAccessToken() && isset($_GET['url'])) {
   // Start to make API requests.
-  $url = new Google_Url();
+  $url = new Google_Service_Urlshortener_Url();
   $url->longUrl = $_GET['url'];
   $short = $service->url->insert($url);
   $_SESSION['access_token'] = $client->getAccessToken();

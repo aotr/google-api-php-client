@@ -1,6 +1,6 @@
 <?php
-require_once '../Google_Client.php';
-require_once '../contrib/Google_ShoppingService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Shopping.php';
 
 $client = new Google_Client();
 $client->setApplicationName("Google Shopping PHP Starter Application");

@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-require_once '../Google_Client.php';
-require_once '../contrib/Google_PredictionService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Prediction.php';
 
 // Set your client id, service account name, and the path to your private key.
 // For more information about obtaining these keys, visit:

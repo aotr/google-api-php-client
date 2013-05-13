@@ -1,6 +1,6 @@
 <?php
-require_once '../Google_Client.php';
-require_once '../contrib/Google_CalendarService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Calendar.php';
 session_start();
 
 $client = new Google_Client();

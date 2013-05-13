@@ -23,7 +23,7 @@ if (!extension_loaded('pdo') || !extension_loaded('pdo_sqlite')) {
 /**
  * Include the library files for the api client and AdSense service class.
  */
-require_once "../Google_Client.php";
+require_once "../src/Google_Client.php";
 require_once "../contrib/Google_AdsensehostService.php";
 
 /**

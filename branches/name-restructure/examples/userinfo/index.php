@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-require_once '../Google_Client.php';
+require_once '../src/Google/Client.php';
 require_once '../contrib/Google_Oauth2Service.php';
 session_start();
 
