@@ -52,7 +52,7 @@ class Google_Service_Reseller extends Google_Service {
    * The "customers" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $resellerService = new Google_ResellerService(...);
+   *   $resellerService = new Google_Service_Reseller(...);
    *   $customers = $resellerService->customers;
    *  </code>
    */
@@ -138,7 +138,7 @@ class Google_Service_Reseller extends Google_Service {
    * The "subscriptions" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $resellerService = new Google_ResellerService(...);
+   *   $resellerService = new Google_Service_Reseller(...);
    *   $subscriptions = $resellerService->subscriptions;
    *  </code>
    */

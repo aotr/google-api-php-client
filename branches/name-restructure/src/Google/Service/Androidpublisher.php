@@ -50,7 +50,7 @@ class Google_Service_Androidpublisher extends Google_Service {
    * The "purchases" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $androidpublisherService = new Google_AndroidpublisherService(...);
+   *   $androidpublisherService = new Google_Service_Androidpublisher(...);
    *   $purchases = $androidpublisherService->purchases;
    *  </code>
    */

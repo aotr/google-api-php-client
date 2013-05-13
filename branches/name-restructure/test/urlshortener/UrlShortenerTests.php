@@ -24,7 +24,7 @@ class UrlShortenerTests extends BaseTest {
 
   public function __construct() {
     parent::__construct();
-    $this->service = new Google_UrlshortenerService(BaseTest::$client);
+    $this->service = new Google_Service_Urlshortener(BaseTest::$client);
   }
 
   public function testUrlShort() {

@@ -40,7 +40,7 @@ $client->setScopes(array('https://www.googleapis.com/auth/adexchange.buyer'));
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
 // $client->setDeveloperKey('insert_your_simple_api_key');
-$service = new Google_AdexchangebuyerService($client);
+$service = new Google_Service_Adexchangebuyer($client);
 
 if (isset($_GET['code'])) {
   $client->authenticate();

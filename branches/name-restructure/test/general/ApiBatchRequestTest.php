@@ -26,7 +26,7 @@ class ApiBatchRequestTest extends BaseTest {
   public $plus;
   public function __construct() {
     parent::__construct();
-    $this->plus = new Google_PlusService(BaseTest::$client);
+    $this->plus = new Google_Service_Plus(BaseTest::$client);
   }
 
   public function testBatchRequest() {

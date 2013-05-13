@@ -21,7 +21,7 @@ class PageSpeedTest extends BaseTest {
   public $service;
   public function __construct() {
     parent::__construct();
-    $this->service = new Google_PagespeedonlineService(BaseTest::$client);
+    $this->service = new Google_Service_Pagespeedonline(BaseTest::$client);
   }
 
   public function testPageSpeed() {

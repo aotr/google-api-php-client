@@ -56,7 +56,7 @@ class Google_Service_Plus extends Google_Service {
    * The "activities" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new Google_Service_Plus(...);
    *   $activities = $plusService->activities;
    *  </code>
    */
@@ -129,7 +129,7 @@ class Google_Service_Plus extends Google_Service {
    * The "comments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new Google_Service_Plus(...);
    *   $comments = $plusService->comments;
    *  </code>
    */
@@ -180,7 +180,7 @@ class Google_Service_Plus extends Google_Service {
    * The "moments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new Google_Service_Plus(...);
    *   $moments = $plusService->moments;
    *  </code>
    */
@@ -250,7 +250,7 @@ class Google_Service_Plus extends Google_Service {
    * The "people" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $plusService = new Google_PlusService(...);
+   *   $plusService = new Google_Service_Plus(...);
    *   $people = $plusService->people;
    *  </code>
    */

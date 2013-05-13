@@ -52,7 +52,7 @@ class Google_Service_Taskqueue extends Google_Service {
    * The "taskqueues" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $taskqueueService = new Google_TaskqueueService(...);
+   *   $taskqueueService = new Google_Service_Taskqueue(...);
    *   $taskqueues = $taskqueueService->taskqueues;
    *  </code>
    */
@@ -85,7 +85,7 @@ class Google_Service_Taskqueue extends Google_Service {
    * The "tasks" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $taskqueueService = new Google_TaskqueueService(...);
+   *   $taskqueueService = new Google_Service_Taskqueue(...);
    *   $tasks = $taskqueueService->tasks;
    *  </code>
    */

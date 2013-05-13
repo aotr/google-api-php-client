@@ -20,7 +20,7 @@ require_once '../src/Google/Service/Pagespeedonline.php';
 
 $client = new Google_Client();
 $client->setApplicationName("PageSpeedOnline_Example_App");
-$service = new Google_PagespeedonlineService($client);
+$service = new Google_Service_Pagespeedonline($client);
 
 if (isset($_GET['url'])) {
   $result = $service->pagespeedapi->runpagespeed($_GET['url']);
@@ -51,6 +51,6 @@ if (isset($_GET['url'])) {
       <div>Number of Static Resources: <?php print $result['pageStats']['numberStaticResources']; ?></div>
       <pre><?php var_dump($result); ?></pre>
     </div>
-  <? endif ?>
+  <?php endif ?>
 </div>
 </body></html>

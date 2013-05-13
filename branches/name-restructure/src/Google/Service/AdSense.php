@@ -86,7 +86,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "accounts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $accounts = $adsenseService->accounts;
    *  </code>
    */
@@ -137,7 +137,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "adclients" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $adclients = $adsenseService->adclients;
    *  </code>
    */
@@ -169,7 +169,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "adunits" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
@@ -223,7 +223,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "customchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
@@ -257,7 +257,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "customchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
@@ -312,7 +312,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "adunits" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
@@ -347,7 +347,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "reports" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $reports = $adsenseService->reports;
    *  </code>
    */
@@ -390,7 +390,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "saved" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $saved = $adsenseService->saved;
    *  </code>
    */
@@ -445,7 +445,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "savedadstyles" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $savedadstyles = $adsenseService->savedadstyles;
    *  </code>
    */
@@ -495,7 +495,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "urlchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $urlchannels = $adsenseService->urlchannels;
    *  </code>
    */
@@ -529,7 +529,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "adclients" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $adclients = $adsenseService->adclients;
    *  </code>
    */
@@ -561,7 +561,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "adunits" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
@@ -613,7 +613,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "customchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
@@ -647,7 +647,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "customchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $customchannels = $adsenseService->customchannels;
    *  </code>
    */
@@ -699,7 +699,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "adunits" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $adunits = $adsenseService->adunits;
    *  </code>
    */
@@ -734,7 +734,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "reports" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $reports = $adsenseService->reports;
    *  </code>
    */
@@ -777,7 +777,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "saved" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $saved = $adsenseService->saved;
    *  </code>
    */
@@ -831,7 +831,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "savedadstyles" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $savedadstyles = $adsenseService->savedadstyles;
    *  </code>
    */
@@ -880,7 +880,7 @@ class Google_Service_AdSense extends Google_Service {
    * The "urlchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsenseService = new Google_AdSenseService(...);
+   *   $adsenseService = new Google_Service_AdSense(...);
    *   $urlchannels = $adsenseService->urlchannels;
    *  </code>
    */

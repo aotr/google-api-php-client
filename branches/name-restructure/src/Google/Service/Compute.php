@@ -72,7 +72,7 @@ class Google_Service_Compute extends Google_Service {
    * The "disks" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $disks = $computeService->disks;
    *  </code>
    */
@@ -167,7 +167,7 @@ class Google_Service_Compute extends Google_Service {
    * The "firewalls" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $firewalls = $computeService->firewalls;
    *  </code>
    */
@@ -295,7 +295,7 @@ class Google_Service_Compute extends Google_Service {
    * The "globalOperations" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $globalOperations = $computeService->globalOperations;
    *  </code>
    */
@@ -361,7 +361,7 @@ class Google_Service_Compute extends Google_Service {
    * The "images" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $images = $computeService->images;
    *  </code>
    */
@@ -470,7 +470,7 @@ class Google_Service_Compute extends Google_Service {
    * The "instances" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $instances = $computeService->instances;
    *  </code>
    */
@@ -705,7 +705,7 @@ class Google_Service_Compute extends Google_Service {
    * The "kernels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $kernels = $computeService->kernels;
    *  </code>
    */
@@ -757,7 +757,7 @@ class Google_Service_Compute extends Google_Service {
    * The "machineTypes" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $machineTypes = $computeService->machineTypes;
    *  </code>
    */
@@ -810,7 +810,7 @@ class Google_Service_Compute extends Google_Service {
    * The "networks" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $networks = $computeService->networks;
    *  </code>
    */
@@ -899,7 +899,7 @@ class Google_Service_Compute extends Google_Service {
    * The "projects" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $projects = $computeService->projects;
    *  </code>
    */
@@ -948,7 +948,7 @@ class Google_Service_Compute extends Google_Service {
    * The "snapshots" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $snapshots = $computeService->snapshots;
    *  </code>
    */
@@ -1038,7 +1038,7 @@ class Google_Service_Compute extends Google_Service {
    * The "zoneOperations" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $zoneOperations = $computeService->zoneOperations;
    *  </code>
    */
@@ -1107,7 +1107,7 @@ class Google_Service_Compute extends Google_Service {
    * The "zones" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $computeService = new Google_ComputeService(...);
+   *   $computeService = new Google_Service_Compute(...);
    *   $zones = $computeService->zones;
    *  </code>
    */

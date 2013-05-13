@@ -56,7 +56,7 @@ class AdSenseAuth {
     // Point the oauth2_redirect_uri to index.php.
     $this->apiClient->setRedirectUri('http://localhost/index.php');
     // Create the api AdsenseService instance.
-    $this->adSenseService = new Google_AdsenseService($this->apiClient);
+    $this->adSenseService = new Google_Service_Adsense($this->apiClient);
   }
 
   /**

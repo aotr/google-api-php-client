@@ -68,7 +68,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "data" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $data = $analyticsService->data;
    *  </code>
    */
@@ -81,7 +81,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "ga" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $ga = $analyticsService->ga;
    *  </code>
    */
@@ -120,7 +120,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "mcf" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $mcf = $analyticsService->mcf;
    *  </code>
    */
@@ -159,7 +159,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "management" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $management = $analyticsService->management;
    *  </code>
    */
@@ -172,7 +172,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "accounts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $accounts = $analyticsService->accounts;
    *  </code>
    */
@@ -203,7 +203,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "customDataSources" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $customDataSources = $analyticsService->customDataSources;
    *  </code>
    */
@@ -236,7 +236,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "dailyUploads" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $dailyUploads = $analyticsService->dailyUploads;
    *  </code>
    */
@@ -312,7 +312,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "experiments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $experiments = $analyticsService->experiments;
    *  </code>
    */
@@ -443,7 +443,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "goals" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $goals = $analyticsService->goals;
    *  </code>
    */
@@ -477,7 +477,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "profiles" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $profiles = $analyticsService->profiles;
    *  </code>
    */
@@ -510,7 +510,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "segments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $segments = $analyticsService->segments;
    *  </code>
    */
@@ -541,7 +541,7 @@ class Google_Service_Analytics extends Google_Service {
    * The "webproperties" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $analyticsService = new Google_AnalyticsService(...);
+   *   $analyticsService = new Google_Service_Analytics(...);
    *   $webproperties = $analyticsService->webproperties;
    *  </code>
    */

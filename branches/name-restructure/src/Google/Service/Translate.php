@@ -54,7 +54,7 @@ class Google_Service_Translate extends Google_Service {
    * The "detections" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $translateService = new Google_TranslateService(...);
+   *   $translateService = new Google_Service_Translate(...);
    *   $detections = $translateService->detections;
    *  </code>
    */
@@ -84,7 +84,7 @@ class Google_Service_Translate extends Google_Service {
    * The "languages" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $translateService = new Google_TranslateService(...);
+   *   $translateService = new Google_Service_Translate(...);
    *   $languages = $translateService->languages;
    *  </code>
    */
@@ -115,7 +115,7 @@ class Google_Service_Translate extends Google_Service {
    * The "translations" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $translateService = new Google_TranslateService(...);
+   *   $translateService = new Google_Service_Translate(...);
    *   $translations = $translateService->translations;
    *  </code>
    */

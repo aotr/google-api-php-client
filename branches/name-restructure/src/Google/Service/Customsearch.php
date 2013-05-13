@@ -50,7 +50,7 @@ class Google_Service_Customsearch extends Google_Service {
    * The "cse" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $customsearchService = new Google_CustomsearchService(...);
+   *   $customsearchService = new Google_Service_Customsearch(...);
    *   $cse = $customsearchService->cse;
    *  </code>
    */

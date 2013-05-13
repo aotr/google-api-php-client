@@ -58,7 +58,7 @@ class Google_Service_Dfareporting extends Google_Service {
    * The "dimensionValues" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $dfareportingService = new Google_DfareportingService(...);
+   *   $dfareportingService = new Google_Service_Dfareporting(...);
    *   $dimensionValues = $dfareportingService->dimensionValues;
    *  </code>
    */
@@ -92,7 +92,7 @@ class Google_Service_Dfareporting extends Google_Service {
    * The "files" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $dfareportingService = new Google_DfareportingService(...);
+   *   $dfareportingService = new Google_Service_Dfareporting(...);
    *   $files = $dfareportingService->files;
    *  </code>
    */
@@ -127,7 +127,7 @@ class Google_Service_Dfareporting extends Google_Service {
    * The "reports" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $dfareportingService = new Google_DfareportingService(...);
+   *   $dfareportingService = new Google_Service_Dfareporting(...);
    *   $reports = $dfareportingService->reports;
    *  </code>
    */
@@ -269,7 +269,7 @@ class Google_Service_Dfareporting extends Google_Service {
    * The "files" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $dfareportingService = new Google_DfareportingService(...);
+   *   $dfareportingService = new Google_Service_Dfareporting(...);
    *   $files = $dfareportingService->files;
    *  </code>
    */
@@ -324,7 +324,7 @@ class Google_Service_Dfareporting extends Google_Service {
    * The "userProfiles" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $dfareportingService = new Google_DfareportingService(...);
+   *   $dfareportingService = new Google_Service_Dfareporting(...);
    *   $userProfiles = $dfareportingService->userProfiles;
    *  </code>
    */

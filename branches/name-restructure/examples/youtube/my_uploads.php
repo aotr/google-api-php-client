@@ -19,7 +19,7 @@ $redirect = filter_var('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'],
   FILTER_SANITIZE_URL);
 $client->setRedirectUri($redirect);
 
-$youtube = new Google_YoutubeService($client);
+$youtube = new Google_Service_Youtube($client);
 
 if (isset($_GET['code'])) {
   if (strval($_SESSION['state']) !== strval($_GET['state'])) {

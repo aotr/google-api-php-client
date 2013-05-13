@@ -80,7 +80,7 @@ class Google_Service_Books extends Google_Service {
    * The "bookshelves" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $bookshelves = $booksService->bookshelves;
    *  </code>
    */
@@ -132,7 +132,7 @@ class Google_Service_Books extends Google_Service {
    * The "volumes" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $volumes = $booksService->volumes;
    *  </code>
    */
@@ -168,7 +168,7 @@ class Google_Service_Books extends Google_Service {
    * The "cloudloading" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $cloudloading = $booksService->cloudloading;
    *  </code>
    */
@@ -231,7 +231,7 @@ class Google_Service_Books extends Google_Service {
    * The "layers" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $layers = $booksService->layers;
    *  </code>
    */
@@ -287,7 +287,7 @@ class Google_Service_Books extends Google_Service {
    * The "annotationData" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $annotationData = $booksService->annotationData;
    *  </code>
    */
@@ -355,7 +355,7 @@ class Google_Service_Books extends Google_Service {
    * The "volumeAnnotations" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $volumeAnnotations = $booksService->volumeAnnotations;
    *  </code>
    */
@@ -422,7 +422,7 @@ class Google_Service_Books extends Google_Service {
    * The "myconfig" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $myconfig = $booksService->myconfig;
    *  </code>
    */
@@ -502,7 +502,7 @@ class Google_Service_Books extends Google_Service {
    * The "mylibrary" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $mylibrary = $booksService->mylibrary;
    *  </code>
    */
@@ -515,7 +515,7 @@ class Google_Service_Books extends Google_Service {
    * The "annotations" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $annotations = $booksService->annotations;
    *  </code>
    */
@@ -626,7 +626,7 @@ class Google_Service_Books extends Google_Service {
    * The "bookshelves" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $bookshelves = $booksService->bookshelves;
    *  </code>
    */
@@ -737,7 +737,7 @@ class Google_Service_Books extends Google_Service {
    * The "volumes" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $volumes = $booksService->volumes;
    *  </code>
    */
@@ -774,7 +774,7 @@ class Google_Service_Books extends Google_Service {
    * The "readingpositions" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $readingpositions = $booksService->readingpositions;
    *  </code>
    */
@@ -826,7 +826,7 @@ class Google_Service_Books extends Google_Service {
    * The "volumes" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $volumes = $booksService->volumes;
    *  </code>
    */
@@ -891,7 +891,7 @@ class Google_Service_Books extends Google_Service {
    * The "associated" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $associated = $booksService->associated;
    *  </code>
    */
@@ -924,7 +924,7 @@ class Google_Service_Books extends Google_Service {
    * The "mybooks" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $mybooks = $booksService->mybooks;
    *  </code>
    */
@@ -959,7 +959,7 @@ class Google_Service_Books extends Google_Service {
    * The "recommended" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $recommended = $booksService->recommended;
    *  </code>
    */
@@ -990,7 +990,7 @@ class Google_Service_Books extends Google_Service {
    * The "useruploaded" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $booksService = new Google_BooksService(...);
+   *   $booksService = new Google_Service_Books(...);
    *   $useruploaded = $booksService->useruploaded;
    *  </code>
    */

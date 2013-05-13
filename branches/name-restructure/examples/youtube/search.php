@@ -24,7 +24,7 @@ require_once 'google-api-php-client/src/contrib/Google_YouTubeService.php';
   $client = new Google_Client();
   $client->setDeveloperKey($DEVELOPER_KEY);
 
-  $youtube = new Google_YoutubeService($client);
+  $youtube = new Google_Service_Youtube($client);
 
   try {
     $searchResponse = $youtube->search->listSearch('id,snippet', array(

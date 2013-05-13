@@ -50,7 +50,7 @@ class Google_Service_Pagespeedonline extends Google_Service {
    * The "pagespeedapi" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $pagespeedonlineService = new Google_PagespeedonlineService(...);
+   *   $pagespeedonlineService = new Google_Service_Pagespeedonline(...);
    *   $pagespeedapi = $pagespeedonlineService->pagespeedapi;
    *  </code>
    */

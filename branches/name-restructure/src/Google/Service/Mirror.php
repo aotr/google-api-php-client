@@ -58,7 +58,7 @@ class Google_Service_Mirror extends Google_Service {
    * The "contacts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $mirrorService = new Google_MirrorService(...);
+   *   $mirrorService = new Google_Service_Mirror(...);
    *   $contacts = $mirrorService->contacts;
    *  </code>
    */
@@ -169,7 +169,7 @@ class Google_Service_Mirror extends Google_Service {
    * The "locations" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $mirrorService = new Google_MirrorService(...);
+   *   $mirrorService = new Google_Service_Mirror(...);
    *   $locations = $mirrorService->locations;
    *  </code>
    */
@@ -215,7 +215,7 @@ class Google_Service_Mirror extends Google_Service {
    * The "subscriptions" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $mirrorService = new Google_MirrorService(...);
+   *   $mirrorService = new Google_Service_Mirror(...);
    *   $subscriptions = $mirrorService->subscriptions;
    *  </code>
    */
@@ -291,7 +291,7 @@ class Google_Service_Mirror extends Google_Service {
    * The "timeline" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $mirrorService = new Google_MirrorService(...);
+   *   $mirrorService = new Google_Service_Mirror(...);
    *   $timeline = $mirrorService->timeline;
    *  </code>
    */
@@ -410,7 +410,7 @@ class Google_Service_Mirror extends Google_Service {
    * The "attachments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $mirrorService = new Google_MirrorService(...);
+   *   $mirrorService = new Google_Service_Mirror(...);
    *   $attachments = $mirrorService->attachments;
    *  </code>
    */

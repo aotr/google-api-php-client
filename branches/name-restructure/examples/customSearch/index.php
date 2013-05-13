@@ -24,7 +24,7 @@ $client->setApplicationName('Google CustomSearch PHP Starter Application');
 // Visit https://code.google.com/apis/console?api=customsearch to generate
 // your developer key (simple api key).
 // $client->setDeveloperKey('INSERT_your_developer_key');
-$search = new Google_CustomsearchService($client);
+$search = new Google_Service_Customsearch($client);
 
 
 // Example executing a search with your custom search id.

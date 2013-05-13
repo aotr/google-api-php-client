@@ -48,7 +48,7 @@ $client->setAssertionCredentials(new Google_Auth_AssertionCredentials(
 );
 
 $client->setClientId(CLIENT_ID);
-$service = new Google_PredictionService($client);
+$service = new Google_Service_Prediction($client);
 
 
 // Prediction logic:

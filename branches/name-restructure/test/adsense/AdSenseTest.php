@@ -30,7 +30,7 @@ class AdSenseManagementTest extends BaseTest {
   public $adsense;
   public function __construct() {
     parent::__construct();
-    $this->adsense = new Google_AdSenseService(BaseTest::$client);
+    $this->adsense = new Google_Service_AdSense(BaseTest::$client);
   }
 
   public function testAccountsList() {

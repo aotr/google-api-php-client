@@ -72,7 +72,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "activities" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $activities = $youtubeService->activities;
    *  </code>
    */
@@ -134,7 +134,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "channels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $channels = $youtubeService->channels;
    *  </code>
    */
@@ -195,7 +195,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "guideCategories" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $guideCategories = $youtubeService->guideCategories;
    *  </code>
    */
@@ -230,7 +230,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "liveBroadcasts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $liveBroadcasts = $youtubeService->liveBroadcasts;
    *  </code>
    */
@@ -381,7 +381,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "liveStreams" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $liveStreams = $youtubeService->liveStreams;
    *  </code>
    */
@@ -469,7 +469,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "playlistItems" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $playlistItems = $youtubeService->playlistItems;
    *  </code>
    */
@@ -560,7 +560,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "playlists" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $playlists = $youtubeService->playlists;
    *  </code>
    */
@@ -651,7 +651,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "search" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $search = $youtubeService->search;
    *  </code>
    */
@@ -711,7 +711,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "subscriptions" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $subscriptions = $youtubeService->subscriptions;
    *  </code>
    */
@@ -782,7 +782,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "thumbnails" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $thumbnails = $youtubeService->thumbnails;
    *  </code>
    */
@@ -812,7 +812,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "videoCategories" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $videoCategories = $youtubeService->videoCategories;
    *  </code>
    */
@@ -846,7 +846,7 @@ class Google_Service_YouTube extends Google_Service {
    * The "videos" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeService = new Google_YouTubeService(...);
+   *   $youtubeService = new Google_Service_YouTube(...);
    *   $videos = $youtubeService->videos;
    *  </code>
    */

@@ -58,7 +58,7 @@ class Google_Service_Blogger extends Google_Service {
    * The "blogs" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bloggerService = new Google_BloggerService(...);
+   *   $bloggerService = new Google_Service_Blogger(...);
    *   $blogs = $bloggerService->blogs;
    *  </code>
    */
@@ -124,7 +124,7 @@ class Google_Service_Blogger extends Google_Service {
    * The "comments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bloggerService = new Google_BloggerService(...);
+   *   $bloggerService = new Google_Service_Blogger(...);
    *   $comments = $bloggerService->comments;
    *  </code>
    */
@@ -180,7 +180,7 @@ class Google_Service_Blogger extends Google_Service {
    * The "pages" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bloggerService = new Google_BloggerService(...);
+   *   $bloggerService = new Google_Service_Blogger(...);
    *   $pages = $bloggerService->pages;
    *  </code>
    */
@@ -230,7 +230,7 @@ class Google_Service_Blogger extends Google_Service {
    * The "posts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bloggerService = new Google_BloggerService(...);
+   *   $bloggerService = new Google_Service_Blogger(...);
    *   $posts = $bloggerService->posts;
    *  </code>
    */
@@ -394,7 +394,7 @@ class Google_Service_Blogger extends Google_Service {
    * The "users" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bloggerService = new Google_BloggerService(...);
+   *   $bloggerService = new Google_Service_Blogger(...);
    *   $users = $bloggerService->users;
    *  </code>
    */

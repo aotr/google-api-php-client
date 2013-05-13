@@ -80,7 +80,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "acl" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $acl = $orkutService->acl;
    *  </code>
    */
@@ -106,7 +106,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "activities" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $activities = $orkutService->activities;
    *  </code>
    */
@@ -153,7 +153,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "activityVisibility" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $activityVisibility = $orkutService->activityVisibility;
    *  </code>
    */
@@ -220,7 +220,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "badges" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $badges = $orkutService->badges;
    *  </code>
    */
@@ -268,7 +268,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "comments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $comments = $orkutService->comments;
    *  </code>
    */
@@ -352,7 +352,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communities" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communities = $orkutService->communities;
    *  </code>
    */
@@ -405,7 +405,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityFollow" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityFollow = $orkutService->communityFollow;
    *  </code>
    */
@@ -449,7 +449,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityMembers" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityMembers = $orkutService->communityMembers;
    *  </code>
    */
@@ -537,7 +537,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityMessages" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityMessages = $orkutService->communityMessages;
    *  </code>
    */
@@ -605,7 +605,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityPollComments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityPollComments = $orkutService->communityPollComments;
    *  </code>
    */
@@ -659,7 +659,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityPollVotes" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityPollVotes = $orkutService->communityPollVotes;
    *  </code>
    */
@@ -691,7 +691,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityPolls" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityPolls = $orkutService->communityPolls;
    *  </code>
    */
@@ -745,7 +745,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityRelated" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityRelated = $orkutService->communityRelated;
    *  </code>
    */
@@ -777,7 +777,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "communityTopics" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $communityTopics = $orkutService->communityTopics;
    *  </code>
    */
@@ -864,7 +864,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "counters" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $counters = $orkutService->counters;
    *  </code>
    */
@@ -894,7 +894,7 @@ class Google_Service_Orkut extends Google_Service {
    * The "scraps" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $orkutService = new Google_OrkutService(...);
+   *   $orkutService = new Google_Service_Orkut(...);
    *   $scraps = $orkutService->scraps;
    *  </code>
    */

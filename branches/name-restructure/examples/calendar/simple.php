@@ -12,7 +12,7 @@ $client->setApplicationName("Google Calendar PHP Starter Application");
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
 // $client->setDeveloperKey('insert_your_developer_key');
-$cal = new Google_CalendarService($client);
+$cal = new Google_Service_Calendar($client);
 if (isset($_GET['logout'])) {
   unset($_SESSION['token']);
 }

@@ -52,7 +52,7 @@ class Google_Service_Tasks extends Google_Service {
    * The "tasklists" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $tasksService = new Google_TasksService(...);
+   *   $tasksService = new Google_Service_Tasks(...);
    *   $tasklists = $tasksService->tasklists;
    *  </code>
    */
@@ -167,7 +167,7 @@ class Google_Service_Tasks extends Google_Service {
    * The "tasks" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $tasksService = new Google_TasksService(...);
+   *   $tasksService = new Google_Service_Tasks(...);
    *   $tasks = $tasksService->tasks;
    *  </code>
    */

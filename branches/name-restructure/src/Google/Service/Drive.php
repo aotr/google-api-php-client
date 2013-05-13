@@ -70,7 +70,7 @@ class Google_Service_Drive extends Google_Service {
    * The "about" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $about = $driveService->about;
    *  </code>
    */
@@ -103,7 +103,7 @@ class Google_Service_Drive extends Google_Service {
    * The "apps" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $apps = $driveService->apps;
    *  </code>
    */
@@ -149,7 +149,7 @@ class Google_Service_Drive extends Google_Service {
    * The "changes" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $changes = $driveService->changes;
    *  </code>
    */
@@ -201,7 +201,7 @@ class Google_Service_Drive extends Google_Service {
    * The "children" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $children = $driveService->children;
    *  </code>
    */
@@ -284,7 +284,7 @@ class Google_Service_Drive extends Google_Service {
    * The "comments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $comments = $driveService->comments;
    *  </code>
    */
@@ -408,7 +408,7 @@ class Google_Service_Drive extends Google_Service {
    * The "files" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $files = $driveService->files;
    *  </code>
    */
@@ -633,7 +633,7 @@ class Google_Service_Drive extends Google_Service {
    * The "parents" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $parents = $driveService->parents;
    *  </code>
    */
@@ -712,7 +712,7 @@ class Google_Service_Drive extends Google_Service {
    * The "permissions" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $permissions = $driveService->permissions;
    *  </code>
    */
@@ -836,7 +836,7 @@ class Google_Service_Drive extends Google_Service {
    * The "properties" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $properties = $driveService->properties;
    *  </code>
    */
@@ -961,7 +961,7 @@ class Google_Service_Drive extends Google_Service {
    * The "replies" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $replies = $driveService->replies;
    *  </code>
    */
@@ -1090,7 +1090,7 @@ class Google_Service_Drive extends Google_Service {
    * The "revisions" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $driveService = new Google_DriveService(...);
+   *   $driveService = new Google_Service_Drive(...);
    *   $revisions = $driveService->revisions;
    *  </code>
    */

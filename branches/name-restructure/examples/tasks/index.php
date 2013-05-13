@@ -25,7 +25,7 @@ $client = new Google_Client();
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
 // $client->setApplicationName("Tasks_Example_App");
-$tasksService = new Google_TasksService($client);
+$tasksService = new Google_Service_Tasks($client);
 
 if (isset($_REQUEST['logout'])) {
   unset($_SESSION['access_token']);

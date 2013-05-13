@@ -26,7 +26,7 @@ $client = new Google_Client();
 // Visit https://code.google.com/apis/console to generate your client's Developer Key.
 //$client->setDeveloperKey('insert_your_developer_key');
 $client->setApplicationName("Books_Example_App");
-$service = new Google_BooksService($client);
+$service = new Google_Service_Books($client);
 
 /**
  * Echo the list of videos in the specified feed.

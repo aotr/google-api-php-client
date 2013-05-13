@@ -52,7 +52,7 @@ class Google_Service_Latitude extends Google_Service {
    * The "currentLocation" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $latitudeService = new Google_LatitudeService(...);
+   *   $latitudeService = new Google_Service_Latitude(...);
    *   $currentLocation = $latitudeService->currentLocation;
    *  </code>
    */
@@ -111,7 +111,7 @@ class Google_Service_Latitude extends Google_Service {
    * The "location" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $latitudeService = new Google_LatitudeService(...);
+   *   $latitudeService = new Google_Service_Latitude(...);
    *   $location = $latitudeService->location;
    *  </code>
    */

@@ -58,7 +58,7 @@ class Google_Service_Bigquery extends Google_Service {
    * The "datasets" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bigqueryService = new Google_BigqueryService(...);
+   *   $bigqueryService = new Google_Service_Bigquery(...);
    *   $datasets = $bigqueryService->datasets;
    *  </code>
    */
@@ -189,7 +189,7 @@ class Google_Service_Bigquery extends Google_Service {
    * The "jobs" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bigqueryService = new Google_BigqueryService(...);
+   *   $bigqueryService = new Google_Service_Bigquery(...);
    *   $jobs = $bigqueryService->jobs;
    *  </code>
    */
@@ -303,7 +303,7 @@ class Google_Service_Bigquery extends Google_Service {
    * The "projects" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bigqueryService = new Google_BigqueryService(...);
+   *   $bigqueryService = new Google_Service_Bigquery(...);
    *   $projects = $bigqueryService->projects;
    *  </code>
    */
@@ -335,7 +335,7 @@ class Google_Service_Bigquery extends Google_Service {
    * The "tabledata" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bigqueryService = new Google_BigqueryService(...);
+   *   $bigqueryService = new Google_Service_Bigquery(...);
    *   $tabledata = $bigqueryService->tabledata;
    *  </code>
    */
@@ -371,7 +371,7 @@ class Google_Service_Bigquery extends Google_Service {
    * The "tables" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $bigqueryService = new Google_BigqueryService(...);
+   *   $bigqueryService = new Google_Service_Bigquery(...);
    *   $tables = $bigqueryService->tables;
    *  </code>
    */
