@@ -16,8 +16,8 @@
  */
 session_start();
 
-require_once '../Google_Client.php';
-require_once '../contrib/Google_BooksService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Books.php';
 
 // Include the boilerplate markup.
 include 'interface.html';

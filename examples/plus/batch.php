@@ -15,20 +15,20 @@
  * the License.
  */
 
-require_once 'Google_Client.php';
-require_once 'contrib/Google_PlusService.php';
+require_once '../../src/Google/Client.php';
+require_once '../../src/Google/Service/Plus.php';
+require_once '../../src/Google/Http/Batch.php';
 session_start();
 
 $client = new Google_Client();
 $client->setApplicationName("Google+ PHP Starter Application");
-$plus = new Google_PlusService($client);
+$plus = new Google_Service_Plus($client);
 
 // Visit https://code.google.com/apis/console?api=plus to generate your
 // client id, client secret, and to register your redirect uri.
 // $client->setClientId('insert_your_oauth2_client_id');
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
-// $client->setDeveloperKey('insert_your_developer_key');
 
 if (isset($_GET['logout'])) {
   unset($_SESSION['token']);
@@ -48,7 +48,7 @@ if (isset($_SESSION['token'])) {
 if ($client->getAccessToken()) {
   $client->setUseBatch(true);
  
-  $batch = new Google_BatchRequest();
+  $batch = new Google_Http_Batch();
   $batch->add($plus->people->get('me'), 'key1');
   $batch->add($plus->people->get('me'), 'key2');
   $result = $batch->execute();

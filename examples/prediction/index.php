@@ -16,8 +16,8 @@
  * limitations under the License.
  */
 
-require_once '../Google_Client.php';
-require_once '../contrib/Google_PredictionService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/Prediction.php';
 
 session_start();
 

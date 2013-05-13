@@ -14,8 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-require_once '../Google/Client.php';
-require_once '../Google/Service/Plus.php';
+require_once '../../src/Google/Client.php';
+require_once '../../src/Google/Service/Plus.php';
 
 session_start();
 
@@ -26,7 +26,6 @@ $client->setApplicationName("Google+ PHP Starter Application");
 // $client->setClientId('insert_your_oauth2_client_id');
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
-// $client->setDeveloperKey('insert_your_developer_key');
 $plus = new Google_Service_Plus($client);
 
 if (isset($_REQUEST['logout'])) {

@@ -1,6 +1,6 @@
 <?php
-require_once '../Google_Client.php';
-require_once '../contrib/Google_PlusMomentsService.php';
+require_once '../src/Google/Client.php';
+require_once '../src/Google/Service/PlusMoments.php';
 
 session_start();
 
