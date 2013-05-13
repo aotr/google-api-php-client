@@ -52,7 +52,7 @@ class Google_Service_Prediction extends Google_Service {
    * The "hostedmodels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $predictionService = new Google_PredictionService(...);
+   *   $predictionService = new Google_Service_Prediction(...);
    *   $hostedmodels = $predictionService->hostedmodels;
    *  </code>
    */
@@ -83,7 +83,7 @@ class Google_Service_Prediction extends Google_Service {
    * The "trainedmodels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $predictionService = new Google_PredictionService(...);
+   *   $predictionService = new Google_Service_Prediction(...);
    *   $trainedmodels = $predictionService->trainedmodels;
    *  </code>
    */

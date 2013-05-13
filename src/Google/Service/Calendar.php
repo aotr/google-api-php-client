@@ -62,7 +62,7 @@ class Google_Service_Calendar extends Google_Service {
    * The "acl" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $calendarService = new Google_CalendarService(...);
+   *   $calendarService = new Google_Service_Calendar(...);
    *   $acl = $calendarService->acl;
    *  </code>
    */
@@ -179,7 +179,7 @@ class Google_Service_Calendar extends Google_Service {
    * The "calendarList" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $calendarService = new Google_CalendarService(...);
+   *   $calendarService = new Google_Service_Calendar(...);
    *   $calendarList = $calendarService->calendarList;
    *  </code>
    */
@@ -302,7 +302,7 @@ class Google_Service_Calendar extends Google_Service {
    * The "calendars" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $calendarService = new Google_CalendarService(...);
+   *   $calendarService = new Google_Service_Calendar(...);
    *   $calendars = $calendarService->calendars;
    *  </code>
    */
@@ -410,7 +410,7 @@ class Google_Service_Calendar extends Google_Service {
    * The "colors" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $calendarService = new Google_CalendarService(...);
+   *   $calendarService = new Google_Service_Calendar(...);
    *   $colors = $calendarService->colors;
    *  </code>
    */
@@ -439,7 +439,7 @@ class Google_Service_Calendar extends Google_Service {
    * The "events" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $calendarService = new Google_CalendarService(...);
+   *   $calendarService = new Google_Service_Calendar(...);
    *   $events = $calendarService->events;
    *  </code>
    */
@@ -675,7 +675,7 @@ class Google_Service_Calendar extends Google_Service {
    * The "freebusy" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $calendarService = new Google_CalendarService(...);
+   *   $calendarService = new Google_Service_Calendar(...);
    *   $freebusy = $calendarService->freebusy;
    *  </code>
    */
@@ -705,7 +705,7 @@ class Google_Service_Calendar extends Google_Service {
    * The "settings" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $calendarService = new Google_CalendarService(...);
+   *   $calendarService = new Google_Service_Calendar(...);
    *   $settings = $calendarService->settings;
    *  </code>
    */

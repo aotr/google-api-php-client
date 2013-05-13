@@ -26,7 +26,7 @@ $client = new Google_Client();
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
 $client->setApplicationName("Latitude_Example_App");
-$service = new Google_LatitudeService($client);
+$service = new Google_Service_Latitude($client);
 
 if (isset($_REQUEST['logout'])) {
   unset($_SESSION['access_token']);

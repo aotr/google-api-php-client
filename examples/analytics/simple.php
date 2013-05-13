@@ -12,7 +12,7 @@ $client->setApplicationName("Google Analytics PHP Starter Application");
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
 // $client->setDeveloperKey('insert_your_developer_key');
-$service = new Google_AnalyticsService($client);
+$service = new Google_Service_Analytics($client);
 
 if (isset($_GET['logout'])) {
   unset($_SESSION['token']);

@@ -51,7 +51,7 @@ class AdSenseHostAuth {
     // src/ folder in your client library install.
     $this->apiClient = new Google_Client();
     // Create the api AdsensehostService instance.
-    $this->adSenseHostService = new Google_AdsensehostService($this->apiClient);
+    $this->adSenseHostService = new Google_Service_Adsensehost($this->apiClient);
   }
 
   /**

@@ -54,7 +54,7 @@ class Google_Service_Adexchangebuyer extends Google_Service {
    * The "accounts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangebuyerService = new Google_AdexchangebuyerService(...);
+   *   $adexchangebuyerService = new Google_Service_Adexchangebuyer(...);
    *   $accounts = $adexchangebuyerService->accounts;
    *  </code>
    */
@@ -136,7 +136,7 @@ class Google_Service_Adexchangebuyer extends Google_Service {
    * The "creatives" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangebuyerService = new Google_AdexchangebuyerService(...);
+   *   $adexchangebuyerService = new Google_Service_Adexchangebuyer(...);
    *   $creatives = $adexchangebuyerService->creatives;
    *  </code>
    */
@@ -204,7 +204,7 @@ class Google_Service_Adexchangebuyer extends Google_Service {
    * The "directDeals" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangebuyerService = new Google_AdexchangebuyerService(...);
+   *   $adexchangebuyerService = new Google_Service_Adexchangebuyer(...);
    *   $directDeals = $adexchangebuyerService->directDeals;
    *  </code>
    */

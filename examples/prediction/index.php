@@ -32,7 +32,7 @@ $client->setApplicationName("Google Prediction API PHP Starter Application");
 // $client->setDeveloperKey('insert_your_developer_key');
 $client->setScopes(array('https://www.googleapis.com/auth/prediction'));
 
-$predictionService = new Google_PredictionService($client);
+$predictionService = new Google_Service_Prediction($client);
 $trainedmodels = $predictionService->trainedmodels;
 
 if (isset($_REQUEST['logout'])) {

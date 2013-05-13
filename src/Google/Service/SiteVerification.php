@@ -50,7 +50,7 @@ class Google_Service_SiteVerification extends Google_Service {
    * The "webResource" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $siteVerificationService = new Google_SiteVerificationService(...);
+   *   $siteVerificationService = new Google_Service_SiteVerification(...);
    *   $webResource = $siteVerificationService->webResource;
    *  </code>
    */

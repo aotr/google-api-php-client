@@ -64,7 +64,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "adclients" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $adclients = $adexchangesellerService->adclients;
    *  </code>
    */
@@ -96,7 +96,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "adunits" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $adunits = $adexchangesellerService->adunits;
    *  </code>
    */
@@ -148,7 +148,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "customchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $customchannels = $adexchangesellerService->customchannels;
    *  </code>
    */
@@ -182,7 +182,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "customchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $customchannels = $adexchangesellerService->customchannels;
    *  </code>
    */
@@ -234,7 +234,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "adunits" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $adunits = $adexchangesellerService->adunits;
    *  </code>
    */
@@ -269,7 +269,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "reports" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $reports = $adexchangesellerService->reports;
    *  </code>
    */
@@ -310,7 +310,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "saved" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $saved = $adexchangesellerService->saved;
    *  </code>
    */
@@ -364,7 +364,7 @@ class Google_Service_AdExchangeSeller extends Google_Service {
    * The "urlchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adexchangesellerService = new Google_AdExchangeSellerService(...);
+   *   $adexchangesellerService = new Google_Service_AdExchangeSeller(...);
    *   $urlchannels = $adexchangesellerService->urlchannels;
    *  </code>
    */

@@ -60,7 +60,7 @@ class Google_Service_Storage extends Google_Service {
    * The "bucketAccessControls" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $storageService = new Google_StorageService(...);
+   *   $storageService = new Google_Service_Storage(...);
    *   $bucketAccessControls = $storageService->bucketAccessControls;
    *  </code>
    */
@@ -180,7 +180,7 @@ class Google_Service_Storage extends Google_Service {
    * The "buckets" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $storageService = new Google_StorageService(...);
+   *   $storageService = new Google_Service_Storage(...);
    *   $buckets = $storageService->buckets;
    *  </code>
    */
@@ -314,7 +314,7 @@ class Google_Service_Storage extends Google_Service {
    * The "channels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $storageService = new Google_StorageService(...);
+   *   $storageService = new Google_Service_Storage(...);
    *   $channels = $storageService->channels;
    *  </code>
    */
@@ -339,7 +339,7 @@ class Google_Service_Storage extends Google_Service {
    * The "defaultObjectAccessControls" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $storageService = new Google_StorageService(...);
+   *   $storageService = new Google_Service_Storage(...);
    *   $defaultObjectAccessControls = $storageService->defaultObjectAccessControls;
    *  </code>
    */
@@ -460,7 +460,7 @@ class Google_Service_Storage extends Google_Service {
    * The "objectAccessControls" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $storageService = new Google_StorageService(...);
+   *   $storageService = new Google_Service_Storage(...);
    *   $objectAccessControls = $storageService->objectAccessControls;
    *  </code>
    */
@@ -598,7 +598,7 @@ class Google_Service_Storage extends Google_Service {
    * The "objects" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $storageService = new Google_StorageService(...);
+   *   $storageService = new Google_Service_Storage(...);
    *   $objects = $storageService->objects;
    *  </code>
    */

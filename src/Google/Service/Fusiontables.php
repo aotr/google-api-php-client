@@ -58,7 +58,7 @@ class Google_Service_Fusiontables extends Google_Service {
    * The "column" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $fusiontablesService = new Google_FusiontablesService(...);
+   *   $fusiontablesService = new Google_Service_Fusiontables(...);
    *   $column = $fusiontablesService->column;
    *  </code>
    */
@@ -179,7 +179,7 @@ class Google_Service_Fusiontables extends Google_Service {
    * The "query" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $fusiontablesService = new Google_FusiontablesService(...);
+   *   $fusiontablesService = new Google_Service_Fusiontables(...);
    *   $query = $fusiontablesService->query;
    *  </code>
    */
@@ -232,7 +232,7 @@ class Google_Service_Fusiontables extends Google_Service {
    * The "style" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $fusiontablesService = new Google_FusiontablesService(...);
+   *   $fusiontablesService = new Google_Service_Fusiontables(...);
    *   $style = $fusiontablesService->style;
    *  </code>
    */
@@ -352,7 +352,7 @@ class Google_Service_Fusiontables extends Google_Service {
    * The "table" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $fusiontablesService = new Google_FusiontablesService(...);
+   *   $fusiontablesService = new Google_Service_Fusiontables(...);
    *   $table = $fusiontablesService->table;
    *  </code>
    */
@@ -534,7 +534,7 @@ class Google_Service_Fusiontables extends Google_Service {
    * The "template" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $fusiontablesService = new Google_FusiontablesService(...);
+   *   $fusiontablesService = new Google_Service_Fusiontables(...);
    *   $template = $fusiontablesService->template;
    *  </code>
    */

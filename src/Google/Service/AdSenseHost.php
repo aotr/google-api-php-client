@@ -66,7 +66,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "accounts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $accounts = $adsensehostService->accounts;
    *  </code>
    */
@@ -113,7 +113,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "adclients" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $adclients = $adsensehostService->adclients;
    *  </code>
    */
@@ -164,7 +164,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "adunits" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $adunits = $adsensehostService->adunits;
    *  </code>
    */
@@ -317,7 +317,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "reports" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $reports = $adsensehostService->reports;
    *  </code>
    */
@@ -359,7 +359,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "adclients" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $adclients = $adsensehostService->adclients;
    *  </code>
    */
@@ -408,7 +408,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "associationsessions" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $associationsessions = $adsensehostService->associationsessions;
    *  </code>
    */
@@ -461,7 +461,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "customchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $customchannels = $adsensehostService->customchannels;
    *  </code>
    */
@@ -586,7 +586,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "reports" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $reports = $adsensehostService->reports;
    *  </code>
    */
@@ -627,7 +627,7 @@ class Google_Service_AdSenseHost extends Google_Service {
    * The "urlchannels" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $adsensehostService = new Google_AdSenseHostService(...);
+   *   $adsensehostService = new Google_Service_AdSenseHost(...);
    *   $urlchannels = $adsensehostService->urlchannels;
    *  </code>
    */

@@ -50,7 +50,7 @@ class Google_Service_Urlshortener extends Google_Service {
    * The "url" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $urlshortenerService = new Google_UrlshortenerService(...);
+   *   $urlshortenerService = new Google_Service_Urlshortener(...);
    *   $url = $urlshortenerService->url;
    *  </code>
    */

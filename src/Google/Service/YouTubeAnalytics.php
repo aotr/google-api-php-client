@@ -50,7 +50,7 @@ class Google_Service_YouTubeAnalytics extends Google_Service {
    * The "reports" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $youtubeAnalyticsService = new Google_YouTubeAnalyticsService(...);
+   *   $youtubeAnalyticsService = new Google_Service_YouTubeAnalytics(...);
    *   $reports = $youtubeAnalyticsService->reports;
    *  </code>
    */

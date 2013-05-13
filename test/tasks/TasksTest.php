@@ -23,7 +23,7 @@ class TasksTest extends BaseTest {
 
   public function __construct() {
     parent::__construct();
-    $this->taskService = new Google_TasksService(BaseTest::$client);
+    $this->taskService = new Google_Service_Tasks(BaseTest::$client);
   }
   
   public function testInsertTask() {

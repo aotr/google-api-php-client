@@ -50,7 +50,7 @@ class Google_Service_Licensing extends Google_Service {
    * The "licenseAssignments" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $licensingService = new Google_LicensingService(...);
+   *   $licensingService = new Google_Service_Licensing(...);
    *   $licenseAssignments = $licensingService->licenseAssignments;
    *  </code>
    */

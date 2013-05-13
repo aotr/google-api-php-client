@@ -20,7 +20,7 @@ require_once '../src/Google/Service/Books.php';
 
 $client = new Google_Client();
 $client->setApplicationName("My_Books_API_Example");
-$service = new Google_BooksService($client);
+$service = new Google_Service_Books($client);
 
 $optParams = array('filter' => 'free-ebooks');
 $results = $service->volumes->listVolumes('Henry David Thoreau', $optParams);

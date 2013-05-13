@@ -50,7 +50,7 @@ class Google_Service_Shopping extends Google_Service {
    * The "products" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $shoppingService = new Google_ShoppingService(...);
+   *   $shoppingService = new Google_Service_Shopping(...);
    *   $products = $shoppingService->products;
    *  </code>
    */

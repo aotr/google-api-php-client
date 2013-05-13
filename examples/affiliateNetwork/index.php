@@ -27,7 +27,7 @@ $client->setApplicationName("Google GAN PHP Starter Application");
 // $client->setClientSecret('insert_your_oauth2_client_secret');
 // $client->setRedirectUri('insert_your_oauth2_redirect_uri');
 // $client->setDeveloperKey('insert_your_simple_api_key');
-$gan = new Google_GanService($client);
+$gan = new Google_Service_Gan($client);
 
 if (isset($_REQUEST['logout'])) {
   unset($_SESSION['access_token']);

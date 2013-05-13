@@ -99,7 +99,7 @@ if ($_GET['action'] == 'revoke') {
   $authHelper->setTokenFromStorage();
 
   if ($authHelper->isAuthorized()) {
-    $analytics = new Google_AnalyticsService($client);
+    $analytics = new Google_Service_Analytics($client);
 
     if ($_GET['demo'] == 'hello') {
 

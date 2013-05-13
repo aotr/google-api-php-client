@@ -50,7 +50,7 @@ class Google_Service_Groupssettings extends Google_Service {
    * The "groups" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $groupssettingsService = new Google_GroupssettingsService(...);
+   *   $groupssettingsService = new Google_Service_Groupssettings(...);
    *   $groups = $groupssettingsService->groups;
    *  </code>
    */

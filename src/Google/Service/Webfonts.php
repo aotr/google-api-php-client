@@ -50,7 +50,7 @@ class Google_Service_Webfonts extends Google_Service {
    * The "webfonts" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $webfontsService = new Google_WebfontsService(...);
+   *   $webfontsService = new Google_Service_Webfonts(...);
    *   $webfonts = $webfontsService->webfonts;
    *  </code>
    */

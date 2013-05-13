@@ -50,7 +50,7 @@ class Google_Service_Audit extends Google_Service {
    * The "activities" collection of methods.
    * Typical usage is:
    *  <code>
-   *   $auditService = new Google_AuditService(...);
+   *   $auditService = new Google_Service_Audit(...);
    *   $activities = $auditService->activities;
    *  </code>
    */

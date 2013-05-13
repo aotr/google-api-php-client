@@ -13,7 +13,7 @@ $client->setClientSecret('insert_client_secret');
 $client->setRedirectUri('insert_redirect_uri');
 $client->setDeveloperKey('insert_developer_key');
 
-$moments = new Google_PlusMomentsService($client);
+$moments = new Google_Service_PlusMoments($client);
 
 if (isset($_GET['signout'])) {
   unset($_SESSION['token']);
