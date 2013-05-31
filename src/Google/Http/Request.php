@@ -50,17 +50,19 @@ class Google_Http_Request {
   protected $responseBody;
   
   public $accessKey;
+  
+  private $base_path;
 
   public function __construct($url, $method = 'GET', $headers = array(), $postBody = null) {
+    // TODO(ianbarber): Unpleasant. Remove these hacks where possible.
+    $this->base_path = Google_Client::getStaticBasePath();
+    $app_name = Google_Client::getStaticAppName();
     $this->setUrl($url);
     $this->setRequestMethod($method);
     $this->setRequestHeaders($headers);
     $this->setPostBody($postBody);
 
-    // TODO(ianbarber): We need the client here somehow :/
-    //$appName = $client->getApplicationName();
-    $appName = "";
-    $this->userAgent = $appName . " " .self::USER_AGENT_SUFFIX;
+    $this->userAgent = $app_name . " " .self::USER_AGENT_SUFFIX;
   }
 
   /**
@@ -201,8 +203,7 @@ class Google_Http_Request {
       if (substr($url, 0, 1) !== '/') {
         $url = '/' . $url;
       }
-      global $apiConfig;
-      $this->url = $apiConfig['basePath'] . $url;
+      $this->url = $this->base_path . $url;
     }
   }
 
