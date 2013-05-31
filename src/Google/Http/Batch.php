@@ -29,8 +29,12 @@ class Google_Http_Batch {
 
   /** @var array service requests to be executed. */
   private $requests = array();
+  
+  /** @var Google_IO_Abstract */
+  private $io;
 
-  public function __construct($boundary = false) {
+  public function __construct(Google_IO_Abstract $io, $boundary = false) {
+    $this->io = $io;
     $boundary = (false == $boundary) ? mt_rand() : $boundary;
     $this->boundary = str_replace('"', '', $boundary);
   }
@@ -55,6 +59,7 @@ class Google_Http_Batch {
     $body = rtrim($body);
     $body .= "\n--{$this->boundary}--";
 
+    // TODO(ianbarber): Also need to inject basepath here.
     global $apiConfig;
     $url = $apiConfig['basePath'] . '/batch';
     $httpRequest = new Google_Http_Request($url, 'POST');
@@ -62,7 +67,7 @@ class Google_Http_Batch {
         'Content-Type' => 'multipart/mixed; boundary=' . $this->boundary));
 
     $httpRequest->setPostBody($body);
-    $response = Google_Client::$io->makeRequest($httpRequest);
+    $response = $this->io->makeRequest($httpRequest);
 
     $response = $this->parseResponse($response);
     return $response;

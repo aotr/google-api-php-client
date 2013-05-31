@@ -19,4 +19,18 @@ class Google_Service {
   public $version;
   public $servicePath;
   public $resource;
+  private $client;
+  
+  // TODO(ianbarber): Make subclasses call superclass constructor.
+  public function __construct(Google_Client $client) {
+    $this->client = $client;
+  }
+  
+  /**
+   * Return the associated Google_Client class.
+   * @return Google_Client
+   */
+  public function getClient() {
+    return $this->client;
+  }
 }

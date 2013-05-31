@@ -29,13 +29,12 @@ require_once "Google/Cache/Exception.php";
 class Google_Cache_Memcache extends Google_Cache_Abstract {
   private $connection = false;
 
-  public function __construct() {
-    global $apiConfig;
+  public function __construct($config) {
     if (! function_exists('memcache_connect')) {
       throw new Google_Cache_Exception("Memcache functions not available");
     }
-    $this->host = $apiConfig['ioMemCacheCache_host'];
-    $this->port = $apiConfig['ioMemCacheCache_port'];
+    $this->host = $config['host'];
+    $this->port = $config['port'];
     if (empty($this->host) || empty($this->port)) {
       throw new Google_Cache_Exception("You need to supply a valid memcache host and port");
     }

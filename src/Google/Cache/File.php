@@ -30,9 +30,8 @@ require_once "Google/Cache/Exception.php";
 class Google_Cache_File extends Google_Cache_Abstract {
   private $path;
 
-  public function __construct() {
-    global $apiConfig;
-    $this->path = $apiConfig['ioFileCache_directory'];
+  public function __construct($config) {
+    $this->path = $config['directory'];
   }
 
   private function isLocked($storageFile) {

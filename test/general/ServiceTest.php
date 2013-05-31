@@ -55,9 +55,6 @@ class ServiceTest extends BaseTest {
     ));
     $this->assertEquals('asdf', $model->name);
     $this->assertEquals('z', $model->gender);
-
-    global $apiConfig;
-    $apiConfig['use_objects'] = true;
     $model->mapTypes(array(
       '__infoType' => 'Google_Model',
       '__infoDataType' => 'map',
@@ -71,7 +68,6 @@ class ServiceTest extends BaseTest {
     $this->assertEquals('asdf', $model->name);
     $this->assertEquals('z', $model->gender);
 
-    $apiConfig['use_objects'] = false;
     $this->assertEquals(false, $model->isAssociativeArray(""));
     $this->assertEquals(false, $model->isAssociativeArray(false));
     $this->assertEquals(false, $model->isAssociativeArray(null));

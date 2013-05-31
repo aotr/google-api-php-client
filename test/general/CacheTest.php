@@ -44,9 +44,8 @@ class CacheTest extends BaseTest {
   }
 
   public function testDelete() {
-    global $apiConfig;
-    $apiConfig['ioFileCache_directory'] = '/tmp/google-api-php-client/tests';
-    $cache = new Google_Cache_File();
+    $config = array('directory' => '/tmp/google-api-php-client/tests');
+    $cache = new Google_Cache_File($config);
     $cache->set('foo', 'bar');
     $cache->delete('foo');
     $this->assertEquals($cache->get('foo'), false);

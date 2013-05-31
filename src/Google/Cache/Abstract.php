@@ -21,6 +21,8 @@
  * @author Chris Chabot <chabotc@google.com>
  */
 abstract class Google_Cache_Abstract {
+  
+  abstract public function __construct($config);
 
   /**
    * Retrieves the data for the given key, or false if they

@@ -44,20 +44,12 @@ class Google_IO_Curl implements Google_IO_Interface {
       CURLOPT_HEADER => true,
       CURLOPT_VERBOSE => false,
   );
-
-  /**
-   * Perform an authenticated / signed apiHttpRequest.
-   * This function takes the apiHttpRequest, calls apiAuth->sign on it
-   * (which can modify the request in what ever way fits the auth mechanism)
-   * and then calls apiCurlIO::makeRequest on the signed request
-   *
-   * @param Google_Http_Request $request
-   * @return Google_Http_Request The resulting HTTP response including the
-   * responseHttpCode, responseHeaders and responseBody.
-   */
-  public function authenticatedRequest(Google_Http_Request $request) {
-    $request = Google_Client::$auth->sign($request);
-    return $this->makeRequest($request);
+  
+  /** @var Google_Cache_Abstract */
+  private $cache;
+  
+  public function __construct(Google_Cache_Abstract $cache, $config = null) {
+    $this->cache = $cache;
   }
 
   /**
@@ -175,7 +167,7 @@ class Google_IO_Curl implements Google_IO_Interface {
   public function setCachedRequest(Google_Http_Request $request) {
     // Determine if the request is cacheable.
     if (Google_Http_CacheParser::isResponseCacheable($request)) {
-      Google_Client::$cache->set($request->getCacheKey(), $request);
+      $this->cache->set($request->getCacheKey(), $request);
       return true;
     }
 
@@ -193,7 +185,7 @@ class Google_IO_Curl implements Google_IO_Interface {
       false;
     }
 
-    return Google_Client::$cache->get($request->getCacheKey());
+    return $this->cache->get($request->getCacheKey());
   }
 
   /**
