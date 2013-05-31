@@ -23,6 +23,7 @@
  */
 
 require_once 'Google/Client.php';
+require_once 'Google/IO/Exception.php';
 require_once 'Google/IO/Interface.php';
 require_once 'Google/Http/CacheParser.php';
 require_once 'Google/Http/Request.php';
