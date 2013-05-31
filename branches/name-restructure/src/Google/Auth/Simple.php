@@ -26,16 +26,42 @@ require_once "Google/Http/Request.php";
  * @author Chirag Shah <chirags@google.com>
  */
 class Google_Auth_Simple extends Google_Auth_Abstract {
-  public $key = null;
+  private $key = null;
+  private $io;
 
-  public function __construct() {
-    global $apiConfig;
-    if (!empty($apiConfig['developer_key'])) {
-      $this->setDeveloperKey($apiConfig['developer_key']);
+  public function __construct(Google_IO_Abstract $io, $config = null) {
+    $this->io = $io;
+    $this->updateConfig($config); 
+  }
+  
+  /**
+   * Update the configuration with the data from the given array.
+   */
+  public function updateConfig($config) {
+    if (is_array($config)) {
+      $this->config = array_merge($this->config, $config);
     }
   }
 
-  public function setDeveloperKey($key) {$this->key = $key;}
+  public function setDeveloperKey($key) {
+    $this->key = $key;
+  }
+  
+  /**
+   * Perform an authenticated / signed apiHttpRequest.
+   * This function takes the apiHttpRequest, calls apiAuth->sign on it
+   * (which can modify the request in what ever way fits the auth mechanism)
+   * and then calls apiCurlIO::makeRequest on the signed request
+   *
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request The resulting HTTP response including the
+   * responseHttpCode, responseHeaders and responseBody.
+   */
+  public function authenticatedRequest(Google_Http_Request $request) {
+    $request = $this->sign($request);
+    return $this->io->makeRequest($request);
+  }
+  
   public function authenticate($service) {/*noop*/}
   public function setAccessToken($accessToken) {/* noop*/}
   public function getAccessToken() {return null;}

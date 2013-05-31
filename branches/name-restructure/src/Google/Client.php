@@ -37,16 +37,9 @@ if (! ini_get('date.timezone') && function_exists('date_default_timezone_set')) 
 set_include_path(dirname(dirname(__FILE__))
  . PATH_SEPARATOR . get_include_path());
 
-require_once "config.php";
-// If a local configuration file is found, merge it's values with the default configuration
-if (file_exists(dirname(__FILE__)  . '/local_config.php')) {
-  $defaultConfig = $apiConfig;
-  require_once (dirname(__FILE__)  . '/local_config.php');
-  $apiConfig = array_merge($defaultConfig, $apiConfig);
-}
-
 require_once 'Google/Auth/AssertionCredentials.php';
 require_once 'Google/Cache/File.php';
+require_once 'Google/Config.php';
 require_once 'Google/Collection.php';
 require_once 'Google/Exception.php';
 require_once 'Google/IO/Curl.php';
@@ -63,34 +56,32 @@ require_once 'Google/Service/Resource.php';
  */
 class Google_Client {
   /**
-   * @static
    * @var Google_Auth_Abstract $auth
    */
-  static $auth;
+  private $auth;
 
   /**
-   * @static
    * @var Google_IO_Interface $io
    */
-  static $io;
+  private $io;
 
   /**
-   * @static
    * @var Google_Cache_Abstract $cache
    */
-  static $cache;
+  private $cache;
+  
+  /**
+   * @var Google_Config $config
+   */
+  private $config;
 
   /**
-   * @static
    * @var boolean $useBatch
    */
-  static $useBatch = false;
+  private $useBatch = false;
 
   /** @var array $scopes */
   protected $scopes = array();
-
-  /** @var bool $useObjects */
-  protected $useObjects = false;
 
   // definitions of services that are discovered.
   protected $services = array();
@@ -98,27 +89,21 @@ class Google_Client {
   // Used to track authenticated state, can't discover services after doing authenticate()
   private $authenticated = false;
 
-  public function __construct($config = array()) {
-    global $apiConfig;
-    $apiConfig = array_merge($apiConfig, $config);
-    self::$cache = new $apiConfig['cacheClass']();
-    self::$auth = new $apiConfig['authClass']();
-    self::$io = new $apiConfig['ioClass']();
+  public function __construct(Google_Config $config = null) {
+    $this->config = $config ? $config : new Google_Config();
+    $this->cache = $this->config->getDefaultCache();
+    $this->io =  $this->config->getDefaultIo($this->cache);
+    $this->auth = $this->config->getDefaultAuth($this->io);
   }
 
   /**
    * Add a service
    */
   public function addService($service, $version = false) {
-    global $apiConfig;
     if ($this->authenticated) {
       throw new Google_Exception('Cant add services after having authenticated');
     }
-    $this->services[$service] = array();
-    if (isset($apiConfig['services'][$service])) {
-      // Merge the service descriptor with the default values
-      $this->services[$service] = array_merge($this->services[$service], $apiConfig['services'][$service]);
-    }
+    $this->services[$service] = $this->config->getServiceConfig($service);
   }
 
   public function authenticate($code = null) {
@@ -167,15 +152,15 @@ class Google_Client {
     if ($accessToken == null || 'null' == $accessToken) {
       $accessToken = null;
     }
-    self::$auth->setAccessToken($accessToken);
+    $this->auth->setAccessToken($accessToken);
   }
 
   /**
-   * Set the type of Auth class the client should use.
-   * @param string $authClassName
+   * Set the authenticator object
+   * @param string $auth
    */
-  public function setAuthClass($authClassName) {
-    self::$auth = new $authClassName();
+  public function setAuth(Google_Auth_Abstract $auth) {
+    $this->auth = $auth;
   }
 
   /**
@@ -184,7 +169,7 @@ class Google_Client {
    */
   public function createAuthUrl() {
     $service = $this->prepareService();
-    return self::$auth->createAuthUrl($service['scope']);
+    return $this->auth->createAuthUrl($service['scope']);
   }
 
   /**
@@ -194,7 +179,7 @@ class Google_Client {
    *  "expires_in":3600,"id_token":"TOKEN", "created":1320790426}
    */
   public function getAccessToken() {
-    $token = self::$auth->getAccessToken();
+    $token = $this->auth->getAccessToken();
     return (null == $token || 'null' == $token) ? null : $token;
   }
 
@@ -203,16 +188,7 @@ class Google_Client {
    * @return bool Returns True if the access_token is expired.
    */
   public function isAccessTokenExpired() {
-    return self::$auth->isAccessTokenExpired();
-  }
-
-  /**
-   * Set the developer key to use, these are obtained through the API Console.
-   * @see http://code.google.com/apis/console-help/#generatingdevkeys
-   * @param string $developerKey
-   */
-  public function setDeveloperKey($developerKey) {
-    self::$auth->setDeveloperKey($developerKey);
+    return $this->auth->isAccessTokenExpired();
   }
 
   /**
@@ -221,7 +197,7 @@ class Google_Client {
    * @param string $state
    */
   public function setState($state) {
-    self::$auth->setState($state);
+    $this->auth->setState($state);
   }
 
   /**
@@ -230,7 +206,7 @@ class Google_Client {
    *  {@code "online"} to request online access from the user.
    */
   public function setAccessType($accessType) {
-    self::$auth->setAccessType($accessType);
+    $this->auth->setAccessType($accessType);
   }
 
   /**
@@ -239,7 +215,7 @@ class Google_Client {
    *  {@code "auto"} to request auto-approval when possible.
    */
   public function setApprovalPrompt($approvalPrompt) {
-    self::$auth->setApprovalPrompt($approvalPrompt);
+    $this->auth->setApprovalPrompt($approvalPrompt);
   }
 
   /**
@@ -247,25 +223,16 @@ class Google_Client {
    * @param string $applicationName
    */
   public function setApplicationName($applicationName) {
-    global $apiConfig;
-    $apiConfig['application_name'] = $applicationName;
+    $this->config->setApplicationName($applicationName);
   }
 
   /**
    * Set the OAuth 2.0 Client ID.
    * @param string $clientId
    */
-  public function setClientId($clientId) {
-    global $apiConfig;
-    $apiConfig['oauth2_client_id'] = $clientId;
-    self::$auth->clientId = $clientId;
-  }
-
-  /**
-   * Get the OAuth 2.0 Client ID.
-   */
-  public function getClientId() {
-    return self::$auth->clientId;
+  public function setClientId($clientId) {  
+    $this->config->setClientId($clientId);
+    $this->auth->updateConfig($this->config->getAuthConfig());
   }
 
   /**
@@ -273,33 +240,39 @@ class Google_Client {
    * @param string $clientSecret
    */
   public function setClientSecret($clientSecret) {
-    global $apiConfig;
-    $apiConfig['oauth2_client_secret'] = $clientSecret;
-    self::$auth->clientSecret = $clientSecret;
-  }
-
-  /**
-   * Get the OAuth 2.0 Client Secret.
-   */
-  public function getClientSecret() {
-    return self::$auth->clientSecret;
-  }
+    $this->config->setClientSecret($clientSecret);
+    $this->auth->updateConfig($this->config->getAuthConfig());  }
 
   /**
    * Set the OAuth 2.0 Redirect URI.
    * @param string $redirectUri
    */
   public function setRedirectUri($redirectUri) {
-    global $apiConfig;
-    $apiConfig['oauth2_redirect_uri'] = $redirectUri;
-    self::$auth->redirectUri = $redirectUri;
+    $this->config->setRedirectUri($redirectUri);
+    $this->auth->updateConfig($this->config->getAuthConfig());  
   }
-
+  
   /**
-   * Get the OAuth 2.0 Redirect URI.
+   * If 'plus.login' is included in the list of requested scopes, you can use
+   * this method to define types of app activities that your app will write.
+   * You can find a list of available types here:
+   * @link https://developers.google.com/+/api/moment-types
+   *
+   * @param array $requestVisibleActions Array of app activity types
    */
-  public function getRedirectUri() {
-    return self::$auth->redirectUri;
+  public function setRequestVisibleActions($requestVisibleActions) {
+    $this->config->setRequestVisibleActions(join(" ", $requestVisibleActions));
+    $this->auth->updateConfig($this->config->getAuthConfig());
+  }
+  
+  /**
+   * Set the developer key to use, these are obtained through the API Console.
+   * @see http://code.google.com/apis/console-help/#generatingdevkeys
+   * @param string $developerKey
+   */
+  public function setDeveloperKey($developerKey) {
+    $this->config->setDeveloperKey($developerKey);
+    $this->auth->updateConfig($this->config->getAuthConfig());
   }
 
   /**
@@ -308,7 +281,7 @@ class Google_Client {
    * @return void
    */
   public function refreshToken($refreshToken) {
-    self::$auth->refreshToken($refreshToken);
+    return $this->auth->refreshToken($refreshToken);
   }
 
   /**
@@ -319,7 +292,7 @@ class Google_Client {
    * @return boolean Returns True if the revocation was successful, otherwise False.
    */
   public function revokeToken($token = null) {
-    return self::$auth->revokeToken($token);
+    return $this->auth->revokeToken($token);
   }
 
   /**
@@ -331,7 +304,7 @@ class Google_Client {
    * successful.
    */
   public function verifyIdToken($token = null) {
-    return self::$auth->verifyIdToken($token);
+    return $this->auth->verifyIdToken($token);
   }
 
   /**
@@ -339,7 +312,7 @@ class Google_Client {
    * @return void
    */
   public function setAssertionCredentials(Google_Auth_AssertionCredentials $creds) {
-    self::$auth->setAssertionCredentials($creds);
+    $this->auth->setAssertionCredentials($creds);
   }
 
   /**
@@ -362,61 +335,43 @@ class Google_Client {
   }
 
   /**
-   * If 'plus.login' is included in the list of requested scopes, you can use
-   * this method to define types of app activities that your app will write.
-   * You can find a list of available types here:
-   * @link https://developers.google.com/+/api/moment-types
-   *
-   * @param array $requestVisibleActions Array of app activity types
-   */
-  public function setRequestVisibleActions($requestVisibleActions) {
-    self::$auth->requestVisibleActions =
-            join(" ", $requestVisibleActions);
-  }
-
-  /**
-   * Declare if objects should be returned by the api service classes.
-   *
-   * @param boolean $useObjects True if objects should be returned by the service classes.
-   * False if associative arrays should be returned (default behavior).
-   * @experimental
-   */
-  public function setUseObjects($useObjects) {
-    global $apiConfig;
-    $apiConfig['use_objects'] = $useObjects;
-  }
-
-  /**
-   * Declare if objects should be returned by the api service classes.
+   * Declare whether batch calls should be used. This may increase throughput
+   * by making multiple requests in one connection.
    *
    * @param boolean $useBatch True if the experimental batch support should
    * be enabled. Defaults to False.
    * @experimental
    */
   public function setUseBatch($useBatch) {
-    self::$useBatch = $useBatch;
+    $this->useBatch = $useBatch;
+  }
+  
+  /**
+   * Whether or not to batch requests.
+   * @return boolean
+   */
+  public function shouldUseBatch() {
+    return $this->useBatch;
   }
 
   /**
-   * @static
    * @return Google_Auth_Abstract Authentication implementation
    */
-  public static function getAuth() {
-    return Google_Client::$auth;
+  public function getAuth() {
+    return $this->auth;
   }
 
   /**
-   * @static
    * @return Google_IO_Interface IO implementation
    */
-  public static function getIo() {
-    return Google_Client::$io;
+  public function getIo() {
+    return $this->io;
   }
 
   /**
    * @return Google_Cache_Abstract Cache implementation
    */
   public function getCache() {
-    return Google_Client::$cache;
+    return $this->cache;
   }
 }

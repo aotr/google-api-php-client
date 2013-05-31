@@ -50,6 +50,9 @@ class Google_Http_MediaFileUpload {
 
   /** @var int $progress */
   public $progress;
+  
+  /** @var Google_Client_IO */
+  private $io;
 
   /**
    * @param $mimeType string
@@ -58,7 +61,8 @@ class Google_Http_MediaFileUpload {
    * @param bool $chunkSize File will be uploaded in chunks of this many bytes.
    * only used if resumable=True
    */
-  public function __construct($mimeType, $data, $resumable=false, $chunkSize=false) {
+  public function __construct(Google_IO_Abstract $io, $mimeType, $data, $resumable=false, $chunkSize=false) {
+    $this->io = $io;
     $this->mimeType = $mimeType;
     $this->data = $data;
     $this->size = strlen($this->data);
@@ -233,7 +237,7 @@ class Google_Http_MediaFileUpload {
     );
 
     $httpRequest = new Google_Http_Request($this->resumeUri, 'PUT', $headers, $chunk);
-    $response = Google_Client::$io->authenticatedRequest($httpRequest);
+    $response = $this->io->authenticatedRequest($httpRequest);
     $code = $response->getResponseHttpCode();
     if (308 == $code) {
       $range = explode('-', $response->getResponseHeader('range'));
@@ -257,7 +261,7 @@ class Google_Http_MediaFileUpload {
       ));
     }
 
-    $response = Google_Client::$io->makeRequest($httpRequest);
+    $response = $this->io->makeRequest($httpRequest);
     $location = $response->getResponseHeader('location');
     $code = $response->getResponseHttpCode();
     if (200 == $code && true == $location) {

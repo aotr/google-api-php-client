@@ -76,7 +76,7 @@ class ApiClientTest extends BaseTest {
     $client->setApprovalPrompt('force');
     $client->setAccessType('offline');
 
-    global $apiConfig;
+    // TODO(ianbarber): What is this trying to test? 
     $this->assertEquals('client1', $apiConfig['oauth2_client_id']);
     $this->assertEquals('client1secret', $apiConfig['oauth2_client_secret']);
 

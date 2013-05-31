@@ -31,13 +31,14 @@ class Google_Http_REST {
    * Executes a apiServiceRequest using a RESTful call by transforming it into
    * an apiHttpRequest, and executed via apiIO::authenticatedRequest().
    *
+   * @param Google_Client $client
    * @param Google_Http_Request $req
    * @return array decoded result
    * @throws Google_Service_Exception on server side error (ie: not authenticated,
    *  invalid or malformed post body, invalid url)
    */
-  static public function execute(Google_Http_Request $req) {
-    $httpRequest = Google_Client::$io->makeRequest($req);
+  static public function execute(Google_Client $client, Google_Http_Request $req) {
+    $httpRequest = $client->getIo()->makeRequest($req);
     $decodedResponse = self::decodeHttpResponse($httpRequest);
     $ret = isset($decodedResponse['data'])
         ? $decodedResponse['data'] : $decodedResponse;

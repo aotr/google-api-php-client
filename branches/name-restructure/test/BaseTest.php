@@ -25,11 +25,9 @@ class BaseTest extends PHPUnit_Framework_TestCase {
   public function __construct() {
     parent::__construct();
     if (!BaseTest::$client) {
-      global $apiConfig;
-      $apiConfig['ioFileCache_directory'] = '/tmp/google-api-php-client/tests';
-
       BaseTest::$client = new Google_Client();
       if (!BaseTest::$client->getAccessToken()) {
+        // TODO(ianbarber): Sort a way of managing the global access token.
         BaseTest::$client->setAccessToken($apiConfig['oauth_test_token']);
       }
     }

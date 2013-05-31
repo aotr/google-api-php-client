@@ -30,7 +30,7 @@ class ApiBatchRequestTest extends BaseTest {
   }
 
   public function testBatchRequest() {
-    $batch = new Google_Http_Batch();
+    $batch = new Google_Http_Batch($client->getIo());
 
     BaseTest::$client->setUseBatch(true);
     $batch->add($this->plus->people->get('me'), 'key1');

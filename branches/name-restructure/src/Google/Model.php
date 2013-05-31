@@ -16,8 +16,9 @@
  */
 
 /**
- * This class defines attributes, valid values, and usage which is generated from
- * a given json schema. http://tools.ietf.org/html/draft-zyp-json-schema-03#section-5
+ * This class defines attributes, valid values, and usage which is generated         
+ * from a given json schema.  
+ * http://tools.ietf.org/html/draft-zyp-json-schema-03#section-5
  *
  * @author Chirag Shah <chirags@google.com>
  *
@@ -38,6 +39,7 @@ class Google_Model {
    * @return void
    */
   protected function mapTypes($array) {
+    // TODO(ianbarber): This needs removing useObjects.
     foreach ($array as $key => $val) {
       $this->$key = $val;
 
@@ -92,11 +94,6 @@ class Google_Model {
   private function createObjectFromName($name, $item) {
     $type = $this->$name;
     return new $type($item);
-  }
-
-  protected function useObjects() {
-    global $apiConfig;
-    return (isset($apiConfig['use_objects']) && $apiConfig['use_objects']);
   }
 
   /**

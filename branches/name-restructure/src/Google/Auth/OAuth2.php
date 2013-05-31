@@ -32,19 +32,6 @@ require_once "Google/Verifier/Pem.php";
  *
  */
 class Google_Auth_OAuth2 extends Google_Auth_Abstract {
-  public $clientId;
-  public $clientSecret;
-  public $developerKey;
-  public $token;
-  public $redirectUri;
-  public $state;
-  public $accessType = 'offline';
-  public $approvalPrompt = 'force';
-  public $requestVisibleActions;
-
-  /** @var Google_Auth_AssertionCredentials $assertionCredentials */
-  public $assertionCredentials;
-
   const OAUTH2_REVOKE_URI = 'https://accounts.google.com/o/oauth2/revoke';
   const OAUTH2_TOKEN_URI = 'https://accounts.google.com/o/oauth2/token';
   const OAUTH2_AUTH_URL = 'https://accounts.google.com/o/oauth2/auth';
@@ -52,38 +39,67 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
   const CLOCK_SKEW_SECS = 300; // five minutes in seconds
   const AUTH_TOKEN_LIFETIME_SECS = 300; // five minutes in seconds
   const MAX_TOKEN_LIFETIME_SECS = 86400; // one day in seconds
+  
+  /* TODO(ianbarber): Why is this public? */
+  /** @var Google_Auth_AssertionCredentials $assertionCredentials */
+  public $assertionCredentials;
+  
+  /**
+   * @var array Basic settings for access.
+   */
+  private $config = array(
+    'client_id' => '',
+    'client_secret' => '',
+    'redirect_uri' => '',
+    'developer_key' => '',
+    'access_type' => 'offline',
+    'approval_prompt' => 'auto',
+    'request_visible_actions' => '',
+  );
+  
+  /**
+   * @var string The state parameters for CSRF and other forgery protection.
+   */
+  private $state;
+  
+  /**
+   * @var string The token bundle.
+   */
+  private $token;
+  
+  private $io;
 
   /**
    * Instantiates the class, but does not initiate the login flow, leaving it
    * to the discretion of the caller (which is done by calling authenticate()).
    */
-  public function __construct() {
-    global $apiConfig;
-
-    if (! empty($apiConfig['developer_key'])) {
-      $this->developerKey = $apiConfig['developer_key'];
+  public function __construct(Google_IO_Abstract $io, $config = null) {
+    $this->io = $io;
+    $this->updateConfig($config;)
+  }
+  
+  /**
+   * Update the configuration with the data from the given array.
+   */
+  public function updateConfig($config) {
+    if (is_array($config)) {
+      $this->config = array_merge($this->config, $config);
     }
-
-    if (! empty($apiConfig['oauth2_client_id'])) {
-      $this->clientId = $apiConfig['oauth2_client_id'];
-    }
-
-    if (! empty($apiConfig['oauth2_client_secret'])) {
-      $this->clientSecret = $apiConfig['oauth2_client_secret'];
-    }
-
-    if (! empty($apiConfig['oauth2_redirect_uri'])) {
-      $this->redirectUri = $apiConfig['oauth2_redirect_uri'];
-    }
-
-    if (! empty($apiConfig['oauth2_access_type'])) {
-      $this->accessType = $apiConfig['oauth2_access_type'];
-    }
-
-    if (! empty($apiConfig['oauth2_approval_prompt'])) {
-      $this->approvalPrompt = $apiConfig['oauth2_approval_prompt'];
-    }
-
+  }
+  
+  /**
+   * Perform an authenticated / signed apiHttpRequest.
+   * This function takes the apiHttpRequest, calls apiAuth->sign on it
+   * (which can modify the request in what ever way fits the auth mechanism)
+   * and then calls apiCurlIO::makeRequest on the signed request
+   *
+   * @param Google_Http_Request $request
+   * @return Google_Http_Request The resulting HTTP response including the
+   * responseHttpCode, responseHeaders and responseBody.
+   */
+  public function authenticatedRequest(Google_Http_Request $request) {
+    $request = $this->sign($request);
+    return $this->io->makeRequest($request);
   }
 
   /**
@@ -93,18 +109,26 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
    * @return string
    */
   public function authenticate($service, $code = null) {
+    // TODO(ianbarber): We should not be retrieving GET parameters in 
+    // some random inner class.
     if (!$code && isset($_GET['code'])) {
       $code = $_GET['code'];
     }
 
     if ($code) {
-      // We got here from the redirect from a successful authorization grant, fetch the access token
-      $request = Google_Client::$io->makeRequest(new Google_Http_Request(self::OAUTH2_TOKEN_URI, 'POST', array(), array(
-          'code' => $code,
-          'grant_type' => 'authorization_code',
-          'redirect_uri' => $this->redirectUri,
-          'client_id' => $this->clientId,
-          'client_secret' => $this->clientSecret
+      // We got here from the redirect from a successful authorization grant,
+      // fetch the access token
+      $request = $this->io->makeRequest(
+        new Google_Http_Request(
+          self::OAUTH2_TOKEN_URI, 
+          'POST', 
+          array(), 
+          array(
+            'code' => $code,
+            'grant_type' => 'authorization_code',
+            'redirect_uri' => $this->config['redirect_uri'],
+            'client_id' => $this->config['client_id'],
+            'client_secret' => $this->config['client_secret']
       )));
 
       if ($request->getResponseHttpCode() == 200) {
@@ -117,7 +141,10 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
         if ($decodedResponse != null && $decodedResponse['error']) {
           $response = $decodedResponse['error'];
         }
-        throw new Google_Auth_Exception("Error fetching OAuth2 access token, message: '$response'", $request->getResponseHttpCode());
+        throw new Google_Auth_Exception(
+          sprintf("Error fetching OAuth2 access token, message: '%s'",
+            $response), 
+          $request->getResponseHttpCode());
       }
     }
 
@@ -134,27 +161,28 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
    * @return string
    */
   public function createAuthUrl($scope) {
-    $params = array(
-        'response_type=code',
-        'redirect_uri=' . urlencode($this->redirectUri),
-        'client_id=' . urlencode($this->clientId),
-        'scope=' . urlencode($scope),
-        'access_type=' . urlencode($this->accessType),
-        'approval_prompt=' . urlencode($this->approvalPrompt),
+    $params = array
+        'response_type' => 'code',
+        'redirect_uri' => $this->config['redirect_uri'],
+        'client_id' => $this->config['client_id']),
+        'scope' => $scope,
+        'access_type' => $this->config['access_type'],
+        'approval_prompt' =>$this->config['approval_prompt'],
     );
 
     // if the list of scopes contains plus.login, add request_visible_actions
     // to auth URL
-    if(strpos($scope, 'plus.login') && count($this->requestVisibleActions) > 0) {
-        $params[] = 'request_visible_actions=' .
-            urlencode($this->requestVisibleActions);
+    if (strpos($scope, 'plus.login') && 
+      strlen($this->config['request_visible_actions']) > 0) {
+        $params['request_visible_actions'] =
+            $this->config['request_visible_actions']);
     }
 
     if (isset($this->state)) {
-      $params[] = 'state=' . urlencode($this->state);
+      $params['state'] = $this->state;
     }
-    $params = implode('&', $params);
-    return self::OAUTH2_AUTH_URL . "?$params";
+    
+    return self::OAUTH2_AUTH_URL . "?" . http_build_query($params);
   }
 
   /**
@@ -177,7 +205,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
   }
 
   public function setDeveloperKey($developerKey) {
-    $this->developerKey = $developerKey;
+    $this->config['developer_key'] = $developerKey;
   }
 
   public function setState($state) {
@@ -185,11 +213,11 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
   }
 
   public function setAccessType($accessType) {
-    $this->accessType = $accessType;
+    $this->config['access_type'] = $accessType;
   }
 
   public function setApprovalPrompt($approvalPrompt) {
-    $this->approvalPrompt = $approvalPrompt;
+    $this->config['approval_prompt'] = $approvalPrompt;
   }
 
   public function setAssertionCredentials(Google_Auth_AssertionCredentials $creds) {
@@ -207,7 +235,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
     if ($this->developerKey) {
       $requestUrl = $request->getUrl();
       $requestUrl .= (strpos($request->getUrl(), '?') === false) ? '?' : '&';
-      $requestUrl .=  'key=' . urlencode($this->developerKey);
+      $requestUrl .=  'key=' . urlencode($this->config['developer_key']);
       $request->setUrl($requestUrl);
     }
 
@@ -223,9 +251,9 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
         $this->refreshTokenWithAssertion();
       } else {
         if (! array_key_exists('refresh_token', $this->token)) {
-            throw new Google_Auth_Exception("The OAuth 2.0 access token has expired, "
-                . "and a refresh token is not available. Refresh tokens are not "
-                . "returned for responses that were auto-approved.");
+            throw new Google_Auth_Exception("The OAuth 2.0 access token has"
+              ." expired, and a refresh token is not available. Refresh tokens"       
+              . "are not returned for responses that were auto-approved.");
         }
         $this->refreshToken($this->token['refresh_token']);
       }
@@ -246,8 +274,8 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
    */
   public function refreshToken($refreshToken) {
     $this->refreshTokenRequest(array(
-        'client_id' => $this->clientId,
-        'client_secret' => $this->clientSecret,
+        'client_id' => $this->config['client_id'],
+        'client_secret' => $this->config['client_secret'],
         'refresh_token' => $refreshToken,
         'grant_type' => 'refresh_token'
     ));
@@ -272,7 +300,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
 
   private function refreshTokenRequest($params) {
     $http = new Google_Http_Request(self::OAUTH2_TOKEN_URI, 'POST', array(), $params);
-    $request = Google_Client::$io->makeRequest($http);
+    $request = $this->io->makeRequest($http);
 
     $code = $request->getResponseHttpCode();
     $body = $request->getResponseBody();
@@ -306,7 +334,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
       $token = $this->token['access_token'];
     }
     $request = new Google_Http_Request(self::OAUTH2_REVOKE_URI, 'POST', array(), "token=$token");
-    $response = Google_Client::$io->makeRequest($request);
+    $response = $this->io->makeRequest($request);
     $code = $response->getResponseHttpCode();
     if ($code == 200) {
       $this->token = null;
@@ -337,7 +365,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
   // are PEM encoded certificates.
   private function getFederatedSignOnCerts() {
     // This relies on makeRequest caching certificate responses.
-    $request = Google_Client::$io->makeRequest(new Google_Http_Request(
+    $request = $this->io->makeRequest(new Google_Http_Request(
         self::OAUTH2_FEDERATED_SIGNON_CERTS_URL));
     if ($request->getResponseHttpCode() == 200) {
       $certs = json_decode($request->getResponseBody(), true);

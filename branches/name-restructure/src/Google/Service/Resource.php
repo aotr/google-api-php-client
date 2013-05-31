@@ -50,6 +50,9 @@ class Google_Service_Resource {
 
   /** @var Google_Service $service */
   private $service;
+  
+  /** @var Google_Client $client */
+  private $client;
 
   /** @var string $serviceName */
   private $serviceName;
@@ -62,12 +65,14 @@ class Google_Service_Resource {
 
   public function __construct($service, $serviceName, $resourceName, $resource) {
     $this->service = $service;
+    $this->client = $service->getClient();
     $this->serviceName = $serviceName;
     $this->resourceName = $resourceName;
     $this->methods = isset($resource['methods']) ? $resource['methods'] : array($resourceName => $resource);
   }
 
   /**
+   * TODO(ianbarber): This function needs simplifying.
    * @param $name
    * @param $arguments
    * @return Google_Http_Request|array
@@ -149,7 +154,7 @@ class Google_Service_Resource {
     // Process Media Request
     $contentType = false;
     if (isset($method['mediaUpload'])) {
-      $media = Google_Http_MediaFileUpload::process($postBody, $parameters);
+      $media = Google_Http_MediaFileUpload::process($this->client, $postBody, $parameters);
       if ($media) {
         $contentType = isset($media['content-type']) ? $media['content-type']: null;
         $postBody = isset($media['postBody']) ? $media['postBody'] : null;
@@ -171,8 +176,9 @@ class Google_Service_Resource {
       $httpRequest->setRequestHeaders($contentTypeHeader);
     }
 
-    $httpRequest = Google_Client::$auth->sign($httpRequest);
-    if (Google_Client::$useBatch) {
+    $httpRequest = $this->client->getAuth->sign($httpRequest);
+    // TODO(ianbarber): We need a better way of signalling batching.
+    if ($this->client->shouldUseBatch()) {
       return $httpRequest;
     }
 
@@ -190,12 +196,7 @@ class Google_Service_Resource {
       return $httpRequest;
     }
 
-    return Google_Http_REST::execute($httpRequest);
-  }
-
-  public  function useObjects() {
-    global $apiConfig;
-    return (isset($apiConfig['use_objects']) && $apiConfig['use_objects']);
+    return Google_Http_REST::execute($this->client, $httpRequest);
   }
 
   protected function stripNull(&$o) {

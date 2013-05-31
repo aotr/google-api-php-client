@@ -26,7 +26,11 @@ require_once 'Google/Utils.php';
  *
  */
 class Google_Http_Request {
-  // TODO(ianbarber): This should be defined on release.
+  // TODO(ianbarber): This should be defined on release - we can get
+  // perhaps from client passed in.
+  // TODO(ianbarber): We should be holding an array of query
+  // string parameters to avoid the repeated code of checking what
+  // we need to add to the query string (? or &).
   const USER_AGENT_SUFFIX = "google-api-php-client/0.7.0";
   private $batchHeaders = array(
     'Content-Type' => 'application/http',
@@ -53,12 +57,10 @@ class Google_Http_Request {
     $this->setRequestHeaders($headers);
     $this->setPostBody($postBody);
 
-    global $apiConfig;
-    if (empty($apiConfig['application_name'])) {
-      $this->userAgent = self::USER_AGENT_SUFFIX;
-    } else {
-      $this->userAgent = $apiConfig['application_name'] . " " . self::USER_AGENT_SUFFIX;
-    }
+    // TODO(ianbarber): We need the client here somehow :/
+    //$appName = $client->getApplicationName();
+    $appName = "";
+    $this->userAgent = $appName . " " .self::USER_AGENT_SUFFIX;
   }
 
   /**
