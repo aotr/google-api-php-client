@@ -48,7 +48,7 @@ if (isset($_SESSION['token'])) {
 if ($client->getAccessToken()) {
   $client->setUseBatch(true);
  
-  $batch = new Google_Http_Batch();
+  $batch = new Google_Http_Batch($client->getIo());
   $batch->add($plus->people->get('me'), 'key1');
   $batch->add($plus->people->get('me'), 'key2');
   $result = $batch->execute();
