@@ -23,13 +23,45 @@
  * @author Chirag Shah <chirags@google.com>
  *
  */
-class Google_Model {
+class Google_Model implements ArrayAccess {
+  private $data; 
+  private $processed = array();
+  
   public function __construct( /* polymorphic */ ) {
     if (func_num_args() ==  1 && is_array(func_get_arg(0))) {
       // Initialize the model with the array's contents.
       $array = func_get_arg(0);
       $this->mapTypes($array);
     }
+  }
+  
+  public function __get($key) {
+    $keyTypeName = "__$key" . 'Type';
+    $keyDataType = "__$key" . 'DataType';
+    if (!isset($this->processed[$key]) && property_exists($this, $keyTypeName)) 
+    {
+      $val = $this->data[$key];
+      if ($this->isAssociativeArray($val)) {
+        if (isset($this->$keyDataType) && 'map' == $this->$keyDataType) {
+          foreach($val as $arrayKey => $arrayItem) {
+              $this->data[$key][$arrayKey] =
+                $this->createObjectFromName($keyTypeName, $arrayItem);
+          }
+        } else {
+          $this->data[$key] = $this->createObjectFromName($keyTypeName, $val);
+        }
+      } else if (is_array($val)) {
+        $arrayObject = array();
+        foreach ($val as $arrayIndex => $arrayItem) {
+          $arrayObject[$arrayIndex] = 
+            $this->createObjectFromName($keyTypeName, $arrayItem);
+        }
+        $this->data[$key] = $arrayObject;
+      }
+      $this->processed[$key] = true;
+    }
+    
+    return $this->data[$key];
   }
 
   /**
@@ -39,31 +71,7 @@ class Google_Model {
    * @return void
    */
   protected function mapTypes($array) {
-    // TODO(ianbarber): This needs removing useObjects.
-    foreach ($array as $key => $val) {
-      $this->$key = $val;
-
-      $keyTypeName = "__$key" . 'Type';
-      $keyDataType = "__$key" . 'DataType';
-      if ($this->useObjects() && property_exists($this, $keyTypeName)) {
-        if ($this->isAssociativeArray($val)) {
-          if (isset($this->$keyDataType) && 'map' == $this->$keyDataType) {
-            foreach($val as $arrayKey => $arrayItem) {
-              $val[$arrayKey] = $this->createObjectFromName($keyTypeName, $arrayItem);
-            }
-            $this->$key = $val;
-          } else {
-            $this->$key = $this->createObjectFromName($keyTypeName, $val);
-          }
-        } else if (is_array($val)) {
-          $arrayObject = array();
-          foreach ($val as $arrayIndex => $arrayItem) {
-            $arrayObject[$arrayIndex] = $this->createObjectFromName($keyTypeName, $arrayItem);
-          }
-          $this->$key = $arrayObject;
-        }
-      }
-    }
+    $this->data = $array;
   }
 
   /**
@@ -106,5 +114,22 @@ class Google_Model {
     if ($obj && !is_array($obj)) {
       throw new Google_Exception("Incorrect parameter type passed to $method(), expected an array.");
     }
+  }
+  
+  public function offsetExists ( $offset ) {
+    return isset($this->data[$offset]);
+  }
+  
+  public function offsetGet ( $offset ) {
+    return $this->data[$offset];
+  }
+  
+  public function offsetSet ( $offset , $value ) {
+    $this->data[$offset] = $value;
+    $this->processed[$offset] = true;
+  }
+  
+  public function offsetUnset ( $offset ) {
+    unset($this->data[$offset]);
   }
 }

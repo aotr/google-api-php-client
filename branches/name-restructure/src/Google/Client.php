@@ -33,10 +33,6 @@ if (! ini_get('date.timezone') && function_exists('date_default_timezone_set')) 
   date_default_timezone_set('UTC');
 }
 
-// hack around with the include paths a bit so the library 'just works'
-set_include_path(dirname(dirname(__FILE__))
- . PATH_SEPARATOR . get_include_path());
-
 require_once 'Google/Auth/AssertionCredentials.php';
 require_once 'Google/Cache/File.php';
 require_once 'Google/Config.php';
@@ -55,6 +51,8 @@ require_once 'Google/Service/Resource.php';
  * @author Chirag Shah <chirags@google.com>
  */
 class Google_Client {
+  // TODO(ianbarber): Remove horrible hack for request.
+  private static $client;
   /**
    * @var Google_Auth_Abstract $auth
    */
@@ -94,6 +92,8 @@ class Google_Client {
     $this->cache = $this->config->getDefaultCache();
     $this->io =  $this->config->getDefaultIo($this->cache);
     $this->auth = $this->config->getDefaultAuth($this->io);
+    // TODO(ianbarber): Remove horrible hack for request.
+    Google_Client::$client = $this;
   }
 
   /**
@@ -373,5 +373,27 @@ class Google_Client {
    */
   public function getCache() {
     return $this->cache;
+  }
+  
+  /**
+   * @return string the base URL to use for calls to the APIs
+   */
+  public function getBasePath() {
+    return $this->config->getBasePath();
+  }
+  
+  /**
+   * @return string the name of the application
+   */
+  public function getApplicationName() {
+    return $this->config->getApplicationName();
+  }
+  
+  public static function getStaticBasePath() {
+    return self::$client->getBasePath();
+  }
+  
+  public static function getStaticAppName() {
+    return self::$client->getApplicationName();
   }
 }
