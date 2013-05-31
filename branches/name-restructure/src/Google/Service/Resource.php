@@ -70,6 +70,12 @@ class Google_Service_Resource {
     $this->resourceName = $resourceName;
     $this->methods = isset($resource['methods']) ? $resource['methods'] : array($resourceName => $resource);
   }
+  
+  // TODO(ianbarber): Remove this once not needed by generator. Should be always
+  // returning objects.
+  public function useObjects() {
+    return true;
+  }
 
   /**
    * TODO(ianbarber): This function needs simplifying.
@@ -176,8 +182,7 @@ class Google_Service_Resource {
       $httpRequest->setRequestHeaders($contentTypeHeader);
     }
 
-    $httpRequest = $this->client->getAuth->sign($httpRequest);
-    // TODO(ianbarber): We need a better way of signalling batching.
+    $httpRequest = $this->client->getAuth()->sign($httpRequest);
     if ($this->client->shouldUseBatch()) {
       return $httpRequest;
     }
