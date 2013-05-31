@@ -73,9 +73,9 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
    * Instantiates the class, but does not initiate the login flow, leaving it
    * to the discretion of the caller (which is done by calling authenticate()).
    */
-  public function __construct(Google_IO_Abstract $io, $config = null) {
+  public function __construct(Google_IO_Interface $io, $config = null) {
     $this->io = $io;
-    $this->updateConfig($config;)
+    $this->updateConfig($config);
   }
   
   /**
@@ -161,10 +161,10 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
    * @return string
    */
   public function createAuthUrl($scope) {
-    $params = array
+    $params = array(
         'response_type' => 'code',
         'redirect_uri' => $this->config['redirect_uri'],
-        'client_id' => $this->config['client_id']),
+        'client_id' => $this->config['client_id'],
         'scope' => $scope,
         'access_type' => $this->config['access_type'],
         'approval_prompt' =>$this->config['approval_prompt'],
@@ -175,7 +175,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
     if (strpos($scope, 'plus.login') && 
       strlen($this->config['request_visible_actions']) > 0) {
         $params['request_visible_actions'] =
-            $this->config['request_visible_actions']);
+            $this->config['request_visible_actions'];
     }
 
     if (isset($this->state)) {
@@ -232,7 +232,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract {
    */
   public function sign(Google_Http_Request $request) {
     // add the developer key to the request before signing it
-    if ($this->developerKey) {
+    if ($this->config['developer_key']) {
       $requestUrl = $request->getUrl();
       $requestUrl .= (strpos($request->getUrl(), '?') === false) ? '?' : '&';
       $requestUrl .=  'key=' . urlencode($this->config['developer_key']);

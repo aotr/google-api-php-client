@@ -29,7 +29,7 @@ class Google_Auth_Simple extends Google_Auth_Abstract {
   private $key = null;
   private $io;
 
-  public function __construct(Google_IO_Abstract $io, $config = null) {
+  public function __construct(Google_IO_Interface $io, $config = null) {
     $this->io = $io;
     $this->updateConfig($config); 
   }
