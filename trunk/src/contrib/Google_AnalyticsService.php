@@ -2779,12 +2779,15 @@ class Google_Webproperty extends Google_Model {
   public $childLink;
   public $created;
   public $id;
+  public $industryVertical;
   public $internalWebPropertyId;
   public $kind;
+  public $level;
   public $name;
   protected $__parentLinkType = 'Google_WebpropertyParentLink';
   protected $__parentLinkDataType = '';
   public $parentLink;
+  public $profileCount;
   public $selfLink;
   public $updated;
   public $websiteUrl;
@@ -2812,6 +2815,12 @@ class Google_Webproperty extends Google_Model {
   public function getId() {
     return $this->id;
   }
+  public function setIndustryVertical($industryVertical) {
+    $this->industryVertical = $industryVertical;
+  }
+  public function getIndustryVertical() {
+    return $this->industryVertical;
+  }
   public function setInternalWebPropertyId($internalWebPropertyId) {
     $this->internalWebPropertyId = $internalWebPropertyId;
   }
@@ -2824,6 +2833,12 @@ class Google_Webproperty extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
+  public function setLevel($level) {
+    $this->level = $level;
+  }
+  public function getLevel() {
+    return $this->level;
+  }
   public function setName($name) {
     $this->name = $name;
   }
@@ -2835,6 +2850,12 @@ class Google_Webproperty extends Google_Model {
   }
   public function getParentLink() {
     return $this->parentLink;
+  }
+  public function setProfileCount($profileCount) {
+    $this->profileCount = $profileCount;
+  }
+  public function getProfileCount() {
+    return $this->profileCount;
   }
   public function setSelfLink($selfLink) {
     $this->selfLink = $selfLink;
