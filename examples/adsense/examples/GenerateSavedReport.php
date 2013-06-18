@@ -19,31 +19,21 @@
 require_once __DIR__ . "/../BaseExample.php";
 
 /**
- * Retrieves a report for the specified ad client.
+ * This example runs a saved report, given its ID (and the account ID).
  *
- * To get ad clients, see GetAllAdClients.php.
- * Tags: reports.generate
+ * To get the list of saved reports, see GetAllSavedReports.php.
  *
- * @author Silvano Luciani <silvano.luciani@gmail.com>
+ * Tags: accounts.reports.saved.generate
+ *
+ * @author Sérgio Gomes <sgomes@google.com>
  */
 class GenerateReport extends BaseExample {
   public function render() {
-    $startDate = $this->getSixMonthsBeforeNow();
-    $endDate = $this->getNow();
-    $optParams = array(
-      'metric' => array(
-        'PAGE_VIEWS', 'AD_REQUESTS', 'AD_REQUESTS_COVERAGE',
-        'CLICKS', 'AD_REQUESTS_CTR', 'COST_PER_CLICK', 'AD_REQUESTS_RPM',
-        'EARNINGS'),
-      'dimension' => 'DATE',
-      'sort' => 'DATE',
-      'filter' => array(
-        'AD_CLIENT_ID==' . AD_CLIENT_ID
-      )
-    );
+    $accountId = ACCOUNT_ID;
+    $savedReportId = SAVED_REPORT_ID;
     // Retrieve report.
-    $report = $this->adSenseService->reports
-        ->generate($startDate, $endDate, $optParams);
+    $report = $this->adSenseService->account_reports_saved
+        ->generate($accountId, $savedReportId);
 
     if (isset($report['rows'])) {
       printReportTableHeader($report['headers']);
