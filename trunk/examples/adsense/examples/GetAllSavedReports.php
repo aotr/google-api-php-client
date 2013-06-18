@@ -15,40 +15,36 @@
  * limitations under the License.
  */
 
-// Require the base class
+// Require the base class.
 require_once __DIR__ . "/../BaseExample.php";
 
 /**
- * Gets all ad units corresponding to a specified custom channel.
+ * This example gets all saved reports for an account.
  *
- * To get custom channels, see GetAllCustomChannels.php.
- * Tags: accounts.customchannels.adunits.list
+ * Tags: accounts.reports.saved.list
  *
- * @author Silvano Luciani <silvano.luciani@gmail.com>
+ * @author Sérgio Gomes <sgomes@google.com>
  */
-class GetAllAdUnitsForCustomChannel extends BaseExample {
+class GetAllSavedReports extends BaseExample {
   public function render() {
-    $adClientId = AD_CLIENT_ID;
     $accountId = ACCOUNT_ID;
-    $customChannelId = CUSTOM_CHANNEL_ID;
     $optParams['maxResults'] = AD_MAX_PAGE_SIZE;
-    $listClass = 'list';
+    $listClass = 'saved reports';
     printListHeader($listClass);
     $pageToken = null;
     do {
       $optParams['pageToken'] = $pageToken;
-      // Retrieve ad unit list, and display it.
-      $result = $this->adSenseService->accounts_customchannels_adunits
-          ->listAccountsCustomchannelsAdunits(
-              $accountId, $adClientId, $customChannelId);
-      $adUnits = $result['items'];
-      if (isset($adUnits)) {
-        foreach ($adUnits as $adUnit) {
-          $format =
-              'Ad unit with code "%s", name "%s" and status "%s" was found.';
-          $content = sprintf(
-              $format, $adUnit['code'], $adUnit['name'], $adUnit['status']);
-          printListElement($content);
+      // Retrieve saved report list, and display it.
+      $result = $this->adSenseService->accounts_reports_saved
+          ->listAccountsReportsSaved($accountId, $optParams);
+      $savedReports = $result['items'];
+      if (empty($savedReports)) {
+        foreach ($savedReports as $savedReport) {
+          $content = array();
+          $mainFormat = 'Saved report with name "%s" and ID "%s" was found.';
+          $content[] = sprintf(
+              $mainFormat, $savedReport['name'], $savedReport['id']);
+          printListElementForClients($content);
         }
         $pageToken = isset($result['nextPageToken']) ? $result['nextPageToken']
             : null;
