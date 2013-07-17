@@ -203,37 +203,37 @@ class Google_LicenseAssignment extends Google_Model {
   public $selfLink;
   public $skuId;
   public $userId;
-  public function setEtags($etags) {
+  public function setEtags( $etags) {
     $this->etags = $etags;
   }
   public function getEtags() {
     return $this->etags;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setProductId($productId) {
+  public function setProductId( $productId) {
     $this->productId = $productId;
   }
   public function getProductId() {
     return $this->productId;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setSkuId($skuId) {
+  public function setSkuId( $skuId) {
     $this->skuId = $skuId;
   }
   public function getSkuId() {
     return $this->skuId;
   }
-  public function setUserId($userId) {
+  public function setUserId( $userId) {
     $this->userId = $userId;
   }
   public function getUserId() {
@@ -243,7 +243,7 @@ class Google_LicenseAssignment extends Google_Model {
 
 class Google_LicenseAssignmentInsert extends Google_Model {
   public $userId;
-  public function setUserId($userId) {
+  public function setUserId( $userId) {
     $this->userId = $userId;
   }
   public function getUserId() {
@@ -253,12 +253,12 @@ class Google_LicenseAssignmentInsert extends Google_Model {
 
 class Google_LicenseAssignmentList extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_Licensing_LicenseAssignment';
+  protected $__itemsType = 'Google_LicenseAssignment';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -271,13 +271,13 @@ class Google_LicenseAssignmentList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {

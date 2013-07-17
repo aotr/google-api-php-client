@@ -146,7 +146,7 @@ class Google_TranslateService extends Google_Service {
 
 
 class Google_DetectionsListResponse extends Google_Model {
-  protected $__detectionsType = 'Google_Service_Translate_DetectionsResourceItems';
+  protected $__detectionsType = 'Google_DetectionsResourceItems';
   protected $__detectionsDataType = 'array';
   public $detections;
   public function setDetections(/* array(Google_DetectionsResourceItems) */ $detections) {
@@ -162,19 +162,19 @@ class Google_DetectionsResourceItems extends Google_Model {
   public $confidence;
   public $isReliable;
   public $language;
-  public function setConfidence($confidence) {
+  public function setConfidence( $confidence) {
     $this->confidence = $confidence;
   }
   public function getConfidence() {
     return $this->confidence;
   }
-  public function setIsReliable($isReliable) {
+  public function setIsReliable( $isReliable) {
     $this->isReliable = $isReliable;
   }
   public function getIsReliable() {
     return $this->isReliable;
   }
-  public function setLanguage($language) {
+  public function setLanguage( $language) {
     $this->language = $language;
   }
   public function getLanguage() {
@@ -183,7 +183,7 @@ class Google_DetectionsResourceItems extends Google_Model {
 }
 
 class Google_LanguagesListResponse extends Google_Model {
-  protected $__languagesType = 'Google_Service_Translate_LanguagesResource';
+  protected $__languagesType = 'Google_LanguagesResource';
   protected $__languagesDataType = 'array';
   public $languages;
   public function setLanguages(/* array(Google_LanguagesResource) */ $languages) {
@@ -198,13 +198,13 @@ class Google_LanguagesListResponse extends Google_Model {
 class Google_LanguagesResource extends Google_Model {
   public $language;
   public $name;
-  public function setLanguage($language) {
+  public function setLanguage( $language) {
     $this->language = $language;
   }
   public function getLanguage() {
     return $this->language;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
@@ -213,7 +213,7 @@ class Google_LanguagesResource extends Google_Model {
 }
 
 class Google_TranslationsListResponse extends Google_Model {
-  protected $__translationsType = 'Google_Service_Translate_TranslationsResource';
+  protected $__translationsType = 'Google_TranslationsResource';
   protected $__translationsDataType = 'array';
   public $translations;
   public function setTranslations(/* array(Google_TranslationsResource) */ $translations) {
@@ -228,13 +228,13 @@ class Google_TranslationsListResponse extends Google_Model {
 class Google_TranslationsResource extends Google_Model {
   public $detectedSourceLanguage;
   public $translatedText;
-  public function setDetectedSourceLanguage($detectedSourceLanguage) {
+  public function setDetectedSourceLanguage( $detectedSourceLanguage) {
     $this->detectedSourceLanguage = $detectedSourceLanguage;
   }
   public function getDetectedSourceLanguage() {
     return $this->detectedSourceLanguage;
   }
-  public function setTranslatedText($translatedText) {
+  public function setTranslatedText( $translatedText) {
     $this->translatedText = $translatedText;
   }
   public function getTranslatedText() {

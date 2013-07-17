@@ -308,61 +308,61 @@ class Google_Address extends Google_Model {
   public $organizationName;
   public $postalCode;
   public $region;
-  public function setAddressLine1($addressLine1) {
+  public function setAddressLine1( $addressLine1) {
     $this->addressLine1 = $addressLine1;
   }
   public function getAddressLine1() {
     return $this->addressLine1;
   }
-  public function setAddressLine2($addressLine2) {
+  public function setAddressLine2( $addressLine2) {
     $this->addressLine2 = $addressLine2;
   }
   public function getAddressLine2() {
     return $this->addressLine2;
   }
-  public function setAddressLine3($addressLine3) {
+  public function setAddressLine3( $addressLine3) {
     $this->addressLine3 = $addressLine3;
   }
   public function getAddressLine3() {
     return $this->addressLine3;
   }
-  public function setContactName($contactName) {
+  public function setContactName( $contactName) {
     $this->contactName = $contactName;
   }
   public function getContactName() {
     return $this->contactName;
   }
-  public function setCountryCode($countryCode) {
+  public function setCountryCode( $countryCode) {
     $this->countryCode = $countryCode;
   }
   public function getCountryCode() {
     return $this->countryCode;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLocality($locality) {
+  public function setLocality( $locality) {
     $this->locality = $locality;
   }
   public function getLocality() {
     return $this->locality;
   }
-  public function setOrganizationName($organizationName) {
+  public function setOrganizationName( $organizationName) {
     $this->organizationName = $organizationName;
   }
   public function getOrganizationName() {
     return $this->organizationName;
   }
-  public function setPostalCode($postalCode) {
+  public function setPostalCode( $postalCode) {
     $this->postalCode = $postalCode;
   }
   public function getPostalCode() {
     return $this->postalCode;
   }
-  public function setRegion($region) {
+  public function setRegion( $region) {
     $this->region = $region;
   }
   public function getRegion() {
@@ -374,28 +374,28 @@ class Google_ChangePlanRequest extends Google_Model {
   public $kind;
   public $planName;
   public $purchaseOrderId;
-  protected $__seatsType = 'Google_Service_Reseller_Seats';
+  protected $__seatsType = 'Google_Seats';
   protected $__seatsDataType = '';
   public $seats;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPlanName($planName) {
+  public function setPlanName( $planName) {
     $this->planName = $planName;
   }
   public function getPlanName() {
     return $this->planName;
   }
-  public function setPurchaseOrderId($purchaseOrderId) {
+  public function setPurchaseOrderId( $purchaseOrderId) {
     $this->purchaseOrderId = $purchaseOrderId;
   }
   public function getPurchaseOrderId() {
     return $this->purchaseOrderId;
   }
-  public function setSeats(Google_Service_Reseller_Seats$seats) {
+  public function setSeats(Google_Seats $seats) {
     $this->seats = $seats;
   }
   public function getSeats() {
@@ -409,47 +409,47 @@ class Google_Customer extends Google_Model {
   public $customerId;
   public $kind;
   public $phoneNumber;
-  protected $__postalAddressType = 'Google_Service_Reseller_Address';
+  protected $__postalAddressType = 'Google_Address';
   protected $__postalAddressDataType = '';
   public $postalAddress;
   public $resourceUiUrl;
-  public function setAlternateEmail($alternateEmail) {
+  public function setAlternateEmail( $alternateEmail) {
     $this->alternateEmail = $alternateEmail;
   }
   public function getAlternateEmail() {
     return $this->alternateEmail;
   }
-  public function setCustomerDomain($customerDomain) {
+  public function setCustomerDomain( $customerDomain) {
     $this->customerDomain = $customerDomain;
   }
   public function getCustomerDomain() {
     return $this->customerDomain;
   }
-  public function setCustomerId($customerId) {
+  public function setCustomerId( $customerId) {
     $this->customerId = $customerId;
   }
   public function getCustomerId() {
     return $this->customerId;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPhoneNumber($phoneNumber) {
+  public function setPhoneNumber( $phoneNumber) {
     $this->phoneNumber = $phoneNumber;
   }
   public function getPhoneNumber() {
     return $this->phoneNumber;
   }
-  public function setPostalAddress(Google_Service_Reseller_Address$postalAddress) {
+  public function setPostalAddress(Google_Address $postalAddress) {
     $this->postalAddress = $postalAddress;
   }
   public function getPostalAddress() {
     return $this->postalAddress;
   }
-  public function setResourceUiUrl($resourceUiUrl) {
+  public function setResourceUiUrl( $resourceUiUrl) {
     $this->resourceUiUrl = $resourceUiUrl;
   }
   public function getResourceUiUrl() {
@@ -460,13 +460,13 @@ class Google_Customer extends Google_Model {
 class Google_RenewalSettings extends Google_Model {
   public $kind;
   public $renewalType;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setRenewalType($renewalType) {
+  public function setRenewalType( $renewalType) {
     $this->renewalType = $renewalType;
   }
   public function getRenewalType() {
@@ -478,19 +478,19 @@ class Google_Seats extends Google_Model {
   public $kind;
   public $maximumNumberOfSeats;
   public $numberOfSeats;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMaximumNumberOfSeats($maximumNumberOfSeats) {
+  public function setMaximumNumberOfSeats( $maximumNumberOfSeats) {
     $this->maximumNumberOfSeats = $maximumNumberOfSeats;
   }
   public function getMaximumNumberOfSeats() {
     return $this->maximumNumberOfSeats;
   }
-  public function setNumberOfSeats($numberOfSeats) {
+  public function setNumberOfSeats( $numberOfSeats) {
     $this->numberOfSeats = $numberOfSeats;
   }
   public function getNumberOfSeats() {
@@ -502,99 +502,99 @@ class Google_Subscription extends Google_Model {
   public $creationTime;
   public $customerId;
   public $kind;
-  protected $__planType = 'Google_Service_Reseller_SubscriptionPlan';
+  protected $__planType = 'Google_SubscriptionPlan';
   protected $__planDataType = '';
   public $plan;
   public $purchaseOrderId;
-  protected $__renewalSettingsType = 'Google_Service_Reseller_RenewalSettings';
+  protected $__renewalSettingsType = 'Google_RenewalSettings';
   protected $__renewalSettingsDataType = '';
   public $renewalSettings;
   public $resourceUiUrl;
-  protected $__seatsType = 'Google_Service_Reseller_Seats';
+  protected $__seatsType = 'Google_Seats';
   protected $__seatsDataType = '';
   public $seats;
   public $skuId;
   public $status;
   public $subscriptionId;
-  protected $__transferInfoType = 'Google_Service_Reseller_SubscriptionTransferInfo';
+  protected $__transferInfoType = 'Google_SubscriptionTransferInfo';
   protected $__transferInfoDataType = '';
   public $transferInfo;
-  protected $__trialSettingsType = 'Google_Service_Reseller_SubscriptionTrialSettings';
+  protected $__trialSettingsType = 'Google_SubscriptionTrialSettings';
   protected $__trialSettingsDataType = '';
   public $trialSettings;
-  public function setCreationTime($creationTime) {
+  public function setCreationTime( $creationTime) {
     $this->creationTime = $creationTime;
   }
   public function getCreationTime() {
     return $this->creationTime;
   }
-  public function setCustomerId($customerId) {
+  public function setCustomerId( $customerId) {
     $this->customerId = $customerId;
   }
   public function getCustomerId() {
     return $this->customerId;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPlan(Google_Service_Reseller_SubscriptionPlan$plan) {
+  public function setPlan(Google_SubscriptionPlan $plan) {
     $this->plan = $plan;
   }
   public function getPlan() {
     return $this->plan;
   }
-  public function setPurchaseOrderId($purchaseOrderId) {
+  public function setPurchaseOrderId( $purchaseOrderId) {
     $this->purchaseOrderId = $purchaseOrderId;
   }
   public function getPurchaseOrderId() {
     return $this->purchaseOrderId;
   }
-  public function setRenewalSettings(Google_Service_Reseller_RenewalSettings$renewalSettings) {
+  public function setRenewalSettings(Google_RenewalSettings $renewalSettings) {
     $this->renewalSettings = $renewalSettings;
   }
   public function getRenewalSettings() {
     return $this->renewalSettings;
   }
-  public function setResourceUiUrl($resourceUiUrl) {
+  public function setResourceUiUrl( $resourceUiUrl) {
     $this->resourceUiUrl = $resourceUiUrl;
   }
   public function getResourceUiUrl() {
     return $this->resourceUiUrl;
   }
-  public function setSeats(Google_Service_Reseller_Seats$seats) {
+  public function setSeats(Google_Seats $seats) {
     $this->seats = $seats;
   }
   public function getSeats() {
     return $this->seats;
   }
-  public function setSkuId($skuId) {
+  public function setSkuId( $skuId) {
     $this->skuId = $skuId;
   }
   public function getSkuId() {
     return $this->skuId;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
     return $this->status;
   }
-  public function setSubscriptionId($subscriptionId) {
+  public function setSubscriptionId( $subscriptionId) {
     $this->subscriptionId = $subscriptionId;
   }
   public function getSubscriptionId() {
     return $this->subscriptionId;
   }
-  public function setTransferInfo(Google_Service_Reseller_SubscriptionTransferInfo$transferInfo) {
+  public function setTransferInfo(Google_SubscriptionTransferInfo $transferInfo) {
     $this->transferInfo = $transferInfo;
   }
   public function getTransferInfo() {
     return $this->transferInfo;
   }
-  public function setTrialSettings(Google_Service_Reseller_SubscriptionTrialSettings$trialSettings) {
+  public function setTrialSettings(Google_SubscriptionTrialSettings $trialSettings) {
     $this->trialSettings = $trialSettings;
   }
   public function getTrialSettings() {
@@ -603,24 +603,24 @@ class Google_Subscription extends Google_Model {
 }
 
 class Google_SubscriptionPlan extends Google_Model {
-  protected $__commitmentIntervalType = 'Google_Service_Reseller_SubscriptionPlanCommitmentInterval';
+  protected $__commitmentIntervalType = 'Google_SubscriptionPlanCommitmentInterval';
   protected $__commitmentIntervalDataType = '';
   public $commitmentInterval;
   public $isCommitmentPlan;
   public $planName;
-  public function setCommitmentInterval(Google_Service_Reseller_SubscriptionPlanCommitmentInterval$commitmentInterval) {
+  public function setCommitmentInterval(Google_SubscriptionPlanCommitmentInterval $commitmentInterval) {
     $this->commitmentInterval = $commitmentInterval;
   }
   public function getCommitmentInterval() {
     return $this->commitmentInterval;
   }
-  public function setIsCommitmentPlan($isCommitmentPlan) {
+  public function setIsCommitmentPlan( $isCommitmentPlan) {
     $this->isCommitmentPlan = $isCommitmentPlan;
   }
   public function getIsCommitmentPlan() {
     return $this->isCommitmentPlan;
   }
-  public function setPlanName($planName) {
+  public function setPlanName( $planName) {
     $this->planName = $planName;
   }
   public function getPlanName() {
@@ -631,13 +631,13 @@ class Google_SubscriptionPlan extends Google_Model {
 class Google_SubscriptionPlanCommitmentInterval extends Google_Model {
   public $endTime;
   public $startTime;
-  public function setEndTime($endTime) {
+  public function setEndTime( $endTime) {
     $this->endTime = $endTime;
   }
   public function getEndTime() {
     return $this->endTime;
   }
-  public function setStartTime($startTime) {
+  public function setStartTime( $startTime) {
     $this->startTime = $startTime;
   }
   public function getStartTime() {
@@ -647,7 +647,7 @@ class Google_SubscriptionPlanCommitmentInterval extends Google_Model {
 
 class Google_SubscriptionTransferInfo extends Google_Model {
   public $transferabilityExpirationTime;
-  public function setTransferabilityExpirationTime($transferabilityExpirationTime) {
+  public function setTransferabilityExpirationTime( $transferabilityExpirationTime) {
     $this->transferabilityExpirationTime = $transferabilityExpirationTime;
   }
   public function getTransferabilityExpirationTime() {
@@ -658,13 +658,13 @@ class Google_SubscriptionTransferInfo extends Google_Model {
 class Google_SubscriptionTrialSettings extends Google_Model {
   public $isInTrial;
   public $trialEndTime;
-  public function setIsInTrial($isInTrial) {
+  public function setIsInTrial( $isInTrial) {
     $this->isInTrial = $isInTrial;
   }
   public function getIsInTrial() {
     return $this->isInTrial;
   }
-  public function setTrialEndTime($trialEndTime) {
+  public function setTrialEndTime( $trialEndTime) {
     $this->trialEndTime = $trialEndTime;
   }
   public function getTrialEndTime() {
@@ -675,16 +675,16 @@ class Google_SubscriptionTrialSettings extends Google_Model {
 class Google_Subscriptions extends Google_Model {
   public $kind;
   public $nextPageToken;
-  protected $__subscriptionsType = 'Google_Service_Reseller_Subscription';
+  protected $__subscriptionsType = 'Google_Subscription';
   protected $__subscriptionsDataType = 'array';
   public $subscriptions;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {

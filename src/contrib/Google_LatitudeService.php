@@ -200,61 +200,61 @@ class Google_Location extends Google_Model {
   public $longitude;
   public $speed;
   public $timestampMs;
-  public function setAccuracy($accuracy) {
+  public function setAccuracy( $accuracy) {
     $this->accuracy = $accuracy;
   }
   public function getAccuracy() {
     return $this->accuracy;
   }
-  public function setActivityId($activityId) {
+  public function setActivityId( $activityId) {
     $this->activityId = $activityId;
   }
   public function getActivityId() {
     return $this->activityId;
   }
-  public function setAltitude($altitude) {
+  public function setAltitude( $altitude) {
     $this->altitude = $altitude;
   }
   public function getAltitude() {
     return $this->altitude;
   }
-  public function setAltitudeAccuracy($altitudeAccuracy) {
+  public function setAltitudeAccuracy( $altitudeAccuracy) {
     $this->altitudeAccuracy = $altitudeAccuracy;
   }
   public function getAltitudeAccuracy() {
     return $this->altitudeAccuracy;
   }
-  public function setHeading($heading) {
+  public function setHeading( $heading) {
     $this->heading = $heading;
   }
   public function getHeading() {
     return $this->heading;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLatitude($latitude) {
+  public function setLatitude( $latitude) {
     $this->latitude = $latitude;
   }
   public function getLatitude() {
     return $this->latitude;
   }
-  public function setLongitude($longitude) {
+  public function setLongitude( $longitude) {
     $this->longitude = $longitude;
   }
   public function getLongitude() {
     return $this->longitude;
   }
-  public function setSpeed($speed) {
+  public function setSpeed( $speed) {
     $this->speed = $speed;
   }
   public function getSpeed() {
     return $this->speed;
   }
-  public function setTimestampMs($timestampMs) {
+  public function setTimestampMs( $timestampMs) {
     $this->timestampMs = $timestampMs;
   }
   public function getTimestampMs() {
@@ -263,7 +263,7 @@ class Google_Location extends Google_Model {
 }
 
 class Google_LocationFeed extends Google_Model {
-  protected $__itemsType = 'Google_Service_Latitude_Location';
+  protected $__itemsType = 'Google_Location';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -274,7 +274,7 @@ class Google_LocationFeed extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {

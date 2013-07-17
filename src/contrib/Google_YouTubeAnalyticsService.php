@@ -89,7 +89,7 @@ class Google_YouTubeAnalyticsService extends Google_Service {
 
 
 class Google_ResultTable extends Google_Model {
-  protected $__columnHeadersType = 'Google_Service_YouTubeAnalytics_ResultTableColumnHeaders';
+  protected $__columnHeadersType = 'Google_ResultTableColumnHeaders';
   protected $__columnHeadersDataType = 'array';
   public $columnHeaders;
   public $kind;
@@ -101,7 +101,7 @@ class Google_ResultTable extends Google_Model {
   public function getColumnHeaders() {
     return $this->columnHeaders;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -120,19 +120,19 @@ class Google_ResultTableColumnHeaders extends Google_Model {
   public $columnType;
   public $dataType;
   public $name;
-  public function setColumnType($columnType) {
+  public function setColumnType( $columnType) {
     $this->columnType = $columnType;
   }
   public function getColumnType() {
     return $this->columnType;
   }
-  public function setDataType($dataType) {
+  public function setDataType( $dataType) {
     $this->dataType = $dataType;
   }
   public function getDataType() {
     return $this->dataType;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {

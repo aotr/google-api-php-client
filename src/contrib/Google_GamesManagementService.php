@@ -232,10 +232,10 @@ class Google_GamesManagementService extends Google_Service {
 
 class Google_AchievementResetAllResponse extends Google_Model {
   public $kind;
-  protected $__resultsType = 'Google_Service_GamesManagement_AchievementResetResponse';
+  protected $__resultsType = 'Google_AchievementResetResponse';
   protected $__resultsDataType = 'array';
   public $results;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -255,25 +255,25 @@ class Google_AchievementResetResponse extends Google_Model {
   public $definitionId;
   public $kind;
   public $updateOccurred;
-  public function setCurrentState($currentState) {
+  public function setCurrentState( $currentState) {
     $this->currentState = $currentState;
   }
   public function getCurrentState() {
     return $this->currentState;
   }
-  public function setDefinitionId($definitionId) {
+  public function setDefinitionId( $definitionId) {
     $this->definitionId = $definitionId;
   }
   public function getDefinitionId() {
     return $this->definitionId;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setUpdateOccurred($updateOccurred) {
+  public function setUpdateOccurred( $updateOccurred) {
     $this->updateOccurred = $updateOccurred;
   }
   public function getUpdateOccurred() {
@@ -284,22 +284,22 @@ class Google_AchievementResetResponse extends Google_Model {
 class Google_HiddenPlayer extends Google_Model {
   public $hiddenTimeMillis;
   public $kind;
-  protected $__playerType = 'Google_Service_GamesManagement_Player';
+  protected $__playerType = 'Google_Player';
   protected $__playerDataType = '';
   public $player;
-  public function setHiddenTimeMillis($hiddenTimeMillis) {
+  public function setHiddenTimeMillis( $hiddenTimeMillis) {
     $this->hiddenTimeMillis = $hiddenTimeMillis;
   }
   public function getHiddenTimeMillis() {
     return $this->hiddenTimeMillis;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPlayer(Google_Service_GamesManagement_Player$player) {
+  public function setPlayer(Google_Player $player) {
     $this->player = $player;
   }
   public function getPlayer() {
@@ -308,7 +308,7 @@ class Google_HiddenPlayer extends Google_Model {
 }
 
 class Google_HiddenPlayerList extends Google_Model {
-  protected $__itemsType = 'Google_Service_GamesManagement_HiddenPlayer';
+  protected $__itemsType = 'Google_HiddenPlayer';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -320,13 +320,13 @@ class Google_HiddenPlayerList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -339,25 +339,25 @@ class Google_Player extends Google_Model {
   public $displayName;
   public $kind;
   public $playerId;
-  public function setAvatarImageUrl($avatarImageUrl) {
+  public function setAvatarImageUrl( $avatarImageUrl) {
     $this->avatarImageUrl = $avatarImageUrl;
   }
   public function getAvatarImageUrl() {
     return $this->avatarImageUrl;
   }
-  public function setDisplayName($displayName) {
+  public function setDisplayName( $displayName) {
     $this->displayName = $displayName;
   }
   public function getDisplayName() {
     return $this->displayName;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPlayerId($playerId) {
+  public function setPlayerId( $playerId) {
     $this->playerId = $playerId;
   }
   public function getPlayerId() {
@@ -368,7 +368,7 @@ class Google_Player extends Google_Model {
 class Google_PlayerScoreResetResponse extends Google_Model {
   public $kind;
   public $resetScoreTimeSpans;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {

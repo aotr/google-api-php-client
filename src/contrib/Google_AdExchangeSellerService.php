@@ -393,31 +393,31 @@ class Google_AdClient extends Google_Model {
   public $kind;
   public $productCode;
   public $supportsReporting;
-  public function setArcOptIn($arcOptIn) {
+  public function setArcOptIn( $arcOptIn) {
     $this->arcOptIn = $arcOptIn;
   }
   public function getArcOptIn() {
     return $this->arcOptIn;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setProductCode($productCode) {
+  public function setProductCode( $productCode) {
     $this->productCode = $productCode;
   }
   public function getProductCode() {
     return $this->productCode;
   }
-  public function setSupportsReporting($supportsReporting) {
+  public function setSupportsReporting( $supportsReporting) {
     $this->supportsReporting = $supportsReporting;
   }
   public function getSupportsReporting() {
@@ -427,12 +427,12 @@ class Google_AdClient extends Google_Model {
 
 class Google_AdClients extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_AdExchangeSeller_AdClient';
+  protected $__itemsType = 'Google_AdClient';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -445,13 +445,13 @@ class Google_AdClients extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -465,31 +465,31 @@ class Google_AdUnit extends Google_Model {
   public $kind;
   public $name;
   public $status;
-  public function setCode($code) {
+  public function setCode( $code) {
     $this->code = $code;
   }
   public function getCode() {
     return $this->code;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
@@ -499,12 +499,12 @@ class Google_AdUnit extends Google_Model {
 
 class Google_AdUnits extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_AdExchangeSeller_AdUnit';
+  protected $__itemsType = 'Google_AdUnit';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -517,13 +517,13 @@ class Google_AdUnits extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -536,34 +536,34 @@ class Google_CustomChannel extends Google_Model {
   public $id;
   public $kind;
   public $name;
-  protected $__targetingInfoType = 'Google_Service_AdExchangeSeller_CustomChannelTargetingInfo';
+  protected $__targetingInfoType = 'Google_CustomChannelTargetingInfo';
   protected $__targetingInfoDataType = '';
   public $targetingInfo;
-  public function setCode($code) {
+  public function setCode( $code) {
     $this->code = $code;
   }
   public function getCode() {
     return $this->code;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setTargetingInfo(Google_Service_AdExchangeSeller_CustomChannelTargetingInfo$targetingInfo) {
+  public function setTargetingInfo(Google_CustomChannelTargetingInfo $targetingInfo) {
     $this->targetingInfo = $targetingInfo;
   }
   public function getTargetingInfo() {
@@ -576,25 +576,25 @@ class Google_CustomChannelTargetingInfo extends Google_Model {
   public $description;
   public $location;
   public $siteLanguage;
-  public function setAdsAppearOn($adsAppearOn) {
+  public function setAdsAppearOn( $adsAppearOn) {
     $this->adsAppearOn = $adsAppearOn;
   }
   public function getAdsAppearOn() {
     return $this->adsAppearOn;
   }
-  public function setDescription($description) {
+  public function setDescription( $description) {
     $this->description = $description;
   }
   public function getDescription() {
     return $this->description;
   }
-  public function setLocation($location) {
+  public function setLocation( $location) {
     $this->location = $location;
   }
   public function getLocation() {
     return $this->location;
   }
-  public function setSiteLanguage($siteLanguage) {
+  public function setSiteLanguage( $siteLanguage) {
     $this->siteLanguage = $siteLanguage;
   }
   public function getSiteLanguage() {
@@ -604,12 +604,12 @@ class Google_CustomChannelTargetingInfo extends Google_Model {
 
 class Google_CustomChannels extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_AdExchangeSeller_CustomChannel';
+  protected $__itemsType = 'Google_CustomChannel';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -622,13 +622,13 @@ class Google_CustomChannels extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -638,7 +638,7 @@ class Google_CustomChannels extends Google_Model {
 
 class Google_Report extends Google_Model {
   public $averages;
-  protected $__headersType = 'Google_Service_AdExchangeSeller_ReportHeaders';
+  protected $__headersType = 'Google_ReportHeaders';
   protected $__headersDataType = 'array';
   public $headers;
   public $kind;
@@ -660,7 +660,7 @@ class Google_Report extends Google_Model {
   public function getHeaders() {
     return $this->headers;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -673,7 +673,7 @@ class Google_Report extends Google_Model {
   public function getRows() {
     return $this->rows;
   }
-  public function setTotalMatchedRows($totalMatchedRows) {
+  public function setTotalMatchedRows( $totalMatchedRows) {
     $this->totalMatchedRows = $totalMatchedRows;
   }
   public function getTotalMatchedRows() {
@@ -699,19 +699,19 @@ class Google_ReportHeaders extends Google_Model {
   public $currency;
   public $name;
   public $type;
-  public function setCurrency($currency) {
+  public function setCurrency( $currency) {
     $this->currency = $currency;
   }
   public function getCurrency() {
     return $this->currency;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -723,19 +723,19 @@ class Google_SavedReport extends Google_Model {
   public $id;
   public $kind;
   public $name;
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
@@ -745,12 +745,12 @@ class Google_SavedReport extends Google_Model {
 
 class Google_SavedReports extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_AdExchangeSeller_SavedReport';
+  protected $__itemsType = 'Google_SavedReport';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -763,13 +763,13 @@ class Google_SavedReports extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -781,19 +781,19 @@ class Google_UrlChannel extends Google_Model {
   public $id;
   public $kind;
   public $urlPattern;
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setUrlPattern($urlPattern) {
+  public function setUrlPattern( $urlPattern) {
     $this->urlPattern = $urlPattern;
   }
   public function getUrlPattern() {
@@ -803,12 +803,12 @@ class Google_UrlChannel extends Google_Model {
 
 class Google_UrlChannels extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_AdExchangeSeller_UrlChannel';
+  protected $__itemsType = 'Google_UrlChannel';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -821,13 +821,13 @@ class Google_UrlChannels extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {

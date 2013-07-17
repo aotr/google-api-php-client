@@ -158,25 +158,25 @@ class Google_GetResponse extends Google_Model {
   public $data;
   public $kind;
   public $stateKey;
-  public function setCurrentStateVersion($currentStateVersion) {
+  public function setCurrentStateVersion( $currentStateVersion) {
     $this->currentStateVersion = $currentStateVersion;
   }
   public function getCurrentStateVersion() {
     return $this->currentStateVersion;
   }
-  public function setData($data) {
+  public function setData( $data) {
     $this->data = $data;
   }
   public function getData() {
     return $this->data;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setStateKey($stateKey) {
+  public function setStateKey( $stateKey) {
     $this->stateKey = $stateKey;
   }
   public function getStateKey() {
@@ -185,7 +185,7 @@ class Google_GetResponse extends Google_Model {
 }
 
 class Google_ListResponse extends Google_Model {
-  protected $__itemsType = 'Google_Service_Appstate_GetResponse';
+  protected $__itemsType = 'Google_GetResponse';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -197,13 +197,13 @@ class Google_ListResponse extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMaximumKeyCount($maximumKeyCount) {
+  public function setMaximumKeyCount( $maximumKeyCount) {
     $this->maximumKeyCount = $maximumKeyCount;
   }
   public function getMaximumKeyCount() {
@@ -214,13 +214,13 @@ class Google_ListResponse extends Google_Model {
 class Google_UpdateRequest extends Google_Model {
   public $data;
   public $kind;
-  public function setData($data) {
+  public function setData( $data) {
     $this->data = $data;
   }
   public function getData() {
     return $this->data;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -232,19 +232,19 @@ class Google_WriteResult extends Google_Model {
   public $currentStateVersion;
   public $kind;
   public $stateKey;
-  public function setCurrentStateVersion($currentStateVersion) {
+  public function setCurrentStateVersion( $currentStateVersion) {
     $this->currentStateVersion = $currentStateVersion;
   }
   public function getCurrentStateVersion() {
     return $this->currentStateVersion;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setStateKey($stateKey) {
+  public function setStateKey( $stateKey) {
     $this->stateKey = $stateKey;
   }
   public function getStateKey() {

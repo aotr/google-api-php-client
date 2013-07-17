@@ -279,7 +279,7 @@ class Google_AdexchangebuyerService extends Google_Service {
 
 
 class Google_Account extends Google_Model {
-  protected $__bidderLocationType = 'Google_Service_Adexchangebuyer_AccountBidderLocation';
+  protected $__bidderLocationType = 'Google_AccountBidderLocation';
   protected $__bidderLocationDataType = 'array';
   public $bidderLocation;
   public $cookieMatchingNid;
@@ -294,31 +294,31 @@ class Google_Account extends Google_Model {
   public function getBidderLocation() {
     return $this->bidderLocation;
   }
-  public function setCookieMatchingNid($cookieMatchingNid) {
+  public function setCookieMatchingNid( $cookieMatchingNid) {
     $this->cookieMatchingNid = $cookieMatchingNid;
   }
   public function getCookieMatchingNid() {
     return $this->cookieMatchingNid;
   }
-  public function setCookieMatchingUrl($cookieMatchingUrl) {
+  public function setCookieMatchingUrl( $cookieMatchingUrl) {
     $this->cookieMatchingUrl = $cookieMatchingUrl;
   }
   public function getCookieMatchingUrl() {
     return $this->cookieMatchingUrl;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMaximumTotalQps($maximumTotalQps) {
+  public function setMaximumTotalQps( $maximumTotalQps) {
     $this->maximumTotalQps = $maximumTotalQps;
   }
   public function getMaximumTotalQps() {
@@ -330,19 +330,19 @@ class Google_AccountBidderLocation extends Google_Model {
   public $maximumQps;
   public $region;
   public $url;
-  public function setMaximumQps($maximumQps) {
+  public function setMaximumQps( $maximumQps) {
     $this->maximumQps = $maximumQps;
   }
   public function getMaximumQps() {
     return $this->maximumQps;
   }
-  public function setRegion($region) {
+  public function setRegion( $region) {
     $this->region = $region;
   }
   public function getRegion() {
     return $this->region;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -351,7 +351,7 @@ class Google_AccountBidderLocation extends Google_Model {
 }
 
 class Google_AccountsList extends Google_Model {
-  protected $__itemsType = 'Google_Service_Adexchangebuyer_Account';
+  protected $__itemsType = 'Google_Account';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -362,7 +362,7 @@ class Google_AccountsList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -379,7 +379,7 @@ class Google_Creative extends Google_Model {
   public $attribute;
   public $buyerCreativeId;
   public $clickThroughUrl;
-  protected $__disapprovalReasonsType = 'Google_Service_Adexchangebuyer_CreativeDisapprovalReasons';
+  protected $__disapprovalReasonsType = 'Google_CreativeDisapprovalReasons';
   protected $__disapprovalReasonsDataType = 'array';
   public $disapprovalReasons;
   public $height;
@@ -390,13 +390,13 @@ class Google_Creative extends Google_Model {
   public $vendorType;
   public $videoURL;
   public $width;
-  public function setHTMLSnippet($HTMLSnippet) {
+  public function setHTMLSnippet( $HTMLSnippet) {
     $this->HTMLSnippet = $HTMLSnippet;
   }
   public function getHTMLSnippet() {
     return $this->HTMLSnippet;
   }
-  public function setAccountId($accountId) {
+  public function setAccountId( $accountId) {
     $this->accountId = $accountId;
   }
   public function getAccountId() {
@@ -409,13 +409,13 @@ class Google_Creative extends Google_Model {
   public function getAdvertiserId() {
     return $this->advertiserId;
   }
-  public function setAdvertiserName($advertiserName) {
+  public function setAdvertiserName( $advertiserName) {
     $this->advertiserName = $advertiserName;
   }
   public function getAdvertiserName() {
     return $this->advertiserName;
   }
-  public function setAgencyId($agencyId) {
+  public function setAgencyId( $agencyId) {
     $this->agencyId = $agencyId;
   }
   public function getAgencyId() {
@@ -428,7 +428,7 @@ class Google_Creative extends Google_Model {
   public function getAttribute() {
     return $this->attribute;
   }
-  public function setBuyerCreativeId($buyerCreativeId) {
+  public function setBuyerCreativeId( $buyerCreativeId) {
     $this->buyerCreativeId = $buyerCreativeId;
   }
   public function getBuyerCreativeId() {
@@ -448,13 +448,13 @@ class Google_Creative extends Google_Model {
   public function getDisapprovalReasons() {
     return $this->disapprovalReasons;
   }
-  public function setHeight($height) {
+  public function setHeight( $height) {
     $this->height = $height;
   }
   public function getHeight() {
     return $this->height;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -474,7 +474,7 @@ class Google_Creative extends Google_Model {
   public function getSensitiveCategories() {
     return $this->sensitiveCategories;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
@@ -487,13 +487,13 @@ class Google_Creative extends Google_Model {
   public function getVendorType() {
     return $this->vendorType;
   }
-  public function setVideoURL($videoURL) {
+  public function setVideoURL( $videoURL) {
     $this->videoURL = $videoURL;
   }
   public function getVideoURL() {
     return $this->videoURL;
   }
-  public function setWidth($width) {
+  public function setWidth( $width) {
     $this->width = $width;
   }
   public function getWidth() {
@@ -511,7 +511,7 @@ class Google_CreativeDisapprovalReasons extends Google_Model {
   public function getDetails() {
     return $this->details;
   }
-  public function setReason($reason) {
+  public function setReason( $reason) {
     $this->reason = $reason;
   }
   public function getReason() {
@@ -520,7 +520,7 @@ class Google_CreativeDisapprovalReasons extends Google_Model {
 }
 
 class Google_CreativesList extends Google_Model {
-  protected $__itemsType = 'Google_Service_Adexchangebuyer_Creative';
+  protected $__itemsType = 'Google_Creative';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -532,13 +532,13 @@ class Google_CreativesList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -557,61 +557,61 @@ class Google_DirectDeal extends Google_Model {
   public $privateExchangeMinCpm;
   public $sellerNetwork;
   public $startTime;
-  public function setAccountId($accountId) {
+  public function setAccountId( $accountId) {
     $this->accountId = $accountId;
   }
   public function getAccountId() {
     return $this->accountId;
   }
-  public function setAdvertiser($advertiser) {
+  public function setAdvertiser( $advertiser) {
     $this->advertiser = $advertiser;
   }
   public function getAdvertiser() {
     return $this->advertiser;
   }
-  public function setCurrencyCode($currencyCode) {
+  public function setCurrencyCode( $currencyCode) {
     $this->currencyCode = $currencyCode;
   }
   public function getCurrencyCode() {
     return $this->currencyCode;
   }
-  public function setEndTime($endTime) {
+  public function setEndTime( $endTime) {
     $this->endTime = $endTime;
   }
   public function getEndTime() {
     return $this->endTime;
   }
-  public function setFixedCpm($fixedCpm) {
+  public function setFixedCpm( $fixedCpm) {
     $this->fixedCpm = $fixedCpm;
   }
   public function getFixedCpm() {
     return $this->fixedCpm;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPrivateExchangeMinCpm($privateExchangeMinCpm) {
+  public function setPrivateExchangeMinCpm( $privateExchangeMinCpm) {
     $this->privateExchangeMinCpm = $privateExchangeMinCpm;
   }
   public function getPrivateExchangeMinCpm() {
     return $this->privateExchangeMinCpm;
   }
-  public function setSellerNetwork($sellerNetwork) {
+  public function setSellerNetwork( $sellerNetwork) {
     $this->sellerNetwork = $sellerNetwork;
   }
   public function getSellerNetwork() {
     return $this->sellerNetwork;
   }
-  public function setStartTime($startTime) {
+  public function setStartTime( $startTime) {
     $this->startTime = $startTime;
   }
   public function getStartTime() {
@@ -620,7 +620,7 @@ class Google_DirectDeal extends Google_Model {
 }
 
 class Google_DirectDealsList extends Google_Model {
-  protected $__directDealsType = 'Google_Service_Adexchangebuyer_DirectDeal';
+  protected $__directDealsType = 'Google_DirectDeal';
   protected $__directDealsDataType = 'array';
   public $directDeals;
   public $kind;
@@ -631,7 +631,7 @@ class Google_DirectDealsList extends Google_Model {
   public function getDirectDeals() {
     return $this->directDeals;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -641,10 +641,10 @@ class Google_DirectDealsList extends Google_Model {
 
 class Google_PerformanceReportList extends Google_Model {
   public $kind;
-  protected $__performance_reportType = 'Google_Service_Adexchangebuyer_PerformanceReportListPerformanceReport';
+  protected $__performance_reportType = 'Google_PerformanceReportListPerformanceReport';
   protected $__performance_reportDataType = 'array';
   public $performance_report;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -666,37 +666,37 @@ class Google_PerformanceReportListPerformanceReport extends Google_Model {
   public $latency95thPercentile;
   public $region;
   public $timestamp;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLatency50thPercentile($latency50thPercentile) {
+  public function setLatency50thPercentile( $latency50thPercentile) {
     $this->latency50thPercentile = $latency50thPercentile;
   }
   public function getLatency50thPercentile() {
     return $this->latency50thPercentile;
   }
-  public function setLatency85thPercentile($latency85thPercentile) {
+  public function setLatency85thPercentile( $latency85thPercentile) {
     $this->latency85thPercentile = $latency85thPercentile;
   }
   public function getLatency85thPercentile() {
     return $this->latency85thPercentile;
   }
-  public function setLatency95thPercentile($latency95thPercentile) {
+  public function setLatency95thPercentile( $latency95thPercentile) {
     $this->latency95thPercentile = $latency95thPercentile;
   }
   public function getLatency95thPercentile() {
     return $this->latency95thPercentile;
   }
-  public function setRegion($region) {
+  public function setRegion( $region) {
     $this->region = $region;
   }
   public function getRegion() {
     return $this->region;
   }
-  public function setTimestamp($timestamp) {
+  public function setTimestamp( $timestamp) {
     $this->timestamp = $timestamp;
   }
   public function getTimestamp() {
