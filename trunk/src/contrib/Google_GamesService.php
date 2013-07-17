@@ -24,7 +24,6 @@
    */
   class Google_AchievementDefinitionsServiceResource extends Google_ServiceResource {
 
-
     /**
      * Lists all the achievement definitions for your application. (achievementDefinitions.list)
      *
@@ -56,7 +55,6 @@
    *  </code>
    */
   class Google_AchievementsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Increments the steps of the achievement with the given ID for the currently authenticated player.
@@ -149,7 +147,6 @@
    */
   class Google_ApplicationsServiceResource extends Google_ServiceResource {
 
-
     /**
      * Retrieves the metadata of the application with the given ID. If the requested application is not
      * available for the specified platformType, the returned response will not include any instance
@@ -172,6 +169,18 @@
         return $data;
       }
     }
+    /**
+     * Indicate that the the currently authenticated user is playing your application.
+     * (applications.played)
+     *
+     * @param array $optParams Optional parameters.
+     */
+    public function played($optParams = array()) {
+      $params = array();
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('played', array($params));
+      return $data;
+    }
   }
 
   /**
@@ -183,7 +192,6 @@
    *  </code>
    */
   class Google_LeaderboardsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Retrieves the metadata of the leaderboard with the given ID. (leaderboards.get)
@@ -236,7 +244,6 @@
    */
   class Google_PlayersServiceResource extends Google_ServiceResource {
 
-
     /**
      * Retrieves the Player resource with the given ID. To retrieve the player for the currently
      * authenticated user, set playerId to me. (players.get)
@@ -267,7 +274,6 @@
    */
   class Google_RevisionsServiceResource extends Google_ServiceResource {
 
-
     /**
      * Checks whether the games client is out of date. (revisions.check)
      *
@@ -296,7 +302,6 @@
    *  </code>
    */
   class Google_RoomsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Create a room. For internal use by the Games SDK only. Calling this method directly is
@@ -457,7 +462,6 @@
    */
   class Google_ScoresServiceResource extends Google_ServiceResource {
 
-
     /**
      * Get high scores and optionally, ranks in leaderboards for the currently authenticated player. For
      * a specific time span, leaderboardId can be set to ALL to retrieve data for all leaderboards in a
@@ -609,7 +613,7 @@ class Google_GamesService extends Google_Service {
     $client->addService($this->serviceName, $this->version);
     $this->achievementDefinitions = new Google_AchievementDefinitionsServiceResource($this, $this->serviceName, 'achievementDefinitions', json_decode('{"methods": {"list": {"id": "games.achievementDefinitions.list", "path": "achievements", "httpMethod": "GET", "parameters": {"language": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "1", "maximum": "200", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "AchievementDefinitionsListResponse"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
     $this->achievements = new Google_AchievementsServiceResource($this, $this->serviceName, 'achievements', json_decode('{"methods": {"increment": {"id": "games.achievements.increment", "path": "achievements/{achievementId}/increment", "httpMethod": "POST", "parameters": {"achievementId": {"type": "string", "required": true, "location": "path"}, "requestId": {"type": "string", "format": "int64", "location": "query"}, "stepsToIncrement": {"type": "integer", "required": true, "format": "int32", "minimum": "1", "location": "query"}}, "response": {"$ref": "AchievementIncrementResponse"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "list": {"id": "games.achievements.list", "path": "players/{playerId}/achievements", "httpMethod": "GET", "parameters": {"language": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "1", "maximum": "200", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "playerId": {"type": "string", "required": true, "location": "path"}, "state": {"type": "string", "enum": ["ALL", "HIDDEN", "REVEALED", "UNLOCKED"], "location": "query"}}, "response": {"$ref": "PlayerAchievementListResponse"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "reveal": {"id": "games.achievements.reveal", "path": "achievements/{achievementId}/reveal", "httpMethod": "POST", "parameters": {"achievementId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AchievementRevealResponse"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "unlock": {"id": "games.achievements.unlock", "path": "achievements/{achievementId}/unlock", "httpMethod": "POST", "parameters": {"achievementId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AchievementUnlockResponse"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
-    $this->applications = new Google_ApplicationsServiceResource($this, $this->serviceName, 'applications', json_decode('{"methods": {"get": {"id": "games.applications.get", "path": "applications/{applicationId}", "httpMethod": "GET", "parameters": {"applicationId": {"type": "string", "required": true, "location": "path"}, "language": {"type": "string", "location": "query"}, "platformType": {"type": "string", "enum": ["ANDROID", "IOS", "WEB_APP"], "location": "query"}}, "response": {"$ref": "Application"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
+    $this->applications = new Google_ApplicationsServiceResource($this, $this->serviceName, 'applications', json_decode('{"methods": {"get": {"id": "games.applications.get", "path": "applications/{applicationId}", "httpMethod": "GET", "parameters": {"applicationId": {"type": "string", "required": true, "location": "path"}, "language": {"type": "string", "location": "query"}, "platformType": {"type": "string", "enum": ["ANDROID", "IOS", "WEB_APP"], "location": "query"}}, "response": {"$ref": "Application"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "played": {"id": "games.applications.played", "path": "applications/played", "httpMethod": "POST", "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
     $this->leaderboards = new Google_LeaderboardsServiceResource($this, $this->serviceName, 'leaderboards', json_decode('{"methods": {"get": {"id": "games.leaderboards.get", "path": "leaderboards/{leaderboardId}", "httpMethod": "GET", "parameters": {"language": {"type": "string", "location": "query"}, "leaderboardId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Leaderboard"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}, "list": {"id": "games.leaderboards.list", "path": "leaderboards", "httpMethod": "GET", "parameters": {"language": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "int32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "LeaderboardListResponse"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
     $this->players = new Google_PlayersServiceResource($this, $this->serviceName, 'players', json_decode('{"methods": {"get": {"id": "games.players.get", "path": "players/{playerId}", "httpMethod": "GET", "parameters": {"playerId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Player"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
     $this->revisions = new Google_RevisionsServiceResource($this, $this->serviceName, 'revisions', json_decode('{"methods": {"check": {"id": "games.revisions.check", "path": "revisions/check", "httpMethod": "GET", "parameters": {"clientRevision": {"type": "string", "required": true, "location": "query"}}, "response": {"$ref": "RevisionCheckResponse"}, "scopes": ["https://www.googleapis.com/auth/plus.login"]}}}', true));
@@ -627,6 +631,8 @@ class Google_AchievementDefinition extends Google_Model {
   public $formattedTotalSteps;
   public $id;
   public $initialState;
+  public $isRevealedIconUrlDefault;
+  public $isUnlockedIconUrlDefault;
   public $kind;
   public $name;
   public $revealedIconUrl;
@@ -662,6 +668,18 @@ class Google_AchievementDefinition extends Google_Model {
   public function getInitialState() {
     return $this->initialState;
   }
+  public function setIsRevealedIconUrlDefault($isRevealedIconUrlDefault) {
+    $this->isRevealedIconUrlDefault = $isRevealedIconUrlDefault;
+  }
+  public function getIsRevealedIconUrlDefault() {
+    return $this->isRevealedIconUrlDefault;
+  }
+  public function setIsUnlockedIconUrlDefault($isUnlockedIconUrlDefault) {
+    $this->isUnlockedIconUrlDefault = $isUnlockedIconUrlDefault;
+  }
+  public function getIsUnlockedIconUrlDefault() {
+    return $this->isUnlockedIconUrlDefault;
+  }
   public function setKind($kind) {
     $this->kind = $kind;
   }
@@ -695,7 +713,7 @@ class Google_AchievementDefinition extends Google_Model {
 }
 
 class Google_AchievementDefinitionsListResponse extends Google_Model {
-  protected $__itemsType = 'Google_AchievementDefinition';
+  protected $__itemsType = 'Google_Service_Games_AchievementDefinition';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -843,16 +861,16 @@ class Google_AnonymousPlayer extends Google_Model {
 
 class Google_Application extends Google_Model {
   public $achievement_count;
-  protected $__assetsType = 'Google_ImageAsset';
+  protected $__assetsType = 'Google_Service_Games_ImageAsset';
   protected $__assetsDataType = 'array';
   public $assets;
   public $author;
-  protected $__categoryType = 'Google_ApplicationCategory';
+  protected $__categoryType = 'Google_Service_Games_ApplicationCategory';
   protected $__categoryDataType = '';
   public $category;
   public $description;
   public $id;
-  protected $__instancesType = 'Google_Instance';
+  protected $__instancesType = 'Google_Service_Games_Instance';
   protected $__instancesDataType = 'array';
   public $instances;
   public $kind;
@@ -878,7 +896,7 @@ class Google_Application extends Google_Model {
   public function getAuthor() {
     return $this->author;
   }
-  public function setCategory(Google_ApplicationCategory $category) {
+  public function setCategory(Google_Service_Games_ApplicationCategory$category) {
     $this->category = $category;
   }
   public function getCategory() {
@@ -993,10 +1011,10 @@ class Google_ImageAsset extends Google_Model {
 
 class Google_Instance extends Google_Model {
   public $acquisitionUri;
-  protected $__androidInstanceType = 'Google_InstanceAndroidDetails';
+  protected $__androidInstanceType = 'Google_Service_Games_InstanceAndroidDetails';
   protected $__androidInstanceDataType = '';
   public $androidInstance;
-  protected $__iosInstanceType = 'Google_InstanceIosDetails';
+  protected $__iosInstanceType = 'Google_Service_Games_InstanceIosDetails';
   protected $__iosInstanceDataType = '';
   public $iosInstance;
   public $kind;
@@ -1004,7 +1022,7 @@ class Google_Instance extends Google_Model {
   public $platformType;
   public $realtimePlay;
   public $turnBasedPlay;
-  protected $__webInstanceType = 'Google_InstanceWebDetails';
+  protected $__webInstanceType = 'Google_Service_Games_InstanceWebDetails';
   protected $__webInstanceDataType = '';
   public $webInstance;
   public function setAcquisitionUri($acquisitionUri) {
@@ -1013,13 +1031,13 @@ class Google_Instance extends Google_Model {
   public function getAcquisitionUri() {
     return $this->acquisitionUri;
   }
-  public function setAndroidInstance(Google_InstanceAndroidDetails $androidInstance) {
+  public function setAndroidInstance(Google_Service_Games_InstanceAndroidDetails$androidInstance) {
     $this->androidInstance = $androidInstance;
   }
   public function getAndroidInstance() {
     return $this->androidInstance;
   }
-  public function setIosInstance(Google_InstanceIosDetails $iosInstance) {
+  public function setIosInstance(Google_Service_Games_InstanceIosDetails$iosInstance) {
     $this->iosInstance = $iosInstance;
   }
   public function getIosInstance() {
@@ -1055,7 +1073,7 @@ class Google_Instance extends Google_Model {
   public function getTurnBasedPlay() {
     return $this->turnBasedPlay;
   }
-  public function setWebInstance(Google_InstanceWebDetails $webInstance) {
+  public function setWebInstance(Google_Service_Games_InstanceWebDetails$webInstance) {
     $this->webInstance = $webInstance;
   }
   public function getWebInstance() {
@@ -1067,6 +1085,7 @@ class Google_InstanceAndroidDetails extends Google_Model {
   public $enablePiracyCheck;
   public $kind;
   public $packageName;
+  public $preferred;
   public function setEnablePiracyCheck($enablePiracyCheck) {
     $this->enablePiracyCheck = $enablePiracyCheck;
   }
@@ -1085,12 +1104,20 @@ class Google_InstanceAndroidDetails extends Google_Model {
   public function getPackageName() {
     return $this->packageName;
   }
+  public function setPreferred($preferred) {
+    $this->preferred = $preferred;
+  }
+  public function getPreferred() {
+    return $this->preferred;
+  }
 }
 
 class Google_InstanceIosDetails extends Google_Model {
   public $bundleIdentifier;
   public $itunesAppId;
   public $kind;
+  public $preferredForIpad;
+  public $preferredForIphone;
   public $supportIpad;
   public $supportIphone;
   public function setBundleIdentifier($bundleIdentifier) {
@@ -1111,6 +1138,18 @@ class Google_InstanceIosDetails extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
+  public function setPreferredForIpad($preferredForIpad) {
+    $this->preferredForIpad = $preferredForIpad;
+  }
+  public function getPreferredForIpad() {
+    return $this->preferredForIpad;
+  }
+  public function setPreferredForIphone($preferredForIphone) {
+    $this->preferredForIphone = $preferredForIphone;
+  }
+  public function getPreferredForIphone() {
+    return $this->preferredForIphone;
+  }
   public function setSupportIpad($supportIpad) {
     $this->supportIpad = $supportIpad;
   }
@@ -1128,6 +1167,7 @@ class Google_InstanceIosDetails extends Google_Model {
 class Google_InstanceWebDetails extends Google_Model {
   public $kind;
   public $launchUrl;
+  public $preferred;
   public function setKind($kind) {
     $this->kind = $kind;
   }
@@ -1140,11 +1180,18 @@ class Google_InstanceWebDetails extends Google_Model {
   public function getLaunchUrl() {
     return $this->launchUrl;
   }
+  public function setPreferred($preferred) {
+    $this->preferred = $preferred;
+  }
+  public function getPreferred() {
+    return $this->preferred;
+  }
 }
 
 class Google_Leaderboard extends Google_Model {
   public $iconUrl;
   public $id;
+  public $isIconUrlDefault;
   public $kind;
   public $name;
   public $order;
@@ -1159,6 +1206,12 @@ class Google_Leaderboard extends Google_Model {
   }
   public function getId() {
     return $this->id;
+  }
+  public function setIsIconUrlDefault($isIconUrlDefault) {
+    $this->isIconUrlDefault = $isIconUrlDefault;
+  }
+  public function getIsIconUrlDefault() {
+    return $this->isIconUrlDefault;
   }
   public function setKind($kind) {
     $this->kind = $kind;
@@ -1184,7 +1237,7 @@ class Google_LeaderboardEntry extends Google_Model {
   public $formattedScore;
   public $formattedScoreRank;
   public $kind;
-  protected $__playerType = 'Google_Player';
+  protected $__playerType = 'Google_Service_Games_Player';
   protected $__playerDataType = '';
   public $player;
   public $scoreRank;
@@ -1209,7 +1262,7 @@ class Google_LeaderboardEntry extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setPlayer(Google_Player $player) {
+  public function setPlayer(Google_Service_Games_Player$player) {
     $this->player = $player;
   }
   public function getPlayer() {
@@ -1242,7 +1295,7 @@ class Google_LeaderboardEntry extends Google_Model {
 }
 
 class Google_LeaderboardListResponse extends Google_Model {
-  protected $__itemsType = 'Google_Leaderboard';
+  protected $__itemsType = 'Google_Service_Games_Leaderboard';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1307,13 +1360,13 @@ class Google_LeaderboardScoreRank extends Google_Model {
 }
 
 class Google_LeaderboardScores extends Google_Model {
-  protected $__itemsType = 'Google_LeaderboardEntry';
+  protected $__itemsType = 'Google_Service_Games_LeaderboardEntry';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
   public $numScores;
-  protected $__playerScoreType = 'Google_LeaderboardEntry';
+  protected $__playerScoreType = 'Google_Service_Games_LeaderboardEntry';
   protected $__playerScoreDataType = '';
   public $playerScore;
   public $prevPageToken;
@@ -1342,7 +1395,7 @@ class Google_LeaderboardScores extends Google_Model {
   public function getNumScores() {
     return $this->numScores;
   }
-  public function setPlayerScore(Google_LeaderboardEntry $playerScore) {
+  public function setPlayerScore(Google_Service_Games_LeaderboardEntry$playerScore) {
     $this->playerScore = $playerScore;
   }
   public function getPlayerScore() {
@@ -1388,10 +1441,10 @@ class Google_NetworkDiagnostics extends Google_Model {
 }
 
 class Google_PeerChannelDiagnostics extends Google_Model {
-  protected $__bytesReceivedType = 'Google_AggregateStats';
+  protected $__bytesReceivedType = 'Google_Service_Games_AggregateStats';
   protected $__bytesReceivedDataType = '';
   public $bytesReceived;
-  protected $__bytesSentType = 'Google_AggregateStats';
+  protected $__bytesSentType = 'Google_Service_Games_AggregateStats';
   protected $__bytesSentDataType = '';
   public $bytesSent;
   public $kind;
@@ -1399,16 +1452,16 @@ class Google_PeerChannelDiagnostics extends Google_Model {
   public $numMessagesReceived;
   public $numMessagesSent;
   public $numSendFailures;
-  protected $__roundtripLatencyMillisType = 'Google_AggregateStats';
+  protected $__roundtripLatencyMillisType = 'Google_Service_Games_AggregateStats';
   protected $__roundtripLatencyMillisDataType = '';
   public $roundtripLatencyMillis;
-  public function setBytesReceived(Google_AggregateStats $bytesReceived) {
+  public function setBytesReceived(Google_Service_Games_AggregateStats$bytesReceived) {
     $this->bytesReceived = $bytesReceived;
   }
   public function getBytesReceived() {
     return $this->bytesReceived;
   }
-  public function setBytesSent(Google_AggregateStats $bytesSent) {
+  public function setBytesSent(Google_Service_Games_AggregateStats$bytesSent) {
     $this->bytesSent = $bytesSent;
   }
   public function getBytesSent() {
@@ -1444,7 +1497,7 @@ class Google_PeerChannelDiagnostics extends Google_Model {
   public function getNumSendFailures() {
     return $this->numSendFailures;
   }
-  public function setRoundtripLatencyMillis(Google_AggregateStats $roundtripLatencyMillis) {
+  public function setRoundtripLatencyMillis(Google_Service_Games_AggregateStats$roundtripLatencyMillis) {
     $this->roundtripLatencyMillis = $roundtripLatencyMillis;
   }
   public function getRoundtripLatencyMillis() {
@@ -1456,10 +1509,10 @@ class Google_PeerSessionDiagnostics extends Google_Model {
   public $connectedTimestampMillis;
   public $kind;
   public $participantId;
-  protected $__reliableChannelType = 'Google_PeerChannelDiagnostics';
+  protected $__reliableChannelType = 'Google_Service_Games_PeerChannelDiagnostics';
   protected $__reliableChannelDataType = '';
   public $reliableChannel;
-  protected $__unreliableChannelType = 'Google_PeerChannelDiagnostics';
+  protected $__unreliableChannelType = 'Google_Service_Games_PeerChannelDiagnostics';
   protected $__unreliableChannelDataType = '';
   public $unreliableChannel;
   public function setConnectedTimestampMillis($connectedTimestampMillis) {
@@ -1480,13 +1533,13 @@ class Google_PeerSessionDiagnostics extends Google_Model {
   public function getParticipantId() {
     return $this->participantId;
   }
-  public function setReliableChannel(Google_PeerChannelDiagnostics $reliableChannel) {
+  public function setReliableChannel(Google_Service_Games_PeerChannelDiagnostics$reliableChannel) {
     $this->reliableChannel = $reliableChannel;
   }
   public function getReliableChannel() {
     return $this->reliableChannel;
   }
-  public function setUnreliableChannel(Google_PeerChannelDiagnostics $unreliableChannel) {
+  public function setUnreliableChannel(Google_Service_Games_PeerChannelDiagnostics$unreliableChannel) {
     $this->unreliableChannel = $unreliableChannel;
   }
   public function getUnreliableChannel() {
@@ -1571,7 +1624,7 @@ class Google_PlayerAchievement extends Google_Model {
 }
 
 class Google_PlayerAchievementListResponse extends Google_Model {
-  protected $__itemsType = 'Google_PlayerAchievement';
+  protected $__itemsType = 'Google_Service_Games_PlayerAchievement';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1600,12 +1653,12 @@ class Google_PlayerAchievementListResponse extends Google_Model {
 class Google_PlayerLeaderboardScore extends Google_Model {
   public $kind;
   public $leaderboard_id;
-  protected $__publicRankType = 'Google_LeaderboardScoreRank';
+  protected $__publicRankType = 'Google_Service_Games_LeaderboardScoreRank';
   protected $__publicRankDataType = '';
   public $publicRank;
   public $scoreString;
   public $scoreValue;
-  protected $__socialRankType = 'Google_LeaderboardScoreRank';
+  protected $__socialRankType = 'Google_Service_Games_LeaderboardScoreRank';
   protected $__socialRankDataType = '';
   public $socialRank;
   public $timeSpan;
@@ -1622,7 +1675,7 @@ class Google_PlayerLeaderboardScore extends Google_Model {
   public function getLeaderboard_id() {
     return $this->leaderboard_id;
   }
-  public function setPublicRank(Google_LeaderboardScoreRank $publicRank) {
+  public function setPublicRank(Google_Service_Games_LeaderboardScoreRank$publicRank) {
     $this->publicRank = $publicRank;
   }
   public function getPublicRank() {
@@ -1640,7 +1693,7 @@ class Google_PlayerLeaderboardScore extends Google_Model {
   public function getScoreValue() {
     return $this->scoreValue;
   }
-  public function setSocialRank(Google_LeaderboardScoreRank $socialRank) {
+  public function setSocialRank(Google_Service_Games_LeaderboardScoreRank$socialRank) {
     $this->socialRank = $socialRank;
   }
   public function getSocialRank() {
@@ -1661,7 +1714,7 @@ class Google_PlayerLeaderboardScore extends Google_Model {
 }
 
 class Google_PlayerLeaderboardScoreListResponse extends Google_Model {
-  protected $__itemsType = 'Google_PlayerLeaderboardScore';
+  protected $__itemsType = 'Google_Service_Games_PlayerLeaderboardScore';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1720,7 +1773,7 @@ class Google_PlayerScore extends Google_Model {
 
 class Google_PlayerScoreListResponse extends Google_Model {
   public $kind;
-  protected $__submittedScoresType = 'Google_PlayerScoreResponse';
+  protected $__submittedScoresType = 'Google_Service_Games_PlayerScoreResponse';
   protected $__submittedScoresDataType = 'array';
   public $submittedScores;
   public function setKind($kind) {
@@ -1743,7 +1796,7 @@ class Google_PlayerScoreResponse extends Google_Model {
   public $formattedScore;
   public $kind;
   public $leaderboardId;
-  protected $__unbeatenScoresType = 'Google_PlayerScore';
+  protected $__unbeatenScoresType = 'Google_Service_Games_PlayerScore';
   protected $__unbeatenScoresDataType = 'array';
   public $unbeatenScores;
   public function setBeatenScoreTimeSpans(/* array(Google_string) */ $beatenScoreTimeSpans) {
@@ -1782,7 +1835,7 @@ class Google_PlayerScoreResponse extends Google_Model {
 
 class Google_PlayerScoreSubmissionList extends Google_Model {
   public $kind;
-  protected $__scoresType = 'Google_ScoreSubmission';
+  protected $__scoresType = 'Google_Service_Games_ScoreSubmission';
   protected $__scoresDataType = 'array';
   public $scores;
   public function setKind($kind) {
@@ -1819,18 +1872,21 @@ class Google_RevisionCheckResponse extends Google_Model {
 
 class Google_Room extends Google_Model {
   public $applicationId;
-  protected $__autoMatchingCriteriaType = 'Google_RoomAutoMatchingCriteria';
+  protected $__autoMatchingCriteriaType = 'Google_Service_Games_RoomAutoMatchingCriteria';
   protected $__autoMatchingCriteriaDataType = '';
   public $autoMatchingCriteria;
-  protected $__creationDetailsType = 'Google_RoomModification';
+  protected $__autoMatchingStatusType = 'Google_Service_Games_RoomAutoMatchStatus';
+  protected $__autoMatchingStatusDataType = '';
+  public $autoMatchingStatus;
+  protected $__creationDetailsType = 'Google_Service_Games_RoomModification';
   protected $__creationDetailsDataType = '';
   public $creationDetails;
   public $description;
   public $kind;
-  protected $__lastUpdateDetailsType = 'Google_RoomModification';
+  protected $__lastUpdateDetailsType = 'Google_Service_Games_RoomModification';
   protected $__lastUpdateDetailsDataType = '';
   public $lastUpdateDetails;
-  protected $__participantsType = 'Google_RoomParticipant';
+  protected $__participantsType = 'Google_Service_Games_RoomParticipant';
   protected $__participantsDataType = 'array';
   public $participants;
   public $roomId;
@@ -1843,13 +1899,19 @@ class Google_Room extends Google_Model {
   public function getApplicationId() {
     return $this->applicationId;
   }
-  public function setAutoMatchingCriteria(Google_RoomAutoMatchingCriteria $autoMatchingCriteria) {
+  public function setAutoMatchingCriteria(Google_Service_Games_RoomAutoMatchingCriteria$autoMatchingCriteria) {
     $this->autoMatchingCriteria = $autoMatchingCriteria;
   }
   public function getAutoMatchingCriteria() {
     return $this->autoMatchingCriteria;
   }
-  public function setCreationDetails(Google_RoomModification $creationDetails) {
+  public function setAutoMatchingStatus(Google_Service_Games_RoomAutoMatchStatus$autoMatchingStatus) {
+    $this->autoMatchingStatus = $autoMatchingStatus;
+  }
+  public function getAutoMatchingStatus() {
+    return $this->autoMatchingStatus;
+  }
+  public function setCreationDetails(Google_Service_Games_RoomModification$creationDetails) {
     $this->creationDetails = $creationDetails;
   }
   public function getCreationDetails() {
@@ -1867,7 +1929,7 @@ class Google_Room extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setLastUpdateDetails(Google_RoomModification $lastUpdateDetails) {
+  public function setLastUpdateDetails(Google_Service_Games_RoomModification$lastUpdateDetails) {
     $this->lastUpdateDetails = $lastUpdateDetails;
   }
   public function getLastUpdateDetails() {
@@ -1903,6 +1965,23 @@ class Google_Room extends Google_Model {
   }
   public function getVariant() {
     return $this->variant;
+  }
+}
+
+class Google_RoomAutoMatchStatus extends Google_Model {
+  public $kind;
+  public $waitEstimateSeconds;
+  public function setKind($kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setWaitEstimateSeconds($waitEstimateSeconds) {
+    $this->waitEstimateSeconds = $waitEstimateSeconds;
+  }
+  public function getWaitEstimateSeconds() {
+    return $this->waitEstimateSeconds;
   }
 }
 
@@ -1955,25 +2034,33 @@ class Google_RoomClientAddress extends Google_Model {
 }
 
 class Google_RoomCreateRequest extends Google_Model {
-  protected $__autoMatchingCriteriaType = 'Google_RoomAutoMatchingCriteria';
+  protected $__autoMatchingCriteriaType = 'Google_Service_Games_RoomAutoMatchingCriteria';
   protected $__autoMatchingCriteriaDataType = '';
   public $autoMatchingCriteria;
-  protected $__clientAddressType = 'Google_RoomClientAddress';
+  public $capabilities;
+  protected $__clientAddressType = 'Google_Service_Games_RoomClientAddress';
   protected $__clientAddressDataType = '';
   public $clientAddress;
   public $invitedPlayerIds;
   public $kind;
-  protected $__networkDiagnosticsType = 'Google_NetworkDiagnostics';
+  protected $__networkDiagnosticsType = 'Google_Service_Games_NetworkDiagnostics';
   protected $__networkDiagnosticsDataType = '';
   public $networkDiagnostics;
   public $variant;
-  public function setAutoMatchingCriteria(Google_RoomAutoMatchingCriteria $autoMatchingCriteria) {
+  public function setAutoMatchingCriteria(Google_Service_Games_RoomAutoMatchingCriteria$autoMatchingCriteria) {
     $this->autoMatchingCriteria = $autoMatchingCriteria;
   }
   public function getAutoMatchingCriteria() {
     return $this->autoMatchingCriteria;
   }
-  public function setClientAddress(Google_RoomClientAddress $clientAddress) {
+  public function setCapabilities(/* array(Google_string) */ $capabilities) {
+    $this->assertIsArray($capabilities, 'Google_string', __METHOD__);
+    $this->capabilities = $capabilities;
+  }
+  public function getCapabilities() {
+    return $this->capabilities;
+  }
+  public function setClientAddress(Google_Service_Games_RoomClientAddress$clientAddress) {
     $this->clientAddress = $clientAddress;
   }
   public function getClientAddress() {
@@ -1992,7 +2079,7 @@ class Google_RoomCreateRequest extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setNetworkDiagnostics(Google_NetworkDiagnostics $networkDiagnostics) {
+  public function setNetworkDiagnostics(Google_Service_Games_NetworkDiagnostics$networkDiagnostics) {
     $this->networkDiagnostics = $networkDiagnostics;
   }
   public function getNetworkDiagnostics() {
@@ -2007,14 +2094,22 @@ class Google_RoomCreateRequest extends Google_Model {
 }
 
 class Google_RoomJoinRequest extends Google_Model {
-  protected $__clientAddressType = 'Google_RoomClientAddress';
+  public $capabilities;
+  protected $__clientAddressType = 'Google_Service_Games_RoomClientAddress';
   protected $__clientAddressDataType = '';
   public $clientAddress;
   public $kind;
-  protected $__networkDiagnosticsType = 'Google_NetworkDiagnostics';
+  protected $__networkDiagnosticsType = 'Google_Service_Games_NetworkDiagnostics';
   protected $__networkDiagnosticsDataType = '';
   public $networkDiagnostics;
-  public function setClientAddress(Google_RoomClientAddress $clientAddress) {
+  public function setCapabilities(/* array(Google_string) */ $capabilities) {
+    $this->assertIsArray($capabilities, 'Google_string', __METHOD__);
+    $this->capabilities = $capabilities;
+  }
+  public function getCapabilities() {
+    return $this->capabilities;
+  }
+  public function setClientAddress(Google_Service_Games_RoomClientAddress$clientAddress) {
     $this->clientAddress = $clientAddress;
   }
   public function getClientAddress() {
@@ -2026,7 +2121,7 @@ class Google_RoomJoinRequest extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setNetworkDiagnostics(Google_NetworkDiagnostics $networkDiagnostics) {
+  public function setNetworkDiagnostics(Google_Service_Games_NetworkDiagnostics$networkDiagnostics) {
     $this->networkDiagnostics = $networkDiagnostics;
   }
   public function getNetworkDiagnostics() {
@@ -2038,7 +2133,7 @@ class Google_RoomLeaveDiagnostics extends Google_Model {
   public $androidNetworkSubtype;
   public $androidNetworkType;
   public $kind;
-  protected $__peerSessionType = 'Google_PeerSessionDiagnostics';
+  protected $__peerSessionType = 'Google_Service_Games_PeerSessionDiagnostics';
   protected $__peerSessionDataType = 'array';
   public $peerSession;
   public $socketsUsed;
@@ -2077,7 +2172,7 @@ class Google_RoomLeaveDiagnostics extends Google_Model {
 
 class Google_RoomLeaveRequest extends Google_Model {
   public $kind;
-  protected $__leaveDiagnosticsType = 'Google_RoomLeaveDiagnostics';
+  protected $__leaveDiagnosticsType = 'Google_Service_Games_RoomLeaveDiagnostics';
   protected $__leaveDiagnosticsDataType = '';
   public $leaveDiagnostics;
   public $reason;
@@ -2087,7 +2182,7 @@ class Google_RoomLeaveRequest extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setLeaveDiagnostics(Google_RoomLeaveDiagnostics $leaveDiagnostics) {
+  public function setLeaveDiagnostics(Google_Service_Games_RoomLeaveDiagnostics$leaveDiagnostics) {
     $this->leaveDiagnostics = $leaveDiagnostics;
   }
   public function getLeaveDiagnostics() {
@@ -2102,7 +2197,7 @@ class Google_RoomLeaveRequest extends Google_Model {
 }
 
 class Google_RoomList extends Google_Model {
-  protected $__itemsType = 'Google_Room';
+  protected $__itemsType = 'Google_Service_Games_Room';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -2206,7 +2301,7 @@ class Google_RoomP2PStatus extends Google_Model {
 
 class Google_RoomP2PStatuses extends Google_Model {
   public $kind;
-  protected $__updatesType = 'Google_RoomP2PStatus';
+  protected $__updatesType = 'Google_Service_Games_RoomP2PStatus';
   protected $__updatesDataType = 'array';
   public $updates;
   public function setKind($kind) {
@@ -2225,27 +2320,35 @@ class Google_RoomP2PStatuses extends Google_Model {
 }
 
 class Google_RoomParticipant extends Google_Model {
-  protected $__autoMatchedPlayerType = 'Google_AnonymousPlayer';
+  protected $__autoMatchedPlayerType = 'Google_Service_Games_AnonymousPlayer';
   protected $__autoMatchedPlayerDataType = '';
   public $autoMatchedPlayer;
-  protected $__clientAddressType = 'Google_RoomClientAddress';
+  public $capabilities;
+  protected $__clientAddressType = 'Google_Service_Games_RoomClientAddress';
   protected $__clientAddressDataType = '';
   public $clientAddress;
   public $connected;
   public $id;
   public $kind;
   public $leaveReason;
-  protected $__playerType = 'Google_Player';
+  protected $__playerType = 'Google_Service_Games_Player';
   protected $__playerDataType = '';
   public $player;
   public $status;
-  public function setAutoMatchedPlayer(Google_AnonymousPlayer $autoMatchedPlayer) {
+  public function setAutoMatchedPlayer(Google_Service_Games_AnonymousPlayer$autoMatchedPlayer) {
     $this->autoMatchedPlayer = $autoMatchedPlayer;
   }
   public function getAutoMatchedPlayer() {
     return $this->autoMatchedPlayer;
   }
-  public function setClientAddress(Google_RoomClientAddress $clientAddress) {
+  public function setCapabilities(/* array(Google_string) */ $capabilities) {
+    $this->assertIsArray($capabilities, 'Google_string', __METHOD__);
+    $this->capabilities = $capabilities;
+  }
+  public function getCapabilities() {
+    return $this->capabilities;
+  }
+  public function setClientAddress(Google_Service_Games_RoomClientAddress$clientAddress) {
     $this->clientAddress = $clientAddress;
   }
   public function getClientAddress() {
@@ -2275,7 +2378,7 @@ class Google_RoomParticipant extends Google_Model {
   public function getLeaveReason() {
     return $this->leaveReason;
   }
-  public function setPlayer(Google_Player $player) {
+  public function setPlayer(Google_Service_Games_Player$player) {
     $this->player = $player;
   }
   public function getPlayer() {
@@ -2290,13 +2393,22 @@ class Google_RoomParticipant extends Google_Model {
 }
 
 class Google_RoomStatus extends Google_Model {
+  protected $__autoMatchingStatusType = 'Google_Service_Games_RoomAutoMatchStatus';
+  protected $__autoMatchingStatusDataType = '';
+  public $autoMatchingStatus;
   public $kind;
-  protected $__participantsType = 'Google_RoomParticipant';
+  protected $__participantsType = 'Google_Service_Games_RoomParticipant';
   protected $__participantsDataType = 'array';
   public $participants;
   public $roomId;
   public $status;
   public $statusVersion;
+  public function setAutoMatchingStatus(Google_Service_Games_RoomAutoMatchStatus$autoMatchingStatus) {
+    $this->autoMatchingStatus = $autoMatchingStatus;
+  }
+  public function getAutoMatchingStatus() {
+    return $this->autoMatchingStatus;
+  }
   public function setKind($kind) {
     $this->kind = $kind;
   }

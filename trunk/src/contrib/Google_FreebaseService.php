@@ -24,15 +24,14 @@
    */
   class Google_TextServiceResource extends Google_ServiceResource {
 
-
     /**
      * Returns blob attached to node at specified id as HTML (text.get)
      *
      * @param string $id The id of the item that you want data about
      * @param array $optParams Optional parameters.
      *
-     * @opt_param string maxlength The max number of characters to return. Valid only for 'plain' format.
      * @opt_param string format Sanitizing transformation.
+     * @opt_param string maxlength The max number of characters to return. Valid only for 'plain' format.
      * @return Google_ContentserviceGet
      */
     public function get($id, $optParams = array()) {
@@ -47,22 +46,58 @@
     }
   }
 
+  /**
+   * The "topic" collection of methods.
+   * Typical usage is:
+   *  <code>
+   *   $freebaseService = new Google_FreebaseService(...);
+   *   $topic = $freebaseService->topic;
+   *  </code>
+   */
+  class Google_TopicServiceResource extends Google_ServiceResource {
+
+    /**
+     * Get properties and meta-data about a topic. (topic.lookup)
+     *
+     * @param string $id The id of the item that you want data about.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string dateline Determines how up-to-date the data returned is. A unix epoch time, a guid or a 'now'
+     * @opt_param string filter A frebase domain, type or property id, 'suggest', 'commons', or 'all'. Filter the results and returns only appropriate properties.
+     * @opt_param string lang The language you 'd like the content in - a freebase /type/lang language key.
+     * @opt_param string limit The maximum number of property values to return for each property.
+     * @opt_param bool raw Do not apply any constraints, or get any names.
+     * @return Google_TopicLookup
+     */
+    public function lookup($id, $optParams = array()) {
+      $params = array('id' => $id);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('lookup', array($params));
+      if ($this->useObjects()) {
+        return new Google_TopicLookup($data);
+      } else {
+        return $data;
+      }
+    }
+  }
+
 /**
  * Service definition for Google_Freebase (v1).
  *
  * <p>
- * Lets you access the Freebase repository of open data.
+ * Topic and MQL APIs provide you structured access to Freebase data.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="http://wiki.freebase.com/wiki/API" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/freebase/" target="_blank">API Documentation</a>
  * </p>
  *
  * @author Google, Inc.
  */
 class Google_FreebaseService extends Google_Service {
   public $text;
+  public $topic;
   /**
    * Constructs the internal representation of the Freebase service.
    *
@@ -74,9 +109,16 @@ class Google_FreebaseService extends Google_Service {
     $this->serviceName = 'freebase';
 
     $client->addService($this->serviceName, $this->version);
-    $this->text = new Google_TextServiceResource($this, $this->serviceName, 'text', json_decode('{"methods": {"get": {"httpMethod": "GET", "response": {"$ref": "ContentserviceGet"}, "id": "freebase.text.get", "parameters": {"maxlength": {"type": "integer", "location": "query", "format": "uint32"}, "id": {"repeated": true, "required": true, "type": "string", "location": "path"}, "format": {"default": "plain", "enum": ["html", "plain", "raw"], "type": "string", "location": "query"}}, "path": "text{/id*}"}}}', true));
+    $this->text = new Google_TextServiceResource($this, $this->serviceName, 'text', json_decode('{"methods": {"get": {"id": "freebase.text.get", "path": "text{/id*}", "httpMethod": "GET", "parameters": {"format": {"type": "string", "default": "plain", "enum": ["html", "plain", "raw"], "location": "query"}, "id": {"type": "string", "required": true, "repeated": true, "location": "path"}, "maxlength": {"type": "integer", "format": "uint32", "location": "query"}}, "response": {"$ref": "ContentserviceGet"}}}}', true));
+    $this->topic = new Google_TopicServiceResource($this, $this->serviceName, 'topic', json_decode('{"methods": {"lookup": {"id": "freebase.topic.lookup", "path": "topic{/id*}", "httpMethod": "GET", "parameters": {"dateline": {"type": "string", "location": "query"}, "filter": {"type": "string", "repeated": true, "location": "query"}, "id": {"type": "string", "required": true, "repeated": true, "location": "path"}, "lang": {"type": "string", "default": "en", "location": "query"}, "limit": {"type": "integer", "default": "10", "format": "uint32", "location": "query"}, "raw": {"type": "boolean", "default": "false", "location": "query"}}, "response": {"$ref": "TopicLookup"}}}}', true));
+
+    $this-> = new Google_ImageServiceResource($this, $this->serviceName, 'image', json_decode('{"path": "image{/id*}", "id": "freebase.image", "supportsMediaDownload": true, "httpMethod": "GET", "parameters": {"fallbackid": {"type": "string", "default": "/freebase/no_image_png", "location": "query"}, "id": {"type": "string", "required": true, "repeated": true, "location": "path"}, "maxheight": {"type": "integer", "format": "uint32", "maximum": "4096", "location": "query"}, "maxwidth": {"type": "integer", "format": "uint32", "maximum": "4096", "location": "query"}, "mode": {"type": "string", "default": "fit", "enum": ["fill", "fillcrop", "fillcropmid", "fit"], "location": "query"}, "pad": {"type": "boolean", "default": "false", "location": "query"}}}', true));
+    $this-> = new Google_MqlreadServiceResource($this, $this->serviceName, 'mqlread', json_decode('{"path": "mqlread", "id": "freebase.mqlread", "supportsMediaDownload": true, "httpMethod": "GET", "parameters": {"as_of_time": {"type": "string", "location": "query"}, "callback": {"type": "string", "location": "query"}, "cost": {"type": "boolean", "default": "false", "location": "query"}, "cursor": {"type": "string", "location": "query"}, "dateline": {"type": "string", "location": "query"}, "html_escape": {"type": "boolean", "default": "true", "location": "query"}, "indent": {"type": "integer", "default": "0", "format": "uint32", "maximum": "10", "location": "query"}, "lang": {"type": "string", "default": "/lang/en", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}, "uniqueness_failure": {"type": "string", "default": "hard", "enum": ["hard", "soft"], "location": "query"}}}', true));
+    $this-> = new Google_MqlwriteServiceResource($this, $this->serviceName, 'mqlwrite', json_decode('{"path": "mqlwrite", "scopes": ["https://www.googleapis.com/auth/freebase"], "id": "freebase.mqlwrite", "supportsMediaDownload": true, "httpMethod": "GET", "parameters": {"callback": {"type": "string", "location": "query"}, "dateline": {"type": "string", "location": "query"}, "indent": {"type": "integer", "default": "0", "format": "uint32", "maximum": "10", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}, "use_permission_of": {"type": "string", "location": "query"}}}', true));
   }
 }
+
+
 
 class Google_ContentserviceGet extends Google_Model {
   public $result;
@@ -85,5 +127,262 @@ class Google_ContentserviceGet extends Google_Model {
   }
   public function getResult() {
     return $this->result;
+  }
+}
+
+class Google_TopicLookup extends Google_Model {
+  public $id;
+  protected $__propertyType = 'Google_Service_Freebase_TopicLookupProperty';
+  protected $__propertyDataType = '';
+  public $property;
+  public function setId($id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setProperty(Google_Service_Freebase_TopicLookupProperty$property) {
+    $this->property = $property;
+  }
+  public function getProperty() {
+    return $this->property;
+  }
+}
+
+class Google_TopicLookupProperty extends Google_Model {
+  protected $__/freebase/object_profile/linkcountType = 'Google_Service_Freebase_TopicStatslinkcount';
+  protected $__/freebase/object_profile/linkcountDataType = '';
+  public $/freebase/object_profile/linkcount;
+  public function set/freebase/object_profile/linkcount(Google_Service_Freebase_TopicStatslinkcount$/freebase/object_profile/linkcount) {
+    $this->/freebase/object_profile/linkcount = $/freebase/object_profile/linkcount;
+  }
+  public function get/freebase/object_profile/linkcount() {
+    return $this->/freebase/object_profile/linkcount;
+  }
+}
+
+class Google_TopicPropertyvalue extends Google_Model {
+  public $count;
+  public $status;
+  protected $__valuesType = 'Google_Service_Freebase_TopicValue';
+  protected $__valuesDataType = 'array';
+  public $values;
+  public $valuetype;
+  public function setCount($count) {
+    $this->count = $count;
+  }
+  public function getCount() {
+    return $this->count;
+  }
+  public function setStatus($status) {
+    $this->status = $status;
+  }
+  public function getStatus() {
+    return $this->status;
+  }
+  public function setValues(/* array(Google_TopicValue) */ $values) {
+    $this->assertIsArray($values, 'Google_TopicValue', __METHOD__);
+    $this->values = $values;
+  }
+  public function getValues() {
+    return $this->values;
+  }
+  public function setValuetype($valuetype) {
+    $this->valuetype = $valuetype;
+  }
+  public function getValuetype() {
+    return $this->valuetype;
+  }
+}
+
+class Google_TopicStatslinkcount extends Google_Model {
+  public $type;
+  protected $__valuesType = 'Google_Service_Freebase_TopicStatslinkcountValues';
+  protected $__valuesDataType = 'array';
+  public $values;
+  public function setType($type) {
+    $this->type = $type;
+  }
+  public function getType() {
+    return $this->type;
+  }
+  public function setValues(/* array(Google_TopicStatslinkcountValues) */ $values) {
+    $this->assertIsArray($values, 'Google_TopicStatslinkcountValues', __METHOD__);
+    $this->values = $values;
+  }
+  public function getValues() {
+    return $this->values;
+  }
+}
+
+class Google_TopicStatslinkcountValues extends Google_Model {
+  public $count;
+  public $id;
+  protected $__valuesType = 'Google_Service_Freebase_TopicStatslinkcountValuesValues';
+  protected $__valuesDataType = 'array';
+  public $values;
+  public function setCount($count) {
+    $this->count = $count;
+  }
+  public function getCount() {
+    return $this->count;
+  }
+  public function setId($id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setValues(/* array(Google_TopicStatslinkcountValuesValues) */ $values) {
+    $this->assertIsArray($values, 'Google_TopicStatslinkcountValuesValues', __METHOD__);
+    $this->values = $values;
+  }
+  public function getValues() {
+    return $this->values;
+  }
+}
+
+class Google_TopicStatslinkcountValuesValues extends Google_Model {
+  public $count;
+  public $id;
+  protected $__valuesType = 'Google_Service_Freebase_TopicStatslinkcountValuesValuesValues';
+  protected $__valuesDataType = 'array';
+  public $values;
+  public function setCount($count) {
+    $this->count = $count;
+  }
+  public function getCount() {
+    return $this->count;
+  }
+  public function setId($id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setValues(/* array(Google_TopicStatslinkcountValuesValuesValues) */ $values) {
+    $this->assertIsArray($values, 'Google_TopicStatslinkcountValuesValuesValues', __METHOD__);
+    $this->values = $values;
+  }
+  public function getValues() {
+    return $this->values;
+  }
+}
+
+class Google_TopicStatslinkcountValuesValuesValues extends Google_Model {
+  public $count;
+  public $id;
+  public function setCount($count) {
+    $this->count = $count;
+  }
+  public function getCount() {
+    return $this->count;
+  }
+  public function setId($id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+}
+
+class Google_TopicValue extends Google_Model {
+  protected $__citationType = 'Google_Service_Freebase_TopicValueCitation';
+  protected $__citationDataType = '';
+  public $citation;
+  public $creator;
+  public $dataset;
+  public $id;
+  public $lang;
+  public $project;
+  protected $__propertyType = 'Google_Service_Freebase_TopicPropertyvalue';
+  protected $__propertyDataType = 'map';
+  public $property;
+  public $text;
+  public $timestamp;
+  public $value;
+  public function setCitation(Google_Service_Freebase_TopicValueCitation$citation) {
+    $this->citation = $citation;
+  }
+  public function getCitation() {
+    return $this->citation;
+  }
+  public function setCreator($creator) {
+    $this->creator = $creator;
+  }
+  public function getCreator() {
+    return $this->creator;
+  }
+  public function setDataset($dataset) {
+    $this->dataset = $dataset;
+  }
+  public function getDataset() {
+    return $this->dataset;
+  }
+  public function setId($id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setLang($lang) {
+    $this->lang = $lang;
+  }
+  public function getLang() {
+    return $this->lang;
+  }
+  public function setProject($project) {
+    $this->project = $project;
+  }
+  public function getProject() {
+    return $this->project;
+  }
+  public function setProperty(Google_Service_Freebase_TopicPropertyvalue$property) {
+    $this->property = $property;
+  }
+  public function getProperty() {
+    return $this->property;
+  }
+  public function setText($text) {
+    $this->text = $text;
+  }
+  public function getText() {
+    return $this->text;
+  }
+  public function setTimestamp($timestamp) {
+    $this->timestamp = $timestamp;
+  }
+  public function getTimestamp() {
+    return $this->timestamp;
+  }
+  public function setValue($value) {
+    $this->value = $value;
+  }
+  public function getValue() {
+    return $this->value;
+  }
+}
+
+class Google_TopicValueCitation extends Google_Model {
+  public $provider;
+  public $statement;
+  public $uri;
+  public function setProvider($provider) {
+    $this->provider = $provider;
+  }
+  public function getProvider() {
+    return $this->provider;
+  }
+  public function setStatement($statement) {
+    $this->statement = $statement;
+  }
+  public function getStatement() {
+    return $this->statement;
+  }
+  public function setUri($uri) {
+    $this->uri = $uri;
+  }
+  public function getUri() {
+    return $this->uri;
   }
 }

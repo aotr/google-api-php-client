@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2010 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -25,7 +23,6 @@
    *  </code>
    */
   class Google_GroupsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Gets one resource by id. (groups.get)
@@ -109,10 +106,12 @@ class Google_GroupssettingsService extends Google_Service {
     $this->serviceName = 'groupssettings';
 
     $client->addService($this->serviceName, $this->version);
-    $this->groups = new Google_GroupsServiceResource($this, $this->serviceName, 'groups', json_decode('{"methods": {"patch": {"scopes": ["https://www.googleapis.com/auth/apps.groups.settings"], "parameters": {"groupUniqueId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "Groups"}, "response": {"$ref": "Groups"}, "httpMethod": "PATCH", "path": "{groupUniqueId}", "id": "groupsSettings.groups.patch"}, "update": {"scopes": ["https://www.googleapis.com/auth/apps.groups.settings"], "parameters": {"groupUniqueId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "Groups"}, "response": {"$ref": "Groups"}, "httpMethod": "PUT", "path": "{groupUniqueId}", "id": "groupsSettings.groups.update"}, "get": {"scopes": ["https://www.googleapis.com/auth/apps.groups.settings"], "parameters": {"groupUniqueId": {"required": true, "type": "string", "location": "path"}}, "response": {"$ref": "Groups"}, "httpMethod": "GET", "path": "{groupUniqueId}", "id": "groupsSettings.groups.get"}}}', true));
+    $this->groups = new Google_GroupsServiceResource($this, $this->serviceName, 'groups', json_decode('{"methods": {"get": {"id": "groupsSettings.groups.get", "path": "{groupUniqueId}", "httpMethod": "GET", "parameters": {"groupUniqueId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Groups"}, "scopes": ["https://www.googleapis.com/auth/apps.groups.settings"]}, "patch": {"id": "groupsSettings.groups.patch", "path": "{groupUniqueId}", "httpMethod": "PATCH", "parameters": {"groupUniqueId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Groups"}, "response": {"$ref": "Groups"}, "scopes": ["https://www.googleapis.com/auth/apps.groups.settings"]}, "update": {"id": "groupsSettings.groups.update", "path": "{groupUniqueId}", "httpMethod": "PUT", "parameters": {"groupUniqueId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Groups"}, "response": {"$ref": "Groups"}, "scopes": ["https://www.googleapis.com/auth/apps.groups.settings"]}}}', true));
 
   }
 }
+
+
 
 class Google_Groups extends Google_Model {
   public $allowExternalMembers;

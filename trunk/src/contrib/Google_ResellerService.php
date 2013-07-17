@@ -1,7 +1,5 @@
 <?php
 /*
- * Copyright 2010 Google Inc.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
@@ -25,7 +23,6 @@
    *  </code>
    */
   class Google_CustomersServiceResource extends Google_ServiceResource {
-
 
     /**
      * Gets a customer resource if one exists and is owned by the reseller. (customers.get)
@@ -111,7 +108,6 @@
    *  </code>
    */
   class Google_SubscriptionsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Changes the plan of a subscription (subscriptions.changePlan)
@@ -228,9 +224,11 @@
      *
      * @param array $optParams Optional parameters.
      *
-     * @opt_param string pageToken Token to specify next page in the list
-     * @opt_param string maxResults Maximum number of results to return
+     * @opt_param string customerAuthToken An auth token needed if the customer is not a resold customer of this reseller. Can be generated at https://www.google.com/a/cpanel/customer-domain/TransferToken.Optional.
+     * @opt_param string customerId Id of the Customer
      * @opt_param string customerNamePrefix Prefix of the customer's domain name by which the subscriptions should be filtered. Optional
+     * @opt_param string maxResults Maximum number of results to return
+     * @opt_param string pageToken Token to specify next page in the list
      * @return Google_Subscriptions
      */
     public function listSubscriptions($optParams = array()) {
@@ -291,11 +289,13 @@ class Google_ResellerService extends Google_Service {
     $this->serviceName = 'reseller';
 
     $client->addService($this->serviceName, $this->version);
-    $this->customers = new Google_CustomersServiceResource($this, $this->serviceName, 'customers', json_decode('{"methods": {"insert": {"parameters": {"customerAuthToken": {"type": "string", "location": "query"}}, "request": {"$ref": "Customer"}, "response": {"$ref": "Customer"}, "httpMethod": "POST", "path": "customers", "id": "reseller.customers.insert"}, "patch": {"parameters": {"customerId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "Customer"}, "response": {"$ref": "Customer"}, "httpMethod": "PATCH", "path": "customers/{customerId}", "id": "reseller.customers.patch"}, "update": {"parameters": {"customerId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "Customer"}, "response": {"$ref": "Customer"}, "httpMethod": "PUT", "path": "customers/{customerId}", "id": "reseller.customers.update"}, "get": {"parameters": {"customerId": {"required": true, "type": "string", "location": "path"}}, "response": {"$ref": "Customer"}, "httpMethod": "GET", "path": "customers/{customerId}", "id": "reseller.customers.get"}}}', true));
-    $this->subscriptions = new Google_SubscriptionsServiceResource($this, $this->serviceName, 'subscriptions', json_decode('{"methods": {"insert": {"parameters": {"customerAuthToken": {"type": "string", "location": "query"}, "customerId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "Subscription"}, "response": {"$ref": "Subscription"}, "httpMethod": "POST", "path": "customers/{customerId}/subscriptions", "id": "reseller.subscriptions.insert"}, "changeRenewalSettings": {"parameters": {"subscriptionId": {"required": true, "type": "string", "location": "path"}, "customerId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "RenewalSettings"}, "response": {"$ref": "Subscription"}, "httpMethod": "POST", "path": "customers/{customerId}/subscriptions/{subscriptionId}/changeRenewalSettings", "id": "reseller.subscriptions.changeRenewalSettings"}, "changePlan": {"parameters": {"subscriptionId": {"required": true, "type": "string", "location": "path"}, "customerId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "ChangePlanRequest"}, "response": {"$ref": "Subscription"}, "httpMethod": "POST", "path": "customers/{customerId}/subscriptions/{subscriptionId}/changePlan", "id": "reseller.subscriptions.changePlan"}, "get": {"parameters": {"subscriptionId": {"required": true, "type": "string", "location": "path"}, "customerId": {"required": true, "type": "string", "location": "path"}}, "response": {"$ref": "Subscription"}, "httpMethod": "GET", "path": "customers/{customerId}/subscriptions/{subscriptionId}", "id": "reseller.subscriptions.get"}, "list": {"parameters": {"pageToken": {"type": "string", "location": "query"}, "maxResults": {"format": "uint32", "maximum": "100", "minimum": "1", "location": "query", "type": "integer"}, "customerNamePrefix": {"type": "string", "location": "query"}}, "id": "reseller.subscriptions.list", "httpMethod": "GET", "path": "subscriptions", "response": {"$ref": "Subscriptions"}}, "changeSeats": {"parameters": {"subscriptionId": {"required": true, "type": "string", "location": "path"}, "customerId": {"required": true, "type": "string", "location": "path"}}, "request": {"$ref": "Seats"}, "response": {"$ref": "Subscription"}, "httpMethod": "POST", "path": "customers/{customerId}/subscriptions/{subscriptionId}/changeSeats", "id": "reseller.subscriptions.changeSeats"}, "startPaidService": {"parameters": {"subscriptionId": {"required": true, "type": "string", "location": "path"}, "customerId": {"required": true, "type": "string", "location": "path"}}, "response": {"$ref": "Subscription"}, "httpMethod": "POST", "path": "customers/{customerId}/subscriptions/{subscriptionId}/startPaidService", "id": "reseller.subscriptions.startPaidService"}, "delete": {"parameters": {"deletionType": {"enum": ["cancel", "downgrade", "suspend"], "required": true, "location": "query", "type": "string"}, "customerId": {"required": true, "type": "string", "location": "path"}, "subscriptionId": {"required": true, "type": "string", "location": "path"}}, "httpMethod": "DELETE", "path": "customers/{customerId}/subscriptions/{subscriptionId}", "id": "reseller.subscriptions.delete"}}}', true));
+    $this->customers = new Google_CustomersServiceResource($this, $this->serviceName, 'customers', json_decode('{"methods": {"get": {"id": "reseller.customers.get", "path": "customers/{customerId}", "httpMethod": "GET", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Customer"}}, "insert": {"id": "reseller.customers.insert", "path": "customers", "httpMethod": "POST", "parameters": {"customerAuthToken": {"type": "string", "location": "query"}}, "request": {"$ref": "Customer"}, "response": {"$ref": "Customer"}}, "patch": {"id": "reseller.customers.patch", "path": "customers/{customerId}", "httpMethod": "PATCH", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Customer"}, "response": {"$ref": "Customer"}}, "update": {"id": "reseller.customers.update", "path": "customers/{customerId}", "httpMethod": "PUT", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Customer"}, "response": {"$ref": "Customer"}}}}', true));
+    $this->subscriptions = new Google_SubscriptionsServiceResource($this, $this->serviceName, 'subscriptions', json_decode('{"methods": {"changePlan": {"id": "reseller.subscriptions.changePlan", "path": "customers/{customerId}/subscriptions/{subscriptionId}/changePlan", "httpMethod": "POST", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}, "subscriptionId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "ChangePlanRequest"}, "response": {"$ref": "Subscription"}}, "changeRenewalSettings": {"id": "reseller.subscriptions.changeRenewalSettings", "path": "customers/{customerId}/subscriptions/{subscriptionId}/changeRenewalSettings", "httpMethod": "POST", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}, "subscriptionId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "RenewalSettings"}, "response": {"$ref": "Subscription"}}, "changeSeats": {"id": "reseller.subscriptions.changeSeats", "path": "customers/{customerId}/subscriptions/{subscriptionId}/changeSeats", "httpMethod": "POST", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}, "subscriptionId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Seats"}, "response": {"$ref": "Subscription"}}, "delete": {"id": "reseller.subscriptions.delete", "path": "customers/{customerId}/subscriptions/{subscriptionId}", "httpMethod": "DELETE", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}, "deletionType": {"type": "string", "required": true, "enum": ["cancel", "downgrade", "suspend"], "location": "query"}, "subscriptionId": {"type": "string", "required": true, "location": "path"}}}, "get": {"id": "reseller.subscriptions.get", "path": "customers/{customerId}/subscriptions/{subscriptionId}", "httpMethod": "GET", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}, "subscriptionId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Subscription"}}, "insert": {"id": "reseller.subscriptions.insert", "path": "customers/{customerId}/subscriptions", "httpMethod": "POST", "parameters": {"customerAuthToken": {"type": "string", "location": "query"}, "customerId": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Subscription"}, "response": {"$ref": "Subscription"}}, "list": {"id": "reseller.subscriptions.list", "path": "subscriptions", "httpMethod": "GET", "parameters": {"customerAuthToken": {"type": "string", "location": "query"}, "customerId": {"type": "string", "location": "query"}, "customerNamePrefix": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "format": "uint32", "minimum": "1", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}}, "response": {"$ref": "Subscriptions"}}, "startPaidService": {"id": "reseller.subscriptions.startPaidService", "path": "customers/{customerId}/subscriptions/{subscriptionId}/startPaidService", "httpMethod": "POST", "parameters": {"customerId": {"type": "string", "required": true, "location": "path"}, "subscriptionId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Subscription"}}}}', true));
 
   }
 }
+
+
 
 class Google_Address extends Google_Model {
   public $addressLine1;
@@ -374,7 +374,7 @@ class Google_ChangePlanRequest extends Google_Model {
   public $kind;
   public $planName;
   public $purchaseOrderId;
-  protected $__seatsType = 'Google_Seats';
+  protected $__seatsType = 'Google_Service_Reseller_Seats';
   protected $__seatsDataType = '';
   public $seats;
   public function setKind($kind) {
@@ -395,7 +395,7 @@ class Google_ChangePlanRequest extends Google_Model {
   public function getPurchaseOrderId() {
     return $this->purchaseOrderId;
   }
-  public function setSeats(Google_Seats $seats) {
+  public function setSeats(Google_Service_Reseller_Seats$seats) {
     $this->seats = $seats;
   }
   public function getSeats() {
@@ -409,9 +409,10 @@ class Google_Customer extends Google_Model {
   public $customerId;
   public $kind;
   public $phoneNumber;
-  protected $__postalAddressType = 'Google_Address';
+  protected $__postalAddressType = 'Google_Service_Reseller_Address';
   protected $__postalAddressDataType = '';
   public $postalAddress;
+  public $resourceUiUrl;
   public function setAlternateEmail($alternateEmail) {
     $this->alternateEmail = $alternateEmail;
   }
@@ -442,11 +443,17 @@ class Google_Customer extends Google_Model {
   public function getPhoneNumber() {
     return $this->phoneNumber;
   }
-  public function setPostalAddress(Google_Address $postalAddress) {
+  public function setPostalAddress(Google_Service_Reseller_Address$postalAddress) {
     $this->postalAddress = $postalAddress;
   }
   public function getPostalAddress() {
     return $this->postalAddress;
+  }
+  public function setResourceUiUrl($resourceUiUrl) {
+    $this->resourceUiUrl = $resourceUiUrl;
+  }
+  public function getResourceUiUrl() {
+    return $this->resourceUiUrl;
   }
 }
 
@@ -495,19 +502,24 @@ class Google_Subscription extends Google_Model {
   public $creationTime;
   public $customerId;
   public $kind;
-  protected $__planType = 'Google_SubscriptionPlan';
+  protected $__planType = 'Google_Service_Reseller_SubscriptionPlan';
   protected $__planDataType = '';
   public $plan;
   public $purchaseOrderId;
-  protected $__renewalSettingsType = 'Google_RenewalSettings';
+  protected $__renewalSettingsType = 'Google_Service_Reseller_RenewalSettings';
   protected $__renewalSettingsDataType = '';
   public $renewalSettings;
-  protected $__seatsType = 'Google_Seats';
+  public $resourceUiUrl;
+  protected $__seatsType = 'Google_Service_Reseller_Seats';
   protected $__seatsDataType = '';
   public $seats;
   public $skuId;
+  public $status;
   public $subscriptionId;
-  protected $__trialSettingsType = 'Google_SubscriptionTrialSettings';
+  protected $__transferInfoType = 'Google_Service_Reseller_SubscriptionTransferInfo';
+  protected $__transferInfoDataType = '';
+  public $transferInfo;
+  protected $__trialSettingsType = 'Google_Service_Reseller_SubscriptionTrialSettings';
   protected $__trialSettingsDataType = '';
   public $trialSettings;
   public function setCreationTime($creationTime) {
@@ -528,7 +540,7 @@ class Google_Subscription extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
-  public function setPlan(Google_SubscriptionPlan $plan) {
+  public function setPlan(Google_Service_Reseller_SubscriptionPlan$plan) {
     $this->plan = $plan;
   }
   public function getPlan() {
@@ -540,13 +552,19 @@ class Google_Subscription extends Google_Model {
   public function getPurchaseOrderId() {
     return $this->purchaseOrderId;
   }
-  public function setRenewalSettings(Google_RenewalSettings $renewalSettings) {
+  public function setRenewalSettings(Google_Service_Reseller_RenewalSettings$renewalSettings) {
     $this->renewalSettings = $renewalSettings;
   }
   public function getRenewalSettings() {
     return $this->renewalSettings;
   }
-  public function setSeats(Google_Seats $seats) {
+  public function setResourceUiUrl($resourceUiUrl) {
+    $this->resourceUiUrl = $resourceUiUrl;
+  }
+  public function getResourceUiUrl() {
+    return $this->resourceUiUrl;
+  }
+  public function setSeats(Google_Service_Reseller_Seats$seats) {
     $this->seats = $seats;
   }
   public function getSeats() {
@@ -558,13 +576,25 @@ class Google_Subscription extends Google_Model {
   public function getSkuId() {
     return $this->skuId;
   }
+  public function setStatus($status) {
+    $this->status = $status;
+  }
+  public function getStatus() {
+    return $this->status;
+  }
   public function setSubscriptionId($subscriptionId) {
     $this->subscriptionId = $subscriptionId;
   }
   public function getSubscriptionId() {
     return $this->subscriptionId;
   }
-  public function setTrialSettings(Google_SubscriptionTrialSettings $trialSettings) {
+  public function setTransferInfo(Google_Service_Reseller_SubscriptionTransferInfo$transferInfo) {
+    $this->transferInfo = $transferInfo;
+  }
+  public function getTransferInfo() {
+    return $this->transferInfo;
+  }
+  public function setTrialSettings(Google_Service_Reseller_SubscriptionTrialSettings$trialSettings) {
     $this->trialSettings = $trialSettings;
   }
   public function getTrialSettings() {
@@ -573,12 +603,12 @@ class Google_Subscription extends Google_Model {
 }
 
 class Google_SubscriptionPlan extends Google_Model {
-  protected $__commitmentIntervalType = 'Google_SubscriptionPlanCommitmentInterval';
+  protected $__commitmentIntervalType = 'Google_Service_Reseller_SubscriptionPlanCommitmentInterval';
   protected $__commitmentIntervalDataType = '';
   public $commitmentInterval;
   public $isCommitmentPlan;
   public $planName;
-  public function setCommitmentInterval(Google_SubscriptionPlanCommitmentInterval $commitmentInterval) {
+  public function setCommitmentInterval(Google_Service_Reseller_SubscriptionPlanCommitmentInterval$commitmentInterval) {
     $this->commitmentInterval = $commitmentInterval;
   }
   public function getCommitmentInterval() {
@@ -615,6 +645,16 @@ class Google_SubscriptionPlanCommitmentInterval extends Google_Model {
   }
 }
 
+class Google_SubscriptionTransferInfo extends Google_Model {
+  public $transferabilityExpirationTime;
+  public function setTransferabilityExpirationTime($transferabilityExpirationTime) {
+    $this->transferabilityExpirationTime = $transferabilityExpirationTime;
+  }
+  public function getTransferabilityExpirationTime() {
+    return $this->transferabilityExpirationTime;
+  }
+}
+
 class Google_SubscriptionTrialSettings extends Google_Model {
   public $isInTrial;
   public $trialEndTime;
@@ -635,7 +675,7 @@ class Google_SubscriptionTrialSettings extends Google_Model {
 class Google_Subscriptions extends Google_Model {
   public $kind;
   public $nextPageToken;
-  protected $__subscriptionsType = 'Google_Subscription';
+  protected $__subscriptionsType = 'Google_Service_Reseller_Subscription';
   protected $__subscriptionsDataType = 'array';
   public $subscriptions;
   public function setKind($kind) {

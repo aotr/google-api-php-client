@@ -24,7 +24,6 @@
    */
   class Google_PagespeedapiServiceResource extends Google_ServiceResource {
 
-
     /**
      * Runs Page Speed analysis on the page at the specified URL, and returns a Page Speed score, a list
      * of suggestions to make that page faster, and other information. (pagespeedapi.runpagespeed)
@@ -34,6 +33,7 @@
      *
      * @opt_param string locale The locale used to localize formatted results
      * @opt_param string rule A Page Speed rule to run; if none are given, all rules are run
+     * @opt_param bool screenshot Indicates if binary data containing a screenshot should be included
      * @opt_param string strategy The analysis strategy to use
      * @return Google_Result
      */
@@ -58,7 +58,7 @@
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://code.google.com/apis/pagespeedonline/v1/getting_started.html" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/speed/docs/insights/v1/getting_started" target="_blank">API Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -76,62 +76,43 @@ class Google_PagespeedonlineService extends Google_Service {
     $this->serviceName = 'pagespeedonline';
 
     $client->addService($this->serviceName, $this->version);
-    $this->pagespeedapi = new Google_PagespeedapiServiceResource($this, $this->serviceName, 'pagespeedapi', json_decode('{"methods": {"runpagespeed": {"httpMethod": "GET", "response": {"$ref": "Result"}, "id": "pagespeedonline.pagespeedapi.runpagespeed", "parameters": {"locale": {"type": "string", "location": "query"}, "url": {"required": true, "type": "string", "location": "query"}, "rule": {"repeated": true, "type": "string", "location": "query"}, "strategy": {"enum": ["desktop", "mobile"], "type": "string", "location": "query"}}, "path": "runPagespeed"}}}', true));
+    $this->pagespeedapi = new Google_PagespeedapiServiceResource($this, $this->serviceName, 'pagespeedapi', json_decode('{"methods": {"runpagespeed": {"id": "pagespeedonline.pagespeedapi.runpagespeed", "path": "runPagespeed", "httpMethod": "GET", "parameters": {"locale": {"type": "string", "location": "query"}, "rule": {"type": "string", "repeated": true, "location": "query"}, "screenshot": {"type": "boolean", "default": "false", "location": "query"}, "strategy": {"type": "string", "enum": ["desktop", "mobile"], "location": "query"}, "url": {"type": "string", "required": true, "location": "query"}}, "response": {"$ref": "Result"}}}}', true));
 
   }
 }
 
+
+
 class Google_Result extends Google_Model {
-  public $kind;
-  protected $__formattedResultsType = 'Google_ResultFormattedResults';
+  protected $__formattedResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResults';
   protected $__formattedResultsDataType = '';
   public $formattedResults;
-  public $title;
-  protected $__versionType = 'Google_ResultVersion';
-  protected $__versionDataType = '';
-  public $version;
-  public $score;
-  public $responseCode;
+  public $id;
   public $invalidRules;
-  protected $__pageStatsType = 'Google_ResultPageStats';
+  public $kind;
+  protected $__pageStatsType = 'Google_Service_Pagespeedonline_ResultPageStats';
   protected $__pageStatsDataType = '';
   public $pageStats;
-  public $id;
-  public function setKind($kind) {
-    $this->kind = $kind;
-  }
-  public function getKind() {
-    return $this->kind;
-  }
-  public function setFormattedResults(Google_ResultFormattedResults $formattedResults) {
+  public $responseCode;
+  public $score;
+  protected $__screenshotType = 'Google_Service_Pagespeedonline_ResultScreenshot';
+  protected $__screenshotDataType = '';
+  public $screenshot;
+  public $title;
+  protected $__versionType = 'Google_Service_Pagespeedonline_ResultVersion';
+  protected $__versionDataType = '';
+  public $version;
+  public function setFormattedResults(Google_Service_Pagespeedonline_ResultFormattedResults$formattedResults) {
     $this->formattedResults = $formattedResults;
   }
   public function getFormattedResults() {
     return $this->formattedResults;
   }
-  public function setTitle($title) {
-    $this->title = $title;
+  public function setId($id) {
+    $this->id = $id;
   }
-  public function getTitle() {
-    return $this->title;
-  }
-  public function setVersion(Google_ResultVersion $version) {
-    $this->version = $version;
-  }
-  public function getVersion() {
-    return $this->version;
-  }
-  public function setScore($score) {
-    $this->score = $score;
-  }
-  public function getScore() {
-    return $this->score;
-  }
-  public function setResponseCode($responseCode) {
-    $this->responseCode = $responseCode;
-  }
-  public function getResponseCode() {
-    return $this->responseCode;
+  public function getId() {
+    return $this->id;
   }
   public function setInvalidRules(/* array(Google_string) */ $invalidRules) {
     $this->assertIsArray($invalidRules, 'Google_string', __METHOD__);
@@ -140,23 +121,53 @@ class Google_Result extends Google_Model {
   public function getInvalidRules() {
     return $this->invalidRules;
   }
-  public function setPageStats(Google_ResultPageStats $pageStats) {
+  public function setKind($kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setPageStats(Google_Service_Pagespeedonline_ResultPageStats$pageStats) {
     $this->pageStats = $pageStats;
   }
   public function getPageStats() {
     return $this->pageStats;
   }
-  public function setId($id) {
-    $this->id = $id;
+  public function setResponseCode($responseCode) {
+    $this->responseCode = $responseCode;
   }
-  public function getId() {
-    return $this->id;
+  public function getResponseCode() {
+    return $this->responseCode;
+  }
+  public function setScore($score) {
+    $this->score = $score;
+  }
+  public function getScore() {
+    return $this->score;
+  }
+  public function setScreenshot(Google_Service_Pagespeedonline_ResultScreenshot$screenshot) {
+    $this->screenshot = $screenshot;
+  }
+  public function getScreenshot() {
+    return $this->screenshot;
+  }
+  public function setTitle($title) {
+    $this->title = $title;
+  }
+  public function getTitle() {
+    return $this->title;
+  }
+  public function setVersion(Google_Service_Pagespeedonline_ResultVersion$version) {
+    $this->version = $version;
+  }
+  public function getVersion() {
+    return $this->version;
   }
 }
 
 class Google_ResultFormattedResults extends Google_Model {
   public $locale;
-  protected $__ruleResultsType = 'Google_ResultFormattedResultsRuleResults';
+  protected $__ruleResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement';
   protected $__ruleResultsDataType = 'map';
   public $ruleResults;
   public function setLocale($locale) {
@@ -165,7 +176,7 @@ class Google_ResultFormattedResults extends Google_Model {
   public function getLocale() {
     return $this->locale;
   }
-  public function setRuleResults(Google_ResultFormattedResultsRuleResults $ruleResults) {
+  public function setRuleResults(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement$ruleResults) {
     $this->ruleResults = $ruleResults;
   }
   public function getRuleResults() {
@@ -173,31 +184,18 @@ class Google_ResultFormattedResults extends Google_Model {
   }
 }
 
-class Google_ResultFormattedResultsRuleResults extends Google_Model {
+class Google_ResultFormattedResultsRuleResultsElement extends Google_Model {
   public $localizedRuleName;
-  protected $__urlBlocksType = 'Google_ResultFormattedResultsRuleResultsUrlBlocks';
+  public $ruleImpact;
+  public $ruleScore;
+  protected $__urlBlocksType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks';
   protected $__urlBlocksDataType = 'array';
   public $urlBlocks;
-  public $ruleScore;
-  public $ruleImpact;
   public function setLocalizedRuleName($localizedRuleName) {
     $this->localizedRuleName = $localizedRuleName;
   }
   public function getLocalizedRuleName() {
     return $this->localizedRuleName;
-  }
-  public function setUrlBlocks(/* array(Google_ResultFormattedResultsRuleResultsUrlBlocks) */ $urlBlocks) {
-    $this->assertIsArray($urlBlocks, 'Google_ResultFormattedResultsRuleResultsUrlBlocks', __METHOD__);
-    $this->urlBlocks = $urlBlocks;
-  }
-  public function getUrlBlocks() {
-    return $this->urlBlocks;
-  }
-  public function setRuleScore($ruleScore) {
-    $this->ruleScore = $ruleScore;
-  }
-  public function getRuleScore() {
-    return $this->ruleScore;
   }
   public function setRuleImpact($ruleImpact) {
     $this->ruleImpact = $ruleImpact;
@@ -205,23 +203,36 @@ class Google_ResultFormattedResultsRuleResults extends Google_Model {
   public function getRuleImpact() {
     return $this->ruleImpact;
   }
+  public function setRuleScore($ruleScore) {
+    $this->ruleScore = $ruleScore;
+  }
+  public function getRuleScore() {
+    return $this->ruleScore;
+  }
+  public function setUrlBlocks(/* array(Google_ResultFormattedResultsRuleResultsElementUrlBlocks) */ $urlBlocks) {
+    $this->assertIsArray($urlBlocks, 'Google_ResultFormattedResultsRuleResultsElementUrlBlocks', __METHOD__);
+    $this->urlBlocks = $urlBlocks;
+  }
+  public function getUrlBlocks() {
+    return $this->urlBlocks;
+  }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocks extends Google_Model {
-  protected $__headerType = 'Google_ResultFormattedResultsRuleResultsUrlBlocksHeader';
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocks extends Google_Model {
+  protected $__headerType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader';
   protected $__headerDataType = '';
   public $header;
-  protected $__urlsType = 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrls';
+  protected $__urlsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls';
   protected $__urlsDataType = 'array';
   public $urls;
-  public function setHeader(Google_ResultFormattedResultsRuleResultsUrlBlocksHeader $header) {
+  public function setHeader(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader$header) {
     $this->header = $header;
   }
   public function getHeader() {
     return $this->header;
   }
-  public function setUrls(/* array(Google_ResultFormattedResultsRuleResultsUrlBlocksUrls) */ $urls) {
-    $this->assertIsArray($urls, 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrls', __METHOD__);
+  public function setUrls(/* array(Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrls) */ $urls) {
+    $this->assertIsArray($urls, 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrls', __METHOD__);
     $this->urls = $urls;
   }
   public function getUrls() {
@@ -229,13 +240,13 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocks extends Google_Model {
   }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocksHeader extends Google_Model {
-  protected $__argsType = 'Google_ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs';
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeader extends Google_Model {
+  protected $__argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs';
   protected $__argsDataType = 'array';
   public $args;
   public $format;
-  public function setArgs(/* array(Google_ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs) */ $args) {
-    $this->assertIsArray($args, 'Google_ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs', __METHOD__);
+  public function setArgs(/* array(Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs) */ $args) {
+    $this->assertIsArray($args, 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs', __METHOD__);
     $this->args = $args;
   }
   public function getArgs() {
@@ -249,7 +260,7 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocksHeader extends Google_Mod
   }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs extends Google_Model {
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs extends Google_Model {
   public $type;
   public $value;
   public function setType($type) {
@@ -266,21 +277,21 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocksHeaderArgs extends Google
   }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocksUrls extends Google_Model {
-  protected $__detailsType = 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetails';
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrls extends Google_Model {
+  protected $__detailsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails';
   protected $__detailsDataType = 'array';
   public $details;
-  protected $__resultType = 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResult';
+  protected $__resultType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult';
   protected $__resultDataType = '';
   public $result;
-  public function setDetails(/* array(Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetails) */ $details) {
-    $this->assertIsArray($details, 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetails', __METHOD__);
+  public function setDetails(/* array(Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails) */ $details) {
+    $this->assertIsArray($details, 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails', __METHOD__);
     $this->details = $details;
   }
   public function getDetails() {
     return $this->details;
   }
-  public function setResult(Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResult $result) {
+  public function setResult(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult$result) {
     $this->result = $result;
   }
   public function getResult() {
@@ -288,13 +299,13 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocksUrls extends Google_Model
   }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetails extends Google_Model {
-  protected $__argsType = 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetailsArgs';
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails extends Google_Model {
+  protected $__argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs';
   protected $__argsDataType = 'array';
   public $args;
   public $format;
-  public function setArgs(/* array(Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetailsArgs) */ $args) {
-    $this->assertIsArray($args, 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetailsArgs', __METHOD__);
+  public function setArgs(/* array(Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs) */ $args) {
+    $this->assertIsArray($args, 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs', __METHOD__);
     $this->args = $args;
   }
   public function getArgs() {
@@ -308,7 +319,7 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetails extends Googl
   }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetailsArgs extends Google_Model {
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs extends Google_Model {
   public $type;
   public $value;
   public function setType($type) {
@@ -325,13 +336,13 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsDetailsArgs extends G
   }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResult extends Google_Model {
-  protected $__argsType = 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResultArgs';
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult extends Google_Model {
+  protected $__argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs';
   protected $__argsDataType = 'array';
   public $args;
   public $format;
-  public function setArgs(/* array(Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResultArgs) */ $args) {
-    $this->assertIsArray($args, 'Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResultArgs', __METHOD__);
+  public function setArgs(/* array(Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs) */ $args) {
+    $this->assertIsArray($args, 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs', __METHOD__);
     $this->args = $args;
   }
   public function getArgs() {
@@ -345,7 +356,7 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResult extends Google
   }
 }
 
-class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResultArgs extends Google_Model {
+class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs extends Google_Model {
   public $type;
   public $value;
   public function setType($type) {
@@ -363,24 +374,24 @@ class Google_ResultFormattedResultsRuleResultsUrlBlocksUrlsResultArgs extends Go
 }
 
 class Google_ResultPageStats extends Google_Model {
-  public $otherResponseBytes;
-  public $flashResponseBytes;
-  public $totalRequestBytes;
-  public $numberCssResources;
-  public $numberResources;
   public $cssResponseBytes;
-  public $javascriptResponseBytes;
-  public $imageResponseBytes;
-  public $numberHosts;
-  public $numberStaticResources;
+  public $flashResponseBytes;
   public $htmlResponseBytes;
+  public $imageResponseBytes;
+  public $javascriptResponseBytes;
+  public $numberCssResources;
+  public $numberHosts;
   public $numberJsResources;
+  public $numberResources;
+  public $numberStaticResources;
+  public $otherResponseBytes;
   public $textResponseBytes;
-  public function setOtherResponseBytes($otherResponseBytes) {
-    $this->otherResponseBytes = $otherResponseBytes;
+  public $totalRequestBytes;
+  public function setCssResponseBytes($cssResponseBytes) {
+    $this->cssResponseBytes = $cssResponseBytes;
   }
-  public function getOtherResponseBytes() {
-    return $this->otherResponseBytes;
+  public function getCssResponseBytes() {
+    return $this->cssResponseBytes;
   }
   public function setFlashResponseBytes($flashResponseBytes) {
     $this->flashResponseBytes = $flashResponseBytes;
@@ -388,35 +399,11 @@ class Google_ResultPageStats extends Google_Model {
   public function getFlashResponseBytes() {
     return $this->flashResponseBytes;
   }
-  public function setTotalRequestBytes($totalRequestBytes) {
-    $this->totalRequestBytes = $totalRequestBytes;
+  public function setHtmlResponseBytes($htmlResponseBytes) {
+    $this->htmlResponseBytes = $htmlResponseBytes;
   }
-  public function getTotalRequestBytes() {
-    return $this->totalRequestBytes;
-  }
-  public function setNumberCssResources($numberCssResources) {
-    $this->numberCssResources = $numberCssResources;
-  }
-  public function getNumberCssResources() {
-    return $this->numberCssResources;
-  }
-  public function setNumberResources($numberResources) {
-    $this->numberResources = $numberResources;
-  }
-  public function getNumberResources() {
-    return $this->numberResources;
-  }
-  public function setCssResponseBytes($cssResponseBytes) {
-    $this->cssResponseBytes = $cssResponseBytes;
-  }
-  public function getCssResponseBytes() {
-    return $this->cssResponseBytes;
-  }
-  public function setJavascriptResponseBytes($javascriptResponseBytes) {
-    $this->javascriptResponseBytes = $javascriptResponseBytes;
-  }
-  public function getJavascriptResponseBytes() {
-    return $this->javascriptResponseBytes;
+  public function getHtmlResponseBytes() {
+    return $this->htmlResponseBytes;
   }
   public function setImageResponseBytes($imageResponseBytes) {
     $this->imageResponseBytes = $imageResponseBytes;
@@ -424,23 +411,23 @@ class Google_ResultPageStats extends Google_Model {
   public function getImageResponseBytes() {
     return $this->imageResponseBytes;
   }
+  public function setJavascriptResponseBytes($javascriptResponseBytes) {
+    $this->javascriptResponseBytes = $javascriptResponseBytes;
+  }
+  public function getJavascriptResponseBytes() {
+    return $this->javascriptResponseBytes;
+  }
+  public function setNumberCssResources($numberCssResources) {
+    $this->numberCssResources = $numberCssResources;
+  }
+  public function getNumberCssResources() {
+    return $this->numberCssResources;
+  }
   public function setNumberHosts($numberHosts) {
     $this->numberHosts = $numberHosts;
   }
   public function getNumberHosts() {
     return $this->numberHosts;
-  }
-  public function setNumberStaticResources($numberStaticResources) {
-    $this->numberStaticResources = $numberStaticResources;
-  }
-  public function getNumberStaticResources() {
-    return $this->numberStaticResources;
-  }
-  public function setHtmlResponseBytes($htmlResponseBytes) {
-    $this->htmlResponseBytes = $htmlResponseBytes;
-  }
-  public function getHtmlResponseBytes() {
-    return $this->htmlResponseBytes;
   }
   public function setNumberJsResources($numberJsResources) {
     $this->numberJsResources = $numberJsResources;
@@ -448,11 +435,66 @@ class Google_ResultPageStats extends Google_Model {
   public function getNumberJsResources() {
     return $this->numberJsResources;
   }
+  public function setNumberResources($numberResources) {
+    $this->numberResources = $numberResources;
+  }
+  public function getNumberResources() {
+    return $this->numberResources;
+  }
+  public function setNumberStaticResources($numberStaticResources) {
+    $this->numberStaticResources = $numberStaticResources;
+  }
+  public function getNumberStaticResources() {
+    return $this->numberStaticResources;
+  }
+  public function setOtherResponseBytes($otherResponseBytes) {
+    $this->otherResponseBytes = $otherResponseBytes;
+  }
+  public function getOtherResponseBytes() {
+    return $this->otherResponseBytes;
+  }
   public function setTextResponseBytes($textResponseBytes) {
     $this->textResponseBytes = $textResponseBytes;
   }
   public function getTextResponseBytes() {
     return $this->textResponseBytes;
+  }
+  public function setTotalRequestBytes($totalRequestBytes) {
+    $this->totalRequestBytes = $totalRequestBytes;
+  }
+  public function getTotalRequestBytes() {
+    return $this->totalRequestBytes;
+  }
+}
+
+class Google_ResultScreenshot extends Google_Model {
+  public $data;
+  public $height;
+  public $mime_type;
+  public $width;
+  public function setData($data) {
+    $this->data = $data;
+  }
+  public function getData() {
+    return $this->data;
+  }
+  public function setHeight($height) {
+    $this->height = $height;
+  }
+  public function getHeight() {
+    return $this->height;
+  }
+  public function setMime_type($mime_type) {
+    $this->mime_type = $mime_type;
+  }
+  public function getMime_type() {
+    return $this->mime_type;
+  }
+  public function setWidth($width) {
+    $this->width = $width;
+  }
+  public function getWidth() {
+    return $this->width;
   }
 }
 

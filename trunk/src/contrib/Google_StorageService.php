@@ -24,7 +24,6 @@
    */
   class Google_BucketAccessControlsServiceResource extends Google_ServiceResource {
 
-
     /**
      * Permanently deletes the ACL entry for the specified entity on the specified bucket.
      * (bucketAccessControls.delete)
@@ -143,7 +142,6 @@
    *  </code>
    */
   class Google_BucketsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Permanently deletes an empty bucket. (buckets.delete)
@@ -278,7 +276,6 @@
    */
   class Google_ChannelsServiceResource extends Google_ServiceResource {
 
-
     /**
      * (channels.stop)
      *
@@ -302,7 +299,6 @@
    *  </code>
    */
   class Google_DefaultObjectAccessControlsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Permanently deletes the default object ACL entry for the specified entity on the specified
@@ -423,7 +419,6 @@
    *  </code>
    */
   class Google_ObjectAccessControlsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Permanently deletes the ACL entry for the specified entity on the specified object.
@@ -561,7 +556,6 @@
    *  </code>
    */
   class Google_ObjectsServiceResource extends Google_ServiceResource {
-
 
     /**
      * Concatenates a list of existing objects into a new object in the same bucket. (objects.compose)
@@ -836,34 +830,37 @@ class Google_StorageService extends Google_Service {
 
 
 class Google_Bucket extends Google_Model {
-  protected $__aclType = 'Google_BucketAccessControl';
+  protected $__aclType = 'Google_Service_Storage_BucketAccessControl';
   protected $__aclDataType = 'array';
   public $acl;
-  protected $__corsType = 'Google_BucketCors';
+  protected $__corsType = 'Google_Service_Storage_BucketCors';
   protected $__corsDataType = 'array';
   public $cors;
-  protected $__defaultObjectAclType = 'Google_ObjectAccessControl';
+  protected $__defaultObjectAclType = 'Google_Service_Storage_ObjectAccessControl';
   protected $__defaultObjectAclDataType = 'array';
   public $defaultObjectAcl;
   public $etag;
   public $id;
   public $kind;
+  protected $__lifecycleType = 'Google_Service_Storage_BucketLifecycle';
+  protected $__lifecycleDataType = '';
+  public $lifecycle;
   public $location;
-  protected $__loggingType = 'Google_BucketLogging';
+  protected $__loggingType = 'Google_Service_Storage_BucketLogging';
   protected $__loggingDataType = '';
   public $logging;
   public $metageneration;
   public $name;
-  protected $__ownerType = 'Google_BucketOwner';
+  protected $__ownerType = 'Google_Service_Storage_BucketOwner';
   protected $__ownerDataType = '';
   public $owner;
   public $selfLink;
   public $storageClass;
   public $timeCreated;
-  protected $__versioningType = 'Google_BucketVersioning';
+  protected $__versioningType = 'Google_Service_Storage_BucketVersioning';
   protected $__versioningDataType = '';
   public $versioning;
-  protected $__websiteType = 'Google_BucketWebsite';
+  protected $__websiteType = 'Google_Service_Storage_BucketWebsite';
   protected $__websiteDataType = '';
   public $website;
   public function setAcl(/* array(Google_BucketAccessControl) */ $acl) {
@@ -905,13 +902,19 @@ class Google_Bucket extends Google_Model {
   public function getKind() {
     return $this->kind;
   }
+  public function setLifecycle(Google_Service_Storage_BucketLifecycle$lifecycle) {
+    $this->lifecycle = $lifecycle;
+  }
+  public function getLifecycle() {
+    return $this->lifecycle;
+  }
   public function setLocation($location) {
     $this->location = $location;
   }
   public function getLocation() {
     return $this->location;
   }
-  public function setLogging(Google_BucketLogging $logging) {
+  public function setLogging(Google_Service_Storage_BucketLogging$logging) {
     $this->logging = $logging;
   }
   public function getLogging() {
@@ -929,7 +932,7 @@ class Google_Bucket extends Google_Model {
   public function getName() {
     return $this->name;
   }
-  public function setOwner(Google_BucketOwner $owner) {
+  public function setOwner(Google_Service_Storage_BucketOwner$owner) {
     $this->owner = $owner;
   }
   public function getOwner() {
@@ -953,13 +956,13 @@ class Google_Bucket extends Google_Model {
   public function getTimeCreated() {
     return $this->timeCreated;
   }
-  public function setVersioning(Google_BucketVersioning $versioning) {
+  public function setVersioning(Google_Service_Storage_BucketVersioning$versioning) {
     $this->versioning = $versioning;
   }
   public function getVersioning() {
     return $this->versioning;
   }
-  public function setWebsite(Google_BucketWebsite $website) {
+  public function setWebsite(Google_Service_Storage_BucketWebsite$website) {
     $this->website = $website;
   }
   public function getWebsite() {
@@ -1041,7 +1044,7 @@ class Google_BucketAccessControl extends Google_Model {
 }
 
 class Google_BucketAccessControls extends Google_Model {
-  protected $__itemsType = 'Google_BucketAccessControl';
+  protected $__itemsType = 'Google_Service_Storage_BucketAccessControl';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1091,6 +1094,81 @@ class Google_BucketCors extends Google_Model {
   }
   public function getResponseHeader() {
     return $this->responseHeader;
+  }
+}
+
+class Google_BucketLifecycle extends Google_Model {
+  protected $__ruleType = 'Google_Service_Storage_BucketLifecycleRule';
+  protected $__ruleDataType = 'array';
+  public $rule;
+  public function setRule(/* array(Google_BucketLifecycleRule) */ $rule) {
+    $this->assertIsArray($rule, 'Google_BucketLifecycleRule', __METHOD__);
+    $this->rule = $rule;
+  }
+  public function getRule() {
+    return $this->rule;
+  }
+}
+
+class Google_BucketLifecycleRule extends Google_Model {
+  protected $__actionType = 'Google_Service_Storage_BucketLifecycleRuleAction';
+  protected $__actionDataType = '';
+  public $action;
+  protected $__conditionType = 'Google_Service_Storage_BucketLifecycleRuleCondition';
+  protected $__conditionDataType = '';
+  public $condition;
+  public function setAction(Google_Service_Storage_BucketLifecycleRuleAction$action) {
+    $this->action = $action;
+  }
+  public function getAction() {
+    return $this->action;
+  }
+  public function setCondition(Google_Service_Storage_BucketLifecycleRuleCondition$condition) {
+    $this->condition = $condition;
+  }
+  public function getCondition() {
+    return $this->condition;
+  }
+}
+
+class Google_BucketLifecycleRuleAction extends Google_Model {
+  public $type;
+  public function setType($type) {
+    $this->type = $type;
+  }
+  public function getType() {
+    return $this->type;
+  }
+}
+
+class Google_BucketLifecycleRuleCondition extends Google_Model {
+  public $age;
+  public $createdBefore;
+  public $isLive;
+  public $numNewerVersions;
+  public function setAge($age) {
+    $this->age = $age;
+  }
+  public function getAge() {
+    return $this->age;
+  }
+  public function setCreatedBefore($createdBefore) {
+    $this->createdBefore = $createdBefore;
+  }
+  public function getCreatedBefore() {
+    return $this->createdBefore;
+  }
+  public function setIsLive($isLive) {
+    $this->isLive = $isLive;
+  }
+  public function getIsLive() {
+    return $this->isLive;
+  }
+  public function setNumNewerVersions($numNewerVersions) {
+    $this->numNewerVersions = $numNewerVersions;
+  }
+  public function getNumNewerVersions() {
+    return $this->numNewerVersions;
   }
 }
 
@@ -1156,7 +1234,7 @@ class Google_BucketWebsite extends Google_Model {
 }
 
 class Google_Buckets extends Google_Model {
-  protected $__itemsType = 'Google_Bucket';
+  protected $__itemsType = 'Google_Service_Storage_Bucket';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1249,14 +1327,14 @@ class Google_Channel extends Google_Model {
 }
 
 class Google_ComposeRequest extends Google_Model {
-  protected $__destinationType = 'Google_StorageObject';
+  protected $__destinationType = 'Google_Service_Storage_StorageObject';
   protected $__destinationDataType = '';
   public $destination;
   public $kind;
-  protected $__sourceObjectsType = 'Google_ComposeRequestSourceObjects';
+  protected $__sourceObjectsType = 'Google_Service_Storage_ComposeRequestSourceObjects';
   protected $__sourceObjectsDataType = 'array';
   public $sourceObjects;
-  public function setDestination(Google_StorageObject $destination) {
+  public function setDestination(Google_Service_Storage_StorageObject$destination) {
     $this->destination = $destination;
   }
   public function getDestination() {
@@ -1280,7 +1358,7 @@ class Google_ComposeRequest extends Google_Model {
 class Google_ComposeRequestSourceObjects extends Google_Model {
   public $generation;
   public $name;
-  protected $__objectPreconditionsType = 'Google_ComposeRequestSourceObjectsObjectPreconditions';
+  protected $__objectPreconditionsType = 'Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions';
   protected $__objectPreconditionsDataType = '';
   public $objectPreconditions;
   public function setGeneration($generation) {
@@ -1295,7 +1373,7 @@ class Google_ComposeRequestSourceObjects extends Google_Model {
   public function getName() {
     return $this->name;
   }
-  public function setObjectPreconditions(Google_ComposeRequestSourceObjectsObjectPreconditions $objectPreconditions) {
+  public function setObjectPreconditions(Google_Service_Storage_ComposeRequestSourceObjectsObjectPreconditions$objectPreconditions) {
     $this->objectPreconditions = $objectPreconditions;
   }
   public function getObjectPreconditions() {
@@ -1419,7 +1497,7 @@ class Google_ObjectAccessControls extends Google_Model {
 }
 
 class Google_Objects extends Google_Model {
-  protected $__itemsType = 'Google_StorageObject';
+  protected $__itemsType = 'Google_Service_Storage_StorageObject';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1454,7 +1532,7 @@ class Google_Objects extends Google_Model {
 }
 
 class Google_StorageObject extends Google_Model {
-  protected $__aclType = 'Google_ObjectAccessControl';
+  protected $__aclType = 'Google_Service_Storage_ObjectAccessControl';
   protected $__aclDataType = 'array';
   public $acl;
   public $bucket;
@@ -1474,7 +1552,7 @@ class Google_StorageObject extends Google_Model {
   public $metadata;
   public $metageneration;
   public $name;
-  protected $__ownerType = 'Google_StorageObjectOwner';
+  protected $__ownerType = 'Google_Service_Storage_StorageObjectOwner';
   protected $__ownerDataType = '';
   public $owner;
   public $selfLink;
@@ -1590,7 +1668,7 @@ class Google_StorageObject extends Google_Model {
   public function getName() {
     return $this->name;
   }
-  public function setOwner(Google_StorageObjectOwner $owner) {
+  public function setOwner(Google_Service_Storage_StorageObjectOwner$owner) {
     $this->owner = $owner;
   }
   public function getOwner() {
