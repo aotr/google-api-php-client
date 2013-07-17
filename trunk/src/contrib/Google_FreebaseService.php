@@ -112,9 +112,9 @@ class Google_FreebaseService extends Google_Service {
     $this->text = new Google_TextServiceResource($this, $this->serviceName, 'text', json_decode('{"methods": {"get": {"id": "freebase.text.get", "path": "text{/id*}", "httpMethod": "GET", "parameters": {"format": {"type": "string", "default": "plain", "enum": ["html", "plain", "raw"], "location": "query"}, "id": {"type": "string", "required": true, "repeated": true, "location": "path"}, "maxlength": {"type": "integer", "format": "uint32", "location": "query"}}, "response": {"$ref": "ContentserviceGet"}}}}', true));
     $this->topic = new Google_TopicServiceResource($this, $this->serviceName, 'topic', json_decode('{"methods": {"lookup": {"id": "freebase.topic.lookup", "path": "topic{/id*}", "httpMethod": "GET", "parameters": {"dateline": {"type": "string", "location": "query"}, "filter": {"type": "string", "repeated": true, "location": "query"}, "id": {"type": "string", "required": true, "repeated": true, "location": "path"}, "lang": {"type": "string", "default": "en", "location": "query"}, "limit": {"type": "integer", "default": "10", "format": "uint32", "location": "query"}, "raw": {"type": "boolean", "default": "false", "location": "query"}}, "response": {"$ref": "TopicLookup"}}}}', true));
 
-    $this-> = new Google_ImageServiceResource($this, $this->serviceName, 'image', json_decode('{"path": "image{/id*}", "id": "freebase.image", "supportsMediaDownload": true, "httpMethod": "GET", "parameters": {"fallbackid": {"type": "string", "default": "/freebase/no_image_png", "location": "query"}, "id": {"type": "string", "required": true, "repeated": true, "location": "path"}, "maxheight": {"type": "integer", "format": "uint32", "maximum": "4096", "location": "query"}, "maxwidth": {"type": "integer", "format": "uint32", "maximum": "4096", "location": "query"}, "mode": {"type": "string", "default": "fit", "enum": ["fill", "fillcrop", "fillcropmid", "fit"], "location": "query"}, "pad": {"type": "boolean", "default": "false", "location": "query"}}}', true));
-    $this-> = new Google_MqlreadServiceResource($this, $this->serviceName, 'mqlread', json_decode('{"path": "mqlread", "id": "freebase.mqlread", "supportsMediaDownload": true, "httpMethod": "GET", "parameters": {"as_of_time": {"type": "string", "location": "query"}, "callback": {"type": "string", "location": "query"}, "cost": {"type": "boolean", "default": "false", "location": "query"}, "cursor": {"type": "string", "location": "query"}, "dateline": {"type": "string", "location": "query"}, "html_escape": {"type": "boolean", "default": "true", "location": "query"}, "indent": {"type": "integer", "default": "0", "format": "uint32", "maximum": "10", "location": "query"}, "lang": {"type": "string", "default": "/lang/en", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}, "uniqueness_failure": {"type": "string", "default": "hard", "enum": ["hard", "soft"], "location": "query"}}}', true));
-    $this-> = new Google_MqlwriteServiceResource($this, $this->serviceName, 'mqlwrite', json_decode('{"path": "mqlwrite", "scopes": ["https://www.googleapis.com/auth/freebase"], "id": "freebase.mqlwrite", "supportsMediaDownload": true, "httpMethod": "GET", "parameters": {"callback": {"type": "string", "location": "query"}, "dateline": {"type": "string", "location": "query"}, "indent": {"type": "integer", "default": "0", "format": "uint32", "maximum": "10", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}, "use_permission_of": {"type": "string", "location": "query"}}}', true));
+    $this-> = new Google_ImageServiceResource($this, $this->serviceName, 'image', json_decode('{"httpMethod": "GET", "path": "image{/id*}", "supportsMediaDownload": true, "id": "freebase.image", "parameters": {"fallbackid": {"type": "string", "default": "/freebase/no_image_png", "location": "query"}, "id": {"type": "string", "required": true, "repeated": true, "location": "path"}, "maxheight": {"type": "integer", "format": "uint32", "maximum": "4096", "location": "query"}, "maxwidth": {"type": "integer", "format": "uint32", "maximum": "4096", "location": "query"}, "mode": {"type": "string", "default": "fit", "enum": ["fill", "fillcrop", "fillcropmid", "fit"], "location": "query"}, "pad": {"type": "boolean", "default": "false", "location": "query"}}}', true));
+    $this-> = new Google_MqlreadServiceResource($this, $this->serviceName, 'mqlread', json_decode('{"httpMethod": "GET", "path": "mqlread", "supportsMediaDownload": true, "id": "freebase.mqlread", "parameters": {"as_of_time": {"type": "string", "location": "query"}, "callback": {"type": "string", "location": "query"}, "cost": {"type": "boolean", "default": "false", "location": "query"}, "cursor": {"type": "string", "location": "query"}, "dateline": {"type": "string", "location": "query"}, "html_escape": {"type": "boolean", "default": "true", "location": "query"}, "indent": {"type": "integer", "default": "0", "format": "uint32", "maximum": "10", "location": "query"}, "lang": {"type": "string", "default": "/lang/en", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}, "uniqueness_failure": {"type": "string", "default": "hard", "enum": ["hard", "soft"], "location": "query"}}}', true));
+    $this-> = new Google_MqlwriteServiceResource($this, $this->serviceName, 'mqlwrite', json_decode('{"httpMethod": "GET", "path": "mqlwrite", "scopes": ["https://www.googleapis.com/auth/freebase"], "supportsMediaDownload": true, "id": "freebase.mqlwrite", "parameters": {"callback": {"type": "string", "location": "query"}, "dateline": {"type": "string", "location": "query"}, "indent": {"type": "integer", "default": "0", "format": "uint32", "maximum": "10", "location": "query"}, "query": {"type": "string", "required": true, "location": "query"}, "use_permission_of": {"type": "string", "location": "query"}}}', true));
   }
 }
 
@@ -122,7 +122,7 @@ class Google_FreebaseService extends Google_Service {
 
 class Google_ContentserviceGet extends Google_Model {
   public $result;
-  public function setResult($result) {
+  public function setResult( $result) {
     $this->result = $result;
   }
   public function getResult() {
@@ -132,16 +132,16 @@ class Google_ContentserviceGet extends Google_Model {
 
 class Google_TopicLookup extends Google_Model {
   public $id;
-  protected $__propertyType = 'Google_Service_Freebase_TopicLookupProperty';
+  protected $__propertyType = 'Google_TopicLookupProperty';
   protected $__propertyDataType = '';
   public $property;
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setProperty(Google_Service_Freebase_TopicLookupProperty$property) {
+  public function setProperty(Google_TopicLookupProperty $property) {
     $this->property = $property;
   }
   public function getProperty() {
@@ -150,10 +150,10 @@ class Google_TopicLookup extends Google_Model {
 }
 
 class Google_TopicLookupProperty extends Google_Model {
-  protected $__/freebase/object_profile/linkcountType = 'Google_Service_Freebase_TopicStatslinkcount';
+  protected $__/freebase/object_profile/linkcountType = 'Google_TopicStatslinkcount';
   protected $__/freebase/object_profile/linkcountDataType = '';
   public $/freebase/object_profile/linkcount;
-  public function set/freebase/object_profile/linkcount(Google_Service_Freebase_TopicStatslinkcount$/freebase/object_profile/linkcount) {
+  public function set/freebase/object_profile/linkcount(Google_TopicStatslinkcount $/freebase/object_profile/linkcount) {
     $this->/freebase/object_profile/linkcount = $/freebase/object_profile/linkcount;
   }
   public function get/freebase/object_profile/linkcount() {
@@ -164,17 +164,17 @@ class Google_TopicLookupProperty extends Google_Model {
 class Google_TopicPropertyvalue extends Google_Model {
   public $count;
   public $status;
-  protected $__valuesType = 'Google_Service_Freebase_TopicValue';
+  protected $__valuesType = 'Google_TopicValue';
   protected $__valuesDataType = 'array';
   public $values;
   public $valuetype;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
@@ -187,7 +187,7 @@ class Google_TopicPropertyvalue extends Google_Model {
   public function getValues() {
     return $this->values;
   }
-  public function setValuetype($valuetype) {
+  public function setValuetype( $valuetype) {
     $this->valuetype = $valuetype;
   }
   public function getValuetype() {
@@ -197,10 +197,10 @@ class Google_TopicPropertyvalue extends Google_Model {
 
 class Google_TopicStatslinkcount extends Google_Model {
   public $type;
-  protected $__valuesType = 'Google_Service_Freebase_TopicStatslinkcountValues';
+  protected $__valuesType = 'Google_TopicStatslinkcountValues';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -218,16 +218,16 @@ class Google_TopicStatslinkcount extends Google_Model {
 class Google_TopicStatslinkcountValues extends Google_Model {
   public $count;
   public $id;
-  protected $__valuesType = 'Google_Service_Freebase_TopicStatslinkcountValuesValues';
+  protected $__valuesType = 'Google_TopicStatslinkcountValuesValues';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
@@ -245,16 +245,16 @@ class Google_TopicStatslinkcountValues extends Google_Model {
 class Google_TopicStatslinkcountValuesValues extends Google_Model {
   public $count;
   public $id;
-  protected $__valuesType = 'Google_Service_Freebase_TopicStatslinkcountValuesValuesValues';
+  protected $__valuesType = 'Google_TopicStatslinkcountValuesValuesValues';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
@@ -272,13 +272,13 @@ class Google_TopicStatslinkcountValuesValues extends Google_Model {
 class Google_TopicStatslinkcountValuesValuesValues extends Google_Model {
   public $count;
   public $id;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
@@ -287,7 +287,7 @@ class Google_TopicStatslinkcountValuesValuesValues extends Google_Model {
 }
 
 class Google_TopicValue extends Google_Model {
-  protected $__citationType = 'Google_Service_Freebase_TopicValueCitation';
+  protected $__citationType = 'Google_TopicValueCitation';
   protected $__citationDataType = '';
   public $citation;
   public $creator;
@@ -295,67 +295,67 @@ class Google_TopicValue extends Google_Model {
   public $id;
   public $lang;
   public $project;
-  protected $__propertyType = 'Google_Service_Freebase_TopicPropertyvalue';
+  protected $__propertyType = 'Google_TopicPropertyvalue';
   protected $__propertyDataType = 'map';
   public $property;
   public $text;
   public $timestamp;
   public $value;
-  public function setCitation(Google_Service_Freebase_TopicValueCitation$citation) {
+  public function setCitation(Google_TopicValueCitation $citation) {
     $this->citation = $citation;
   }
   public function getCitation() {
     return $this->citation;
   }
-  public function setCreator($creator) {
+  public function setCreator( $creator) {
     $this->creator = $creator;
   }
   public function getCreator() {
     return $this->creator;
   }
-  public function setDataset($dataset) {
+  public function setDataset( $dataset) {
     $this->dataset = $dataset;
   }
   public function getDataset() {
     return $this->dataset;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setLang($lang) {
+  public function setLang( $lang) {
     $this->lang = $lang;
   }
   public function getLang() {
     return $this->lang;
   }
-  public function setProject($project) {
+  public function setProject( $project) {
     $this->project = $project;
   }
   public function getProject() {
     return $this->project;
   }
-  public function setProperty(Google_Service_Freebase_TopicPropertyvalue$property) {
+  public function setProperty(Google_TopicPropertyvalue $property) {
     $this->property = $property;
   }
   public function getProperty() {
     return $this->property;
   }
-  public function setText($text) {
+  public function setText( $text) {
     $this->text = $text;
   }
   public function getText() {
     return $this->text;
   }
-  public function setTimestamp($timestamp) {
+  public function setTimestamp( $timestamp) {
     $this->timestamp = $timestamp;
   }
   public function getTimestamp() {
     return $this->timestamp;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -367,19 +367,19 @@ class Google_TopicValueCitation extends Google_Model {
   public $provider;
   public $statement;
   public $uri;
-  public function setProvider($provider) {
+  public function setProvider( $provider) {
     $this->provider = $provider;
   }
   public function getProvider() {
     return $this->provider;
   }
-  public function setStatement($statement) {
+  public function setStatement( $statement) {
     $this->statement = $statement;
   }
   public function getStatement() {
     return $this->statement;
   }
-  public function setUri($uri) {
+  public function setUri( $uri) {
     $this->uri = $uri;
   }
   public function getUri() {

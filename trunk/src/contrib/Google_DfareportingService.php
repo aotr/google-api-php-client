@@ -417,7 +417,7 @@ class Google_DfareportingService extends Google_Service {
 
 
 class Google_Activities extends Google_Model {
-  protected $__filtersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__filtersType = 'Google_DimensionValue';
   protected $__filtersDataType = 'array';
   public $filters;
   public $kind;
@@ -429,7 +429,7 @@ class Google_Activities extends Google_Model {
   public function getFilters() {
     return $this->filters;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -445,53 +445,53 @@ class Google_Activities extends Google_Model {
 }
 
 class Google_CompatibleFields extends Google_Model {
-  protected $__crossDimensionReachReportCompatibleFieldsType = 'Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields';
+  protected $__crossDimensionReachReportCompatibleFieldsType = 'Google_CrossDimensionReachReportCompatibleFields';
   protected $__crossDimensionReachReportCompatibleFieldsDataType = '';
   public $crossDimensionReachReportCompatibleFields;
-  protected $__floodlightReportCompatibleFieldsType = 'Google_Service_Dfareporting_FloodlightReportCompatibleFields';
+  protected $__floodlightReportCompatibleFieldsType = 'Google_FloodlightReportCompatibleFields';
   protected $__floodlightReportCompatibleFieldsDataType = '';
   public $floodlightReportCompatibleFields;
   public $kind;
-  protected $__pathToConversionReportCompatibleFieldsType = 'Google_Service_Dfareporting_PathToConversionReportCompatibleFields';
+  protected $__pathToConversionReportCompatibleFieldsType = 'Google_PathToConversionReportCompatibleFields';
   protected $__pathToConversionReportCompatibleFieldsDataType = '';
   public $pathToConversionReportCompatibleFields;
-  protected $__reachReportCompatibleFieldsType = 'Google_Service_Dfareporting_ReachReportCompatibleFields';
+  protected $__reachReportCompatibleFieldsType = 'Google_ReachReportCompatibleFields';
   protected $__reachReportCompatibleFieldsDataType = '';
   public $reachReportCompatibleFields;
-  protected $__reportCompatibleFieldsType = 'Google_Service_Dfareporting_ReportCompatibleFields';
+  protected $__reportCompatibleFieldsType = 'Google_ReportCompatibleFields';
   protected $__reportCompatibleFieldsDataType = '';
   public $reportCompatibleFields;
-  public function setCrossDimensionReachReportCompatibleFields(Google_Service_Dfareporting_CrossDimensionReachReportCompatibleFields$crossDimensionReachReportCompatibleFields) {
+  public function setCrossDimensionReachReportCompatibleFields(Google_CrossDimensionReachReportCompatibleFields $crossDimensionReachReportCompatibleFields) {
     $this->crossDimensionReachReportCompatibleFields = $crossDimensionReachReportCompatibleFields;
   }
   public function getCrossDimensionReachReportCompatibleFields() {
     return $this->crossDimensionReachReportCompatibleFields;
   }
-  public function setFloodlightReportCompatibleFields(Google_Service_Dfareporting_FloodlightReportCompatibleFields$floodlightReportCompatibleFields) {
+  public function setFloodlightReportCompatibleFields(Google_FloodlightReportCompatibleFields $floodlightReportCompatibleFields) {
     $this->floodlightReportCompatibleFields = $floodlightReportCompatibleFields;
   }
   public function getFloodlightReportCompatibleFields() {
     return $this->floodlightReportCompatibleFields;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPathToConversionReportCompatibleFields(Google_Service_Dfareporting_PathToConversionReportCompatibleFields$pathToConversionReportCompatibleFields) {
+  public function setPathToConversionReportCompatibleFields(Google_PathToConversionReportCompatibleFields $pathToConversionReportCompatibleFields) {
     $this->pathToConversionReportCompatibleFields = $pathToConversionReportCompatibleFields;
   }
   public function getPathToConversionReportCompatibleFields() {
     return $this->pathToConversionReportCompatibleFields;
   }
-  public function setReachReportCompatibleFields(Google_Service_Dfareporting_ReachReportCompatibleFields$reachReportCompatibleFields) {
+  public function setReachReportCompatibleFields(Google_ReachReportCompatibleFields $reachReportCompatibleFields) {
     $this->reachReportCompatibleFields = $reachReportCompatibleFields;
   }
   public function getReachReportCompatibleFields() {
     return $this->reachReportCompatibleFields;
   }
-  public function setReportCompatibleFields(Google_Service_Dfareporting_ReportCompatibleFields$reportCompatibleFields) {
+  public function setReportCompatibleFields(Google_ReportCompatibleFields $reportCompatibleFields) {
     $this->reportCompatibleFields = $reportCompatibleFields;
   }
   public function getReportCompatibleFields() {
@@ -500,17 +500,17 @@ class Google_CompatibleFields extends Google_Model {
 }
 
 class Google_CrossDimensionReachReportCompatibleFields extends Google_Model {
-  protected $__breakdownType = 'Google_Service_Dfareporting_Dimension';
+  protected $__breakdownType = 'Google_Dimension';
   protected $__breakdownDataType = 'array';
   public $breakdown;
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $__dimensionFiltersType = 'Google_Dimension';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
   public $kind;
-  protected $__metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__metricsType = 'Google_Metric';
   protected $__metricsDataType = 'array';
   public $metrics;
-  protected $__overlapMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__overlapMetricsType = 'Google_Metric';
   protected $__overlapMetricsDataType = 'array';
   public $overlapMetrics;
   public function setBreakdown(/* array(Google_Dimension) */ $breakdown) {
@@ -527,7 +527,7 @@ class Google_CrossDimensionReachReportCompatibleFields extends Google_Model {
   public function getDimensionFilters() {
     return $this->dimensionFilters;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -550,7 +550,7 @@ class Google_CrossDimensionReachReportCompatibleFields extends Google_Model {
 }
 
 class Google_CustomRichMediaEvents extends Google_Model {
-  protected $__filteredEventIdsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__filteredEventIdsType = 'Google_DimensionValue';
   protected $__filteredEventIdsDataType = 'array';
   public $filteredEventIds;
   public $kind;
@@ -561,7 +561,7 @@ class Google_CustomRichMediaEvents extends Google_Model {
   public function getFilteredEventIds() {
     return $this->filteredEventIds;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -574,25 +574,25 @@ class Google_DateRange extends Google_Model {
   public $kind;
   public $relativeDateRange;
   public $startDate;
-  public function setEndDate($endDate) {
+  public function setEndDate( $endDate) {
     $this->endDate = $endDate;
   }
   public function getEndDate() {
     return $this->endDate;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setRelativeDateRange($relativeDateRange) {
+  public function setRelativeDateRange( $relativeDateRange) {
     $this->relativeDateRange = $relativeDateRange;
   }
   public function getRelativeDateRange() {
     return $this->relativeDateRange;
   }
-  public function setStartDate($startDate) {
+  public function setStartDate( $startDate) {
     $this->startDate = $startDate;
   }
   public function getStartDate() {
@@ -601,7 +601,7 @@ class Google_DateRange extends Google_Model {
 }
 
 class Google_DfareportingFile extends Google_Model {
-  protected $__dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $__dateRangeType = 'Google_DateRange';
   protected $__dateRangeDataType = '';
   public $dateRange;
   public $etag;
@@ -612,64 +612,64 @@ class Google_DfareportingFile extends Google_Model {
   public $lastModifiedTime;
   public $reportId;
   public $status;
-  protected $__urlsType = 'Google_Service_Dfareporting_DfareportingFileUrls';
+  protected $__urlsType = 'Google_DfareportingFileUrls';
   protected $__urlsDataType = '';
   public $urls;
-  public function setDateRange(Google_Service_Dfareporting_DateRange$dateRange) {
+  public function setDateRange(Google_DateRange $dateRange) {
     $this->dateRange = $dateRange;
   }
   public function getDateRange() {
     return $this->dateRange;
   }
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
     return $this->etag;
   }
-  public function setFileName($fileName) {
+  public function setFileName( $fileName) {
     $this->fileName = $fileName;
   }
   public function getFileName() {
     return $this->fileName;
   }
-  public function setFormat($format) {
+  public function setFormat( $format) {
     $this->format = $format;
   }
   public function getFormat() {
     return $this->format;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLastModifiedTime($lastModifiedTime) {
+  public function setLastModifiedTime( $lastModifiedTime) {
     $this->lastModifiedTime = $lastModifiedTime;
   }
   public function getLastModifiedTime() {
     return $this->lastModifiedTime;
   }
-  public function setReportId($reportId) {
+  public function setReportId( $reportId) {
     $this->reportId = $reportId;
   }
   public function getReportId() {
     return $this->reportId;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
     return $this->status;
   }
-  public function setUrls(Google_Service_Dfareporting_DfareportingFileUrls$urls) {
+  public function setUrls(Google_DfareportingFileUrls $urls) {
     $this->urls = $urls;
   }
   public function getUrls() {
@@ -680,13 +680,13 @@ class Google_DfareportingFile extends Google_Model {
 class Google_DfareportingFileUrls extends Google_Model {
   public $apiUrl;
   public $browserUrl;
-  public function setApiUrl($apiUrl) {
+  public function setApiUrl( $apiUrl) {
     $this->apiUrl = $apiUrl;
   }
   public function getApiUrl() {
     return $this->apiUrl;
   }
-  public function setBrowserUrl($browserUrl) {
+  public function setBrowserUrl( $browserUrl) {
     $this->browserUrl = $browserUrl;
   }
   public function getBrowserUrl() {
@@ -697,13 +697,13 @@ class Google_DfareportingFileUrls extends Google_Model {
 class Google_Dimension extends Google_Model {
   public $kind;
   public $name;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
@@ -715,19 +715,19 @@ class Google_DimensionFilter extends Google_Model {
   public $dimensionName;
   public $kind;
   public $value;
-  public function setDimensionName($dimensionName) {
+  public function setDimensionName( $dimensionName) {
     $this->dimensionName = $dimensionName;
   }
   public function getDimensionName() {
     return $this->dimensionName;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -742,37 +742,37 @@ class Google_DimensionValue extends Google_Model {
   public $kind;
   public $matchType;
   public $value;
-  public function setDimensionName($dimensionName) {
+  public function setDimensionName( $dimensionName) {
     $this->dimensionName = $dimensionName;
   }
   public function getDimensionName() {
     return $this->dimensionName;
   }
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
     return $this->etag;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMatchType($matchType) {
+  public function setMatchType( $matchType) {
     $this->matchType = $matchType;
   }
   public function getMatchType() {
     return $this->matchType;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -782,12 +782,12 @@ class Google_DimensionValue extends Google_Model {
 
 class Google_DimensionValueList extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__itemsType = 'Google_DimensionValue';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -800,13 +800,13 @@ class Google_DimensionValueList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -817,18 +817,18 @@ class Google_DimensionValueList extends Google_Model {
 class Google_DimensionValueRequest extends Google_Model {
   public $dimensionName;
   public $endDate;
-  protected $__filtersType = 'Google_Service_Dfareporting_DimensionFilter';
+  protected $__filtersType = 'Google_DimensionFilter';
   protected $__filtersDataType = 'array';
   public $filters;
   public $kind;
   public $startDate;
-  public function setDimensionName($dimensionName) {
+  public function setDimensionName( $dimensionName) {
     $this->dimensionName = $dimensionName;
   }
   public function getDimensionName() {
     return $this->dimensionName;
   }
-  public function setEndDate($endDate) {
+  public function setEndDate( $endDate) {
     $this->endDate = $endDate;
   }
   public function getEndDate() {
@@ -841,13 +841,13 @@ class Google_DimensionValueRequest extends Google_Model {
   public function getFilters() {
     return $this->filters;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setStartDate($startDate) {
+  public function setStartDate( $startDate) {
     $this->startDate = $startDate;
   }
   public function getStartDate() {
@@ -857,12 +857,12 @@ class Google_DimensionValueRequest extends Google_Model {
 
 class Google_FileList extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_Dfareporting_DfareportingFile';
+  protected $__itemsType = 'Google_DfareportingFile';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -875,13 +875,13 @@ class Google_FileList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -890,14 +890,14 @@ class Google_FileList extends Google_Model {
 }
 
 class Google_FloodlightReportCompatibleFields extends Google_Model {
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $__dimensionFiltersType = 'Google_Dimension';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
-  protected $__dimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $__dimensionsType = 'Google_Dimension';
   protected $__dimensionsDataType = 'array';
   public $dimensions;
   public $kind;
-  protected $__metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__metricsType = 'Google_Metric';
   protected $__metricsDataType = 'array';
   public $metrics;
   public function setDimensionFilters(/* array(Google_Dimension) */ $dimensionFilters) {
@@ -914,7 +914,7 @@ class Google_FloodlightReportCompatibleFields extends Google_Model {
   public function getDimensions() {
     return $this->dimensions;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -932,13 +932,13 @@ class Google_FloodlightReportCompatibleFields extends Google_Model {
 class Google_Metric extends Google_Model {
   public $kind;
   public $name;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
@@ -947,17 +947,17 @@ class Google_Metric extends Google_Model {
 }
 
 class Google_PathToConversionReportCompatibleFields extends Google_Model {
-  protected $__conversionDimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $__conversionDimensionsType = 'Google_Dimension';
   protected $__conversionDimensionsDataType = 'array';
   public $conversionDimensions;
-  protected $__customFloodlightVariablesType = 'Google_Service_Dfareporting_Dimension';
+  protected $__customFloodlightVariablesType = 'Google_Dimension';
   protected $__customFloodlightVariablesDataType = 'array';
   public $customFloodlightVariables;
   public $kind;
-  protected $__metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__metricsType = 'Google_Metric';
   protected $__metricsDataType = 'array';
   public $metrics;
-  protected $__perInteractionDimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $__perInteractionDimensionsType = 'Google_Dimension';
   protected $__perInteractionDimensionsDataType = 'array';
   public $perInteractionDimensions;
   public function setConversionDimensions(/* array(Google_Dimension) */ $conversionDimensions) {
@@ -974,7 +974,7 @@ class Google_PathToConversionReportCompatibleFields extends Google_Model {
   public function getCustomFloodlightVariables() {
     return $this->customFloodlightVariables;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -997,20 +997,20 @@ class Google_PathToConversionReportCompatibleFields extends Google_Model {
 }
 
 class Google_ReachReportCompatibleFields extends Google_Model {
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $__dimensionFiltersType = 'Google_Dimension';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
-  protected $__dimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $__dimensionsType = 'Google_Dimension';
   protected $__dimensionsDataType = 'array';
   public $dimensions;
   public $kind;
-  protected $__metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__metricsType = 'Google_Metric';
   protected $__metricsDataType = 'array';
   public $metrics;
-  protected $__pivotedActivityMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__pivotedActivityMetricsType = 'Google_Metric';
   protected $__pivotedActivityMetricsDataType = 'array';
   public $pivotedActivityMetrics;
-  protected $__reachByFrequencyMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__reachByFrequencyMetricsType = 'Google_Metric';
   protected $__reachByFrequencyMetricsDataType = 'array';
   public $reachByFrequencyMetrics;
   public function setDimensionFilters(/* array(Google_Dimension) */ $dimensionFilters) {
@@ -1027,7 +1027,7 @@ class Google_ReachReportCompatibleFields extends Google_Model {
   public function getDimensions() {
     return $this->dimensions;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -1060,19 +1060,19 @@ class Google_Recipient extends Google_Model {
   public $deliveryType;
   public $email;
   public $kind;
-  public function setDeliveryType($deliveryType) {
+  public function setDeliveryType( $deliveryType) {
     $this->deliveryType = $deliveryType;
   }
   public function getDeliveryType() {
     return $this->deliveryType;
   }
-  public function setEmail($email) {
+  public function setEmail( $email) {
     $this->email = $email;
   }
   public function getEmail() {
     return $this->email;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -1082,21 +1082,21 @@ class Google_Recipient extends Google_Model {
 
 class Google_Report extends Google_Model {
   public $accountId;
-  protected $__activeGrpCriteriaType = 'Google_Service_Dfareporting_ReportActiveGrpCriteria';
+  protected $__activeGrpCriteriaType = 'Google_ReportActiveGrpCriteria';
   protected $__activeGrpCriteriaDataType = '';
   public $activeGrpCriteria;
-  protected $__criteriaType = 'Google_Service_Dfareporting_ReportCriteria';
+  protected $__criteriaType = 'Google_ReportCriteria';
   protected $__criteriaDataType = '';
   public $criteria;
-  protected $__crossDimensionReachCriteriaType = 'Google_Service_Dfareporting_ReportCrossDimensionReachCriteria';
+  protected $__crossDimensionReachCriteriaType = 'Google_ReportCrossDimensionReachCriteria';
   protected $__crossDimensionReachCriteriaDataType = '';
   public $crossDimensionReachCriteria;
-  protected $__deliveryType = 'Google_Service_Dfareporting_ReportDelivery';
+  protected $__deliveryType = 'Google_ReportDelivery';
   protected $__deliveryDataType = '';
   public $delivery;
   public $etag;
   public $fileName;
-  protected $__floodlightCriteriaType = 'Google_Service_Dfareporting_ReportFloodlightCriteria';
+  protected $__floodlightCriteriaType = 'Google_ReportFloodlightCriteria';
   protected $__floodlightCriteriaDataType = '';
   public $floodlightCriteria;
   public $format;
@@ -1105,126 +1105,126 @@ class Google_Report extends Google_Model {
   public $lastModifiedTime;
   public $name;
   public $ownerProfileId;
-  protected $__pathToConversionCriteriaType = 'Google_Service_Dfareporting_ReportPathToConversionCriteria';
+  protected $__pathToConversionCriteriaType = 'Google_ReportPathToConversionCriteria';
   protected $__pathToConversionCriteriaDataType = '';
   public $pathToConversionCriteria;
-  protected $__reachCriteriaType = 'Google_Service_Dfareporting_ReportReachCriteria';
+  protected $__reachCriteriaType = 'Google_ReportReachCriteria';
   protected $__reachCriteriaDataType = '';
   public $reachCriteria;
-  protected $__scheduleType = 'Google_Service_Dfareporting_ReportSchedule';
+  protected $__scheduleType = 'Google_ReportSchedule';
   protected $__scheduleDataType = '';
   public $schedule;
   public $subAccountId;
   public $type;
-  public function setAccountId($accountId) {
+  public function setAccountId( $accountId) {
     $this->accountId = $accountId;
   }
   public function getAccountId() {
     return $this->accountId;
   }
-  public function setActiveGrpCriteria(Google_Service_Dfareporting_ReportActiveGrpCriteria$activeGrpCriteria) {
+  public function setActiveGrpCriteria(Google_ReportActiveGrpCriteria $activeGrpCriteria) {
     $this->activeGrpCriteria = $activeGrpCriteria;
   }
   public function getActiveGrpCriteria() {
     return $this->activeGrpCriteria;
   }
-  public function setCriteria(Google_Service_Dfareporting_ReportCriteria$criteria) {
+  public function setCriteria(Google_ReportCriteria $criteria) {
     $this->criteria = $criteria;
   }
   public function getCriteria() {
     return $this->criteria;
   }
-  public function setCrossDimensionReachCriteria(Google_Service_Dfareporting_ReportCrossDimensionReachCriteria$crossDimensionReachCriteria) {
+  public function setCrossDimensionReachCriteria(Google_ReportCrossDimensionReachCriteria $crossDimensionReachCriteria) {
     $this->crossDimensionReachCriteria = $crossDimensionReachCriteria;
   }
   public function getCrossDimensionReachCriteria() {
     return $this->crossDimensionReachCriteria;
   }
-  public function setDelivery(Google_Service_Dfareporting_ReportDelivery$delivery) {
+  public function setDelivery(Google_ReportDelivery $delivery) {
     $this->delivery = $delivery;
   }
   public function getDelivery() {
     return $this->delivery;
   }
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
     return $this->etag;
   }
-  public function setFileName($fileName) {
+  public function setFileName( $fileName) {
     $this->fileName = $fileName;
   }
   public function getFileName() {
     return $this->fileName;
   }
-  public function setFloodlightCriteria(Google_Service_Dfareporting_ReportFloodlightCriteria$floodlightCriteria) {
+  public function setFloodlightCriteria(Google_ReportFloodlightCriteria $floodlightCriteria) {
     $this->floodlightCriteria = $floodlightCriteria;
   }
   public function getFloodlightCriteria() {
     return $this->floodlightCriteria;
   }
-  public function setFormat($format) {
+  public function setFormat( $format) {
     $this->format = $format;
   }
   public function getFormat() {
     return $this->format;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLastModifiedTime($lastModifiedTime) {
+  public function setLastModifiedTime( $lastModifiedTime) {
     $this->lastModifiedTime = $lastModifiedTime;
   }
   public function getLastModifiedTime() {
     return $this->lastModifiedTime;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setOwnerProfileId($ownerProfileId) {
+  public function setOwnerProfileId( $ownerProfileId) {
     $this->ownerProfileId = $ownerProfileId;
   }
   public function getOwnerProfileId() {
     return $this->ownerProfileId;
   }
-  public function setPathToConversionCriteria(Google_Service_Dfareporting_ReportPathToConversionCriteria$pathToConversionCriteria) {
+  public function setPathToConversionCriteria(Google_ReportPathToConversionCriteria $pathToConversionCriteria) {
     $this->pathToConversionCriteria = $pathToConversionCriteria;
   }
   public function getPathToConversionCriteria() {
     return $this->pathToConversionCriteria;
   }
-  public function setReachCriteria(Google_Service_Dfareporting_ReportReachCriteria$reachCriteria) {
+  public function setReachCriteria(Google_ReportReachCriteria $reachCriteria) {
     $this->reachCriteria = $reachCriteria;
   }
   public function getReachCriteria() {
     return $this->reachCriteria;
   }
-  public function setSchedule(Google_Service_Dfareporting_ReportSchedule$schedule) {
+  public function setSchedule(Google_ReportSchedule $schedule) {
     $this->schedule = $schedule;
   }
   public function getSchedule() {
     return $this->schedule;
   }
-  public function setSubAccountId($subAccountId) {
+  public function setSubAccountId( $subAccountId) {
     $this->subAccountId = $subAccountId;
   }
   public function getSubAccountId() {
     return $this->subAccountId;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -1233,17 +1233,17 @@ class Google_Report extends Google_Model {
 }
 
 class Google_ReportActiveGrpCriteria extends Google_Model {
-  protected $__dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $__dateRangeType = 'Google_DateRange';
   protected $__dateRangeDataType = '';
   public $dateRange;
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__dimensionFiltersType = 'Google_DimensionValue';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
-  protected $__dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__dimensionsType = 'Google_SortedDimension';
   protected $__dimensionsDataType = 'array';
   public $dimensions;
   public $metricNames;
-  public function setDateRange(Google_Service_Dfareporting_DateRange$dateRange) {
+  public function setDateRange(Google_DateRange $dateRange) {
     $this->dateRange = $dateRange;
   }
   public function getDateRange() {
@@ -1273,17 +1273,17 @@ class Google_ReportActiveGrpCriteria extends Google_Model {
 }
 
 class Google_ReportCompatibleFields extends Google_Model {
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_Dimension';
+  protected $__dimensionFiltersType = 'Google_Dimension';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
-  protected $__dimensionsType = 'Google_Service_Dfareporting_Dimension';
+  protected $__dimensionsType = 'Google_Dimension';
   protected $__dimensionsDataType = 'array';
   public $dimensions;
   public $kind;
-  protected $__metricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__metricsType = 'Google_Metric';
   protected $__metricsDataType = 'array';
   public $metrics;
-  protected $__pivotedActivityMetricsType = 'Google_Service_Dfareporting_Metric';
+  protected $__pivotedActivityMetricsType = 'Google_Metric';
   protected $__pivotedActivityMetricsDataType = 'array';
   public $pivotedActivityMetrics;
   public function setDimensionFilters(/* array(Google_Dimension) */ $dimensionFilters) {
@@ -1300,7 +1300,7 @@ class Google_ReportCompatibleFields extends Google_Model {
   public function getDimensions() {
     return $this->dimensions;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -1323,35 +1323,35 @@ class Google_ReportCompatibleFields extends Google_Model {
 }
 
 class Google_ReportCriteria extends Google_Model {
-  protected $__activitiesType = 'Google_Service_Dfareporting_Activities';
+  protected $__activitiesType = 'Google_Activities';
   protected $__activitiesDataType = '';
   public $activities;
-  protected $__customRichMediaEventsType = 'Google_Service_Dfareporting_CustomRichMediaEvents';
+  protected $__customRichMediaEventsType = 'Google_CustomRichMediaEvents';
   protected $__customRichMediaEventsDataType = '';
   public $customRichMediaEvents;
-  protected $__dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $__dateRangeType = 'Google_DateRange';
   protected $__dateRangeDataType = '';
   public $dateRange;
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__dimensionFiltersType = 'Google_DimensionValue';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
-  protected $__dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__dimensionsType = 'Google_SortedDimension';
   protected $__dimensionsDataType = 'array';
   public $dimensions;
   public $metricNames;
-  public function setActivities(Google_Service_Dfareporting_Activities$activities) {
+  public function setActivities(Google_Activities $activities) {
     $this->activities = $activities;
   }
   public function getActivities() {
     return $this->activities;
   }
-  public function setCustomRichMediaEvents(Google_Service_Dfareporting_CustomRichMediaEvents$customRichMediaEvents) {
+  public function setCustomRichMediaEvents(Google_CustomRichMediaEvents $customRichMediaEvents) {
     $this->customRichMediaEvents = $customRichMediaEvents;
   }
   public function getCustomRichMediaEvents() {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange$dateRange) {
+  public function setDateRange(Google_DateRange $dateRange) {
     $this->dateRange = $dateRange;
   }
   public function getDateRange() {
@@ -1381,14 +1381,14 @@ class Google_ReportCriteria extends Google_Model {
 }
 
 class Google_ReportCrossDimensionReachCriteria extends Google_Model {
-  protected $__breakdownType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__breakdownType = 'Google_SortedDimension';
   protected $__breakdownDataType = 'array';
   public $breakdown;
-  protected $__dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $__dateRangeType = 'Google_DateRange';
   protected $__dateRangeDataType = '';
   public $dateRange;
   public $dimension;
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__dimensionFiltersType = 'Google_DimensionValue';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
   public $metricNames;
@@ -1401,13 +1401,13 @@ class Google_ReportCrossDimensionReachCriteria extends Google_Model {
   public function getBreakdown() {
     return $this->breakdown;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange$dateRange) {
+  public function setDateRange(Google_DateRange $dateRange) {
     $this->dateRange = $dateRange;
   }
   public function getDateRange() {
     return $this->dateRange;
   }
-  public function setDimension($dimension) {
+  public function setDimension( $dimension) {
     $this->dimension = $dimension;
   }
   public function getDimension() {
@@ -1434,7 +1434,7 @@ class Google_ReportCrossDimensionReachCriteria extends Google_Model {
   public function getOverlapMetricNames() {
     return $this->overlapMetricNames;
   }
-  public function setPivoted($pivoted) {
+  public function setPivoted( $pivoted) {
     $this->pivoted = $pivoted;
   }
   public function getPivoted() {
@@ -1446,22 +1446,22 @@ class Google_ReportDelivery extends Google_Model {
   public $emailOwner;
   public $emailOwnerDeliveryType;
   public $message;
-  protected $__recipientsType = 'Google_Service_Dfareporting_Recipient';
+  protected $__recipientsType = 'Google_Recipient';
   protected $__recipientsDataType = 'array';
   public $recipients;
-  public function setEmailOwner($emailOwner) {
+  public function setEmailOwner( $emailOwner) {
     $this->emailOwner = $emailOwner;
   }
   public function getEmailOwner() {
     return $this->emailOwner;
   }
-  public function setEmailOwnerDeliveryType($emailOwnerDeliveryType) {
+  public function setEmailOwnerDeliveryType( $emailOwnerDeliveryType) {
     $this->emailOwnerDeliveryType = $emailOwnerDeliveryType;
   }
   public function getEmailOwnerDeliveryType() {
     return $this->emailOwnerDeliveryType;
   }
-  public function setMessage($message) {
+  public function setMessage( $message) {
     $this->message = $message;
   }
   public function getMessage() {
@@ -1477,23 +1477,23 @@ class Google_ReportDelivery extends Google_Model {
 }
 
 class Google_ReportFloodlightCriteria extends Google_Model {
-  protected $__customRichMediaEventsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__customRichMediaEventsType = 'Google_DimensionValue';
   protected $__customRichMediaEventsDataType = 'array';
   public $customRichMediaEvents;
-  protected $__dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $__dateRangeType = 'Google_DateRange';
   protected $__dateRangeDataType = '';
   public $dateRange;
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__dimensionFiltersType = 'Google_DimensionValue';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
-  protected $__dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__dimensionsType = 'Google_SortedDimension';
   protected $__dimensionsDataType = 'array';
   public $dimensions;
-  protected $__floodlightConfigIdType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__floodlightConfigIdType = 'Google_DimensionValue';
   protected $__floodlightConfigIdDataType = '';
   public $floodlightConfigId;
   public $metricNames;
-  protected $__reportPropertiesType = 'Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties';
+  protected $__reportPropertiesType = 'Google_ReportFloodlightCriteriaReportProperties';
   protected $__reportPropertiesDataType = '';
   public $reportProperties;
   public function setCustomRichMediaEvents(/* array(Google_DimensionValue) */ $customRichMediaEvents) {
@@ -1503,7 +1503,7 @@ class Google_ReportFloodlightCriteria extends Google_Model {
   public function getCustomRichMediaEvents() {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange$dateRange) {
+  public function setDateRange(Google_DateRange $dateRange) {
     $this->dateRange = $dateRange;
   }
   public function getDateRange() {
@@ -1523,7 +1523,7 @@ class Google_ReportFloodlightCriteria extends Google_Model {
   public function getDimensions() {
     return $this->dimensions;
   }
-  public function setFloodlightConfigId(Google_Service_Dfareporting_DimensionValue$floodlightConfigId) {
+  public function setFloodlightConfigId(Google_DimensionValue $floodlightConfigId) {
     $this->floodlightConfigId = $floodlightConfigId;
   }
   public function getFloodlightConfigId() {
@@ -1536,7 +1536,7 @@ class Google_ReportFloodlightCriteria extends Google_Model {
   public function getMetricNames() {
     return $this->metricNames;
   }
-  public function setReportProperties(Google_Service_Dfareporting_ReportFloodlightCriteriaReportProperties$reportProperties) {
+  public function setReportProperties(Google_ReportFloodlightCriteriaReportProperties $reportProperties) {
     $this->reportProperties = $reportProperties;
   }
   public function getReportProperties() {
@@ -1548,19 +1548,19 @@ class Google_ReportFloodlightCriteriaReportProperties extends Google_Model {
   public $includeAttributedIPConversions;
   public $includeUnattributedCookieConversions;
   public $includeUnattributedIPConversions;
-  public function setIncludeAttributedIPConversions($includeAttributedIPConversions) {
+  public function setIncludeAttributedIPConversions( $includeAttributedIPConversions) {
     $this->includeAttributedIPConversions = $includeAttributedIPConversions;
   }
   public function getIncludeAttributedIPConversions() {
     return $this->includeAttributedIPConversions;
   }
-  public function setIncludeUnattributedCookieConversions($includeUnattributedCookieConversions) {
+  public function setIncludeUnattributedCookieConversions( $includeUnattributedCookieConversions) {
     $this->includeUnattributedCookieConversions = $includeUnattributedCookieConversions;
   }
   public function getIncludeUnattributedCookieConversions() {
     return $this->includeUnattributedCookieConversions;
   }
-  public function setIncludeUnattributedIPConversions($includeUnattributedIPConversions) {
+  public function setIncludeUnattributedIPConversions( $includeUnattributedIPConversions) {
     $this->includeUnattributedIPConversions = $includeUnattributedIPConversions;
   }
   public function getIncludeUnattributedIPConversions() {
@@ -1570,12 +1570,12 @@ class Google_ReportFloodlightCriteriaReportProperties extends Google_Model {
 
 class Google_ReportList extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_Dfareporting_Report';
+  protected $__itemsType = 'Google_Report';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -1588,13 +1588,13 @@ class Google_ReportList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1603,29 +1603,29 @@ class Google_ReportList extends Google_Model {
 }
 
 class Google_ReportPathToConversionCriteria extends Google_Model {
-  protected $__activityFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__activityFiltersType = 'Google_DimensionValue';
   protected $__activityFiltersDataType = 'array';
   public $activityFilters;
-  protected $__conversionDimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__conversionDimensionsType = 'Google_SortedDimension';
   protected $__conversionDimensionsDataType = 'array';
   public $conversionDimensions;
-  protected $__customFloodlightVariablesType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__customFloodlightVariablesType = 'Google_SortedDimension';
   protected $__customFloodlightVariablesDataType = 'array';
   public $customFloodlightVariables;
-  protected $__customRichMediaEventsType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__customRichMediaEventsType = 'Google_DimensionValue';
   protected $__customRichMediaEventsDataType = 'array';
   public $customRichMediaEvents;
-  protected $__dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $__dateRangeType = 'Google_DateRange';
   protected $__dateRangeDataType = '';
   public $dateRange;
-  protected $__floodlightConfigIdType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__floodlightConfigIdType = 'Google_DimensionValue';
   protected $__floodlightConfigIdDataType = '';
   public $floodlightConfigId;
   public $metricNames;
-  protected $__perInteractionDimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__perInteractionDimensionsType = 'Google_SortedDimension';
   protected $__perInteractionDimensionsDataType = 'array';
   public $perInteractionDimensions;
-  protected $__reportPropertiesType = 'Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties';
+  protected $__reportPropertiesType = 'Google_ReportPathToConversionCriteriaReportProperties';
   protected $__reportPropertiesDataType = '';
   public $reportProperties;
   public function setActivityFilters(/* array(Google_DimensionValue) */ $activityFilters) {
@@ -1656,13 +1656,13 @@ class Google_ReportPathToConversionCriteria extends Google_Model {
   public function getCustomRichMediaEvents() {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange$dateRange) {
+  public function setDateRange(Google_DateRange $dateRange) {
     $this->dateRange = $dateRange;
   }
   public function getDateRange() {
     return $this->dateRange;
   }
-  public function setFloodlightConfigId(Google_Service_Dfareporting_DimensionValue$floodlightConfigId) {
+  public function setFloodlightConfigId(Google_DimensionValue $floodlightConfigId) {
     $this->floodlightConfigId = $floodlightConfigId;
   }
   public function getFloodlightConfigId() {
@@ -1682,7 +1682,7 @@ class Google_ReportPathToConversionCriteria extends Google_Model {
   public function getPerInteractionDimensions() {
     return $this->perInteractionDimensions;
   }
-  public function setReportProperties(Google_Service_Dfareporting_ReportPathToConversionCriteriaReportProperties$reportProperties) {
+  public function setReportProperties(Google_ReportPathToConversionCriteriaReportProperties $reportProperties) {
     $this->reportProperties = $reportProperties;
   }
   public function getReportProperties() {
@@ -1700,55 +1700,55 @@ class Google_ReportPathToConversionCriteriaReportProperties extends Google_Model
   public $maximumImpressionInteractions;
   public $maximumInteractionGap;
   public $pivotOnInteractionPath;
-  public function setClicksLookbackWindow($clicksLookbackWindow) {
+  public function setClicksLookbackWindow( $clicksLookbackWindow) {
     $this->clicksLookbackWindow = $clicksLookbackWindow;
   }
   public function getClicksLookbackWindow() {
     return $this->clicksLookbackWindow;
   }
-  public function setImpressionsLookbackWindow($impressionsLookbackWindow) {
+  public function setImpressionsLookbackWindow( $impressionsLookbackWindow) {
     $this->impressionsLookbackWindow = $impressionsLookbackWindow;
   }
   public function getImpressionsLookbackWindow() {
     return $this->impressionsLookbackWindow;
   }
-  public function setIncludeAttributedIPConversions($includeAttributedIPConversions) {
+  public function setIncludeAttributedIPConversions( $includeAttributedIPConversions) {
     $this->includeAttributedIPConversions = $includeAttributedIPConversions;
   }
   public function getIncludeAttributedIPConversions() {
     return $this->includeAttributedIPConversions;
   }
-  public function setIncludeUnattributedCookieConversions($includeUnattributedCookieConversions) {
+  public function setIncludeUnattributedCookieConversions( $includeUnattributedCookieConversions) {
     $this->includeUnattributedCookieConversions = $includeUnattributedCookieConversions;
   }
   public function getIncludeUnattributedCookieConversions() {
     return $this->includeUnattributedCookieConversions;
   }
-  public function setIncludeUnattributedIPConversions($includeUnattributedIPConversions) {
+  public function setIncludeUnattributedIPConversions( $includeUnattributedIPConversions) {
     $this->includeUnattributedIPConversions = $includeUnattributedIPConversions;
   }
   public function getIncludeUnattributedIPConversions() {
     return $this->includeUnattributedIPConversions;
   }
-  public function setMaximumClickInteractions($maximumClickInteractions) {
+  public function setMaximumClickInteractions( $maximumClickInteractions) {
     $this->maximumClickInteractions = $maximumClickInteractions;
   }
   public function getMaximumClickInteractions() {
     return $this->maximumClickInteractions;
   }
-  public function setMaximumImpressionInteractions($maximumImpressionInteractions) {
+  public function setMaximumImpressionInteractions( $maximumImpressionInteractions) {
     $this->maximumImpressionInteractions = $maximumImpressionInteractions;
   }
   public function getMaximumImpressionInteractions() {
     return $this->maximumImpressionInteractions;
   }
-  public function setMaximumInteractionGap($maximumInteractionGap) {
+  public function setMaximumInteractionGap( $maximumInteractionGap) {
     $this->maximumInteractionGap = $maximumInteractionGap;
   }
   public function getMaximumInteractionGap() {
     return $this->maximumInteractionGap;
   }
-  public function setPivotOnInteractionPath($pivotOnInteractionPath) {
+  public function setPivotOnInteractionPath( $pivotOnInteractionPath) {
     $this->pivotOnInteractionPath = $pivotOnInteractionPath;
   }
   public function getPivotOnInteractionPath() {
@@ -1757,36 +1757,36 @@ class Google_ReportPathToConversionCriteriaReportProperties extends Google_Model
 }
 
 class Google_ReportReachCriteria extends Google_Model {
-  protected $__activitiesType = 'Google_Service_Dfareporting_Activities';
+  protected $__activitiesType = 'Google_Activities';
   protected $__activitiesDataType = '';
   public $activities;
-  protected $__customRichMediaEventsType = 'Google_Service_Dfareporting_CustomRichMediaEvents';
+  protected $__customRichMediaEventsType = 'Google_CustomRichMediaEvents';
   protected $__customRichMediaEventsDataType = '';
   public $customRichMediaEvents;
-  protected $__dateRangeType = 'Google_Service_Dfareporting_DateRange';
+  protected $__dateRangeType = 'Google_DateRange';
   protected $__dateRangeDataType = '';
   public $dateRange;
-  protected $__dimensionFiltersType = 'Google_Service_Dfareporting_DimensionValue';
+  protected $__dimensionFiltersType = 'Google_DimensionValue';
   protected $__dimensionFiltersDataType = 'array';
   public $dimensionFilters;
-  protected $__dimensionsType = 'Google_Service_Dfareporting_SortedDimension';
+  protected $__dimensionsType = 'Google_SortedDimension';
   protected $__dimensionsDataType = 'array';
   public $dimensions;
   public $metricNames;
   public $reachByFrequencyMetricNames;
-  public function setActivities(Google_Service_Dfareporting_Activities$activities) {
+  public function setActivities(Google_Activities $activities) {
     $this->activities = $activities;
   }
   public function getActivities() {
     return $this->activities;
   }
-  public function setCustomRichMediaEvents(Google_Service_Dfareporting_CustomRichMediaEvents$customRichMediaEvents) {
+  public function setCustomRichMediaEvents(Google_CustomRichMediaEvents $customRichMediaEvents) {
     $this->customRichMediaEvents = $customRichMediaEvents;
   }
   public function getCustomRichMediaEvents() {
     return $this->customRichMediaEvents;
   }
-  public function setDateRange(Google_Service_Dfareporting_DateRange$dateRange) {
+  public function setDateRange(Google_DateRange $dateRange) {
     $this->dateRange = $dateRange;
   }
   public function getDateRange() {
@@ -1830,25 +1830,25 @@ class Google_ReportSchedule extends Google_Model {
   public $repeatsOnWeekDays;
   public $runsOnDayOfMonth;
   public $startDate;
-  public function setActive($active) {
+  public function setActive( $active) {
     $this->active = $active;
   }
   public function getActive() {
     return $this->active;
   }
-  public function setEvery($every) {
+  public function setEvery( $every) {
     $this->every = $every;
   }
   public function getEvery() {
     return $this->every;
   }
-  public function setExpirationDate($expirationDate) {
+  public function setExpirationDate( $expirationDate) {
     $this->expirationDate = $expirationDate;
   }
   public function getExpirationDate() {
     return $this->expirationDate;
   }
-  public function setRepeats($repeats) {
+  public function setRepeats( $repeats) {
     $this->repeats = $repeats;
   }
   public function getRepeats() {
@@ -1861,13 +1861,13 @@ class Google_ReportSchedule extends Google_Model {
   public function getRepeatsOnWeekDays() {
     return $this->repeatsOnWeekDays;
   }
-  public function setRunsOnDayOfMonth($runsOnDayOfMonth) {
+  public function setRunsOnDayOfMonth( $runsOnDayOfMonth) {
     $this->runsOnDayOfMonth = $runsOnDayOfMonth;
   }
   public function getRunsOnDayOfMonth() {
     return $this->runsOnDayOfMonth;
   }
-  public function setStartDate($startDate) {
+  public function setStartDate( $startDate) {
     $this->startDate = $startDate;
   }
   public function getStartDate() {
@@ -1879,19 +1879,19 @@ class Google_SortedDimension extends Google_Model {
   public $kind;
   public $name;
   public $sortOrder;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setSortOrder($sortOrder) {
+  public function setSortOrder( $sortOrder) {
     $this->sortOrder = $sortOrder;
   }
   public function getSortOrder() {
@@ -1908,49 +1908,49 @@ class Google_UserProfile extends Google_Model {
   public $subAccountId;
   public $subAccountName;
   public $userName;
-  public function setAccountId($accountId) {
+  public function setAccountId( $accountId) {
     $this->accountId = $accountId;
   }
   public function getAccountId() {
     return $this->accountId;
   }
-  public function setAccountName($accountName) {
+  public function setAccountName( $accountName) {
     $this->accountName = $accountName;
   }
   public function getAccountName() {
     return $this->accountName;
   }
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
     return $this->etag;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setProfileId($profileId) {
+  public function setProfileId( $profileId) {
     $this->profileId = $profileId;
   }
   public function getProfileId() {
     return $this->profileId;
   }
-  public function setSubAccountId($subAccountId) {
+  public function setSubAccountId( $subAccountId) {
     $this->subAccountId = $subAccountId;
   }
   public function getSubAccountId() {
     return $this->subAccountId;
   }
-  public function setSubAccountName($subAccountName) {
+  public function setSubAccountName( $subAccountName) {
     $this->subAccountName = $subAccountName;
   }
   public function getSubAccountName() {
     return $this->subAccountName;
   }
-  public function setUserName($userName) {
+  public function setUserName( $userName) {
     $this->userName = $userName;
   }
   public function getUserName() {
@@ -1960,11 +1960,11 @@ class Google_UserProfile extends Google_Model {
 
 class Google_UserProfileList extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_Dfareporting_UserProfile';
+  protected $__itemsType = 'Google_UserProfile';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -1977,7 +1977,7 @@ class Google_UserProfileList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {

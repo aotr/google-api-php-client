@@ -339,7 +339,7 @@ class Google_Task extends Google_Model {
   public $hidden;
   public $id;
   public $kind;
-  protected $__linksType = 'Google_Service_Tasks_TaskLinks';
+  protected $__linksType = 'Google_TaskLinks';
   protected $__linksDataType = 'array';
   public $links;
   public $notes;
@@ -349,43 +349,43 @@ class Google_Task extends Google_Model {
   public $status;
   public $title;
   public $updated;
-  public function setCompleted($completed) {
+  public function setCompleted( $completed) {
     $this->completed = $completed;
   }
   public function getCompleted() {
     return $this->completed;
   }
-  public function setDeleted($deleted) {
+  public function setDeleted( $deleted) {
     $this->deleted = $deleted;
   }
   public function getDeleted() {
     return $this->deleted;
   }
-  public function setDue($due) {
+  public function setDue( $due) {
     $this->due = $due;
   }
   public function getDue() {
     return $this->due;
   }
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
     return $this->etag;
   }
-  public function setHidden($hidden) {
+  public function setHidden( $hidden) {
     $this->hidden = $hidden;
   }
   public function getHidden() {
     return $this->hidden;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -398,43 +398,43 @@ class Google_Task extends Google_Model {
   public function getLinks() {
     return $this->links;
   }
-  public function setNotes($notes) {
+  public function setNotes( $notes) {
     $this->notes = $notes;
   }
   public function getNotes() {
     return $this->notes;
   }
-  public function setParent($parent) {
+  public function setParent( $parent) {
     $this->parent = $parent;
   }
   public function getParent() {
     return $this->parent;
   }
-  public function setPosition($position) {
+  public function setPosition( $position) {
     $this->position = $position;
   }
   public function getPosition() {
     return $this->position;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
     return $this->status;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
@@ -446,19 +446,19 @@ class Google_TaskLinks extends Google_Model {
   public $description;
   public $link;
   public $type;
-  public function setDescription($description) {
+  public function setDescription( $description) {
     $this->description = $description;
   }
   public function getDescription() {
     return $this->description;
   }
-  public function setLink($link) {
+  public function setLink( $link) {
     $this->link = $link;
   }
   public function getLink() {
     return $this->link;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -473,37 +473,37 @@ class Google_TaskList extends Google_Model {
   public $selfLink;
   public $title;
   public $updated;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
     return $this->etag;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
@@ -513,12 +513,12 @@ class Google_TaskList extends Google_Model {
 
 class Google_TaskLists extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_Tasks_TaskList';
+  protected $__itemsType = 'Google_TaskList';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -531,13 +531,13 @@ class Google_TaskLists extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -547,12 +547,12 @@ class Google_TaskLists extends Google_Model {
 
 class Google_Tasks extends Google_Model {
   public $etag;
-  protected $__itemsType = 'Google_Service_Tasks_Task';
+  protected $__itemsType = 'Google_Task';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
   public $nextPageToken;
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
@@ -565,13 +565,13 @@ class Google_Tasks extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {

@@ -116,17 +116,17 @@ class Google_UrlshortenerService extends Google_Service {
 
 
 class Google_AnalyticsSnapshot extends Google_Model {
-  protected $__browsersType = 'Google_Service_Urlshortener_StringCount';
+  protected $__browsersType = 'Google_StringCount';
   protected $__browsersDataType = 'array';
   public $browsers;
-  protected $__countriesType = 'Google_Service_Urlshortener_StringCount';
+  protected $__countriesType = 'Google_StringCount';
   protected $__countriesDataType = 'array';
   public $countries;
   public $longUrlClicks;
-  protected $__platformsType = 'Google_Service_Urlshortener_StringCount';
+  protected $__platformsType = 'Google_StringCount';
   protected $__platformsDataType = 'array';
   public $platforms;
-  protected $__referrersType = 'Google_Service_Urlshortener_StringCount';
+  protected $__referrersType = 'Google_StringCount';
   protected $__referrersDataType = 'array';
   public $referrers;
   public $shortUrlClicks;
@@ -144,7 +144,7 @@ class Google_AnalyticsSnapshot extends Google_Model {
   public function getCountries() {
     return $this->countries;
   }
-  public function setLongUrlClicks($longUrlClicks) {
+  public function setLongUrlClicks( $longUrlClicks) {
     $this->longUrlClicks = $longUrlClicks;
   }
   public function getLongUrlClicks() {
@@ -164,7 +164,7 @@ class Google_AnalyticsSnapshot extends Google_Model {
   public function getReferrers() {
     return $this->referrers;
   }
-  public function setShortUrlClicks($shortUrlClicks) {
+  public function setShortUrlClicks( $shortUrlClicks) {
     $this->shortUrlClicks = $shortUrlClicks;
   }
   public function getShortUrlClicks() {
@@ -173,46 +173,46 @@ class Google_AnalyticsSnapshot extends Google_Model {
 }
 
 class Google_AnalyticsSummary extends Google_Model {
-  protected $__allTimeType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
+  protected $__allTimeType = 'Google_AnalyticsSnapshot';
   protected $__allTimeDataType = '';
   public $allTime;
-  protected $__dayType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
+  protected $__dayType = 'Google_AnalyticsSnapshot';
   protected $__dayDataType = '';
   public $day;
-  protected $__monthType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
+  protected $__monthType = 'Google_AnalyticsSnapshot';
   protected $__monthDataType = '';
   public $month;
-  protected $__twoHoursType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
+  protected $__twoHoursType = 'Google_AnalyticsSnapshot';
   protected $__twoHoursDataType = '';
   public $twoHours;
-  protected $__weekType = 'Google_Service_Urlshortener_AnalyticsSnapshot';
+  protected $__weekType = 'Google_AnalyticsSnapshot';
   protected $__weekDataType = '';
   public $week;
-  public function setAllTime(Google_Service_Urlshortener_AnalyticsSnapshot$allTime) {
+  public function setAllTime(Google_AnalyticsSnapshot $allTime) {
     $this->allTime = $allTime;
   }
   public function getAllTime() {
     return $this->allTime;
   }
-  public function setDay(Google_Service_Urlshortener_AnalyticsSnapshot$day) {
+  public function setDay(Google_AnalyticsSnapshot $day) {
     $this->day = $day;
   }
   public function getDay() {
     return $this->day;
   }
-  public function setMonth(Google_Service_Urlshortener_AnalyticsSnapshot$month) {
+  public function setMonth(Google_AnalyticsSnapshot $month) {
     $this->month = $month;
   }
   public function getMonth() {
     return $this->month;
   }
-  public function setTwoHours(Google_Service_Urlshortener_AnalyticsSnapshot$twoHours) {
+  public function setTwoHours(Google_AnalyticsSnapshot $twoHours) {
     $this->twoHours = $twoHours;
   }
   public function getTwoHours() {
     return $this->twoHours;
   }
-  public function setWeek(Google_Service_Urlshortener_AnalyticsSnapshot$week) {
+  public function setWeek(Google_AnalyticsSnapshot $week) {
     $this->week = $week;
   }
   public function getWeek() {
@@ -223,13 +223,13 @@ class Google_AnalyticsSummary extends Google_Model {
 class Google_StringCount extends Google_Model {
   public $count;
   public $id;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
@@ -238,7 +238,7 @@ class Google_StringCount extends Google_Model {
 }
 
 class Google_Url extends Google_Model {
-  protected $__analyticsType = 'Google_Service_Urlshortener_AnalyticsSummary';
+  protected $__analyticsType = 'Google_AnalyticsSummary';
   protected $__analyticsDataType = '';
   public $analytics;
   public $created;
@@ -246,37 +246,37 @@ class Google_Url extends Google_Model {
   public $kind;
   public $longUrl;
   public $status;
-  public function setAnalytics(Google_Service_Urlshortener_AnalyticsSummary$analytics) {
+  public function setAnalytics(Google_AnalyticsSummary $analytics) {
     $this->analytics = $analytics;
   }
   public function getAnalytics() {
     return $this->analytics;
   }
-  public function setCreated($created) {
+  public function setCreated( $created) {
     $this->created = $created;
   }
   public function getCreated() {
     return $this->created;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLongUrl($longUrl) {
+  public function setLongUrl( $longUrl) {
     $this->longUrl = $longUrl;
   }
   public function getLongUrl() {
     return $this->longUrl;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
@@ -285,7 +285,7 @@ class Google_Url extends Google_Model {
 }
 
 class Google_UrlHistory extends Google_Model {
-  protected $__itemsType = 'Google_Service_Urlshortener_Url';
+  protected $__itemsType = 'Google_Url';
   protected $__itemsDataType = 'array';
   public $items;
   public $itemsPerPage;
@@ -299,25 +299,25 @@ class Google_UrlHistory extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setItemsPerPage($itemsPerPage) {
+  public function setItemsPerPage( $itemsPerPage) {
     $this->itemsPerPage = $itemsPerPage;
   }
   public function getItemsPerPage() {
     return $this->itemsPerPage;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
     return $this->nextPageToken;
   }
-  public function setTotalItems($totalItems) {
+  public function setTotalItems( $totalItems) {
     $this->totalItems = $totalItems;
   }
   public function getTotalItems() {

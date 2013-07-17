@@ -160,7 +160,7 @@ class Google_ReportsService extends Google_Service {
 
 
 class Google_Activities extends Google_Model {
-  protected $__itemsType = 'Google_Service_Reports_Activity';
+  protected $__itemsType = 'Google_Activity';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -172,13 +172,13 @@ class Google_Activities extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -187,19 +187,19 @@ class Google_Activities extends Google_Model {
 }
 
 class Google_Activity extends Google_Model {
-  protected $__actorType = 'Google_Service_Reports_ActivityActor';
+  protected $__actorType = 'Google_ActivityActor';
   protected $__actorDataType = '';
   public $actor;
-  protected $__eventsType = 'Google_Service_Reports_ActivityEvents';
+  protected $__eventsType = 'Google_ActivityEvents';
   protected $__eventsDataType = 'array';
   public $events;
-  protected $__idType = 'Google_Service_Reports_ActivityId';
+  protected $__idType = 'Google_ActivityId';
   protected $__idDataType = '';
   public $id;
   public $ipAddress;
   public $kind;
   public $ownerDomain;
-  public function setActor(Google_Service_Reports_ActivityActor$actor) {
+  public function setActor(Google_ActivityActor $actor) {
     $this->actor = $actor;
   }
   public function getActor() {
@@ -212,25 +212,25 @@ class Google_Activity extends Google_Model {
   public function getEvents() {
     return $this->events;
   }
-  public function setId(Google_Service_Reports_ActivityId$id) {
+  public function setId(Google_ActivityId $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setIpAddress($ipAddress) {
+  public function setIpAddress( $ipAddress) {
     $this->ipAddress = $ipAddress;
   }
   public function getIpAddress() {
     return $this->ipAddress;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setOwnerDomain($ownerDomain) {
+  public function setOwnerDomain( $ownerDomain) {
     $this->ownerDomain = $ownerDomain;
   }
   public function getOwnerDomain() {
@@ -243,25 +243,25 @@ class Google_ActivityActor extends Google_Model {
   public $email;
   public $key;
   public $profileId;
-  public function setCallerType($callerType) {
+  public function setCallerType( $callerType) {
     $this->callerType = $callerType;
   }
   public function getCallerType() {
     return $this->callerType;
   }
-  public function setEmail($email) {
+  public function setEmail( $email) {
     $this->email = $email;
   }
   public function getEmail() {
     return $this->email;
   }
-  public function setKey($key) {
+  public function setKey( $key) {
     $this->key = $key;
   }
   public function getKey() {
     return $this->key;
   }
-  public function setProfileId($profileId) {
+  public function setProfileId( $profileId) {
     $this->profileId = $profileId;
   }
   public function getProfileId() {
@@ -271,11 +271,11 @@ class Google_ActivityActor extends Google_Model {
 
 class Google_ActivityEvents extends Google_Model {
   public $name;
-  protected $__parametersType = 'Google_Service_Reports_ActivityEventsParameters';
+  protected $__parametersType = 'Google_ActivityEventsParameters';
   protected $__parametersDataType = 'array';
   public $parameters;
   public $type;
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
@@ -288,7 +288,7 @@ class Google_ActivityEvents extends Google_Model {
   public function getParameters() {
     return $this->parameters;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -301,25 +301,25 @@ class Google_ActivityEventsParameters extends Google_Model {
   public $intValue;
   public $name;
   public $value;
-  public function setBoolValue($boolValue) {
+  public function setBoolValue( $boolValue) {
     $this->boolValue = $boolValue;
   }
   public function getBoolValue() {
     return $this->boolValue;
   }
-  public function setIntValue($intValue) {
+  public function setIntValue( $intValue) {
     $this->intValue = $intValue;
   }
   public function getIntValue() {
     return $this->intValue;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -332,25 +332,25 @@ class Google_ActivityId extends Google_Model {
   public $customerId;
   public $time;
   public $uniqueQualifier;
-  public function setApplicationName($applicationName) {
+  public function setApplicationName( $applicationName) {
     $this->applicationName = $applicationName;
   }
   public function getApplicationName() {
     return $this->applicationName;
   }
-  public function setCustomerId($customerId) {
+  public function setCustomerId( $customerId) {
     $this->customerId = $customerId;
   }
   public function getCustomerId() {
     return $this->customerId;
   }
-  public function setTime($time) {
+  public function setTime( $time) {
     $this->time = $time;
   }
   public function getTime() {
     return $this->time;
   }
-  public function setUniqueQualifier($uniqueQualifier) {
+  public function setUniqueQualifier( $uniqueQualifier) {
     $this->uniqueQualifier = $uniqueQualifier;
   }
   public function getUniqueQualifier() {
@@ -360,26 +360,26 @@ class Google_ActivityId extends Google_Model {
 
 class Google_UsageReport extends Google_Model {
   public $date;
-  protected $__entityType = 'Google_Service_Reports_UsageReportEntity';
+  protected $__entityType = 'Google_UsageReportEntity';
   protected $__entityDataType = '';
   public $entity;
   public $kind;
-  protected $__parametersType = 'Google_Service_Reports_UsageReportParameters';
+  protected $__parametersType = 'Google_UsageReportParameters';
   protected $__parametersDataType = 'array';
   public $parameters;
-  public function setDate($date) {
+  public function setDate( $date) {
     $this->date = $date;
   }
   public function getDate() {
     return $this->date;
   }
-  public function setEntity(Google_Service_Reports_UsageReportEntity$entity) {
+  public function setEntity(Google_UsageReportEntity $entity) {
     $this->entity = $entity;
   }
   public function getEntity() {
     return $this->entity;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -399,25 +399,25 @@ class Google_UsageReportEntity extends Google_Model {
   public $profileId;
   public $type;
   public $userEmail;
-  public function setCustomerId($customerId) {
+  public function setCustomerId( $customerId) {
     $this->customerId = $customerId;
   }
   public function getCustomerId() {
     return $this->customerId;
   }
-  public function setProfileId($profileId) {
+  public function setProfileId( $profileId) {
     $this->profileId = $profileId;
   }
   public function getProfileId() {
     return $this->profileId;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
     return $this->type;
   }
-  public function setUserEmail($userEmail) {
+  public function setUserEmail( $userEmail) {
     $this->userEmail = $userEmail;
   }
   public function getUserEmail() {
@@ -431,31 +431,31 @@ class Google_UsageReportParameters extends Google_Model {
   public $intValue;
   public $name;
   public $stringValue;
-  public function setBoolValue($boolValue) {
+  public function setBoolValue( $boolValue) {
     $this->boolValue = $boolValue;
   }
   public function getBoolValue() {
     return $this->boolValue;
   }
-  public function setDatetimeValue($datetimeValue) {
+  public function setDatetimeValue( $datetimeValue) {
     $this->datetimeValue = $datetimeValue;
   }
   public function getDatetimeValue() {
     return $this->datetimeValue;
   }
-  public function setIntValue($intValue) {
+  public function setIntValue( $intValue) {
     $this->intValue = $intValue;
   }
   public function getIntValue() {
     return $this->intValue;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setStringValue($stringValue) {
+  public function setStringValue( $stringValue) {
     $this->stringValue = $stringValue;
   }
   public function getStringValue() {
@@ -466,19 +466,19 @@ class Google_UsageReportParameters extends Google_Model {
 class Google_UsageReports extends Google_Model {
   public $kind;
   public $nextPageToken;
-  protected $__usageReportsType = 'Google_Service_Reports_UsageReport';
+  protected $__usageReportsType = 'Google_UsageReport';
   protected $__usageReportsDataType = 'array';
   public $usageReports;
-  protected $__warningsType = 'Google_Service_Reports_UsageReportsWarnings';
+  protected $__warningsType = 'Google_UsageReportsWarnings';
   protected $__warningsDataType = 'array';
   public $warnings;
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -502,11 +502,11 @@ class Google_UsageReports extends Google_Model {
 
 class Google_UsageReportsWarnings extends Google_Model {
   public $code;
-  protected $__dataType = 'Google_Service_Reports_UsageReportsWarningsData';
+  protected $__dataType = 'Google_UsageReportsWarningsData';
   protected $__dataDataType = 'array';
   public $data;
   public $message;
-  public function setCode($code) {
+  public function setCode( $code) {
     $this->code = $code;
   }
   public function getCode() {
@@ -519,7 +519,7 @@ class Google_UsageReportsWarnings extends Google_Model {
   public function getData() {
     return $this->data;
   }
-  public function setMessage($message) {
+  public function setMessage( $message) {
     $this->message = $message;
   }
   public function getMessage() {
@@ -530,13 +530,13 @@ class Google_UsageReportsWarnings extends Google_Model {
 class Google_UsageReportsWarningsData extends Google_Model {
   public $key;
   public $value;
-  public function setKey($key) {
+  public function setKey( $key) {
     $this->key = $key;
   }
   public function getKey() {
     return $this->key;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {

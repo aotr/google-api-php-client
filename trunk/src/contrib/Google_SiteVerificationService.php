@@ -178,17 +178,17 @@ class Google_SiteVerificationService extends Google_Service {
 
 
 class Google_SiteVerificationWebResourceGettokenRequest extends Google_Model {
-  protected $__siteType = 'Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite';
+  protected $__siteType = 'Google_SiteVerificationWebResourceGettokenRequestSite';
   protected $__siteDataType = '';
   public $site;
   public $verificationMethod;
-  public function setSite(Google_Service_SiteVerification_SiteVerificationWebResourceGettokenRequestSite$site) {
+  public function setSite(Google_SiteVerificationWebResourceGettokenRequestSite $site) {
     $this->site = $site;
   }
   public function getSite() {
     return $this->site;
   }
-  public function setVerificationMethod($verificationMethod) {
+  public function setVerificationMethod( $verificationMethod) {
     $this->verificationMethod = $verificationMethod;
   }
   public function getVerificationMethod() {
@@ -199,13 +199,13 @@ class Google_SiteVerificationWebResourceGettokenRequest extends Google_Model {
 class Google_SiteVerificationWebResourceGettokenRequestSite extends Google_Model {
   public $identifier;
   public $type;
-  public function setIdentifier($identifier) {
+  public function setIdentifier( $identifier) {
     $this->identifier = $identifier;
   }
   public function getIdentifier() {
     return $this->identifier;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -216,13 +216,13 @@ class Google_SiteVerificationWebResourceGettokenRequestSite extends Google_Model
 class Google_SiteVerificationWebResourceGettokenResponse extends Google_Model {
   public $method;
   public $token;
-  public function setMethod($method) {
+  public function setMethod( $method) {
     $this->method = $method;
   }
   public function getMethod() {
     return $this->method;
   }
-  public function setToken($token) {
+  public function setToken( $token) {
     $this->token = $token;
   }
   public function getToken() {
@@ -231,7 +231,7 @@ class Google_SiteVerificationWebResourceGettokenResponse extends Google_Model {
 }
 
 class Google_SiteVerificationWebResourceListResponse extends Google_Model {
-  protected $__itemsType = 'Google_Service_SiteVerification_SiteVerificationWebResourceResource';
+  protected $__itemsType = 'Google_SiteVerificationWebResourceResource';
   protected $__itemsDataType = 'array';
   public $items;
   public function setItems(/* array(Google_SiteVerificationWebResourceResource) */ $items) {
@@ -246,10 +246,10 @@ class Google_SiteVerificationWebResourceListResponse extends Google_Model {
 class Google_SiteVerificationWebResourceResource extends Google_Model {
   public $id;
   public $owners;
-  protected $__siteType = 'Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite';
+  protected $__siteType = 'Google_SiteVerificationWebResourceResourceSite';
   protected $__siteDataType = '';
   public $site;
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
@@ -262,7 +262,7 @@ class Google_SiteVerificationWebResourceResource extends Google_Model {
   public function getOwners() {
     return $this->owners;
   }
-  public function setSite(Google_Service_SiteVerification_SiteVerificationWebResourceResourceSite$site) {
+  public function setSite(Google_SiteVerificationWebResourceResourceSite $site) {
     $this->site = $site;
   }
   public function getSite() {
@@ -273,13 +273,13 @@ class Google_SiteVerificationWebResourceResource extends Google_Model {
 class Google_SiteVerificationWebResourceResourceSite extends Google_Model {
   public $identifier;
   public $type;
-  public function setIdentifier($identifier) {
+  public function setIdentifier( $identifier) {
     $this->identifier = $identifier;
   }
   public function getIdentifier() {
     return $this->identifier;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {

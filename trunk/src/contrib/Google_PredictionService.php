@@ -219,17 +219,17 @@ class Google_PredictionService extends Google_Service {
 
 
 class Google_Analyze extends Google_Model {
-  protected $__dataDescriptionType = 'Google_Service_Prediction_AnalyzeDataDescription';
+  protected $__dataDescriptionType = 'Google_AnalyzeDataDescription';
   protected $__dataDescriptionDataType = '';
   public $dataDescription;
   public $errors;
   public $id;
   public $kind;
-  protected $__modelDescriptionType = 'Google_Service_Prediction_AnalyzeModelDescription';
+  protected $__modelDescriptionType = 'Google_AnalyzeModelDescription';
   protected $__modelDescriptionDataType = '';
   public $modelDescription;
   public $selfLink;
-  public function setDataDescription(Google_Service_Prediction_AnalyzeDataDescription$dataDescription) {
+  public function setDataDescription(Google_AnalyzeDataDescription $dataDescription) {
     $this->dataDescription = $dataDescription;
   }
   public function getDataDescription() {
@@ -242,25 +242,25 @@ class Google_Analyze extends Google_Model {
   public function getErrors() {
     return $this->errors;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setModelDescription(Google_Service_Prediction_AnalyzeModelDescription$modelDescription) {
+  public function setModelDescription(Google_AnalyzeModelDescription $modelDescription) {
     $this->modelDescription = $modelDescription;
   }
   public function getModelDescription() {
     return $this->modelDescription;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -269,10 +269,10 @@ class Google_Analyze extends Google_Model {
 }
 
 class Google_AnalyzeDataDescription extends Google_Model {
-  protected $__featuresType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeatures';
+  protected $__featuresType = 'Google_AnalyzeDataDescriptionFeatures';
   protected $__featuresDataType = 'array';
   public $features;
-  protected $__outputFeatureType = 'Google_Service_Prediction_AnalyzeDataDescriptionOutputFeature';
+  protected $__outputFeatureType = 'Google_AnalyzeDataDescriptionOutputFeature';
   protected $__outputFeatureDataType = '';
   public $outputFeature;
   public function setFeatures(/* array(Google_AnalyzeDataDescriptionFeatures) */ $features) {
@@ -282,7 +282,7 @@ class Google_AnalyzeDataDescription extends Google_Model {
   public function getFeatures() {
     return $this->features;
   }
-  public function setOutputFeature(Google_Service_Prediction_AnalyzeDataDescriptionOutputFeature$outputFeature) {
+  public function setOutputFeature(Google_AnalyzeDataDescriptionOutputFeature $outputFeature) {
     $this->outputFeature = $outputFeature;
   }
   public function getOutputFeature() {
@@ -291,35 +291,35 @@ class Google_AnalyzeDataDescription extends Google_Model {
 }
 
 class Google_AnalyzeDataDescriptionFeatures extends Google_Model {
-  protected $__categoricalType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategorical';
+  protected $__categoricalType = 'Google_AnalyzeDataDescriptionFeaturesCategorical';
   protected $__categoricalDataType = '';
   public $categorical;
   public $index;
-  protected $__numericType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesNumeric';
+  protected $__numericType = 'Google_AnalyzeDataDescriptionFeaturesNumeric';
   protected $__numericDataType = '';
   public $numeric;
-  protected $__textType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesText';
+  protected $__textType = 'Google_AnalyzeDataDescriptionFeaturesText';
   protected $__textDataType = '';
   public $text;
-  public function setCategorical(Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategorical$categorical) {
+  public function setCategorical(Google_AnalyzeDataDescriptionFeaturesCategorical $categorical) {
     $this->categorical = $categorical;
   }
   public function getCategorical() {
     return $this->categorical;
   }
-  public function setIndex($index) {
+  public function setIndex( $index) {
     $this->index = $index;
   }
   public function getIndex() {
     return $this->index;
   }
-  public function setNumeric(Google_Service_Prediction_AnalyzeDataDescriptionFeaturesNumeric$numeric) {
+  public function setNumeric(Google_AnalyzeDataDescriptionFeaturesNumeric $numeric) {
     $this->numeric = $numeric;
   }
   public function getNumeric() {
     return $this->numeric;
   }
-  public function setText(Google_Service_Prediction_AnalyzeDataDescriptionFeaturesText$text) {
+  public function setText(Google_AnalyzeDataDescriptionFeaturesText $text) {
     $this->text = $text;
   }
   public function getText() {
@@ -329,10 +329,10 @@ class Google_AnalyzeDataDescriptionFeatures extends Google_Model {
 
 class Google_AnalyzeDataDescriptionFeaturesCategorical extends Google_Model {
   public $count;
-  protected $__valuesType = 'Google_Service_Prediction_AnalyzeDataDescriptionFeaturesCategoricalValues';
+  protected $__valuesType = 'Google_AnalyzeDataDescriptionFeaturesCategoricalValues';
   protected $__valuesDataType = 'array';
   public $values;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
@@ -350,13 +350,13 @@ class Google_AnalyzeDataDescriptionFeaturesCategorical extends Google_Model {
 class Google_AnalyzeDataDescriptionFeaturesCategoricalValues extends Google_Model {
   public $count;
   public $value;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -368,19 +368,19 @@ class Google_AnalyzeDataDescriptionFeaturesNumeric extends Google_Model {
   public $count;
   public $mean;
   public $variance;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setMean($mean) {
+  public function setMean( $mean) {
     $this->mean = $mean;
   }
   public function getMean() {
     return $this->mean;
   }
-  public function setVariance($variance) {
+  public function setVariance( $variance) {
     $this->variance = $variance;
   }
   public function getVariance() {
@@ -390,7 +390,7 @@ class Google_AnalyzeDataDescriptionFeaturesNumeric extends Google_Model {
 
 class Google_AnalyzeDataDescriptionFeaturesText extends Google_Model {
   public $count;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
@@ -399,13 +399,13 @@ class Google_AnalyzeDataDescriptionFeaturesText extends Google_Model {
 }
 
 class Google_AnalyzeDataDescriptionOutputFeature extends Google_Model {
-  protected $__numericType = 'Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureNumeric';
+  protected $__numericType = 'Google_AnalyzeDataDescriptionOutputFeatureNumeric';
   protected $__numericDataType = '';
   public $numeric;
-  protected $__textType = 'Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureText';
+  protected $__textType = 'Google_AnalyzeDataDescriptionOutputFeatureText';
   protected $__textDataType = 'array';
   public $text;
-  public function setNumeric(Google_Service_Prediction_AnalyzeDataDescriptionOutputFeatureNumeric$numeric) {
+  public function setNumeric(Google_AnalyzeDataDescriptionOutputFeatureNumeric $numeric) {
     $this->numeric = $numeric;
   }
   public function getNumeric() {
@@ -424,19 +424,19 @@ class Google_AnalyzeDataDescriptionOutputFeatureNumeric extends Google_Model {
   public $count;
   public $mean;
   public $variance;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setMean($mean) {
+  public function setMean( $mean) {
     $this->mean = $mean;
   }
   public function getMean() {
     return $this->mean;
   }
-  public function setVariance($variance) {
+  public function setVariance( $variance) {
     $this->variance = $variance;
   }
   public function getVariance() {
@@ -447,13 +447,13 @@ class Google_AnalyzeDataDescriptionOutputFeatureNumeric extends Google_Model {
 class Google_AnalyzeDataDescriptionOutputFeatureText extends Google_Model {
   public $count;
   public $value;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -464,22 +464,22 @@ class Google_AnalyzeDataDescriptionOutputFeatureText extends Google_Model {
 class Google_AnalyzeModelDescription extends Google_Model {
   public $confusionMatrix;
   public $confusionMatrixRowTotals;
-  protected $__modelinfoType = 'Google_Service_Prediction_Insert2';
+  protected $__modelinfoType = 'Google_Insert2';
   protected $__modelinfoDataType = '';
   public $modelinfo;
-  public function setConfusionMatrix($confusionMatrix) {
+  public function setConfusionMatrix( $confusionMatrix) {
     $this->confusionMatrix = $confusionMatrix;
   }
   public function getConfusionMatrix() {
     return $this->confusionMatrix;
   }
-  public function setConfusionMatrixRowTotals($confusionMatrixRowTotals) {
+  public function setConfusionMatrixRowTotals( $confusionMatrixRowTotals) {
     $this->confusionMatrixRowTotals = $confusionMatrixRowTotals;
   }
   public function getConfusionMatrixRowTotals() {
     return $this->confusionMatrixRowTotals;
   }
-  public function setModelinfo(Google_Service_Prediction_Insert2$modelinfo) {
+  public function setModelinfo(Google_Insert2 $modelinfo) {
     $this->modelinfo = $modelinfo;
   }
   public function getModelinfo() {
@@ -488,10 +488,10 @@ class Google_AnalyzeModelDescription extends Google_Model {
 }
 
 class Google_Input extends Google_Model {
-  protected $__inputType = 'Google_Service_Prediction_InputInput';
+  protected $__inputType = 'Google_InputInput';
   protected $__inputDataType = '';
   public $input;
-  public function setInput(Google_Service_Prediction_InputInput$input) {
+  public function setInput(Google_InputInput $input) {
     $this->input = $input;
   }
   public function getInput() {
@@ -517,41 +517,41 @@ class Google_Insert extends Google_Model {
   public $storageDataLocation;
   public $storagePMMLLocation;
   public $storagePMMLModelLocation;
-  protected $__trainingInstancesType = 'Google_Service_Prediction_InsertTrainingInstances';
+  protected $__trainingInstancesType = 'Google_InsertTrainingInstances';
   protected $__trainingInstancesDataType = 'array';
   public $trainingInstances;
   public $utility;
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setModelType($modelType) {
+  public function setModelType( $modelType) {
     $this->modelType = $modelType;
   }
   public function getModelType() {
     return $this->modelType;
   }
-  public function setSourceModel($sourceModel) {
+  public function setSourceModel( $sourceModel) {
     $this->sourceModel = $sourceModel;
   }
   public function getSourceModel() {
     return $this->sourceModel;
   }
-  public function setStorageDataLocation($storageDataLocation) {
+  public function setStorageDataLocation( $storageDataLocation) {
     $this->storageDataLocation = $storageDataLocation;
   }
   public function getStorageDataLocation() {
     return $this->storageDataLocation;
   }
-  public function setStoragePMMLLocation($storagePMMLLocation) {
+  public function setStoragePMMLLocation( $storagePMMLLocation) {
     $this->storagePMMLLocation = $storagePMMLLocation;
   }
   public function getStoragePMMLLocation() {
     return $this->storagePMMLLocation;
   }
-  public function setStoragePMMLModelLocation($storagePMMLModelLocation) {
+  public function setStoragePMMLModelLocation( $storagePMMLModelLocation) {
     $this->storagePMMLModelLocation = $storagePMMLModelLocation;
   }
   public function getStoragePMMLModelLocation() {
@@ -577,7 +577,7 @@ class Google_Insert2 extends Google_Model {
   public $created;
   public $id;
   public $kind;
-  protected $__modelInfoType = 'Google_Service_Prediction_Insert2ModelInfo';
+  protected $__modelInfoType = 'Google_Insert2ModelInfo';
   protected $__modelInfoDataType = '';
   public $modelInfo;
   public $modelType;
@@ -587,67 +587,67 @@ class Google_Insert2 extends Google_Model {
   public $storagePMMLModelLocation;
   public $trainingComplete;
   public $trainingStatus;
-  public function setCreated($created) {
+  public function setCreated( $created) {
     $this->created = $created;
   }
   public function getCreated() {
     return $this->created;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setModelInfo(Google_Service_Prediction_Insert2ModelInfo$modelInfo) {
+  public function setModelInfo(Google_Insert2ModelInfo $modelInfo) {
     $this->modelInfo = $modelInfo;
   }
   public function getModelInfo() {
     return $this->modelInfo;
   }
-  public function setModelType($modelType) {
+  public function setModelType( $modelType) {
     $this->modelType = $modelType;
   }
   public function getModelType() {
     return $this->modelType;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setStorageDataLocation($storageDataLocation) {
+  public function setStorageDataLocation( $storageDataLocation) {
     $this->storageDataLocation = $storageDataLocation;
   }
   public function getStorageDataLocation() {
     return $this->storageDataLocation;
   }
-  public function setStoragePMMLLocation($storagePMMLLocation) {
+  public function setStoragePMMLLocation( $storagePMMLLocation) {
     $this->storagePMMLLocation = $storagePMMLLocation;
   }
   public function getStoragePMMLLocation() {
     return $this->storagePMMLLocation;
   }
-  public function setStoragePMMLModelLocation($storagePMMLModelLocation) {
+  public function setStoragePMMLModelLocation( $storagePMMLModelLocation) {
     $this->storagePMMLModelLocation = $storagePMMLModelLocation;
   }
   public function getStoragePMMLModelLocation() {
     return $this->storagePMMLModelLocation;
   }
-  public function setTrainingComplete($trainingComplete) {
+  public function setTrainingComplete( $trainingComplete) {
     $this->trainingComplete = $trainingComplete;
   }
   public function getTrainingComplete() {
     return $this->trainingComplete;
   }
-  public function setTrainingStatus($trainingStatus) {
+  public function setTrainingStatus( $trainingStatus) {
     $this->trainingStatus = $trainingStatus;
   }
   public function getTrainingStatus() {
@@ -662,37 +662,37 @@ class Google_Insert2ModelInfo extends Google_Model {
   public $modelType;
   public $numberInstances;
   public $numberLabels;
-  public function setClassWeightedAccuracy($classWeightedAccuracy) {
+  public function setClassWeightedAccuracy( $classWeightedAccuracy) {
     $this->classWeightedAccuracy = $classWeightedAccuracy;
   }
   public function getClassWeightedAccuracy() {
     return $this->classWeightedAccuracy;
   }
-  public function setClassificationAccuracy($classificationAccuracy) {
+  public function setClassificationAccuracy( $classificationAccuracy) {
     $this->classificationAccuracy = $classificationAccuracy;
   }
   public function getClassificationAccuracy() {
     return $this->classificationAccuracy;
   }
-  public function setMeanSquaredError($meanSquaredError) {
+  public function setMeanSquaredError( $meanSquaredError) {
     $this->meanSquaredError = $meanSquaredError;
   }
   public function getMeanSquaredError() {
     return $this->meanSquaredError;
   }
-  public function setModelType($modelType) {
+  public function setModelType( $modelType) {
     $this->modelType = $modelType;
   }
   public function getModelType() {
     return $this->modelType;
   }
-  public function setNumberInstances($numberInstances) {
+  public function setNumberInstances( $numberInstances) {
     $this->numberInstances = $numberInstances;
   }
   public function getNumberInstances() {
     return $this->numberInstances;
   }
-  public function setNumberLabels($numberLabels) {
+  public function setNumberLabels( $numberLabels) {
     $this->numberLabels = $numberLabels;
   }
   public function getNumberLabels() {
@@ -710,7 +710,7 @@ class Google_InsertTrainingInstances extends Google_Model {
   public function getCsvInstance() {
     return $this->csvInstance;
   }
-  public function setOutput($output) {
+  public function setOutput( $output) {
     $this->output = $output;
   }
   public function getOutput() {
@@ -722,24 +722,24 @@ class Google_Output extends Google_Model {
   public $id;
   public $kind;
   public $outputLabel;
-  protected $__outputMultiType = 'Google_Service_Prediction_OutputOutputMulti';
+  protected $__outputMultiType = 'Google_OutputOutputMulti';
   protected $__outputMultiDataType = 'array';
   public $outputMulti;
   public $outputValue;
   public $selfLink;
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setOutputLabel($outputLabel) {
+  public function setOutputLabel( $outputLabel) {
     $this->outputLabel = $outputLabel;
   }
   public function getOutputLabel() {
@@ -752,13 +752,13 @@ class Google_Output extends Google_Model {
   public function getOutputMulti() {
     return $this->outputMulti;
   }
-  public function setOutputValue($outputValue) {
+  public function setOutputValue( $outputValue) {
     $this->outputValue = $outputValue;
   }
   public function getOutputValue() {
     return $this->outputValue;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -769,13 +769,13 @@ class Google_Output extends Google_Model {
 class Google_OutputOutputMulti extends Google_Model {
   public $label;
   public $score;
-  public function setLabel($label) {
+  public function setLabel( $label) {
     $this->label = $label;
   }
   public function getLabel() {
     return $this->label;
   }
-  public function setScore($score) {
+  public function setScore( $score) {
     $this->score = $score;
   }
   public function getScore() {
@@ -784,7 +784,7 @@ class Google_OutputOutputMulti extends Google_Model {
 }
 
 class Google_PredictionList extends Google_Model {
-  protected $__itemsType = 'Google_Service_Prediction_Insert2';
+  protected $__itemsType = 'Google_Insert2';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -797,19 +797,19 @@ class Google_PredictionList extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
     return $this->nextPageToken;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
@@ -827,7 +827,7 @@ class Google_Update extends Google_Model {
   public function getCsvInstance() {
     return $this->csvInstance;
   }
-  public function setOutput($output) {
+  public function setOutput( $output) {
     $this->output = $output;
   }
   public function getOutput() {

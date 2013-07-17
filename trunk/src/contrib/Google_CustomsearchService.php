@@ -111,7 +111,7 @@ class Google_CustomsearchService extends Google_Service {
 
 
 class Google_Context extends Google_Model {
-  protected $__facetsType = 'Google_Service_Customsearch_ContextFacets';
+  protected $__facetsType = 'Google_ContextFacets';
   protected $__facetsDataType = 'array';
   public $facets;
   public $title;
@@ -122,7 +122,7 @@ class Google_Context extends Google_Model {
   public function getFacets() {
     return $this->facets;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
@@ -133,13 +133,13 @@ class Google_Context extends Google_Model {
 class Google_ContextFacets extends Google_Model {
   public $anchor;
   public $label;
-  public function setAnchor($anchor) {
+  public function setAnchor( $anchor) {
     $this->anchor = $anchor;
   }
   public function getAnchor() {
     return $this->anchor;
   }
-  public function setLabel($label) {
+  public function setLabel( $label) {
     $this->label = $label;
   }
   public function getLabel() {
@@ -148,12 +148,12 @@ class Google_ContextFacets extends Google_Model {
 }
 
 class Google_Promotion extends Google_Model {
-  protected $__bodyLinesType = 'Google_Service_Customsearch_PromotionBodyLines';
+  protected $__bodyLinesType = 'Google_PromotionBodyLines';
   protected $__bodyLinesDataType = 'array';
   public $bodyLines;
   public $displayLink;
   public $htmlTitle;
-  protected $__imageType = 'Google_Service_Customsearch_PromotionImage';
+  protected $__imageType = 'Google_PromotionImage';
   protected $__imageDataType = '';
   public $image;
   public $link;
@@ -165,31 +165,31 @@ class Google_Promotion extends Google_Model {
   public function getBodyLines() {
     return $this->bodyLines;
   }
-  public function setDisplayLink($displayLink) {
+  public function setDisplayLink( $displayLink) {
     $this->displayLink = $displayLink;
   }
   public function getDisplayLink() {
     return $this->displayLink;
   }
-  public function setHtmlTitle($htmlTitle) {
+  public function setHtmlTitle( $htmlTitle) {
     $this->htmlTitle = $htmlTitle;
   }
   public function getHtmlTitle() {
     return $this->htmlTitle;
   }
-  public function setImage(Google_Service_Customsearch_PromotionImage$image) {
+  public function setImage(Google_PromotionImage $image) {
     $this->image = $image;
   }
   public function getImage() {
     return $this->image;
   }
-  public function setLink($link) {
+  public function setLink( $link) {
     $this->link = $link;
   }
   public function getLink() {
     return $this->link;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
@@ -202,25 +202,25 @@ class Google_PromotionBodyLines extends Google_Model {
   public $link;
   public $title;
   public $url;
-  public function setHtmlTitle($htmlTitle) {
+  public function setHtmlTitle( $htmlTitle) {
     $this->htmlTitle = $htmlTitle;
   }
   public function getHtmlTitle() {
     return $this->htmlTitle;
   }
-  public function setLink($link) {
+  public function setLink( $link) {
     $this->link = $link;
   }
   public function getLink() {
     return $this->link;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -232,19 +232,19 @@ class Google_PromotionImage extends Google_Model {
   public $height;
   public $source;
   public $width;
-  public function setHeight($height) {
+  public function setHeight( $height) {
     $this->height = $height;
   }
   public function getHeight() {
     return $this->height;
   }
-  public function setSource($source) {
+  public function setSource( $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setWidth($width) {
+  public function setWidth( $width) {
     $this->width = $width;
   }
   public function getWidth() {
@@ -290,223 +290,223 @@ class Google_Query extends Google_Model {
   public $startPage;
   public $title;
   public $totalResults;
-  public function setCount($count) {
+  public function setCount( $count) {
     $this->count = $count;
   }
   public function getCount() {
     return $this->count;
   }
-  public function setCr($cr) {
+  public function setCr( $cr) {
     $this->cr = $cr;
   }
   public function getCr() {
     return $this->cr;
   }
-  public function setCref($cref) {
+  public function setCref( $cref) {
     $this->cref = $cref;
   }
   public function getCref() {
     return $this->cref;
   }
-  public function setCx($cx) {
+  public function setCx( $cx) {
     $this->cx = $cx;
   }
   public function getCx() {
     return $this->cx;
   }
-  public function setDateRestrict($dateRestrict) {
+  public function setDateRestrict( $dateRestrict) {
     $this->dateRestrict = $dateRestrict;
   }
   public function getDateRestrict() {
     return $this->dateRestrict;
   }
-  public function setDisableCnTwTranslation($disableCnTwTranslation) {
+  public function setDisableCnTwTranslation( $disableCnTwTranslation) {
     $this->disableCnTwTranslation = $disableCnTwTranslation;
   }
   public function getDisableCnTwTranslation() {
     return $this->disableCnTwTranslation;
   }
-  public function setExactTerms($exactTerms) {
+  public function setExactTerms( $exactTerms) {
     $this->exactTerms = $exactTerms;
   }
   public function getExactTerms() {
     return $this->exactTerms;
   }
-  public function setExcludeTerms($excludeTerms) {
+  public function setExcludeTerms( $excludeTerms) {
     $this->excludeTerms = $excludeTerms;
   }
   public function getExcludeTerms() {
     return $this->excludeTerms;
   }
-  public function setFileType($fileType) {
+  public function setFileType( $fileType) {
     $this->fileType = $fileType;
   }
   public function getFileType() {
     return $this->fileType;
   }
-  public function setFilter($filter) {
+  public function setFilter( $filter) {
     $this->filter = $filter;
   }
   public function getFilter() {
     return $this->filter;
   }
-  public function setGl($gl) {
+  public function setGl( $gl) {
     $this->gl = $gl;
   }
   public function getGl() {
     return $this->gl;
   }
-  public function setGoogleHost($googleHost) {
+  public function setGoogleHost( $googleHost) {
     $this->googleHost = $googleHost;
   }
   public function getGoogleHost() {
     return $this->googleHost;
   }
-  public function setHighRange($highRange) {
+  public function setHighRange( $highRange) {
     $this->highRange = $highRange;
   }
   public function getHighRange() {
     return $this->highRange;
   }
-  public function setHl($hl) {
+  public function setHl( $hl) {
     $this->hl = $hl;
   }
   public function getHl() {
     return $this->hl;
   }
-  public function setHq($hq) {
+  public function setHq( $hq) {
     $this->hq = $hq;
   }
   public function getHq() {
     return $this->hq;
   }
-  public function setImgColorType($imgColorType) {
+  public function setImgColorType( $imgColorType) {
     $this->imgColorType = $imgColorType;
   }
   public function getImgColorType() {
     return $this->imgColorType;
   }
-  public function setImgDominantColor($imgDominantColor) {
+  public function setImgDominantColor( $imgDominantColor) {
     $this->imgDominantColor = $imgDominantColor;
   }
   public function getImgDominantColor() {
     return $this->imgDominantColor;
   }
-  public function setImgSize($imgSize) {
+  public function setImgSize( $imgSize) {
     $this->imgSize = $imgSize;
   }
   public function getImgSize() {
     return $this->imgSize;
   }
-  public function setImgType($imgType) {
+  public function setImgType( $imgType) {
     $this->imgType = $imgType;
   }
   public function getImgType() {
     return $this->imgType;
   }
-  public function setInputEncoding($inputEncoding) {
+  public function setInputEncoding( $inputEncoding) {
     $this->inputEncoding = $inputEncoding;
   }
   public function getInputEncoding() {
     return $this->inputEncoding;
   }
-  public function setLanguage($language) {
+  public function setLanguage( $language) {
     $this->language = $language;
   }
   public function getLanguage() {
     return $this->language;
   }
-  public function setLinkSite($linkSite) {
+  public function setLinkSite( $linkSite) {
     $this->linkSite = $linkSite;
   }
   public function getLinkSite() {
     return $this->linkSite;
   }
-  public function setLowRange($lowRange) {
+  public function setLowRange( $lowRange) {
     $this->lowRange = $lowRange;
   }
   public function getLowRange() {
     return $this->lowRange;
   }
-  public function setOrTerms($orTerms) {
+  public function setOrTerms( $orTerms) {
     $this->orTerms = $orTerms;
   }
   public function getOrTerms() {
     return $this->orTerms;
   }
-  public function setOutputEncoding($outputEncoding) {
+  public function setOutputEncoding( $outputEncoding) {
     $this->outputEncoding = $outputEncoding;
   }
   public function getOutputEncoding() {
     return $this->outputEncoding;
   }
-  public function setRelatedSite($relatedSite) {
+  public function setRelatedSite( $relatedSite) {
     $this->relatedSite = $relatedSite;
   }
   public function getRelatedSite() {
     return $this->relatedSite;
   }
-  public function setRights($rights) {
+  public function setRights( $rights) {
     $this->rights = $rights;
   }
   public function getRights() {
     return $this->rights;
   }
-  public function setSafe($safe) {
+  public function setSafe( $safe) {
     $this->safe = $safe;
   }
   public function getSafe() {
     return $this->safe;
   }
-  public function setSearchTerms($searchTerms) {
+  public function setSearchTerms( $searchTerms) {
     $this->searchTerms = $searchTerms;
   }
   public function getSearchTerms() {
     return $this->searchTerms;
   }
-  public function setSearchType($searchType) {
+  public function setSearchType( $searchType) {
     $this->searchType = $searchType;
   }
   public function getSearchType() {
     return $this->searchType;
   }
-  public function setSiteSearch($siteSearch) {
+  public function setSiteSearch( $siteSearch) {
     $this->siteSearch = $siteSearch;
   }
   public function getSiteSearch() {
     return $this->siteSearch;
   }
-  public function setSiteSearchFilter($siteSearchFilter) {
+  public function setSiteSearchFilter( $siteSearchFilter) {
     $this->siteSearchFilter = $siteSearchFilter;
   }
   public function getSiteSearchFilter() {
     return $this->siteSearchFilter;
   }
-  public function setSort($sort) {
+  public function setSort( $sort) {
     $this->sort = $sort;
   }
   public function getSort() {
     return $this->sort;
   }
-  public function setStartIndex($startIndex) {
+  public function setStartIndex( $startIndex) {
     $this->startIndex = $startIndex;
   }
   public function getStartIndex() {
     return $this->startIndex;
   }
-  public function setStartPage($startPage) {
+  public function setStartPage( $startPage) {
     $this->startPage = $startPage;
   }
   public function getStartPage() {
     return $this->startPage;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setTotalResults($totalResults) {
+  public function setTotalResults( $totalResults) {
     $this->totalResults = $totalResults;
   }
   public function getTotalResults() {
@@ -522,11 +522,11 @@ class Google_Result extends Google_Model {
   public $htmlFormattedUrl;
   public $htmlSnippet;
   public $htmlTitle;
-  protected $__imageType = 'Google_Service_Customsearch_ResultImage';
+  protected $__imageType = 'Google_ResultImage';
   protected $__imageDataType = '';
   public $image;
   public $kind;
-  protected $__labelsType = 'Google_Service_Customsearch_ResultLabels';
+  protected $__labelsType = 'Google_ResultLabels';
   protected $__labelsDataType = 'array';
   public $labels;
   public $link;
@@ -534,55 +534,55 @@ class Google_Result extends Google_Model {
   public $pagemap;
   public $snippet;
   public $title;
-  public function setCacheId($cacheId) {
+  public function setCacheId( $cacheId) {
     $this->cacheId = $cacheId;
   }
   public function getCacheId() {
     return $this->cacheId;
   }
-  public function setDisplayLink($displayLink) {
+  public function setDisplayLink( $displayLink) {
     $this->displayLink = $displayLink;
   }
   public function getDisplayLink() {
     return $this->displayLink;
   }
-  public function setFileFormat($fileFormat) {
+  public function setFileFormat( $fileFormat) {
     $this->fileFormat = $fileFormat;
   }
   public function getFileFormat() {
     return $this->fileFormat;
   }
-  public function setFormattedUrl($formattedUrl) {
+  public function setFormattedUrl( $formattedUrl) {
     $this->formattedUrl = $formattedUrl;
   }
   public function getFormattedUrl() {
     return $this->formattedUrl;
   }
-  public function setHtmlFormattedUrl($htmlFormattedUrl) {
+  public function setHtmlFormattedUrl( $htmlFormattedUrl) {
     $this->htmlFormattedUrl = $htmlFormattedUrl;
   }
   public function getHtmlFormattedUrl() {
     return $this->htmlFormattedUrl;
   }
-  public function setHtmlSnippet($htmlSnippet) {
+  public function setHtmlSnippet( $htmlSnippet) {
     $this->htmlSnippet = $htmlSnippet;
   }
   public function getHtmlSnippet() {
     return $this->htmlSnippet;
   }
-  public function setHtmlTitle($htmlTitle) {
+  public function setHtmlTitle( $htmlTitle) {
     $this->htmlTitle = $htmlTitle;
   }
   public function getHtmlTitle() {
     return $this->htmlTitle;
   }
-  public function setImage(Google_Service_Customsearch_ResultImage$image) {
+  public function setImage(Google_ResultImage $image) {
     $this->image = $image;
   }
   public function getImage() {
     return $this->image;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -595,31 +595,31 @@ class Google_Result extends Google_Model {
   public function getLabels() {
     return $this->labels;
   }
-  public function setLink($link) {
+  public function setLink( $link) {
     $this->link = $link;
   }
   public function getLink() {
     return $this->link;
   }
-  public function setMime($mime) {
+  public function setMime( $mime) {
     $this->mime = $mime;
   }
   public function getMime() {
     return $this->mime;
   }
-  public function setPagemap($pagemap) {
+  public function setPagemap( $pagemap) {
     $this->pagemap = $pagemap;
   }
   public function getPagemap() {
     return $this->pagemap;
   }
-  public function setSnippet($snippet) {
+  public function setSnippet( $snippet) {
     $this->snippet = $snippet;
   }
   public function getSnippet() {
     return $this->snippet;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
@@ -635,43 +635,43 @@ class Google_ResultImage extends Google_Model {
   public $thumbnailLink;
   public $thumbnailWidth;
   public $width;
-  public function setByteSize($byteSize) {
+  public function setByteSize( $byteSize) {
     $this->byteSize = $byteSize;
   }
   public function getByteSize() {
     return $this->byteSize;
   }
-  public function setContextLink($contextLink) {
+  public function setContextLink( $contextLink) {
     $this->contextLink = $contextLink;
   }
   public function getContextLink() {
     return $this->contextLink;
   }
-  public function setHeight($height) {
+  public function setHeight( $height) {
     $this->height = $height;
   }
   public function getHeight() {
     return $this->height;
   }
-  public function setThumbnailHeight($thumbnailHeight) {
+  public function setThumbnailHeight( $thumbnailHeight) {
     $this->thumbnailHeight = $thumbnailHeight;
   }
   public function getThumbnailHeight() {
     return $this->thumbnailHeight;
   }
-  public function setThumbnailLink($thumbnailLink) {
+  public function setThumbnailLink( $thumbnailLink) {
     $this->thumbnailLink = $thumbnailLink;
   }
   public function getThumbnailLink() {
     return $this->thumbnailLink;
   }
-  public function setThumbnailWidth($thumbnailWidth) {
+  public function setThumbnailWidth( $thumbnailWidth) {
     $this->thumbnailWidth = $thumbnailWidth;
   }
   public function getThumbnailWidth() {
     return $this->thumbnailWidth;
   }
-  public function setWidth($width) {
+  public function setWidth( $width) {
     $this->width = $width;
   }
   public function getWidth() {
@@ -682,13 +682,13 @@ class Google_ResultImage extends Google_Model {
 class Google_ResultLabels extends Google_Model {
   public $displayName;
   public $name;
-  public function setDisplayName($displayName) {
+  public function setDisplayName( $displayName) {
     $this->displayName = $displayName;
   }
   public function getDisplayName() {
     return $this->displayName;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
@@ -697,29 +697,29 @@ class Google_ResultLabels extends Google_Model {
 }
 
 class Google_Search extends Google_Model {
-  protected $__contextType = 'Google_Service_Customsearch_Context';
+  protected $__contextType = 'Google_Context';
   protected $__contextDataType = '';
   public $context;
-  protected $__itemsType = 'Google_Service_Customsearch_Result';
+  protected $__itemsType = 'Google_Result';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
-  protected $__promotionsType = 'Google_Service_Customsearch_Promotion';
+  protected $__promotionsType = 'Google_Promotion';
   protected $__promotionsDataType = 'array';
   public $promotions;
-  protected $__queriesType = 'Google_Service_Customsearch_Query';
+  protected $__queriesType = 'Google_Query';
   protected $__queriesDataType = 'map';
   public $queries;
-  protected $__searchInformationType = 'Google_Service_Customsearch_SearchSearchInformation';
+  protected $__searchInformationType = 'Google_SearchSearchInformation';
   protected $__searchInformationDataType = '';
   public $searchInformation;
-  protected $__spellingType = 'Google_Service_Customsearch_SearchSpelling';
+  protected $__spellingType = 'Google_SearchSpelling';
   protected $__spellingDataType = '';
   public $spelling;
-  protected $__urlType = 'Google_Service_Customsearch_SearchUrl';
+  protected $__urlType = 'Google_SearchUrl';
   protected $__urlDataType = '';
   public $url;
-  public function setContext(Google_Service_Customsearch_Context$context) {
+  public function setContext(Google_Context $context) {
     $this->context = $context;
   }
   public function getContext() {
@@ -732,7 +732,7 @@ class Google_Search extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -745,25 +745,25 @@ class Google_Search extends Google_Model {
   public function getPromotions() {
     return $this->promotions;
   }
-  public function setQueries(Google_Service_Customsearch_Query$queries) {
+  public function setQueries(Google_Query $queries) {
     $this->queries = $queries;
   }
   public function getQueries() {
     return $this->queries;
   }
-  public function setSearchInformation(Google_Service_Customsearch_SearchSearchInformation$searchInformation) {
+  public function setSearchInformation(Google_SearchSearchInformation $searchInformation) {
     $this->searchInformation = $searchInformation;
   }
   public function getSearchInformation() {
     return $this->searchInformation;
   }
-  public function setSpelling(Google_Service_Customsearch_SearchSpelling$spelling) {
+  public function setSpelling(Google_SearchSpelling $spelling) {
     $this->spelling = $spelling;
   }
   public function getSpelling() {
     return $this->spelling;
   }
-  public function setUrl(Google_Service_Customsearch_SearchUrl$url) {
+  public function setUrl(Google_SearchUrl $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -776,25 +776,25 @@ class Google_SearchSearchInformation extends Google_Model {
   public $formattedTotalResults;
   public $searchTime;
   public $totalResults;
-  public function setFormattedSearchTime($formattedSearchTime) {
+  public function setFormattedSearchTime( $formattedSearchTime) {
     $this->formattedSearchTime = $formattedSearchTime;
   }
   public function getFormattedSearchTime() {
     return $this->formattedSearchTime;
   }
-  public function setFormattedTotalResults($formattedTotalResults) {
+  public function setFormattedTotalResults( $formattedTotalResults) {
     $this->formattedTotalResults = $formattedTotalResults;
   }
   public function getFormattedTotalResults() {
     return $this->formattedTotalResults;
   }
-  public function setSearchTime($searchTime) {
+  public function setSearchTime( $searchTime) {
     $this->searchTime = $searchTime;
   }
   public function getSearchTime() {
     return $this->searchTime;
   }
-  public function setTotalResults($totalResults) {
+  public function setTotalResults( $totalResults) {
     $this->totalResults = $totalResults;
   }
   public function getTotalResults() {
@@ -805,13 +805,13 @@ class Google_SearchSearchInformation extends Google_Model {
 class Google_SearchSpelling extends Google_Model {
   public $correctedQuery;
   public $htmlCorrectedQuery;
-  public function setCorrectedQuery($correctedQuery) {
+  public function setCorrectedQuery( $correctedQuery) {
     $this->correctedQuery = $correctedQuery;
   }
   public function getCorrectedQuery() {
     return $this->correctedQuery;
   }
-  public function setHtmlCorrectedQuery($htmlCorrectedQuery) {
+  public function setHtmlCorrectedQuery( $htmlCorrectedQuery) {
     $this->htmlCorrectedQuery = $htmlCorrectedQuery;
   }
   public function getHtmlCorrectedQuery() {
@@ -822,13 +822,13 @@ class Google_SearchSpelling extends Google_Model {
 class Google_SearchUrl extends Google_Model {
   public $template;
   public $type;
-  public function setTemplate($template) {
+  public function setTemplate( $template) {
     $this->template = $template;
   }
   public function getTemplate() {
     return $this->template;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {

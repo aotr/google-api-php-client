@@ -1010,11 +1010,11 @@ class Google_BooksService extends Google_Service {
 class Google_Annotation extends Google_Model {
   public $afterSelectedText;
   public $beforeSelectedText;
-  protected $__clientVersionRangesType = 'Google_Service_Books_AnnotationClientVersionRanges';
+  protected $__clientVersionRangesType = 'Google_AnnotationClientVersionRanges';
   protected $__clientVersionRangesDataType = '';
   public $clientVersionRanges;
   public $created;
-  protected $__currentVersionRangesType = 'Google_Service_Books_AnnotationCurrentVersionRanges';
+  protected $__currentVersionRangesType = 'Google_AnnotationCurrentVersionRanges';
   protected $__currentVersionRangesDataType = '';
   public $currentVersionRanges;
   public $data;
@@ -1028,67 +1028,67 @@ class Google_Annotation extends Google_Model {
   public $selfLink;
   public $updated;
   public $volumeId;
-  public function setAfterSelectedText($afterSelectedText) {
+  public function setAfterSelectedText( $afterSelectedText) {
     $this->afterSelectedText = $afterSelectedText;
   }
   public function getAfterSelectedText() {
     return $this->afterSelectedText;
   }
-  public function setBeforeSelectedText($beforeSelectedText) {
+  public function setBeforeSelectedText( $beforeSelectedText) {
     $this->beforeSelectedText = $beforeSelectedText;
   }
   public function getBeforeSelectedText() {
     return $this->beforeSelectedText;
   }
-  public function setClientVersionRanges(Google_Service_Books_AnnotationClientVersionRanges$clientVersionRanges) {
+  public function setClientVersionRanges(Google_AnnotationClientVersionRanges $clientVersionRanges) {
     $this->clientVersionRanges = $clientVersionRanges;
   }
   public function getClientVersionRanges() {
     return $this->clientVersionRanges;
   }
-  public function setCreated($created) {
+  public function setCreated( $created) {
     $this->created = $created;
   }
   public function getCreated() {
     return $this->created;
   }
-  public function setCurrentVersionRanges(Google_Service_Books_AnnotationCurrentVersionRanges$currentVersionRanges) {
+  public function setCurrentVersionRanges(Google_AnnotationCurrentVersionRanges $currentVersionRanges) {
     $this->currentVersionRanges = $currentVersionRanges;
   }
   public function getCurrentVersionRanges() {
     return $this->currentVersionRanges;
   }
-  public function setData($data) {
+  public function setData( $data) {
     $this->data = $data;
   }
   public function getData() {
     return $this->data;
   }
-  public function setDeleted($deleted) {
+  public function setDeleted( $deleted) {
     $this->deleted = $deleted;
   }
   public function getDeleted() {
     return $this->deleted;
   }
-  public function setHighlightStyle($highlightStyle) {
+  public function setHighlightStyle( $highlightStyle) {
     $this->highlightStyle = $highlightStyle;
   }
   public function getHighlightStyle() {
     return $this->highlightStyle;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLayerId($layerId) {
+  public function setLayerId( $layerId) {
     $this->layerId = $layerId;
   }
   public function getLayerId() {
@@ -1101,25 +1101,25 @@ class Google_Annotation extends Google_Model {
   public function getPageIds() {
     return $this->pageIds;
   }
-  public function setSelectedText($selectedText) {
+  public function setSelectedText( $selectedText) {
     $this->selectedText = $selectedText;
   }
   public function getSelectedText() {
     return $this->selectedText;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
     return $this->updated;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -1128,44 +1128,44 @@ class Google_Annotation extends Google_Model {
 }
 
 class Google_AnnotationClientVersionRanges extends Google_Model {
-  protected $__cfiRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__cfiRangeType = 'Google_BooksAnnotationsRange';
   protected $__cfiRangeDataType = '';
   public $cfiRange;
   public $contentVersion;
-  protected $__gbImageRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__gbImageRangeType = 'Google_BooksAnnotationsRange';
   protected $__gbImageRangeDataType = '';
   public $gbImageRange;
-  protected $__gbTextRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__gbTextRangeType = 'Google_BooksAnnotationsRange';
   protected $__gbTextRangeDataType = '';
   public $gbTextRange;
-  protected $__imageCfiRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__imageCfiRangeType = 'Google_BooksAnnotationsRange';
   protected $__imageCfiRangeDataType = '';
   public $imageCfiRange;
-  public function setCfiRange(Google_Service_Books_BooksAnnotationsRange$cfiRange) {
+  public function setCfiRange(Google_BooksAnnotationsRange $cfiRange) {
     $this->cfiRange = $cfiRange;
   }
   public function getCfiRange() {
     return $this->cfiRange;
   }
-  public function setContentVersion($contentVersion) {
+  public function setContentVersion( $contentVersion) {
     $this->contentVersion = $contentVersion;
   }
   public function getContentVersion() {
     return $this->contentVersion;
   }
-  public function setGbImageRange(Google_Service_Books_BooksAnnotationsRange$gbImageRange) {
+  public function setGbImageRange(Google_BooksAnnotationsRange $gbImageRange) {
     $this->gbImageRange = $gbImageRange;
   }
   public function getGbImageRange() {
     return $this->gbImageRange;
   }
-  public function setGbTextRange(Google_Service_Books_BooksAnnotationsRange$gbTextRange) {
+  public function setGbTextRange(Google_BooksAnnotationsRange $gbTextRange) {
     $this->gbTextRange = $gbTextRange;
   }
   public function getGbTextRange() {
     return $this->gbTextRange;
   }
-  public function setImageCfiRange(Google_Service_Books_BooksAnnotationsRange$imageCfiRange) {
+  public function setImageCfiRange(Google_BooksAnnotationsRange $imageCfiRange) {
     $this->imageCfiRange = $imageCfiRange;
   }
   public function getImageCfiRange() {
@@ -1174,44 +1174,44 @@ class Google_AnnotationClientVersionRanges extends Google_Model {
 }
 
 class Google_AnnotationCurrentVersionRanges extends Google_Model {
-  protected $__cfiRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__cfiRangeType = 'Google_BooksAnnotationsRange';
   protected $__cfiRangeDataType = '';
   public $cfiRange;
   public $contentVersion;
-  protected $__gbImageRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__gbImageRangeType = 'Google_BooksAnnotationsRange';
   protected $__gbImageRangeDataType = '';
   public $gbImageRange;
-  protected $__gbTextRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__gbTextRangeType = 'Google_BooksAnnotationsRange';
   protected $__gbTextRangeDataType = '';
   public $gbTextRange;
-  protected $__imageCfiRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__imageCfiRangeType = 'Google_BooksAnnotationsRange';
   protected $__imageCfiRangeDataType = '';
   public $imageCfiRange;
-  public function setCfiRange(Google_Service_Books_BooksAnnotationsRange$cfiRange) {
+  public function setCfiRange(Google_BooksAnnotationsRange $cfiRange) {
     $this->cfiRange = $cfiRange;
   }
   public function getCfiRange() {
     return $this->cfiRange;
   }
-  public function setContentVersion($contentVersion) {
+  public function setContentVersion( $contentVersion) {
     $this->contentVersion = $contentVersion;
   }
   public function getContentVersion() {
     return $this->contentVersion;
   }
-  public function setGbImageRange(Google_Service_Books_BooksAnnotationsRange$gbImageRange) {
+  public function setGbImageRange(Google_BooksAnnotationsRange $gbImageRange) {
     $this->gbImageRange = $gbImageRange;
   }
   public function getGbImageRange() {
     return $this->gbImageRange;
   }
-  public function setGbTextRange(Google_Service_Books_BooksAnnotationsRange$gbTextRange) {
+  public function setGbTextRange(Google_BooksAnnotationsRange $gbTextRange) {
     $this->gbTextRange = $gbTextRange;
   }
   public function getGbTextRange() {
     return $this->gbTextRange;
   }
-  public function setImageCfiRange(Google_Service_Books_BooksAnnotationsRange$imageCfiRange) {
+  public function setImageCfiRange(Google_BooksAnnotationsRange $imageCfiRange) {
     $this->imageCfiRange = $imageCfiRange;
   }
   public function getImageCfiRange() {
@@ -1229,55 +1229,55 @@ class Google_Annotationdata extends Google_Model {
   public $selfLink;
   public $updated;
   public $volumeId;
-  public function setAnnotationType($annotationType) {
+  public function setAnnotationType( $annotationType) {
     $this->annotationType = $annotationType;
   }
   public function getAnnotationType() {
     return $this->annotationType;
   }
-  public function setData($data) {
+  public function setData( $data) {
     $this->data = $data;
   }
   public function getData() {
     return $this->data;
   }
-  public function setEncoded_data($encoded_data) {
+  public function setEncoded_data( $encoded_data) {
     $this->encoded_data = $encoded_data;
   }
   public function getEncoded_data() {
     return $this->encoded_data;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLayerId($layerId) {
+  public function setLayerId( $layerId) {
     $this->layerId = $layerId;
   }
   public function getLayerId() {
     return $this->layerId;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
     return $this->updated;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -1286,7 +1286,7 @@ class Google_Annotationdata extends Google_Model {
 }
 
 class Google_Annotations extends Google_Model {
-  protected $__itemsType = 'Google_Service_Books_Annotation';
+  protected $__itemsType = 'Google_Annotation';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1299,19 +1299,19 @@ class Google_Annotations extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
     return $this->nextPageToken;
   }
-  public function setTotalItems($totalItems) {
+  public function setTotalItems( $totalItems) {
     $this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -1320,7 +1320,7 @@ class Google_Annotations extends Google_Model {
 }
 
 class Google_Annotationsdata extends Google_Model {
-  protected $__itemsType = 'Google_Service_Books_Annotationdata';
+  protected $__itemsType = 'Google_Annotationdata';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1333,19 +1333,19 @@ class Google_Annotationsdata extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
     return $this->nextPageToken;
   }
-  public function setTotalItems($totalItems) {
+  public function setTotalItems( $totalItems) {
     $this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -1358,25 +1358,25 @@ class Google_BooksAnnotationsRange extends Google_Model {
   public $endPosition;
   public $startOffset;
   public $startPosition;
-  public function setEndOffset($endOffset) {
+  public function setEndOffset( $endOffset) {
     $this->endOffset = $endOffset;
   }
   public function getEndOffset() {
     return $this->endOffset;
   }
-  public function setEndPosition($endPosition) {
+  public function setEndPosition( $endPosition) {
     $this->endPosition = $endPosition;
   }
   public function getEndPosition() {
     return $this->endPosition;
   }
-  public function setStartOffset($startOffset) {
+  public function setStartOffset( $startOffset) {
     $this->startOffset = $startOffset;
   }
   public function getStartOffset() {
     return $this->startOffset;
   }
-  public function setStartPosition($startPosition) {
+  public function setStartPosition( $startPosition) {
     $this->startPosition = $startPosition;
   }
   public function getStartPosition() {
@@ -1389,25 +1389,25 @@ class Google_BooksCloudloadingResource extends Google_Model {
   public $processingState;
   public $title;
   public $volumeId;
-  public function setAuthor($author) {
+  public function setAuthor( $author) {
     $this->author = $author;
   }
   public function getAuthor() {
     return $this->author;
   }
-  public function setProcessingState($processingState) {
+  public function setProcessingState( $processingState) {
     $this->processingState = $processingState;
   }
   public function getProcessingState() {
     return $this->processingState;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -1416,19 +1416,19 @@ class Google_BooksCloudloadingResource extends Google_Model {
 }
 
 class Google_BooksLayerDictData extends Google_Model {
-  protected $__commonType = 'Google_Service_Books_BooksLayerDictDataCommon';
+  protected $__commonType = 'Google_BooksLayerDictDataCommon';
   protected $__commonDataType = '';
   public $common;
-  protected $__dictType = 'Google_Service_Books_BooksLayerDictDataDict';
+  protected $__dictType = 'Google_BooksLayerDictDataDict';
   protected $__dictDataType = '';
   public $dict;
-  public function setCommon(Google_Service_Books_BooksLayerDictDataCommon$common) {
+  public function setCommon(Google_BooksLayerDictDataCommon $common) {
     $this->common = $common;
   }
   public function getCommon() {
     return $this->common;
   }
-  public function setDict(Google_Service_Books_BooksLayerDictDataDict$dict) {
+  public function setDict(Google_BooksLayerDictDataDict $dict) {
     $this->dict = $dict;
   }
   public function getDict() {
@@ -1438,7 +1438,7 @@ class Google_BooksLayerDictData extends Google_Model {
 
 class Google_BooksLayerDictDataCommon extends Google_Model {
   public $title;
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
@@ -1447,13 +1447,13 @@ class Google_BooksLayerDictDataCommon extends Google_Model {
 }
 
 class Google_BooksLayerDictDataDict extends Google_Model {
-  protected $__sourceType = 'Google_Service_Books_BooksLayerDictDataDictSource';
+  protected $__sourceType = 'Google_BooksLayerDictDataDictSource';
   protected $__sourceDataType = '';
   public $source;
-  protected $__wordsType = 'Google_Service_Books_BooksLayerDictDataDictWords';
+  protected $__wordsType = 'Google_BooksLayerDictDataDictWords';
   protected $__wordsDataType = 'array';
   public $words;
-  public function setSource(Google_Service_Books_BooksLayerDictDataDictSource$source) {
+  public function setSource(Google_BooksLayerDictDataDictSource $source) {
     $this->source = $source;
   }
   public function getSource() {
@@ -1471,13 +1471,13 @@ class Google_BooksLayerDictDataDict extends Google_Model {
 class Google_BooksLayerDictDataDictSource extends Google_Model {
   public $attribution;
   public $url;
-  public function setAttribution($attribution) {
+  public function setAttribution( $attribution) {
     $this->attribution = $attribution;
   }
   public function getAttribution() {
     return $this->attribution;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -1486,16 +1486,16 @@ class Google_BooksLayerDictDataDictSource extends Google_Model {
 }
 
 class Google_BooksLayerDictDataDictWords extends Google_Model {
-  protected $__derivativesType = 'Google_Service_Books_BooksLayerDictDataDictWordsDerivatives';
+  protected $__derivativesType = 'Google_BooksLayerDictDataDictWordsDerivatives';
   protected $__derivativesDataType = 'array';
   public $derivatives;
-  protected $__examplesType = 'Google_Service_Books_BooksLayerDictDataDictWordsExamples';
+  protected $__examplesType = 'Google_BooksLayerDictDataDictWordsExamples';
   protected $__examplesDataType = 'array';
   public $examples;
-  protected $__sensesType = 'Google_Service_Books_BooksLayerDictDataDictWordsSenses';
+  protected $__sensesType = 'Google_BooksLayerDictDataDictWordsSenses';
   protected $__sensesDataType = 'array';
   public $senses;
-  protected $__sourceType = 'Google_Service_Books_BooksLayerDictDataDictWordsSource';
+  protected $__sourceType = 'Google_BooksLayerDictDataDictWordsSource';
   protected $__sourceDataType = '';
   public $source;
   public function setDerivatives(/* array(Google_BooksLayerDictDataDictWordsDerivatives) */ $derivatives) {
@@ -1519,7 +1519,7 @@ class Google_BooksLayerDictDataDictWords extends Google_Model {
   public function getSenses() {
     return $this->senses;
   }
-  public function setSource(Google_Service_Books_BooksLayerDictDataDictWordsSource$source) {
+  public function setSource(Google_BooksLayerDictDataDictWordsSource $source) {
     $this->source = $source;
   }
   public function getSource() {
@@ -1528,17 +1528,17 @@ class Google_BooksLayerDictDataDictWords extends Google_Model {
 }
 
 class Google_BooksLayerDictDataDictWordsDerivatives extends Google_Model {
-  protected $__sourceType = 'Google_Service_Books_BooksLayerDictDataDictWordsDerivativesSource';
+  protected $__sourceType = 'Google_BooksLayerDictDataDictWordsDerivativesSource';
   protected $__sourceDataType = '';
   public $source;
   public $text;
-  public function setSource(Google_Service_Books_BooksLayerDictDataDictWordsDerivativesSource$source) {
+  public function setSource(Google_BooksLayerDictDataDictWordsDerivativesSource $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setText($text) {
+  public function setText( $text) {
     $this->text = $text;
   }
   public function getText() {
@@ -1549,13 +1549,13 @@ class Google_BooksLayerDictDataDictWordsDerivatives extends Google_Model {
 class Google_BooksLayerDictDataDictWordsDerivativesSource extends Google_Model {
   public $attribution;
   public $url;
-  public function setAttribution($attribution) {
+  public function setAttribution( $attribution) {
     $this->attribution = $attribution;
   }
   public function getAttribution() {
     return $this->attribution;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -1564,17 +1564,17 @@ class Google_BooksLayerDictDataDictWordsDerivativesSource extends Google_Model {
 }
 
 class Google_BooksLayerDictDataDictWordsExamples extends Google_Model {
-  protected $__sourceType = 'Google_Service_Books_BooksLayerDictDataDictWordsExamplesSource';
+  protected $__sourceType = 'Google_BooksLayerDictDataDictWordsExamplesSource';
   protected $__sourceDataType = '';
   public $source;
   public $text;
-  public function setSource(Google_Service_Books_BooksLayerDictDataDictWordsExamplesSource$source) {
+  public function setSource(Google_BooksLayerDictDataDictWordsExamplesSource $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setText($text) {
+  public function setText( $text) {
     $this->text = $text;
   }
   public function getText() {
@@ -1585,13 +1585,13 @@ class Google_BooksLayerDictDataDictWordsExamples extends Google_Model {
 class Google_BooksLayerDictDataDictWordsExamplesSource extends Google_Model {
   public $attribution;
   public $url;
-  public function setAttribution($attribution) {
+  public function setAttribution( $attribution) {
     $this->attribution = $attribution;
   }
   public function getAttribution() {
     return $this->attribution;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -1600,20 +1600,20 @@ class Google_BooksLayerDictDataDictWordsExamplesSource extends Google_Model {
 }
 
 class Google_BooksLayerDictDataDictWordsSenses extends Google_Model {
-  protected $__conjugationsType = 'Google_Service_Books_BooksLayerDictDataDictWordsSensesConjugations';
+  protected $__conjugationsType = 'Google_BooksLayerDictDataDictWordsSensesConjugations';
   protected $__conjugationsDataType = 'array';
   public $conjugations;
-  protected $__definitionsType = 'Google_Service_Books_BooksLayerDictDataDictWordsSensesDefinitions';
+  protected $__definitionsType = 'Google_BooksLayerDictDataDictWordsSensesDefinitions';
   protected $__definitionsDataType = 'array';
   public $definitions;
   public $partOfSpeech;
   public $pronunciation;
   public $pronunciationUrl;
-  protected $__sourceType = 'Google_Service_Books_BooksLayerDictDataDictWordsSensesSource';
+  protected $__sourceType = 'Google_BooksLayerDictDataDictWordsSensesSource';
   protected $__sourceDataType = '';
   public $source;
   public $syllabification;
-  protected $__synonymsType = 'Google_Service_Books_BooksLayerDictDataDictWordsSensesSynonyms';
+  protected $__synonymsType = 'Google_BooksLayerDictDataDictWordsSensesSynonyms';
   protected $__synonymsDataType = 'array';
   public $synonyms;
   public function setConjugations(/* array(Google_BooksLayerDictDataDictWordsSensesConjugations) */ $conjugations) {
@@ -1630,31 +1630,31 @@ class Google_BooksLayerDictDataDictWordsSenses extends Google_Model {
   public function getDefinitions() {
     return $this->definitions;
   }
-  public function setPartOfSpeech($partOfSpeech) {
+  public function setPartOfSpeech( $partOfSpeech) {
     $this->partOfSpeech = $partOfSpeech;
   }
   public function getPartOfSpeech() {
     return $this->partOfSpeech;
   }
-  public function setPronunciation($pronunciation) {
+  public function setPronunciation( $pronunciation) {
     $this->pronunciation = $pronunciation;
   }
   public function getPronunciation() {
     return $this->pronunciation;
   }
-  public function setPronunciationUrl($pronunciationUrl) {
+  public function setPronunciationUrl( $pronunciationUrl) {
     $this->pronunciationUrl = $pronunciationUrl;
   }
   public function getPronunciationUrl() {
     return $this->pronunciationUrl;
   }
-  public function setSource(Google_Service_Books_BooksLayerDictDataDictWordsSensesSource$source) {
+  public function setSource(Google_BooksLayerDictDataDictWordsSensesSource $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setSyllabification($syllabification) {
+  public function setSyllabification( $syllabification) {
     $this->syllabification = $syllabification;
   }
   public function getSyllabification() {
@@ -1672,13 +1672,13 @@ class Google_BooksLayerDictDataDictWordsSenses extends Google_Model {
 class Google_BooksLayerDictDataDictWordsSensesConjugations extends Google_Model {
   public $type;
   public $value;
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
     return $this->type;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -1688,10 +1688,10 @@ class Google_BooksLayerDictDataDictWordsSensesConjugations extends Google_Model 
 
 class Google_BooksLayerDictDataDictWordsSensesDefinitions extends Google_Model {
   public $definition;
-  protected $__examplesType = 'Google_Service_Books_BooksLayerDictDataDictWordsSensesDefinitionsExamples';
+  protected $__examplesType = 'Google_BooksLayerDictDataDictWordsSensesDefinitionsExamples';
   protected $__examplesDataType = 'array';
   public $examples;
-  public function setDefinition($definition) {
+  public function setDefinition( $definition) {
     $this->definition = $definition;
   }
   public function getDefinition() {
@@ -1707,17 +1707,17 @@ class Google_BooksLayerDictDataDictWordsSensesDefinitions extends Google_Model {
 }
 
 class Google_BooksLayerDictDataDictWordsSensesDefinitionsExamples extends Google_Model {
-  protected $__sourceType = 'Google_Service_Books_BooksLayerDictDataDictWordsSensesDefinitionsExamplesSource';
+  protected $__sourceType = 'Google_BooksLayerDictDataDictWordsSensesDefinitionsExamplesSource';
   protected $__sourceDataType = '';
   public $source;
   public $text;
-  public function setSource(Google_Service_Books_BooksLayerDictDataDictWordsSensesDefinitionsExamplesSource$source) {
+  public function setSource(Google_BooksLayerDictDataDictWordsSensesDefinitionsExamplesSource $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setText($text) {
+  public function setText( $text) {
     $this->text = $text;
   }
   public function getText() {
@@ -1728,13 +1728,13 @@ class Google_BooksLayerDictDataDictWordsSensesDefinitionsExamples extends Google
 class Google_BooksLayerDictDataDictWordsSensesDefinitionsExamplesSource extends Google_Model {
   public $attribution;
   public $url;
-  public function setAttribution($attribution) {
+  public function setAttribution( $attribution) {
     $this->attribution = $attribution;
   }
   public function getAttribution() {
     return $this->attribution;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -1745,13 +1745,13 @@ class Google_BooksLayerDictDataDictWordsSensesDefinitionsExamplesSource extends 
 class Google_BooksLayerDictDataDictWordsSensesSource extends Google_Model {
   public $attribution;
   public $url;
-  public function setAttribution($attribution) {
+  public function setAttribution( $attribution) {
     $this->attribution = $attribution;
   }
   public function getAttribution() {
     return $this->attribution;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -1760,17 +1760,17 @@ class Google_BooksLayerDictDataDictWordsSensesSource extends Google_Model {
 }
 
 class Google_BooksLayerDictDataDictWordsSensesSynonyms extends Google_Model {
-  protected $__sourceType = 'Google_Service_Books_BooksLayerDictDataDictWordsSensesSynonymsSource';
+  protected $__sourceType = 'Google_BooksLayerDictDataDictWordsSensesSynonymsSource';
   protected $__sourceDataType = '';
   public $source;
   public $text;
-  public function setSource(Google_Service_Books_BooksLayerDictDataDictWordsSensesSynonymsSource$source) {
+  public function setSource(Google_BooksLayerDictDataDictWordsSensesSynonymsSource $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setText($text) {
+  public function setText( $text) {
     $this->text = $text;
   }
   public function getText() {
@@ -1781,13 +1781,13 @@ class Google_BooksLayerDictDataDictWordsSensesSynonyms extends Google_Model {
 class Google_BooksLayerDictDataDictWordsSensesSynonymsSource extends Google_Model {
   public $attribution;
   public $url;
-  public function setAttribution($attribution) {
+  public function setAttribution( $attribution) {
     $this->attribution = $attribution;
   }
   public function getAttribution() {
     return $this->attribution;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -1798,13 +1798,13 @@ class Google_BooksLayerDictDataDictWordsSensesSynonymsSource extends Google_Mode
 class Google_BooksLayerDictDataDictWordsSource extends Google_Model {
   public $attribution;
   public $url;
-  public function setAttribution($attribution) {
+  public function setAttribution( $attribution) {
     $this->attribution = $attribution;
   }
   public function getAttribution() {
     return $this->attribution;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -1813,19 +1813,19 @@ class Google_BooksLayerDictDataDictWordsSource extends Google_Model {
 }
 
 class Google_BooksLayerGeoData extends Google_Model {
-  protected $__commonType = 'Google_Service_Books_BooksLayerGeoDataCommon';
+  protected $__commonType = 'Google_BooksLayerGeoDataCommon';
   protected $__commonDataType = '';
   public $common;
-  protected $__geoType = 'Google_Service_Books_BooksLayerGeoDataGeo';
+  protected $__geoType = 'Google_BooksLayerGeoDataGeo';
   protected $__geoDataType = '';
   public $geo;
-  public function setCommon(Google_Service_Books_BooksLayerGeoDataCommon$common) {
+  public function setCommon(Google_BooksLayerGeoDataCommon $common) {
     $this->common = $common;
   }
   public function getCommon() {
     return $this->common;
   }
-  public function setGeo(Google_Service_Books_BooksLayerGeoDataGeo$geo) {
+  public function setGeo(Google_BooksLayerGeoDataGeo $geo) {
     $this->geo = $geo;
   }
   public function getGeo() {
@@ -1839,31 +1839,31 @@ class Google_BooksLayerGeoDataCommon extends Google_Model {
   public $snippet;
   public $snippetUrl;
   public $title;
-  public function setLang($lang) {
+  public function setLang( $lang) {
     $this->lang = $lang;
   }
   public function getLang() {
     return $this->lang;
   }
-  public function setPreviewImageUrl($previewImageUrl) {
+  public function setPreviewImageUrl( $previewImageUrl) {
     $this->previewImageUrl = $previewImageUrl;
   }
   public function getPreviewImageUrl() {
     return $this->previewImageUrl;
   }
-  public function setSnippet($snippet) {
+  public function setSnippet( $snippet) {
     $this->snippet = $snippet;
   }
   public function getSnippet() {
     return $this->snippet;
   }
-  public function setSnippetUrl($snippetUrl) {
+  public function setSnippetUrl( $snippetUrl) {
     $this->snippetUrl = $snippetUrl;
   }
   public function getSnippetUrl() {
     return $this->snippetUrl;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
@@ -1872,7 +1872,7 @@ class Google_BooksLayerGeoDataCommon extends Google_Model {
 }
 
 class Google_BooksLayerGeoDataGeo extends Google_Model {
-  protected $__boundaryType = 'Google_Service_Books_BooksLayerGeoDataGeoBoundary';
+  protected $__boundaryType = 'Google_BooksLayerGeoDataGeoBoundary';
   protected $__boundaryDataType = 'array';
   public $boundary;
   public $cachePolicy;
@@ -1880,7 +1880,7 @@ class Google_BooksLayerGeoDataGeo extends Google_Model {
   public $latitude;
   public $longitude;
   public $mapType;
-  protected $__viewportType = 'Google_Service_Books_BooksLayerGeoDataGeoViewport';
+  protected $__viewportType = 'Google_BooksLayerGeoDataGeoViewport';
   protected $__viewportDataType = '';
   public $viewport;
   public $zoom;
@@ -1891,43 +1891,43 @@ class Google_BooksLayerGeoDataGeo extends Google_Model {
   public function getBoundary() {
     return $this->boundary;
   }
-  public function setCachePolicy($cachePolicy) {
+  public function setCachePolicy( $cachePolicy) {
     $this->cachePolicy = $cachePolicy;
   }
   public function getCachePolicy() {
     return $this->cachePolicy;
   }
-  public function setCountryCode($countryCode) {
+  public function setCountryCode( $countryCode) {
     $this->countryCode = $countryCode;
   }
   public function getCountryCode() {
     return $this->countryCode;
   }
-  public function setLatitude($latitude) {
+  public function setLatitude( $latitude) {
     $this->latitude = $latitude;
   }
   public function getLatitude() {
     return $this->latitude;
   }
-  public function setLongitude($longitude) {
+  public function setLongitude( $longitude) {
     $this->longitude = $longitude;
   }
   public function getLongitude() {
     return $this->longitude;
   }
-  public function setMapType($mapType) {
+  public function setMapType( $mapType) {
     $this->mapType = $mapType;
   }
   public function getMapType() {
     return $this->mapType;
   }
-  public function setViewport(Google_Service_Books_BooksLayerGeoDataGeoViewport$viewport) {
+  public function setViewport(Google_BooksLayerGeoDataGeoViewport $viewport) {
     $this->viewport = $viewport;
   }
   public function getViewport() {
     return $this->viewport;
   }
-  public function setZoom($zoom) {
+  public function setZoom( $zoom) {
     $this->zoom = $zoom;
   }
   public function getZoom() {
@@ -1938,13 +1938,13 @@ class Google_BooksLayerGeoDataGeo extends Google_Model {
 class Google_BooksLayerGeoDataGeoBoundary extends Google_Model {
   public $latitude;
   public $longitude;
-  public function setLatitude($latitude) {
+  public function setLatitude( $latitude) {
     $this->latitude = $latitude;
   }
   public function getLatitude() {
     return $this->latitude;
   }
-  public function setLongitude($longitude) {
+  public function setLongitude( $longitude) {
     $this->longitude = $longitude;
   }
   public function getLongitude() {
@@ -1953,19 +1953,19 @@ class Google_BooksLayerGeoDataGeoBoundary extends Google_Model {
 }
 
 class Google_BooksLayerGeoDataGeoViewport extends Google_Model {
-  protected $__hiType = 'Google_Service_Books_BooksLayerGeoDataGeoViewportHi';
+  protected $__hiType = 'Google_BooksLayerGeoDataGeoViewportHi';
   protected $__hiDataType = '';
   public $hi;
-  protected $__loType = 'Google_Service_Books_BooksLayerGeoDataGeoViewportLo';
+  protected $__loType = 'Google_BooksLayerGeoDataGeoViewportLo';
   protected $__loDataType = '';
   public $lo;
-  public function setHi(Google_Service_Books_BooksLayerGeoDataGeoViewportHi$hi) {
+  public function setHi(Google_BooksLayerGeoDataGeoViewportHi $hi) {
     $this->hi = $hi;
   }
   public function getHi() {
     return $this->hi;
   }
-  public function setLo(Google_Service_Books_BooksLayerGeoDataGeoViewportLo$lo) {
+  public function setLo(Google_BooksLayerGeoDataGeoViewportLo $lo) {
     $this->lo = $lo;
   }
   public function getLo() {
@@ -1976,13 +1976,13 @@ class Google_BooksLayerGeoDataGeoViewport extends Google_Model {
 class Google_BooksLayerGeoDataGeoViewportHi extends Google_Model {
   public $latitude;
   public $longitude;
-  public function setLatitude($latitude) {
+  public function setLatitude( $latitude) {
     $this->latitude = $latitude;
   }
   public function getLatitude() {
     return $this->latitude;
   }
-  public function setLongitude($longitude) {
+  public function setLongitude( $longitude) {
     $this->longitude = $longitude;
   }
   public function getLongitude() {
@@ -1993,13 +1993,13 @@ class Google_BooksLayerGeoDataGeoViewportHi extends Google_Model {
 class Google_BooksLayerGeoDataGeoViewportLo extends Google_Model {
   public $latitude;
   public $longitude;
-  public function setLatitude($latitude) {
+  public function setLatitude( $latitude) {
     $this->latitude = $latitude;
   }
   public function getLatitude() {
     return $this->latitude;
   }
-  public function setLongitude($longitude) {
+  public function setLongitude( $longitude) {
     $this->longitude = $longitude;
   }
   public function getLongitude() {
@@ -2018,61 +2018,61 @@ class Google_Bookshelf extends Google_Model {
   public $updated;
   public $volumeCount;
   public $volumesLastUpdated;
-  public function setAccess($access) {
+  public function setAccess( $access) {
     $this->access = $access;
   }
   public function getAccess() {
     return $this->access;
   }
-  public function setCreated($created) {
+  public function setCreated( $created) {
     $this->created = $created;
   }
   public function getCreated() {
     return $this->created;
   }
-  public function setDescription($description) {
+  public function setDescription( $description) {
     $this->description = $description;
   }
   public function getDescription() {
     return $this->description;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
     return $this->updated;
   }
-  public function setVolumeCount($volumeCount) {
+  public function setVolumeCount( $volumeCount) {
     $this->volumeCount = $volumeCount;
   }
   public function getVolumeCount() {
     return $this->volumeCount;
   }
-  public function setVolumesLastUpdated($volumesLastUpdated) {
+  public function setVolumesLastUpdated( $volumesLastUpdated) {
     $this->volumesLastUpdated = $volumesLastUpdated;
   }
   public function getVolumesLastUpdated() {
@@ -2081,7 +2081,7 @@ class Google_Bookshelf extends Google_Model {
 }
 
 class Google_Bookshelves extends Google_Model {
-  protected $__itemsType = 'Google_Service_Books_Bookshelf';
+  protected $__itemsType = 'Google_Bookshelf';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -2092,7 +2092,7 @@ class Google_Bookshelves extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -2112,67 +2112,67 @@ class Google_ConcurrentAccessRestriction extends Google_Model {
   public $source;
   public $timeWindowSeconds;
   public $volumeId;
-  public function setDeviceAllowed($deviceAllowed) {
+  public function setDeviceAllowed( $deviceAllowed) {
     $this->deviceAllowed = $deviceAllowed;
   }
   public function getDeviceAllowed() {
     return $this->deviceAllowed;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMaxConcurrentDevices($maxConcurrentDevices) {
+  public function setMaxConcurrentDevices( $maxConcurrentDevices) {
     $this->maxConcurrentDevices = $maxConcurrentDevices;
   }
   public function getMaxConcurrentDevices() {
     return $this->maxConcurrentDevices;
   }
-  public function setMessage($message) {
+  public function setMessage( $message) {
     $this->message = $message;
   }
   public function getMessage() {
     return $this->message;
   }
-  public function setNonce($nonce) {
+  public function setNonce( $nonce) {
     $this->nonce = $nonce;
   }
   public function getNonce() {
     return $this->nonce;
   }
-  public function setReasonCode($reasonCode) {
+  public function setReasonCode( $reasonCode) {
     $this->reasonCode = $reasonCode;
   }
   public function getReasonCode() {
     return $this->reasonCode;
   }
-  public function setRestricted($restricted) {
+  public function setRestricted( $restricted) {
     $this->restricted = $restricted;
   }
   public function getRestricted() {
     return $this->restricted;
   }
-  public function setSignature($signature) {
+  public function setSignature( $signature) {
     $this->signature = $signature;
   }
   public function getSignature() {
     return $this->signature;
   }
-  public function setSource($source) {
+  public function setSource( $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setTimeWindowSeconds($timeWindowSeconds) {
+  public function setTimeWindowSeconds( $timeWindowSeconds) {
     $this->timeWindowSeconds = $timeWindowSeconds;
   }
   public function getTimeWindowSeconds() {
     return $this->timeWindowSeconds;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -2193,73 +2193,73 @@ class Google_DownloadAccessRestriction extends Google_Model {
   public $signature;
   public $source;
   public $volumeId;
-  public function setDeviceAllowed($deviceAllowed) {
+  public function setDeviceAllowed( $deviceAllowed) {
     $this->deviceAllowed = $deviceAllowed;
   }
   public function getDeviceAllowed() {
     return $this->deviceAllowed;
   }
-  public function setDownloadsAcquired($downloadsAcquired) {
+  public function setDownloadsAcquired( $downloadsAcquired) {
     $this->downloadsAcquired = $downloadsAcquired;
   }
   public function getDownloadsAcquired() {
     return $this->downloadsAcquired;
   }
-  public function setJustAcquired($justAcquired) {
+  public function setJustAcquired( $justAcquired) {
     $this->justAcquired = $justAcquired;
   }
   public function getJustAcquired() {
     return $this->justAcquired;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMaxDownloadDevices($maxDownloadDevices) {
+  public function setMaxDownloadDevices( $maxDownloadDevices) {
     $this->maxDownloadDevices = $maxDownloadDevices;
   }
   public function getMaxDownloadDevices() {
     return $this->maxDownloadDevices;
   }
-  public function setMessage($message) {
+  public function setMessage( $message) {
     $this->message = $message;
   }
   public function getMessage() {
     return $this->message;
   }
-  public function setNonce($nonce) {
+  public function setNonce( $nonce) {
     $this->nonce = $nonce;
   }
   public function getNonce() {
     return $this->nonce;
   }
-  public function setReasonCode($reasonCode) {
+  public function setReasonCode( $reasonCode) {
     $this->reasonCode = $reasonCode;
   }
   public function getReasonCode() {
     return $this->reasonCode;
   }
-  public function setRestricted($restricted) {
+  public function setRestricted( $restricted) {
     $this->restricted = $restricted;
   }
   public function getRestricted() {
     return $this->restricted;
   }
-  public function setSignature($signature) {
+  public function setSignature( $signature) {
     $this->signature = $signature;
   }
   public function getSignature() {
     return $this->signature;
   }
-  public function setSource($source) {
+  public function setSource( $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -2268,7 +2268,7 @@ class Google_DownloadAccessRestriction extends Google_Model {
 }
 
 class Google_DownloadAccesses extends Google_Model {
-  protected $__downloadAccessListType = 'Google_Service_Books_DownloadAccessRestriction';
+  protected $__downloadAccessListType = 'Google_DownloadAccessRestriction';
   protected $__downloadAccessListDataType = 'array';
   public $downloadAccessList;
   public $kind;
@@ -2279,7 +2279,7 @@ class Google_DownloadAccesses extends Google_Model {
   public function getDownloadAccessList() {
     return $this->downloadAccessList;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -2288,7 +2288,7 @@ class Google_DownloadAccesses extends Google_Model {
 }
 
 class Google_Layersummaries extends Google_Model {
-  protected $__itemsType = 'Google_Service_Books_Layersummary';
+  protected $__itemsType = 'Google_Layersummary';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -2300,13 +2300,13 @@ class Google_Layersummaries extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setTotalItems($totalItems) {
+  public function setTotalItems( $totalItems) {
     $this->totalItems = $totalItems;
   }
   public function getTotalItems() {
@@ -2328,7 +2328,7 @@ class Google_Layersummary extends Google_Model {
   public $updated;
   public $volumeAnnotationsVersion;
   public $volumeId;
-  public function setAnnotationCount($annotationCount) {
+  public function setAnnotationCount( $annotationCount) {
     $this->annotationCount = $annotationCount;
   }
   public function getAnnotationCount() {
@@ -2341,67 +2341,67 @@ class Google_Layersummary extends Google_Model {
   public function getAnnotationTypes() {
     return $this->annotationTypes;
   }
-  public function setAnnotationsDataLink($annotationsDataLink) {
+  public function setAnnotationsDataLink( $annotationsDataLink) {
     $this->annotationsDataLink = $annotationsDataLink;
   }
   public function getAnnotationsDataLink() {
     return $this->annotationsDataLink;
   }
-  public function setAnnotationsLink($annotationsLink) {
+  public function setAnnotationsLink( $annotationsLink) {
     $this->annotationsLink = $annotationsLink;
   }
   public function getAnnotationsLink() {
     return $this->annotationsLink;
   }
-  public function setContentVersion($contentVersion) {
+  public function setContentVersion( $contentVersion) {
     $this->contentVersion = $contentVersion;
   }
   public function getContentVersion() {
     return $this->contentVersion;
   }
-  public function setDataCount($dataCount) {
+  public function setDataCount( $dataCount) {
     $this->dataCount = $dataCount;
   }
   public function getDataCount() {
     return $this->dataCount;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLayerId($layerId) {
+  public function setLayerId( $layerId) {
     $this->layerId = $layerId;
   }
   public function getLayerId() {
     return $this->layerId;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
     return $this->updated;
   }
-  public function setVolumeAnnotationsVersion($volumeAnnotationsVersion) {
+  public function setVolumeAnnotationsVersion( $volumeAnnotationsVersion) {
     $this->volumeAnnotationsVersion = $volumeAnnotationsVersion;
   }
   public function getVolumeAnnotationsVersion() {
     return $this->volumeAnnotationsVersion;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -2417,43 +2417,43 @@ class Google_ReadingPosition extends Google_Model {
   public $pdfPosition;
   public $updated;
   public $volumeId;
-  public function setEpubCfiPosition($epubCfiPosition) {
+  public function setEpubCfiPosition( $epubCfiPosition) {
     $this->epubCfiPosition = $epubCfiPosition;
   }
   public function getEpubCfiPosition() {
     return $this->epubCfiPosition;
   }
-  public function setGbImagePosition($gbImagePosition) {
+  public function setGbImagePosition( $gbImagePosition) {
     $this->gbImagePosition = $gbImagePosition;
   }
   public function getGbImagePosition() {
     return $this->gbImagePosition;
   }
-  public function setGbTextPosition($gbTextPosition) {
+  public function setGbTextPosition( $gbTextPosition) {
     $this->gbTextPosition = $gbTextPosition;
   }
   public function getGbTextPosition() {
     return $this->gbTextPosition;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPdfPosition($pdfPosition) {
+  public function setPdfPosition( $pdfPosition) {
     $this->pdfPosition = $pdfPosition;
   }
   public function getPdfPosition() {
     return $this->pdfPosition;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
     return $this->updated;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -2462,26 +2462,26 @@ class Google_ReadingPosition extends Google_Model {
 }
 
 class Google_RequestAccess extends Google_Model {
-  protected $__concurrentAccessType = 'Google_Service_Books_ConcurrentAccessRestriction';
+  protected $__concurrentAccessType = 'Google_ConcurrentAccessRestriction';
   protected $__concurrentAccessDataType = '';
   public $concurrentAccess;
-  protected $__downloadAccessType = 'Google_Service_Books_DownloadAccessRestriction';
+  protected $__downloadAccessType = 'Google_DownloadAccessRestriction';
   protected $__downloadAccessDataType = '';
   public $downloadAccess;
   public $kind;
-  public function setConcurrentAccess(Google_Service_Books_ConcurrentAccessRestriction$concurrentAccess) {
+  public function setConcurrentAccess(Google_ConcurrentAccessRestriction $concurrentAccess) {
     $this->concurrentAccess = $concurrentAccess;
   }
   public function getConcurrentAccess() {
     return $this->concurrentAccess;
   }
-  public function setDownloadAccess(Google_Service_Books_DownloadAccessRestriction$downloadAccess) {
+  public function setDownloadAccess(Google_DownloadAccessRestriction $downloadAccess) {
     $this->downloadAccess = $downloadAccess;
   }
   public function getDownloadAccess() {
     return $this->downloadAccess;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -2490,7 +2490,7 @@ class Google_RequestAccess extends Google_Model {
 }
 
 class Google_Review extends Google_Model {
-  protected $__authorType = 'Google_Service_Books_ReviewAuthor';
+  protected $__authorType = 'Google_ReviewAuthor';
   protected $__authorDataType = '';
   public $author;
   public $content;
@@ -2498,67 +2498,67 @@ class Google_Review extends Google_Model {
   public $fullTextUrl;
   public $kind;
   public $rating;
-  protected $__sourceType = 'Google_Service_Books_ReviewSource';
+  protected $__sourceType = 'Google_ReviewSource';
   protected $__sourceDataType = '';
   public $source;
   public $title;
   public $type;
   public $volumeId;
-  public function setAuthor(Google_Service_Books_ReviewAuthor$author) {
+  public function setAuthor(Google_ReviewAuthor $author) {
     $this->author = $author;
   }
   public function getAuthor() {
     return $this->author;
   }
-  public function setContent($content) {
+  public function setContent( $content) {
     $this->content = $content;
   }
   public function getContent() {
     return $this->content;
   }
-  public function setDate($date) {
+  public function setDate( $date) {
     $this->date = $date;
   }
   public function getDate() {
     return $this->date;
   }
-  public function setFullTextUrl($fullTextUrl) {
+  public function setFullTextUrl( $fullTextUrl) {
     $this->fullTextUrl = $fullTextUrl;
   }
   public function getFullTextUrl() {
     return $this->fullTextUrl;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setRating($rating) {
+  public function setRating( $rating) {
     $this->rating = $rating;
   }
   public function getRating() {
     return $this->rating;
   }
-  public function setSource(Google_Service_Books_ReviewSource$source) {
+  public function setSource(Google_ReviewSource $source) {
     $this->source = $source;
   }
   public function getSource() {
     return $this->source;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
     return $this->type;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -2568,7 +2568,7 @@ class Google_Review extends Google_Model {
 
 class Google_ReviewAuthor extends Google_Model {
   public $displayName;
-  public function setDisplayName($displayName) {
+  public function setDisplayName( $displayName) {
     $this->displayName = $displayName;
   }
   public function getDisplayName() {
@@ -2580,19 +2580,19 @@ class Google_ReviewSource extends Google_Model {
   public $description;
   public $extraDescription;
   public $url;
-  public function setDescription($description) {
+  public function setDescription( $description) {
     $this->description = $description;
   }
   public function getDescription() {
     return $this->description;
   }
-  public function setExtraDescription($extraDescription) {
+  public function setExtraDescription( $extraDescription) {
     $this->extraDescription = $extraDescription;
   }
   public function getExtraDescription() {
     return $this->extraDescription;
   }
-  public function setUrl($url) {
+  public function setUrl( $url) {
     $this->url = $url;
   }
   public function getUrl() {
@@ -2601,92 +2601,92 @@ class Google_ReviewSource extends Google_Model {
 }
 
 class Google_Volume extends Google_Model {
-  protected $__accessInfoType = 'Google_Service_Books_VolumeAccessInfo';
+  protected $__accessInfoType = 'Google_VolumeAccessInfo';
   protected $__accessInfoDataType = '';
   public $accessInfo;
   public $etag;
   public $id;
   public $kind;
-  protected $__layerInfoType = 'Google_Service_Books_VolumeLayerInfo';
+  protected $__layerInfoType = 'Google_VolumeLayerInfo';
   protected $__layerInfoDataType = '';
   public $layerInfo;
-  protected $__recommendedInfoType = 'Google_Service_Books_VolumeRecommendedInfo';
+  protected $__recommendedInfoType = 'Google_VolumeRecommendedInfo';
   protected $__recommendedInfoDataType = '';
   public $recommendedInfo;
-  protected $__saleInfoType = 'Google_Service_Books_VolumeSaleInfo';
+  protected $__saleInfoType = 'Google_VolumeSaleInfo';
   protected $__saleInfoDataType = '';
   public $saleInfo;
-  protected $__searchInfoType = 'Google_Service_Books_VolumeSearchInfo';
+  protected $__searchInfoType = 'Google_VolumeSearchInfo';
   protected $__searchInfoDataType = '';
   public $searchInfo;
   public $selfLink;
-  protected $__userInfoType = 'Google_Service_Books_VolumeUserInfo';
+  protected $__userInfoType = 'Google_VolumeUserInfo';
   protected $__userInfoDataType = '';
   public $userInfo;
-  protected $__volumeInfoType = 'Google_Service_Books_VolumeVolumeInfo';
+  protected $__volumeInfoType = 'Google_VolumeVolumeInfo';
   protected $__volumeInfoDataType = '';
   public $volumeInfo;
-  public function setAccessInfo(Google_Service_Books_VolumeAccessInfo$accessInfo) {
+  public function setAccessInfo(Google_VolumeAccessInfo $accessInfo) {
     $this->accessInfo = $accessInfo;
   }
   public function getAccessInfo() {
     return $this->accessInfo;
   }
-  public function setEtag($etag) {
+  public function setEtag( $etag) {
     $this->etag = $etag;
   }
   public function getEtag() {
     return $this->etag;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLayerInfo(Google_Service_Books_VolumeLayerInfo$layerInfo) {
+  public function setLayerInfo(Google_VolumeLayerInfo $layerInfo) {
     $this->layerInfo = $layerInfo;
   }
   public function getLayerInfo() {
     return $this->layerInfo;
   }
-  public function setRecommendedInfo(Google_Service_Books_VolumeRecommendedInfo$recommendedInfo) {
+  public function setRecommendedInfo(Google_VolumeRecommendedInfo $recommendedInfo) {
     $this->recommendedInfo = $recommendedInfo;
   }
   public function getRecommendedInfo() {
     return $this->recommendedInfo;
   }
-  public function setSaleInfo(Google_Service_Books_VolumeSaleInfo$saleInfo) {
+  public function setSaleInfo(Google_VolumeSaleInfo $saleInfo) {
     $this->saleInfo = $saleInfo;
   }
   public function getSaleInfo() {
     return $this->saleInfo;
   }
-  public function setSearchInfo(Google_Service_Books_VolumeSearchInfo$searchInfo) {
+  public function setSearchInfo(Google_VolumeSearchInfo $searchInfo) {
     $this->searchInfo = $searchInfo;
   }
   public function getSearchInfo() {
     return $this->searchInfo;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setUserInfo(Google_Service_Books_VolumeUserInfo$userInfo) {
+  public function setUserInfo(Google_VolumeUserInfo $userInfo) {
     $this->userInfo = $userInfo;
   }
   public function getUserInfo() {
     return $this->userInfo;
   }
-  public function setVolumeInfo(Google_Service_Books_VolumeVolumeInfo$volumeInfo) {
+  public function setVolumeInfo(Google_VolumeVolumeInfo $volumeInfo) {
     $this->volumeInfo = $volumeInfo;
   }
   public function getVolumeInfo() {
@@ -2697,14 +2697,14 @@ class Google_Volume extends Google_Model {
 class Google_VolumeAccessInfo extends Google_Model {
   public $accessViewStatus;
   public $country;
-  protected $__downloadAccessType = 'Google_Service_Books_DownloadAccessRestriction';
+  protected $__downloadAccessType = 'Google_DownloadAccessRestriction';
   protected $__downloadAccessDataType = '';
   public $downloadAccess;
   public $embeddable;
-  protected $__epubType = 'Google_Service_Books_VolumeAccessInfoEpub';
+  protected $__epubType = 'Google_VolumeAccessInfoEpub';
   protected $__epubDataType = '';
   public $epub;
-  protected $__pdfType = 'Google_Service_Books_VolumeAccessInfoPdf';
+  protected $__pdfType = 'Google_VolumeAccessInfoPdf';
   protected $__pdfDataType = '';
   public $pdf;
   public $publicDomain;
@@ -2712,67 +2712,67 @@ class Google_VolumeAccessInfo extends Google_Model {
   public $viewOrderUrl;
   public $viewability;
   public $webReaderLink;
-  public function setAccessViewStatus($accessViewStatus) {
+  public function setAccessViewStatus( $accessViewStatus) {
     $this->accessViewStatus = $accessViewStatus;
   }
   public function getAccessViewStatus() {
     return $this->accessViewStatus;
   }
-  public function setCountry($country) {
+  public function setCountry( $country) {
     $this->country = $country;
   }
   public function getCountry() {
     return $this->country;
   }
-  public function setDownloadAccess(Google_Service_Books_DownloadAccessRestriction$downloadAccess) {
+  public function setDownloadAccess(Google_DownloadAccessRestriction $downloadAccess) {
     $this->downloadAccess = $downloadAccess;
   }
   public function getDownloadAccess() {
     return $this->downloadAccess;
   }
-  public function setEmbeddable($embeddable) {
+  public function setEmbeddable( $embeddable) {
     $this->embeddable = $embeddable;
   }
   public function getEmbeddable() {
     return $this->embeddable;
   }
-  public function setEpub(Google_Service_Books_VolumeAccessInfoEpub$epub) {
+  public function setEpub(Google_VolumeAccessInfoEpub $epub) {
     $this->epub = $epub;
   }
   public function getEpub() {
     return $this->epub;
   }
-  public function setPdf(Google_Service_Books_VolumeAccessInfoPdf$pdf) {
+  public function setPdf(Google_VolumeAccessInfoPdf $pdf) {
     $this->pdf = $pdf;
   }
   public function getPdf() {
     return $this->pdf;
   }
-  public function setPublicDomain($publicDomain) {
+  public function setPublicDomain( $publicDomain) {
     $this->publicDomain = $publicDomain;
   }
   public function getPublicDomain() {
     return $this->publicDomain;
   }
-  public function setTextToSpeechPermission($textToSpeechPermission) {
+  public function setTextToSpeechPermission( $textToSpeechPermission) {
     $this->textToSpeechPermission = $textToSpeechPermission;
   }
   public function getTextToSpeechPermission() {
     return $this->textToSpeechPermission;
   }
-  public function setViewOrderUrl($viewOrderUrl) {
+  public function setViewOrderUrl( $viewOrderUrl) {
     $this->viewOrderUrl = $viewOrderUrl;
   }
   public function getViewOrderUrl() {
     return $this->viewOrderUrl;
   }
-  public function setViewability($viewability) {
+  public function setViewability( $viewability) {
     $this->viewability = $viewability;
   }
   public function getViewability() {
     return $this->viewability;
   }
-  public function setWebReaderLink($webReaderLink) {
+  public function setWebReaderLink( $webReaderLink) {
     $this->webReaderLink = $webReaderLink;
   }
   public function getWebReaderLink() {
@@ -2784,19 +2784,19 @@ class Google_VolumeAccessInfoEpub extends Google_Model {
   public $acsTokenLink;
   public $downloadLink;
   public $isAvailable;
-  public function setAcsTokenLink($acsTokenLink) {
+  public function setAcsTokenLink( $acsTokenLink) {
     $this->acsTokenLink = $acsTokenLink;
   }
   public function getAcsTokenLink() {
     return $this->acsTokenLink;
   }
-  public function setDownloadLink($downloadLink) {
+  public function setDownloadLink( $downloadLink) {
     $this->downloadLink = $downloadLink;
   }
   public function getDownloadLink() {
     return $this->downloadLink;
   }
-  public function setIsAvailable($isAvailable) {
+  public function setIsAvailable( $isAvailable) {
     $this->isAvailable = $isAvailable;
   }
   public function getIsAvailable() {
@@ -2808,19 +2808,19 @@ class Google_VolumeAccessInfoPdf extends Google_Model {
   public $acsTokenLink;
   public $downloadLink;
   public $isAvailable;
-  public function setAcsTokenLink($acsTokenLink) {
+  public function setAcsTokenLink( $acsTokenLink) {
     $this->acsTokenLink = $acsTokenLink;
   }
   public function getAcsTokenLink() {
     return $this->acsTokenLink;
   }
-  public function setDownloadLink($downloadLink) {
+  public function setDownloadLink( $downloadLink) {
     $this->downloadLink = $downloadLink;
   }
   public function getDownloadLink() {
     return $this->downloadLink;
   }
-  public function setIsAvailable($isAvailable) {
+  public function setIsAvailable( $isAvailable) {
     $this->isAvailable = $isAvailable;
   }
   public function getIsAvailable() {
@@ -2829,7 +2829,7 @@ class Google_VolumeAccessInfoPdf extends Google_Model {
 }
 
 class Google_VolumeLayerInfo extends Google_Model {
-  protected $__layersType = 'Google_Service_Books_VolumeLayerInfoLayers';
+  protected $__layersType = 'Google_VolumeLayerInfoLayers';
   protected $__layersDataType = 'array';
   public $layers;
   public function setLayers(/* array(Google_VolumeLayerInfoLayers) */ $layers) {
@@ -2844,13 +2844,13 @@ class Google_VolumeLayerInfo extends Google_Model {
 class Google_VolumeLayerInfoLayers extends Google_Model {
   public $layerId;
   public $volumeAnnotationsVersion;
-  public function setLayerId($layerId) {
+  public function setLayerId( $layerId) {
     $this->layerId = $layerId;
   }
   public function getLayerId() {
     return $this->layerId;
   }
-  public function setVolumeAnnotationsVersion($volumeAnnotationsVersion) {
+  public function setVolumeAnnotationsVersion( $volumeAnnotationsVersion) {
     $this->volumeAnnotationsVersion = $volumeAnnotationsVersion;
   }
   public function getVolumeAnnotationsVersion() {
@@ -2860,7 +2860,7 @@ class Google_VolumeLayerInfoLayers extends Google_Model {
 
 class Google_VolumeRecommendedInfo extends Google_Model {
   public $explanation;
-  public function setExplanation($explanation) {
+  public function setExplanation( $explanation) {
     $this->explanation = $explanation;
   }
   public function getExplanation() {
@@ -2872,51 +2872,51 @@ class Google_VolumeSaleInfo extends Google_Model {
   public $buyLink;
   public $country;
   public $isEbook;
-  protected $__listPriceType = 'Google_Service_Books_VolumeSaleInfoListPrice';
+  protected $__listPriceType = 'Google_VolumeSaleInfoListPrice';
   protected $__listPriceDataType = '';
   public $listPrice;
   public $onSaleDate;
-  protected $__retailPriceType = 'Google_Service_Books_VolumeSaleInfoRetailPrice';
+  protected $__retailPriceType = 'Google_VolumeSaleInfoRetailPrice';
   protected $__retailPriceDataType = '';
   public $retailPrice;
   public $saleability;
-  public function setBuyLink($buyLink) {
+  public function setBuyLink( $buyLink) {
     $this->buyLink = $buyLink;
   }
   public function getBuyLink() {
     return $this->buyLink;
   }
-  public function setCountry($country) {
+  public function setCountry( $country) {
     $this->country = $country;
   }
   public function getCountry() {
     return $this->country;
   }
-  public function setIsEbook($isEbook) {
+  public function setIsEbook( $isEbook) {
     $this->isEbook = $isEbook;
   }
   public function getIsEbook() {
     return $this->isEbook;
   }
-  public function setListPrice(Google_Service_Books_VolumeSaleInfoListPrice$listPrice) {
+  public function setListPrice(Google_VolumeSaleInfoListPrice $listPrice) {
     $this->listPrice = $listPrice;
   }
   public function getListPrice() {
     return $this->listPrice;
   }
-  public function setOnSaleDate($onSaleDate) {
+  public function setOnSaleDate( $onSaleDate) {
     $this->onSaleDate = $onSaleDate;
   }
   public function getOnSaleDate() {
     return $this->onSaleDate;
   }
-  public function setRetailPrice(Google_Service_Books_VolumeSaleInfoRetailPrice$retailPrice) {
+  public function setRetailPrice(Google_VolumeSaleInfoRetailPrice $retailPrice) {
     $this->retailPrice = $retailPrice;
   }
   public function getRetailPrice() {
     return $this->retailPrice;
   }
-  public function setSaleability($saleability) {
+  public function setSaleability( $saleability) {
     $this->saleability = $saleability;
   }
   public function getSaleability() {
@@ -2927,13 +2927,13 @@ class Google_VolumeSaleInfo extends Google_Model {
 class Google_VolumeSaleInfoListPrice extends Google_Model {
   public $amount;
   public $currencyCode;
-  public function setAmount($amount) {
+  public function setAmount( $amount) {
     $this->amount = $amount;
   }
   public function getAmount() {
     return $this->amount;
   }
-  public function setCurrencyCode($currencyCode) {
+  public function setCurrencyCode( $currencyCode) {
     $this->currencyCode = $currencyCode;
   }
   public function getCurrencyCode() {
@@ -2944,13 +2944,13 @@ class Google_VolumeSaleInfoListPrice extends Google_Model {
 class Google_VolumeSaleInfoRetailPrice extends Google_Model {
   public $amount;
   public $currencyCode;
-  public function setAmount($amount) {
+  public function setAmount( $amount) {
     $this->amount = $amount;
   }
   public function getAmount() {
     return $this->amount;
   }
-  public function setCurrencyCode($currencyCode) {
+  public function setCurrencyCode( $currencyCode) {
     $this->currencyCode = $currencyCode;
   }
   public function getCurrencyCode() {
@@ -2960,7 +2960,7 @@ class Google_VolumeSaleInfoRetailPrice extends Google_Model {
 
 class Google_VolumeSearchInfo extends Google_Model {
   public $textSnippet;
-  public function setTextSnippet($textSnippet) {
+  public function setTextSnippet( $textSnippet) {
     $this->textSnippet = $textSnippet;
   }
   public function getTextSnippet() {
@@ -2973,59 +2973,59 @@ class Google_VolumeUserInfo extends Google_Model {
   public $isPreordered;
   public $isPurchased;
   public $isUploaded;
-  protected $__readingPositionType = 'Google_Service_Books_ReadingPosition';
+  protected $__readingPositionType = 'Google_ReadingPosition';
   protected $__readingPositionDataType = '';
   public $readingPosition;
-  protected $__reviewType = 'Google_Service_Books_Review';
+  protected $__reviewType = 'Google_Review';
   protected $__reviewDataType = '';
   public $review;
   public $updated;
-  protected $__userUploadedVolumeInfoType = 'Google_Service_Books_VolumeUserInfoUserUploadedVolumeInfo';
+  protected $__userUploadedVolumeInfoType = 'Google_VolumeUserInfoUserUploadedVolumeInfo';
   protected $__userUploadedVolumeInfoDataType = '';
   public $userUploadedVolumeInfo;
-  public function setIsInMyBooks($isInMyBooks) {
+  public function setIsInMyBooks( $isInMyBooks) {
     $this->isInMyBooks = $isInMyBooks;
   }
   public function getIsInMyBooks() {
     return $this->isInMyBooks;
   }
-  public function setIsPreordered($isPreordered) {
+  public function setIsPreordered( $isPreordered) {
     $this->isPreordered = $isPreordered;
   }
   public function getIsPreordered() {
     return $this->isPreordered;
   }
-  public function setIsPurchased($isPurchased) {
+  public function setIsPurchased( $isPurchased) {
     $this->isPurchased = $isPurchased;
   }
   public function getIsPurchased() {
     return $this->isPurchased;
   }
-  public function setIsUploaded($isUploaded) {
+  public function setIsUploaded( $isUploaded) {
     $this->isUploaded = $isUploaded;
   }
   public function getIsUploaded() {
     return $this->isUploaded;
   }
-  public function setReadingPosition(Google_Service_Books_ReadingPosition$readingPosition) {
+  public function setReadingPosition(Google_ReadingPosition $readingPosition) {
     $this->readingPosition = $readingPosition;
   }
   public function getReadingPosition() {
     return $this->readingPosition;
   }
-  public function setReview(Google_Service_Books_Review$review) {
+  public function setReview(Google_Review $review) {
     $this->review = $review;
   }
   public function getReview() {
     return $this->review;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
     return $this->updated;
   }
-  public function setUserUploadedVolumeInfo(Google_Service_Books_VolumeUserInfoUserUploadedVolumeInfo$userUploadedVolumeInfo) {
+  public function setUserUploadedVolumeInfo(Google_VolumeUserInfoUserUploadedVolumeInfo $userUploadedVolumeInfo) {
     $this->userUploadedVolumeInfo = $userUploadedVolumeInfo;
   }
   public function getUserUploadedVolumeInfo() {
@@ -3035,7 +3035,7 @@ class Google_VolumeUserInfo extends Google_Model {
 
 class Google_VolumeUserInfoUserUploadedVolumeInfo extends Google_Model {
   public $processingState;
-  public function setProcessingState($processingState) {
+  public function setProcessingState( $processingState) {
     $this->processingState = $processingState;
   }
   public function getProcessingState() {
@@ -3050,13 +3050,13 @@ class Google_VolumeVolumeInfo extends Google_Model {
   public $categories;
   public $contentVersion;
   public $description;
-  protected $__dimensionsType = 'Google_Service_Books_VolumeVolumeInfoDimensions';
+  protected $__dimensionsType = 'Google_VolumeVolumeInfoDimensions';
   protected $__dimensionsDataType = '';
   public $dimensions;
-  protected $__imageLinksType = 'Google_Service_Books_VolumeVolumeInfoImageLinks';
+  protected $__imageLinksType = 'Google_VolumeVolumeInfoImageLinks';
   protected $__imageLinksDataType = '';
   public $imageLinks;
-  protected $__industryIdentifiersType = 'Google_Service_Books_VolumeVolumeInfoIndustryIdentifiers';
+  protected $__industryIdentifiersType = 'Google_VolumeVolumeInfoIndustryIdentifiers';
   protected $__industryIdentifiersDataType = 'array';
   public $industryIdentifiers;
   public $infoLink;
@@ -3077,13 +3077,13 @@ class Google_VolumeVolumeInfo extends Google_Model {
   public function getAuthors() {
     return $this->authors;
   }
-  public function setAverageRating($averageRating) {
+  public function setAverageRating( $averageRating) {
     $this->averageRating = $averageRating;
   }
   public function getAverageRating() {
     return $this->averageRating;
   }
-  public function setCanonicalVolumeLink($canonicalVolumeLink) {
+  public function setCanonicalVolumeLink( $canonicalVolumeLink) {
     $this->canonicalVolumeLink = $canonicalVolumeLink;
   }
   public function getCanonicalVolumeLink() {
@@ -3096,25 +3096,25 @@ class Google_VolumeVolumeInfo extends Google_Model {
   public function getCategories() {
     return $this->categories;
   }
-  public function setContentVersion($contentVersion) {
+  public function setContentVersion( $contentVersion) {
     $this->contentVersion = $contentVersion;
   }
   public function getContentVersion() {
     return $this->contentVersion;
   }
-  public function setDescription($description) {
+  public function setDescription( $description) {
     $this->description = $description;
   }
   public function getDescription() {
     return $this->description;
   }
-  public function setDimensions(Google_Service_Books_VolumeVolumeInfoDimensions$dimensions) {
+  public function setDimensions(Google_VolumeVolumeInfoDimensions $dimensions) {
     $this->dimensions = $dimensions;
   }
   public function getDimensions() {
     return $this->dimensions;
   }
-  public function setImageLinks(Google_Service_Books_VolumeVolumeInfoImageLinks$imageLinks) {
+  public function setImageLinks(Google_VolumeVolumeInfoImageLinks $imageLinks) {
     $this->imageLinks = $imageLinks;
   }
   public function getImageLinks() {
@@ -3127,67 +3127,67 @@ class Google_VolumeVolumeInfo extends Google_Model {
   public function getIndustryIdentifiers() {
     return $this->industryIdentifiers;
   }
-  public function setInfoLink($infoLink) {
+  public function setInfoLink( $infoLink) {
     $this->infoLink = $infoLink;
   }
   public function getInfoLink() {
     return $this->infoLink;
   }
-  public function setLanguage($language) {
+  public function setLanguage( $language) {
     $this->language = $language;
   }
   public function getLanguage() {
     return $this->language;
   }
-  public function setMainCategory($mainCategory) {
+  public function setMainCategory( $mainCategory) {
     $this->mainCategory = $mainCategory;
   }
   public function getMainCategory() {
     return $this->mainCategory;
   }
-  public function setPageCount($pageCount) {
+  public function setPageCount( $pageCount) {
     $this->pageCount = $pageCount;
   }
   public function getPageCount() {
     return $this->pageCount;
   }
-  public function setPreviewLink($previewLink) {
+  public function setPreviewLink( $previewLink) {
     $this->previewLink = $previewLink;
   }
   public function getPreviewLink() {
     return $this->previewLink;
   }
-  public function setPrintType($printType) {
+  public function setPrintType( $printType) {
     $this->printType = $printType;
   }
   public function getPrintType() {
     return $this->printType;
   }
-  public function setPublishedDate($publishedDate) {
+  public function setPublishedDate( $publishedDate) {
     $this->publishedDate = $publishedDate;
   }
   public function getPublishedDate() {
     return $this->publishedDate;
   }
-  public function setPublisher($publisher) {
+  public function setPublisher( $publisher) {
     $this->publisher = $publisher;
   }
   public function getPublisher() {
     return $this->publisher;
   }
-  public function setRatingsCount($ratingsCount) {
+  public function setRatingsCount( $ratingsCount) {
     $this->ratingsCount = $ratingsCount;
   }
   public function getRatingsCount() {
     return $this->ratingsCount;
   }
-  public function setSubtitle($subtitle) {
+  public function setSubtitle( $subtitle) {
     $this->subtitle = $subtitle;
   }
   public function getSubtitle() {
     return $this->subtitle;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
@@ -3199,19 +3199,19 @@ class Google_VolumeVolumeInfoDimensions extends Google_Model {
   public $height;
   public $thickness;
   public $width;
-  public function setHeight($height) {
+  public function setHeight( $height) {
     $this->height = $height;
   }
   public function getHeight() {
     return $this->height;
   }
-  public function setThickness($thickness) {
+  public function setThickness( $thickness) {
     $this->thickness = $thickness;
   }
   public function getThickness() {
     return $this->thickness;
   }
-  public function setWidth($width) {
+  public function setWidth( $width) {
     $this->width = $width;
   }
   public function getWidth() {
@@ -3226,37 +3226,37 @@ class Google_VolumeVolumeInfoImageLinks extends Google_Model {
   public $small;
   public $smallThumbnail;
   public $thumbnail;
-  public function setExtraLarge($extraLarge) {
+  public function setExtraLarge( $extraLarge) {
     $this->extraLarge = $extraLarge;
   }
   public function getExtraLarge() {
     return $this->extraLarge;
   }
-  public function setLarge($large) {
+  public function setLarge( $large) {
     $this->large = $large;
   }
   public function getLarge() {
     return $this->large;
   }
-  public function setMedium($medium) {
+  public function setMedium( $medium) {
     $this->medium = $medium;
   }
   public function getMedium() {
     return $this->medium;
   }
-  public function setSmall($small) {
+  public function setSmall( $small) {
     $this->small = $small;
   }
   public function getSmall() {
     return $this->small;
   }
-  public function setSmallThumbnail($smallThumbnail) {
+  public function setSmallThumbnail( $smallThumbnail) {
     $this->smallThumbnail = $smallThumbnail;
   }
   public function getSmallThumbnail() {
     return $this->smallThumbnail;
   }
-  public function setThumbnail($thumbnail) {
+  public function setThumbnail( $thumbnail) {
     $this->thumbnail = $thumbnail;
   }
   public function getThumbnail() {
@@ -3267,13 +3267,13 @@ class Google_VolumeVolumeInfoImageLinks extends Google_Model {
 class Google_VolumeVolumeInfoIndustryIdentifiers extends Google_Model {
   public $identifier;
   public $type;
-  public function setIdentifier($identifier) {
+  public function setIdentifier( $identifier) {
     $this->identifier = $identifier;
   }
   public function getIdentifier() {
     return $this->identifier;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -3285,7 +3285,7 @@ class Google_Volumeannotation extends Google_Model {
   public $annotationDataId;
   public $annotationDataLink;
   public $annotationType;
-  protected $__contentRangesType = 'Google_Service_Books_VolumeannotationContentRanges';
+  protected $__contentRangesType = 'Google_VolumeannotationContentRanges';
   protected $__contentRangesDataType = '';
   public $contentRanges;
   public $data;
@@ -3298,55 +3298,55 @@ class Google_Volumeannotation extends Google_Model {
   public $selfLink;
   public $updated;
   public $volumeId;
-  public function setAnnotationDataId($annotationDataId) {
+  public function setAnnotationDataId( $annotationDataId) {
     $this->annotationDataId = $annotationDataId;
   }
   public function getAnnotationDataId() {
     return $this->annotationDataId;
   }
-  public function setAnnotationDataLink($annotationDataLink) {
+  public function setAnnotationDataLink( $annotationDataLink) {
     $this->annotationDataLink = $annotationDataLink;
   }
   public function getAnnotationDataLink() {
     return $this->annotationDataLink;
   }
-  public function setAnnotationType($annotationType) {
+  public function setAnnotationType( $annotationType) {
     $this->annotationType = $annotationType;
   }
   public function getAnnotationType() {
     return $this->annotationType;
   }
-  public function setContentRanges(Google_Service_Books_VolumeannotationContentRanges$contentRanges) {
+  public function setContentRanges(Google_VolumeannotationContentRanges $contentRanges) {
     $this->contentRanges = $contentRanges;
   }
   public function getContentRanges() {
     return $this->contentRanges;
   }
-  public function setData($data) {
+  public function setData( $data) {
     $this->data = $data;
   }
   public function getData() {
     return $this->data;
   }
-  public function setDeleted($deleted) {
+  public function setDeleted( $deleted) {
     $this->deleted = $deleted;
   }
   public function getDeleted() {
     return $this->deleted;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLayerId($layerId) {
+  public function setLayerId( $layerId) {
     $this->layerId = $layerId;
   }
   public function getLayerId() {
@@ -3359,25 +3359,25 @@ class Google_Volumeannotation extends Google_Model {
   public function getPageIds() {
     return $this->pageIds;
   }
-  public function setSelectedText($selectedText) {
+  public function setSelectedText( $selectedText) {
     $this->selectedText = $selectedText;
   }
   public function getSelectedText() {
     return $this->selectedText;
   }
-  public function setSelfLink($selfLink) {
+  public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
   }
   public function getSelfLink() {
     return $this->selfLink;
   }
-  public function setUpdated($updated) {
+  public function setUpdated( $updated) {
     $this->updated = $updated;
   }
   public function getUpdated() {
     return $this->updated;
   }
-  public function setVolumeId($volumeId) {
+  public function setVolumeId( $volumeId) {
     $this->volumeId = $volumeId;
   }
   public function getVolumeId() {
@@ -3386,35 +3386,35 @@ class Google_Volumeannotation extends Google_Model {
 }
 
 class Google_VolumeannotationContentRanges extends Google_Model {
-  protected $__cfiRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__cfiRangeType = 'Google_BooksAnnotationsRange';
   protected $__cfiRangeDataType = '';
   public $cfiRange;
   public $contentVersion;
-  protected $__gbImageRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__gbImageRangeType = 'Google_BooksAnnotationsRange';
   protected $__gbImageRangeDataType = '';
   public $gbImageRange;
-  protected $__gbTextRangeType = 'Google_Service_Books_BooksAnnotationsRange';
+  protected $__gbTextRangeType = 'Google_BooksAnnotationsRange';
   protected $__gbTextRangeDataType = '';
   public $gbTextRange;
-  public function setCfiRange(Google_Service_Books_BooksAnnotationsRange$cfiRange) {
+  public function setCfiRange(Google_BooksAnnotationsRange $cfiRange) {
     $this->cfiRange = $cfiRange;
   }
   public function getCfiRange() {
     return $this->cfiRange;
   }
-  public function setContentVersion($contentVersion) {
+  public function setContentVersion( $contentVersion) {
     $this->contentVersion = $contentVersion;
   }
   public function getContentVersion() {
     return $this->contentVersion;
   }
-  public function setGbImageRange(Google_Service_Books_BooksAnnotationsRange$gbImageRange) {
+  public function setGbImageRange(Google_BooksAnnotationsRange $gbImageRange) {
     $this->gbImageRange = $gbImageRange;
   }
   public function getGbImageRange() {
     return $this->gbImageRange;
   }
-  public function setGbTextRange(Google_Service_Books_BooksAnnotationsRange$gbTextRange) {
+  public function setGbTextRange(Google_BooksAnnotationsRange $gbTextRange) {
     $this->gbTextRange = $gbTextRange;
   }
   public function getGbTextRange() {
@@ -3423,7 +3423,7 @@ class Google_VolumeannotationContentRanges extends Google_Model {
 }
 
 class Google_Volumeannotations extends Google_Model {
-  protected $__itemsType = 'Google_Service_Books_Volumeannotation';
+  protected $__itemsType = 'Google_Volumeannotation';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -3437,25 +3437,25 @@ class Google_Volumeannotations extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
     return $this->nextPageToken;
   }
-  public function setTotalItems($totalItems) {
+  public function setTotalItems( $totalItems) {
     $this->totalItems = $totalItems;
   }
   public function getTotalItems() {
     return $this->totalItems;
   }
-  public function setVersion($version) {
+  public function setVersion( $version) {
     $this->version = $version;
   }
   public function getVersion() {
@@ -3464,7 +3464,7 @@ class Google_Volumeannotations extends Google_Model {
 }
 
 class Google_Volumes extends Google_Model {
-  protected $__itemsType = 'Google_Service_Books_Volume';
+  protected $__itemsType = 'Google_Volume';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -3476,13 +3476,13 @@ class Google_Volumes extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setTotalItems($totalItems) {
+  public function setTotalItems( $totalItems) {
     $this->totalItems = $totalItems;
   }
   public function getTotalItems() {

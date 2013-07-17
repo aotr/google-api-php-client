@@ -394,14 +394,14 @@ class Google_Advertiser extends Google_Model {
   public $contactPhone;
   public $defaultLinkId;
   public $description;
-  protected $__epcNinetyDayAverageType = 'Google_Service_Gan_Money';
+  protected $__epcNinetyDayAverageType = 'Google_Money';
   protected $__epcNinetyDayAverageDataType = '';
   public $epcNinetyDayAverage;
-  protected $__epcSevenDayAverageType = 'Google_Service_Gan_Money';
+  protected $__epcSevenDayAverageType = 'Google_Money';
   protected $__epcSevenDayAverageDataType = '';
   public $epcSevenDayAverage;
   public $id;
-  protected $__itemType = 'Google_Service_Gan_Advertiser';
+  protected $__itemType = 'Google_Advertiser';
   protected $__itemDataType = '';
   public $item;
   public $joinDate;
@@ -414,85 +414,85 @@ class Google_Advertiser extends Google_Model {
   public $redirectDomains;
   public $siteUrl;
   public $status;
-  public function setAllowPublisherCreatedLinks($allowPublisherCreatedLinks) {
+  public function setAllowPublisherCreatedLinks( $allowPublisherCreatedLinks) {
     $this->allowPublisherCreatedLinks = $allowPublisherCreatedLinks;
   }
   public function getAllowPublisherCreatedLinks() {
     return $this->allowPublisherCreatedLinks;
   }
-  public function setCategory($category) {
+  public function setCategory( $category) {
     $this->category = $category;
   }
   public function getCategory() {
     return $this->category;
   }
-  public function setCommissionDuration($commissionDuration) {
+  public function setCommissionDuration( $commissionDuration) {
     $this->commissionDuration = $commissionDuration;
   }
   public function getCommissionDuration() {
     return $this->commissionDuration;
   }
-  public function setContactEmail($contactEmail) {
+  public function setContactEmail( $contactEmail) {
     $this->contactEmail = $contactEmail;
   }
   public function getContactEmail() {
     return $this->contactEmail;
   }
-  public function setContactPhone($contactPhone) {
+  public function setContactPhone( $contactPhone) {
     $this->contactPhone = $contactPhone;
   }
   public function getContactPhone() {
     return $this->contactPhone;
   }
-  public function setDefaultLinkId($defaultLinkId) {
+  public function setDefaultLinkId( $defaultLinkId) {
     $this->defaultLinkId = $defaultLinkId;
   }
   public function getDefaultLinkId() {
     return $this->defaultLinkId;
   }
-  public function setDescription($description) {
+  public function setDescription( $description) {
     $this->description = $description;
   }
   public function getDescription() {
     return $this->description;
   }
-  public function setEpcNinetyDayAverage(Google_Service_Gan_Money$epcNinetyDayAverage) {
+  public function setEpcNinetyDayAverage(Google_Money $epcNinetyDayAverage) {
     $this->epcNinetyDayAverage = $epcNinetyDayAverage;
   }
   public function getEpcNinetyDayAverage() {
     return $this->epcNinetyDayAverage;
   }
-  public function setEpcSevenDayAverage(Google_Service_Gan_Money$epcSevenDayAverage) {
+  public function setEpcSevenDayAverage(Google_Money $epcSevenDayAverage) {
     $this->epcSevenDayAverage = $epcSevenDayAverage;
   }
   public function getEpcSevenDayAverage() {
     return $this->epcSevenDayAverage;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setItem(Google_Service_Gan_Advertiser$item) {
+  public function setItem(Google_Advertiser $item) {
     $this->item = $item;
   }
   public function getItem() {
     return $this->item;
   }
-  public function setJoinDate($joinDate) {
+  public function setJoinDate( $joinDate) {
     $this->joinDate = $joinDate;
   }
   public function getJoinDate() {
     return $this->joinDate;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLogoUrl($logoUrl) {
+  public function setLogoUrl( $logoUrl) {
     $this->logoUrl = $logoUrl;
   }
   public function getLogoUrl() {
@@ -505,19 +505,19 @@ class Google_Advertiser extends Google_Model {
   public function getMerchantCenterIds() {
     return $this->merchantCenterIds;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setPayoutRank($payoutRank) {
+  public function setPayoutRank( $payoutRank) {
     $this->payoutRank = $payoutRank;
   }
   public function getPayoutRank() {
     return $this->payoutRank;
   }
-  public function setProductFeedsEnabled($productFeedsEnabled) {
+  public function setProductFeedsEnabled( $productFeedsEnabled) {
     $this->productFeedsEnabled = $productFeedsEnabled;
   }
   public function getProductFeedsEnabled() {
@@ -530,13 +530,13 @@ class Google_Advertiser extends Google_Model {
   public function getRedirectDomains() {
     return $this->redirectDomains;
   }
-  public function setSiteUrl($siteUrl) {
+  public function setSiteUrl( $siteUrl) {
     $this->siteUrl = $siteUrl;
   }
   public function getSiteUrl() {
     return $this->siteUrl;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
@@ -545,7 +545,7 @@ class Google_Advertiser extends Google_Model {
 }
 
 class Google_Advertisers extends Google_Model {
-  protected $__itemsType = 'Google_Service_Gan_Advertiser';
+  protected $__itemsType = 'Google_Advertiser';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -557,13 +557,13 @@ class Google_Advertisers extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -583,7 +583,7 @@ class Google_CcOffer extends Google_Model {
   public $aprDisplay;
   public $balanceComputationMethod;
   public $balanceTransferTerms;
-  protected $__bonusRewardsType = 'Google_Service_Gan_CcOfferBonusRewards';
+  protected $__bonusRewardsType = 'Google_CcOfferBonusRewards';
   protected $__bonusRewardsDataType = 'array';
   public $bonusRewards;
   public $carRentalInsurance;
@@ -594,7 +594,7 @@ class Google_CcOffer extends Google_Model {
   public $creditLimitMax;
   public $creditLimitMin;
   public $creditRatingDisplay;
-  protected $__defaultFeesType = 'Google_Service_Gan_CcOfferDefaultFees';
+  protected $__defaultFeesType = 'Google_CcOfferDefaultFees';
   protected $__defaultFeesDataType = 'array';
   public $defaultFees;
   public $disclaimer;
@@ -631,7 +631,7 @@ class Google_CcOffer extends Google_Model {
   public $returnedPaymentFee;
   public $rewardPartner;
   public $rewardUnit;
-  protected $__rewardsType = 'Google_Service_Gan_CcOfferRewards';
+  protected $__rewardsType = 'Google_CcOfferRewards';
   protected $__rewardsDataType = 'array';
   public $rewards;
   public $rewardsExpire;
@@ -648,37 +648,37 @@ class Google_CcOffer extends Google_Model {
   public function getAdditionalCardBenefits() {
     return $this->additionalCardBenefits;
   }
-  public function setAdditionalCardHolderFee($additionalCardHolderFee) {
+  public function setAdditionalCardHolderFee( $additionalCardHolderFee) {
     $this->additionalCardHolderFee = $additionalCardHolderFee;
   }
   public function getAdditionalCardHolderFee() {
     return $this->additionalCardHolderFee;
   }
-  public function setAgeMinimum($ageMinimum) {
+  public function setAgeMinimum( $ageMinimum) {
     $this->ageMinimum = $ageMinimum;
   }
   public function getAgeMinimum() {
     return $this->ageMinimum;
   }
-  public function setAgeMinimumDetails($ageMinimumDetails) {
+  public function setAgeMinimumDetails( $ageMinimumDetails) {
     $this->ageMinimumDetails = $ageMinimumDetails;
   }
   public function getAgeMinimumDetails() {
     return $this->ageMinimumDetails;
   }
-  public function setAnnualFee($annualFee) {
+  public function setAnnualFee( $annualFee) {
     $this->annualFee = $annualFee;
   }
   public function getAnnualFee() {
     return $this->annualFee;
   }
-  public function setAnnualFeeDisplay($annualFeeDisplay) {
+  public function setAnnualFeeDisplay( $annualFeeDisplay) {
     $this->annualFeeDisplay = $annualFeeDisplay;
   }
   public function getAnnualFeeDisplay() {
     return $this->annualFeeDisplay;
   }
-  public function setAnnualRewardMaximum($annualRewardMaximum) {
+  public function setAnnualRewardMaximum( $annualRewardMaximum) {
     $this->annualRewardMaximum = $annualRewardMaximum;
   }
   public function getAnnualRewardMaximum() {
@@ -691,19 +691,19 @@ class Google_CcOffer extends Google_Model {
   public function getApprovedCategories() {
     return $this->approvedCategories;
   }
-  public function setAprDisplay($aprDisplay) {
+  public function setAprDisplay( $aprDisplay) {
     $this->aprDisplay = $aprDisplay;
   }
   public function getAprDisplay() {
     return $this->aprDisplay;
   }
-  public function setBalanceComputationMethod($balanceComputationMethod) {
+  public function setBalanceComputationMethod( $balanceComputationMethod) {
     $this->balanceComputationMethod = $balanceComputationMethod;
   }
   public function getBalanceComputationMethod() {
     return $this->balanceComputationMethod;
   }
-  public function setBalanceTransferTerms($balanceTransferTerms) {
+  public function setBalanceTransferTerms( $balanceTransferTerms) {
     $this->balanceTransferTerms = $balanceTransferTerms;
   }
   public function getBalanceTransferTerms() {
@@ -716,7 +716,7 @@ class Google_CcOffer extends Google_Model {
   public function getBonusRewards() {
     return $this->bonusRewards;
   }
-  public function setCarRentalInsurance($carRentalInsurance) {
+  public function setCarRentalInsurance( $carRentalInsurance) {
     $this->carRentalInsurance = $carRentalInsurance;
   }
   public function getCarRentalInsurance() {
@@ -729,37 +729,37 @@ class Google_CcOffer extends Google_Model {
   public function getCardBenefits() {
     return $this->cardBenefits;
   }
-  public function setCardName($cardName) {
+  public function setCardName( $cardName) {
     $this->cardName = $cardName;
   }
   public function getCardName() {
     return $this->cardName;
   }
-  public function setCardType($cardType) {
+  public function setCardType( $cardType) {
     $this->cardType = $cardType;
   }
   public function getCardType() {
     return $this->cardType;
   }
-  public function setCashAdvanceTerms($cashAdvanceTerms) {
+  public function setCashAdvanceTerms( $cashAdvanceTerms) {
     $this->cashAdvanceTerms = $cashAdvanceTerms;
   }
   public function getCashAdvanceTerms() {
     return $this->cashAdvanceTerms;
   }
-  public function setCreditLimitMax($creditLimitMax) {
+  public function setCreditLimitMax( $creditLimitMax) {
     $this->creditLimitMax = $creditLimitMax;
   }
   public function getCreditLimitMax() {
     return $this->creditLimitMax;
   }
-  public function setCreditLimitMin($creditLimitMin) {
+  public function setCreditLimitMin( $creditLimitMin) {
     $this->creditLimitMin = $creditLimitMin;
   }
   public function getCreditLimitMin() {
     return $this->creditLimitMin;
   }
-  public function setCreditRatingDisplay($creditRatingDisplay) {
+  public function setCreditRatingDisplay( $creditRatingDisplay) {
     $this->creditRatingDisplay = $creditRatingDisplay;
   }
   public function getCreditRatingDisplay() {
@@ -772,169 +772,169 @@ class Google_CcOffer extends Google_Model {
   public function getDefaultFees() {
     return $this->defaultFees;
   }
-  public function setDisclaimer($disclaimer) {
+  public function setDisclaimer( $disclaimer) {
     $this->disclaimer = $disclaimer;
   }
   public function getDisclaimer() {
     return $this->disclaimer;
   }
-  public function setEmergencyInsurance($emergencyInsurance) {
+  public function setEmergencyInsurance( $emergencyInsurance) {
     $this->emergencyInsurance = $emergencyInsurance;
   }
   public function getEmergencyInsurance() {
     return $this->emergencyInsurance;
   }
-  public function setExistingCustomerOnly($existingCustomerOnly) {
+  public function setExistingCustomerOnly( $existingCustomerOnly) {
     $this->existingCustomerOnly = $existingCustomerOnly;
   }
   public function getExistingCustomerOnly() {
     return $this->existingCustomerOnly;
   }
-  public function setExtendedWarranty($extendedWarranty) {
+  public function setExtendedWarranty( $extendedWarranty) {
     $this->extendedWarranty = $extendedWarranty;
   }
   public function getExtendedWarranty() {
     return $this->extendedWarranty;
   }
-  public function setFirstYearAnnualFee($firstYearAnnualFee) {
+  public function setFirstYearAnnualFee( $firstYearAnnualFee) {
     $this->firstYearAnnualFee = $firstYearAnnualFee;
   }
   public function getFirstYearAnnualFee() {
     return $this->firstYearAnnualFee;
   }
-  public function setFlightAccidentInsurance($flightAccidentInsurance) {
+  public function setFlightAccidentInsurance( $flightAccidentInsurance) {
     $this->flightAccidentInsurance = $flightAccidentInsurance;
   }
   public function getFlightAccidentInsurance() {
     return $this->flightAccidentInsurance;
   }
-  public function setForeignCurrencyTransactionFee($foreignCurrencyTransactionFee) {
+  public function setForeignCurrencyTransactionFee( $foreignCurrencyTransactionFee) {
     $this->foreignCurrencyTransactionFee = $foreignCurrencyTransactionFee;
   }
   public function getForeignCurrencyTransactionFee() {
     return $this->foreignCurrencyTransactionFee;
   }
-  public function setFraudLiability($fraudLiability) {
+  public function setFraudLiability( $fraudLiability) {
     $this->fraudLiability = $fraudLiability;
   }
   public function getFraudLiability() {
     return $this->fraudLiability;
   }
-  public function setGracePeriodDisplay($gracePeriodDisplay) {
+  public function setGracePeriodDisplay( $gracePeriodDisplay) {
     $this->gracePeriodDisplay = $gracePeriodDisplay;
   }
   public function getGracePeriodDisplay() {
     return $this->gracePeriodDisplay;
   }
-  public function setImageUrl($imageUrl) {
+  public function setImageUrl( $imageUrl) {
     $this->imageUrl = $imageUrl;
   }
   public function getImageUrl() {
     return $this->imageUrl;
   }
-  public function setInitialSetupAndProcessingFee($initialSetupAndProcessingFee) {
+  public function setInitialSetupAndProcessingFee( $initialSetupAndProcessingFee) {
     $this->initialSetupAndProcessingFee = $initialSetupAndProcessingFee;
   }
   public function getInitialSetupAndProcessingFee() {
     return $this->initialSetupAndProcessingFee;
   }
-  public function setIntroBalanceTransferTerms($introBalanceTransferTerms) {
+  public function setIntroBalanceTransferTerms( $introBalanceTransferTerms) {
     $this->introBalanceTransferTerms = $introBalanceTransferTerms;
   }
   public function getIntroBalanceTransferTerms() {
     return $this->introBalanceTransferTerms;
   }
-  public function setIntroCashAdvanceTerms($introCashAdvanceTerms) {
+  public function setIntroCashAdvanceTerms( $introCashAdvanceTerms) {
     $this->introCashAdvanceTerms = $introCashAdvanceTerms;
   }
   public function getIntroCashAdvanceTerms() {
     return $this->introCashAdvanceTerms;
   }
-  public function setIntroPurchaseTerms($introPurchaseTerms) {
+  public function setIntroPurchaseTerms( $introPurchaseTerms) {
     $this->introPurchaseTerms = $introPurchaseTerms;
   }
   public function getIntroPurchaseTerms() {
     return $this->introPurchaseTerms;
   }
-  public function setIssuer($issuer) {
+  public function setIssuer( $issuer) {
     $this->issuer = $issuer;
   }
   public function getIssuer() {
     return $this->issuer;
   }
-  public function setIssuerId($issuerId) {
+  public function setIssuerId( $issuerId) {
     $this->issuerId = $issuerId;
   }
   public function getIssuerId() {
     return $this->issuerId;
   }
-  public function setIssuerWebsite($issuerWebsite) {
+  public function setIssuerWebsite( $issuerWebsite) {
     $this->issuerWebsite = $issuerWebsite;
   }
   public function getIssuerWebsite() {
     return $this->issuerWebsite;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLandingPageUrl($landingPageUrl) {
+  public function setLandingPageUrl( $landingPageUrl) {
     $this->landingPageUrl = $landingPageUrl;
   }
   public function getLandingPageUrl() {
     return $this->landingPageUrl;
   }
-  public function setLatePaymentFee($latePaymentFee) {
+  public function setLatePaymentFee( $latePaymentFee) {
     $this->latePaymentFee = $latePaymentFee;
   }
   public function getLatePaymentFee() {
     return $this->latePaymentFee;
   }
-  public function setLuggageInsurance($luggageInsurance) {
+  public function setLuggageInsurance( $luggageInsurance) {
     $this->luggageInsurance = $luggageInsurance;
   }
   public function getLuggageInsurance() {
     return $this->luggageInsurance;
   }
-  public function setMaxPurchaseRate($maxPurchaseRate) {
+  public function setMaxPurchaseRate( $maxPurchaseRate) {
     $this->maxPurchaseRate = $maxPurchaseRate;
   }
   public function getMaxPurchaseRate() {
     return $this->maxPurchaseRate;
   }
-  public function setMinPurchaseRate($minPurchaseRate) {
+  public function setMinPurchaseRate( $minPurchaseRate) {
     $this->minPurchaseRate = $minPurchaseRate;
   }
   public function getMinPurchaseRate() {
     return $this->minPurchaseRate;
   }
-  public function setMinimumFinanceCharge($minimumFinanceCharge) {
+  public function setMinimumFinanceCharge( $minimumFinanceCharge) {
     $this->minimumFinanceCharge = $minimumFinanceCharge;
   }
   public function getMinimumFinanceCharge() {
     return $this->minimumFinanceCharge;
   }
-  public function setNetwork($network) {
+  public function setNetwork( $network) {
     $this->network = $network;
   }
   public function getNetwork() {
     return $this->network;
   }
-  public function setOfferId($offerId) {
+  public function setOfferId( $offerId) {
     $this->offerId = $offerId;
   }
   public function getOfferId() {
     return $this->offerId;
   }
-  public function setOffersImmediateCashReward($offersImmediateCashReward) {
+  public function setOffersImmediateCashReward( $offersImmediateCashReward) {
     $this->offersImmediateCashReward = $offersImmediateCashReward;
   }
   public function getOffersImmediateCashReward() {
     return $this->offersImmediateCashReward;
   }
-  public function setOverLimitFee($overLimitFee) {
+  public function setOverLimitFee( $overLimitFee) {
     $this->overLimitFee = $overLimitFee;
   }
   public function getOverLimitFee() {
@@ -947,31 +947,31 @@ class Google_CcOffer extends Google_Model {
   public function getProhibitedCategories() {
     return $this->prohibitedCategories;
   }
-  public function setPurchaseRateAdditionalDetails($purchaseRateAdditionalDetails) {
+  public function setPurchaseRateAdditionalDetails( $purchaseRateAdditionalDetails) {
     $this->purchaseRateAdditionalDetails = $purchaseRateAdditionalDetails;
   }
   public function getPurchaseRateAdditionalDetails() {
     return $this->purchaseRateAdditionalDetails;
   }
-  public function setPurchaseRateType($purchaseRateType) {
+  public function setPurchaseRateType( $purchaseRateType) {
     $this->purchaseRateType = $purchaseRateType;
   }
   public function getPurchaseRateType() {
     return $this->purchaseRateType;
   }
-  public function setReturnedPaymentFee($returnedPaymentFee) {
+  public function setReturnedPaymentFee( $returnedPaymentFee) {
     $this->returnedPaymentFee = $returnedPaymentFee;
   }
   public function getReturnedPaymentFee() {
     return $this->returnedPaymentFee;
   }
-  public function setRewardPartner($rewardPartner) {
+  public function setRewardPartner( $rewardPartner) {
     $this->rewardPartner = $rewardPartner;
   }
   public function getRewardPartner() {
     return $this->rewardPartner;
   }
-  public function setRewardUnit($rewardUnit) {
+  public function setRewardUnit( $rewardUnit) {
     $this->rewardUnit = $rewardUnit;
   }
   public function getRewardUnit() {
@@ -984,43 +984,43 @@ class Google_CcOffer extends Google_Model {
   public function getRewards() {
     return $this->rewards;
   }
-  public function setRewardsExpire($rewardsExpire) {
+  public function setRewardsExpire( $rewardsExpire) {
     $this->rewardsExpire = $rewardsExpire;
   }
   public function getRewardsExpire() {
     return $this->rewardsExpire;
   }
-  public function setRewardsHaveBlackoutDates($rewardsHaveBlackoutDates) {
+  public function setRewardsHaveBlackoutDates( $rewardsHaveBlackoutDates) {
     $this->rewardsHaveBlackoutDates = $rewardsHaveBlackoutDates;
   }
   public function getRewardsHaveBlackoutDates() {
     return $this->rewardsHaveBlackoutDates;
   }
-  public function setStatementCopyFee($statementCopyFee) {
+  public function setStatementCopyFee( $statementCopyFee) {
     $this->statementCopyFee = $statementCopyFee;
   }
   public function getStatementCopyFee() {
     return $this->statementCopyFee;
   }
-  public function setTrackingUrl($trackingUrl) {
+  public function setTrackingUrl( $trackingUrl) {
     $this->trackingUrl = $trackingUrl;
   }
   public function getTrackingUrl() {
     return $this->trackingUrl;
   }
-  public function setTravelInsurance($travelInsurance) {
+  public function setTravelInsurance( $travelInsurance) {
     $this->travelInsurance = $travelInsurance;
   }
   public function getTravelInsurance() {
     return $this->travelInsurance;
   }
-  public function setVariableRatesLastUpdated($variableRatesLastUpdated) {
+  public function setVariableRatesLastUpdated( $variableRatesLastUpdated) {
     $this->variableRatesLastUpdated = $variableRatesLastUpdated;
   }
   public function getVariableRatesLastUpdated() {
     return $this->variableRatesLastUpdated;
   }
-  public function setVariableRatesUpdateFrequency($variableRatesUpdateFrequency) {
+  public function setVariableRatesUpdateFrequency( $variableRatesUpdateFrequency) {
     $this->variableRatesUpdateFrequency = $variableRatesUpdateFrequency;
   }
   public function getVariableRatesUpdateFrequency() {
@@ -1031,13 +1031,13 @@ class Google_CcOffer extends Google_Model {
 class Google_CcOfferBonusRewards extends Google_Model {
   public $amount;
   public $details;
-  public function setAmount($amount) {
+  public function setAmount( $amount) {
     $this->amount = $amount;
   }
   public function getAmount() {
     return $this->amount;
   }
-  public function setDetails($details) {
+  public function setDetails( $details) {
     $this->details = $details;
   }
   public function getDetails() {
@@ -1050,25 +1050,25 @@ class Google_CcOfferDefaultFees extends Google_Model {
   public $maxRate;
   public $minRate;
   public $rateType;
-  public function setCategory($category) {
+  public function setCategory( $category) {
     $this->category = $category;
   }
   public function getCategory() {
     return $this->category;
   }
-  public function setMaxRate($maxRate) {
+  public function setMaxRate( $maxRate) {
     $this->maxRate = $maxRate;
   }
   public function getMaxRate() {
     return $this->maxRate;
   }
-  public function setMinRate($minRate) {
+  public function setMinRate( $minRate) {
     $this->minRate = $minRate;
   }
   public function getMinRate() {
     return $this->minRate;
   }
-  public function setRateType($rateType) {
+  public function setRateType( $rateType) {
     $this->rateType = $rateType;
   }
   public function getRateType() {
@@ -1083,37 +1083,37 @@ class Google_CcOfferRewards extends Google_Model {
   public $expirationMonths;
   public $maxRewardTier;
   public $minRewardTier;
-  public function setAdditionalDetails($additionalDetails) {
+  public function setAdditionalDetails( $additionalDetails) {
     $this->additionalDetails = $additionalDetails;
   }
   public function getAdditionalDetails() {
     return $this->additionalDetails;
   }
-  public function setAmount($amount) {
+  public function setAmount( $amount) {
     $this->amount = $amount;
   }
   public function getAmount() {
     return $this->amount;
   }
-  public function setCategory($category) {
+  public function setCategory( $category) {
     $this->category = $category;
   }
   public function getCategory() {
     return $this->category;
   }
-  public function setExpirationMonths($expirationMonths) {
+  public function setExpirationMonths( $expirationMonths) {
     $this->expirationMonths = $expirationMonths;
   }
   public function getExpirationMonths() {
     return $this->expirationMonths;
   }
-  public function setMaxRewardTier($maxRewardTier) {
+  public function setMaxRewardTier( $maxRewardTier) {
     $this->maxRewardTier = $maxRewardTier;
   }
   public function getMaxRewardTier() {
     return $this->maxRewardTier;
   }
-  public function setMinRewardTier($minRewardTier) {
+  public function setMinRewardTier( $minRewardTier) {
     $this->minRewardTier = $minRewardTier;
   }
   public function getMinRewardTier() {
@@ -1122,7 +1122,7 @@ class Google_CcOfferRewards extends Google_Model {
 }
 
 class Google_CcOffers extends Google_Model {
-  protected $__itemsType = 'Google_Service_Gan_CcOffer';
+  protected $__itemsType = 'Google_CcOffer';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1133,7 +1133,7 @@ class Google_CcOffers extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
@@ -1146,97 +1146,97 @@ class Google_Event extends Google_Model {
   public $advertiserName;
   public $chargeId;
   public $chargeType;
-  protected $__commissionableSalesType = 'Google_Service_Gan_Money';
+  protected $__commissionableSalesType = 'Google_Money';
   protected $__commissionableSalesDataType = '';
   public $commissionableSales;
-  protected $__earningsType = 'Google_Service_Gan_Money';
+  protected $__earningsType = 'Google_Money';
   protected $__earningsDataType = '';
   public $earnings;
   public $eventDate;
   public $kind;
   public $memberId;
   public $modifyDate;
-  protected $__networkFeeType = 'Google_Service_Gan_Money';
+  protected $__networkFeeType = 'Google_Money';
   protected $__networkFeeDataType = '';
   public $networkFee;
   public $orderId;
-  protected $__productsType = 'Google_Service_Gan_EventProducts';
+  protected $__productsType = 'Google_EventProducts';
   protected $__productsDataType = 'array';
   public $products;
-  protected $__publisherFeeType = 'Google_Service_Gan_Money';
+  protected $__publisherFeeType = 'Google_Money';
   protected $__publisherFeeDataType = '';
   public $publisherFee;
   public $publisherId;
   public $publisherName;
   public $status;
   public $type;
-  public function setAdvertiserId($advertiserId) {
+  public function setAdvertiserId( $advertiserId) {
     $this->advertiserId = $advertiserId;
   }
   public function getAdvertiserId() {
     return $this->advertiserId;
   }
-  public function setAdvertiserName($advertiserName) {
+  public function setAdvertiserName( $advertiserName) {
     $this->advertiserName = $advertiserName;
   }
   public function getAdvertiserName() {
     return $this->advertiserName;
   }
-  public function setChargeId($chargeId) {
+  public function setChargeId( $chargeId) {
     $this->chargeId = $chargeId;
   }
   public function getChargeId() {
     return $this->chargeId;
   }
-  public function setChargeType($chargeType) {
+  public function setChargeType( $chargeType) {
     $this->chargeType = $chargeType;
   }
   public function getChargeType() {
     return $this->chargeType;
   }
-  public function setCommissionableSales(Google_Service_Gan_Money$commissionableSales) {
+  public function setCommissionableSales(Google_Money $commissionableSales) {
     $this->commissionableSales = $commissionableSales;
   }
   public function getCommissionableSales() {
     return $this->commissionableSales;
   }
-  public function setEarnings(Google_Service_Gan_Money$earnings) {
+  public function setEarnings(Google_Money $earnings) {
     $this->earnings = $earnings;
   }
   public function getEarnings() {
     return $this->earnings;
   }
-  public function setEventDate($eventDate) {
+  public function setEventDate( $eventDate) {
     $this->eventDate = $eventDate;
   }
   public function getEventDate() {
     return $this->eventDate;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMemberId($memberId) {
+  public function setMemberId( $memberId) {
     $this->memberId = $memberId;
   }
   public function getMemberId() {
     return $this->memberId;
   }
-  public function setModifyDate($modifyDate) {
+  public function setModifyDate( $modifyDate) {
     $this->modifyDate = $modifyDate;
   }
   public function getModifyDate() {
     return $this->modifyDate;
   }
-  public function setNetworkFee(Google_Service_Gan_Money$networkFee) {
+  public function setNetworkFee(Google_Money $networkFee) {
     $this->networkFee = $networkFee;
   }
   public function getNetworkFee() {
     return $this->networkFee;
   }
-  public function setOrderId($orderId) {
+  public function setOrderId( $orderId) {
     $this->orderId = $orderId;
   }
   public function getOrderId() {
@@ -1249,31 +1249,31 @@ class Google_Event extends Google_Model {
   public function getProducts() {
     return $this->products;
   }
-  public function setPublisherFee(Google_Service_Gan_Money$publisherFee) {
+  public function setPublisherFee(Google_Money $publisherFee) {
     $this->publisherFee = $publisherFee;
   }
   public function getPublisherFee() {
     return $this->publisherFee;
   }
-  public function setPublisherId($publisherId) {
+  public function setPublisherId( $publisherId) {
     $this->publisherId = $publisherId;
   }
   public function getPublisherId() {
     return $this->publisherId;
   }
-  public function setPublisherName($publisherName) {
+  public function setPublisherName( $publisherName) {
     $this->publisherName = $publisherName;
   }
   public function getPublisherName() {
     return $this->publisherName;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
     return $this->status;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
@@ -1284,70 +1284,70 @@ class Google_Event extends Google_Model {
 class Google_EventProducts extends Google_Model {
   public $categoryId;
   public $categoryName;
-  protected $__earningsType = 'Google_Service_Gan_Money';
+  protected $__earningsType = 'Google_Money';
   protected $__earningsDataType = '';
   public $earnings;
-  protected $__networkFeeType = 'Google_Service_Gan_Money';
+  protected $__networkFeeType = 'Google_Money';
   protected $__networkFeeDataType = '';
   public $networkFee;
-  protected $__publisherFeeType = 'Google_Service_Gan_Money';
+  protected $__publisherFeeType = 'Google_Money';
   protected $__publisherFeeDataType = '';
   public $publisherFee;
   public $quantity;
   public $sku;
   public $skuName;
-  protected $__unitPriceType = 'Google_Service_Gan_Money';
+  protected $__unitPriceType = 'Google_Money';
   protected $__unitPriceDataType = '';
   public $unitPrice;
-  public function setCategoryId($categoryId) {
+  public function setCategoryId( $categoryId) {
     $this->categoryId = $categoryId;
   }
   public function getCategoryId() {
     return $this->categoryId;
   }
-  public function setCategoryName($categoryName) {
+  public function setCategoryName( $categoryName) {
     $this->categoryName = $categoryName;
   }
   public function getCategoryName() {
     return $this->categoryName;
   }
-  public function setEarnings(Google_Service_Gan_Money$earnings) {
+  public function setEarnings(Google_Money $earnings) {
     $this->earnings = $earnings;
   }
   public function getEarnings() {
     return $this->earnings;
   }
-  public function setNetworkFee(Google_Service_Gan_Money$networkFee) {
+  public function setNetworkFee(Google_Money $networkFee) {
     $this->networkFee = $networkFee;
   }
   public function getNetworkFee() {
     return $this->networkFee;
   }
-  public function setPublisherFee(Google_Service_Gan_Money$publisherFee) {
+  public function setPublisherFee(Google_Money $publisherFee) {
     $this->publisherFee = $publisherFee;
   }
   public function getPublisherFee() {
     return $this->publisherFee;
   }
-  public function setQuantity($quantity) {
+  public function setQuantity( $quantity) {
     $this->quantity = $quantity;
   }
   public function getQuantity() {
     return $this->quantity;
   }
-  public function setSku($sku) {
+  public function setSku( $sku) {
     $this->sku = $sku;
   }
   public function getSku() {
     return $this->sku;
   }
-  public function setSkuName($skuName) {
+  public function setSkuName( $skuName) {
     $this->skuName = $skuName;
   }
   public function getSkuName() {
     return $this->skuName;
   }
-  public function setUnitPrice(Google_Service_Gan_Money$unitPrice) {
+  public function setUnitPrice(Google_Money $unitPrice) {
     $this->unitPrice = $unitPrice;
   }
   public function getUnitPrice() {
@@ -1356,7 +1356,7 @@ class Google_EventProducts extends Google_Model {
 }
 
 class Google_Events extends Google_Model {
-  protected $__itemsType = 'Google_Service_Gan_Event';
+  protected $__itemsType = 'Google_Event';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1368,13 +1368,13 @@ class Google_Events extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1392,10 +1392,10 @@ class Google_Link extends Google_Model {
   public $destinationUrl;
   public $duration;
   public $endDate;
-  protected $__epcNinetyDayAverageType = 'Google_Service_Gan_Money';
+  protected $__epcNinetyDayAverageType = 'Google_Money';
   protected $__epcNinetyDayAverageDataType = '';
   public $epcNinetyDayAverage;
-  protected $__epcSevenDayAverageType = 'Google_Service_Gan_Money';
+  protected $__epcSevenDayAverageType = 'Google_Money';
   protected $__epcSevenDayAverageDataType = '';
   public $epcSevenDayAverage;
   public $id;
@@ -1406,131 +1406,131 @@ class Google_Link extends Google_Model {
   public $linkType;
   public $name;
   public $promotionType;
-  protected $__specialOffersType = 'Google_Service_Gan_LinkSpecialOffers';
+  protected $__specialOffersType = 'Google_LinkSpecialOffers';
   protected $__specialOffersDataType = '';
   public $specialOffers;
   public $startDate;
-  public function setAdvertiserId($advertiserId) {
+  public function setAdvertiserId( $advertiserId) {
     $this->advertiserId = $advertiserId;
   }
   public function getAdvertiserId() {
     return $this->advertiserId;
   }
-  public function setAuthorship($authorship) {
+  public function setAuthorship( $authorship) {
     $this->authorship = $authorship;
   }
   public function getAuthorship() {
     return $this->authorship;
   }
-  public function setAvailability($availability) {
+  public function setAvailability( $availability) {
     $this->availability = $availability;
   }
   public function getAvailability() {
     return $this->availability;
   }
-  public function setClickTrackingUrl($clickTrackingUrl) {
+  public function setClickTrackingUrl( $clickTrackingUrl) {
     $this->clickTrackingUrl = $clickTrackingUrl;
   }
   public function getClickTrackingUrl() {
     return $this->clickTrackingUrl;
   }
-  public function setCreateDate($createDate) {
+  public function setCreateDate( $createDate) {
     $this->createDate = $createDate;
   }
   public function getCreateDate() {
     return $this->createDate;
   }
-  public function setDescription($description) {
+  public function setDescription( $description) {
     $this->description = $description;
   }
   public function getDescription() {
     return $this->description;
   }
-  public function setDestinationUrl($destinationUrl) {
+  public function setDestinationUrl( $destinationUrl) {
     $this->destinationUrl = $destinationUrl;
   }
   public function getDestinationUrl() {
     return $this->destinationUrl;
   }
-  public function setDuration($duration) {
+  public function setDuration( $duration) {
     $this->duration = $duration;
   }
   public function getDuration() {
     return $this->duration;
   }
-  public function setEndDate($endDate) {
+  public function setEndDate( $endDate) {
     $this->endDate = $endDate;
   }
   public function getEndDate() {
     return $this->endDate;
   }
-  public function setEpcNinetyDayAverage(Google_Service_Gan_Money$epcNinetyDayAverage) {
+  public function setEpcNinetyDayAverage(Google_Money $epcNinetyDayAverage) {
     $this->epcNinetyDayAverage = $epcNinetyDayAverage;
   }
   public function getEpcNinetyDayAverage() {
     return $this->epcNinetyDayAverage;
   }
-  public function setEpcSevenDayAverage(Google_Service_Gan_Money$epcSevenDayAverage) {
+  public function setEpcSevenDayAverage(Google_Money $epcSevenDayAverage) {
     $this->epcSevenDayAverage = $epcSevenDayAverage;
   }
   public function getEpcSevenDayAverage() {
     return $this->epcSevenDayAverage;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setImageAltText($imageAltText) {
+  public function setImageAltText( $imageAltText) {
     $this->imageAltText = $imageAltText;
   }
   public function getImageAltText() {
     return $this->imageAltText;
   }
-  public function setImpressionTrackingUrl($impressionTrackingUrl) {
+  public function setImpressionTrackingUrl( $impressionTrackingUrl) {
     $this->impressionTrackingUrl = $impressionTrackingUrl;
   }
   public function getImpressionTrackingUrl() {
     return $this->impressionTrackingUrl;
   }
-  public function setIsActive($isActive) {
+  public function setIsActive( $isActive) {
     $this->isActive = $isActive;
   }
   public function getIsActive() {
     return $this->isActive;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setLinkType($linkType) {
+  public function setLinkType( $linkType) {
     $this->linkType = $linkType;
   }
   public function getLinkType() {
     return $this->linkType;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setPromotionType($promotionType) {
+  public function setPromotionType( $promotionType) {
     $this->promotionType = $promotionType;
   }
   public function getPromotionType() {
     return $this->promotionType;
   }
-  public function setSpecialOffers(Google_Service_Gan_LinkSpecialOffers$specialOffers) {
+  public function setSpecialOffers(Google_LinkSpecialOffers $specialOffers) {
     $this->specialOffers = $specialOffers;
   }
   public function getSpecialOffers() {
     return $this->specialOffers;
   }
-  public function setStartDate($startDate) {
+  public function setStartDate( $startDate) {
     $this->startDate = $startDate;
   }
   public function getStartDate() {
@@ -1541,57 +1541,57 @@ class Google_Link extends Google_Model {
 class Google_LinkSpecialOffers extends Google_Model {
   public $freeGift;
   public $freeShipping;
-  protected $__freeShippingMinType = 'Google_Service_Gan_Money';
+  protected $__freeShippingMinType = 'Google_Money';
   protected $__freeShippingMinDataType = '';
   public $freeShippingMin;
   public $percentOff;
-  protected $__percentOffMinType = 'Google_Service_Gan_Money';
+  protected $__percentOffMinType = 'Google_Money';
   protected $__percentOffMinDataType = '';
   public $percentOffMin;
-  protected $__priceCutType = 'Google_Service_Gan_Money';
+  protected $__priceCutType = 'Google_Money';
   protected $__priceCutDataType = '';
   public $priceCut;
-  protected $__priceCutMinType = 'Google_Service_Gan_Money';
+  protected $__priceCutMinType = 'Google_Money';
   protected $__priceCutMinDataType = '';
   public $priceCutMin;
   public $promotionCodes;
-  public function setFreeGift($freeGift) {
+  public function setFreeGift( $freeGift) {
     $this->freeGift = $freeGift;
   }
   public function getFreeGift() {
     return $this->freeGift;
   }
-  public function setFreeShipping($freeShipping) {
+  public function setFreeShipping( $freeShipping) {
     $this->freeShipping = $freeShipping;
   }
   public function getFreeShipping() {
     return $this->freeShipping;
   }
-  public function setFreeShippingMin(Google_Service_Gan_Money$freeShippingMin) {
+  public function setFreeShippingMin(Google_Money $freeShippingMin) {
     $this->freeShippingMin = $freeShippingMin;
   }
   public function getFreeShippingMin() {
     return $this->freeShippingMin;
   }
-  public function setPercentOff($percentOff) {
+  public function setPercentOff( $percentOff) {
     $this->percentOff = $percentOff;
   }
   public function getPercentOff() {
     return $this->percentOff;
   }
-  public function setPercentOffMin(Google_Service_Gan_Money$percentOffMin) {
+  public function setPercentOffMin(Google_Money $percentOffMin) {
     $this->percentOffMin = $percentOffMin;
   }
   public function getPercentOffMin() {
     return $this->percentOffMin;
   }
-  public function setPriceCut(Google_Service_Gan_Money$priceCut) {
+  public function setPriceCut(Google_Money $priceCut) {
     $this->priceCut = $priceCut;
   }
   public function getPriceCut() {
     return $this->priceCut;
   }
-  public function setPriceCutMin(Google_Service_Gan_Money$priceCutMin) {
+  public function setPriceCutMin(Google_Money $priceCutMin) {
     $this->priceCutMin = $priceCutMin;
   }
   public function getPriceCutMin() {
@@ -1607,7 +1607,7 @@ class Google_LinkSpecialOffers extends Google_Model {
 }
 
 class Google_Links extends Google_Model {
-  protected $__itemsType = 'Google_Service_Gan_Link';
+  protected $__itemsType = 'Google_Link';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1619,13 +1619,13 @@ class Google_Links extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1636,13 +1636,13 @@ class Google_Links extends Google_Model {
 class Google_Money extends Google_Model {
   public $amount;
   public $currencyCode;
-  public function setAmount($amount) {
+  public function setAmount( $amount) {
     $this->amount = $amount;
   }
   public function getAmount() {
     return $this->amount;
   }
-  public function setCurrencyCode($currencyCode) {
+  public function setCurrencyCode( $currencyCode) {
     $this->currencyCode = $currencyCode;
   }
   public function getCurrencyCode() {
@@ -1652,14 +1652,14 @@ class Google_Money extends Google_Model {
 
 class Google_Publisher extends Google_Model {
   public $classification;
-  protected $__epcNinetyDayAverageType = 'Google_Service_Gan_Money';
+  protected $__epcNinetyDayAverageType = 'Google_Money';
   protected $__epcNinetyDayAverageDataType = '';
   public $epcNinetyDayAverage;
-  protected $__epcSevenDayAverageType = 'Google_Service_Gan_Money';
+  protected $__epcSevenDayAverageType = 'Google_Money';
   protected $__epcSevenDayAverageDataType = '';
   public $epcSevenDayAverage;
   public $id;
-  protected $__itemType = 'Google_Service_Gan_Publisher';
+  protected $__itemType = 'Google_Publisher';
   protected $__itemDataType = '';
   public $item;
   public $joinDate;
@@ -1668,55 +1668,55 @@ class Google_Publisher extends Google_Model {
   public $payoutRank;
   public $sites;
   public $status;
-  public function setClassification($classification) {
+  public function setClassification( $classification) {
     $this->classification = $classification;
   }
   public function getClassification() {
     return $this->classification;
   }
-  public function setEpcNinetyDayAverage(Google_Service_Gan_Money$epcNinetyDayAverage) {
+  public function setEpcNinetyDayAverage(Google_Money $epcNinetyDayAverage) {
     $this->epcNinetyDayAverage = $epcNinetyDayAverage;
   }
   public function getEpcNinetyDayAverage() {
     return $this->epcNinetyDayAverage;
   }
-  public function setEpcSevenDayAverage(Google_Service_Gan_Money$epcSevenDayAverage) {
+  public function setEpcSevenDayAverage(Google_Money $epcSevenDayAverage) {
     $this->epcSevenDayAverage = $epcSevenDayAverage;
   }
   public function getEpcSevenDayAverage() {
     return $this->epcSevenDayAverage;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setItem(Google_Service_Gan_Publisher$item) {
+  public function setItem(Google_Publisher $item) {
     $this->item = $item;
   }
   public function getItem() {
     return $this->item;
   }
-  public function setJoinDate($joinDate) {
+  public function setJoinDate( $joinDate) {
     $this->joinDate = $joinDate;
   }
   public function getJoinDate() {
     return $this->joinDate;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setPayoutRank($payoutRank) {
+  public function setPayoutRank( $payoutRank) {
     $this->payoutRank = $payoutRank;
   }
   public function getPayoutRank() {
@@ -1729,7 +1729,7 @@ class Google_Publisher extends Google_Model {
   public function getSites() {
     return $this->sites;
   }
-  public function setStatus($status) {
+  public function setStatus( $status) {
     $this->status = $status;
   }
   public function getStatus() {
@@ -1738,7 +1738,7 @@ class Google_Publisher extends Google_Model {
 }
 
 class Google_Publishers extends Google_Model {
-  protected $__itemsType = 'Google_Service_Gan_Publisher';
+  protected $__itemsType = 'Google_Publisher';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -1750,13 +1750,13 @@ class Google_Publishers extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNextPageToken($nextPageToken) {
+  public function setNextPageToken( $nextPageToken) {
     $this->nextPageToken = $nextPageToken;
   }
   public function getNextPageToken() {
@@ -1780,19 +1780,19 @@ class Google_Report extends Google_Model {
   public function getColumn_names() {
     return $this->column_names;
   }
-  public function setEnd_date($end_date) {
+  public function setEnd_date( $end_date) {
     $this->end_date = $end_date;
   }
   public function getEnd_date() {
     return $this->end_date;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setMatching_row_count($matching_row_count) {
+  public function setMatching_row_count( $matching_row_count) {
     $this->matching_row_count = $matching_row_count;
   }
   public function getMatching_row_count() {
@@ -1805,7 +1805,7 @@ class Google_Report extends Google_Model {
   public function getRows() {
     return $this->rows;
   }
-  public function setStart_date($start_date) {
+  public function setStart_date( $start_date) {
     $this->start_date = $start_date;
   }
   public function getStart_date() {
@@ -1818,7 +1818,7 @@ class Google_Report extends Google_Model {
   public function getTotals_rows() {
     return $this->totals_rows;
   }
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {

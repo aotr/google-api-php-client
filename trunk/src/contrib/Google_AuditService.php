@@ -89,7 +89,7 @@ class Google_AuditService extends Google_Service {
 
 
 class Google_Activities extends Google_Model {
-  protected $__itemsType = 'Google_Service_Audit_Activity';
+  protected $__itemsType = 'Google_Activity';
   protected $__itemsDataType = 'array';
   public $items;
   public $kind;
@@ -101,13 +101,13 @@ class Google_Activities extends Google_Model {
   public function getItems() {
     return $this->items;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setNext($next) {
+  public function setNext( $next) {
     $this->next = $next;
   }
   public function getNext() {
@@ -116,19 +116,19 @@ class Google_Activities extends Google_Model {
 }
 
 class Google_Activity extends Google_Model {
-  protected $__actorType = 'Google_Service_Audit_ActivityActor';
+  protected $__actorType = 'Google_ActivityActor';
   protected $__actorDataType = '';
   public $actor;
-  protected $__eventsType = 'Google_Service_Audit_ActivityEvents';
+  protected $__eventsType = 'Google_ActivityEvents';
   protected $__eventsDataType = 'array';
   public $events;
-  protected $__idType = 'Google_Service_Audit_ActivityId';
+  protected $__idType = 'Google_ActivityId';
   protected $__idDataType = '';
   public $id;
   public $ipAddress;
   public $kind;
   public $ownerDomain;
-  public function setActor(Google_Service_Audit_ActivityActor$actor) {
+  public function setActor(Google_ActivityActor $actor) {
     $this->actor = $actor;
   }
   public function getActor() {
@@ -141,25 +141,25 @@ class Google_Activity extends Google_Model {
   public function getEvents() {
     return $this->events;
   }
-  public function setId(Google_Service_Audit_ActivityId$id) {
+  public function setId(Google_ActivityId $id) {
     $this->id = $id;
   }
   public function getId() {
     return $this->id;
   }
-  public function setIpAddress($ipAddress) {
+  public function setIpAddress( $ipAddress) {
     $this->ipAddress = $ipAddress;
   }
   public function getIpAddress() {
     return $this->ipAddress;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setOwnerDomain($ownerDomain) {
+  public function setOwnerDomain( $ownerDomain) {
     $this->ownerDomain = $ownerDomain;
   }
   public function getOwnerDomain() {
@@ -172,25 +172,25 @@ class Google_ActivityActor extends Google_Model {
   public $callerType;
   public $email;
   public $key;
-  public function setApplicationId($applicationId) {
+  public function setApplicationId( $applicationId) {
     $this->applicationId = $applicationId;
   }
   public function getApplicationId() {
     return $this->applicationId;
   }
-  public function setCallerType($callerType) {
+  public function setCallerType( $callerType) {
     $this->callerType = $callerType;
   }
   public function getCallerType() {
     return $this->callerType;
   }
-  public function setEmail($email) {
+  public function setEmail( $email) {
     $this->email = $email;
   }
   public function getEmail() {
     return $this->email;
   }
-  public function setKey($key) {
+  public function setKey( $key) {
     $this->key = $key;
   }
   public function getKey() {
@@ -201,16 +201,16 @@ class Google_ActivityActor extends Google_Model {
 class Google_ActivityEvents extends Google_Model {
   public $eventType;
   public $name;
-  protected $__parametersType = 'Google_Service_Audit_ActivityEventsParameters';
+  protected $__parametersType = 'Google_ActivityEventsParameters';
   protected $__parametersDataType = 'array';
   public $parameters;
-  public function setEventType($eventType) {
+  public function setEventType( $eventType) {
     $this->eventType = $eventType;
   }
   public function getEventType() {
     return $this->eventType;
   }
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
@@ -228,13 +228,13 @@ class Google_ActivityEvents extends Google_Model {
 class Google_ActivityEventsParameters extends Google_Model {
   public $name;
   public $value;
-  public function setName($name) {
+  public function setName( $name) {
     $this->name = $name;
   }
   public function getName() {
     return $this->name;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -247,25 +247,25 @@ class Google_ActivityId extends Google_Model {
   public $customerId;
   public $time;
   public $uniqQualifier;
-  public function setApplicationId($applicationId) {
+  public function setApplicationId( $applicationId) {
     $this->applicationId = $applicationId;
   }
   public function getApplicationId() {
     return $this->applicationId;
   }
-  public function setCustomerId($customerId) {
+  public function setCustomerId( $customerId) {
     $this->customerId = $customerId;
   }
   public function getCustomerId() {
     return $this->customerId;
   }
-  public function setTime($time) {
+  public function setTime( $time) {
     $this->time = $time;
   }
   public function getTime() {
     return $this->time;
   }
-  public function setUniqQualifier($uniqQualifier) {
+  public function setUniqQualifier( $uniqQualifier) {
     $this->uniqQualifier = $uniqQualifier;
   }
   public function getUniqQualifier() {

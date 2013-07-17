@@ -84,31 +84,31 @@ class Google_PagespeedonlineService extends Google_Service {
 
 
 class Google_Result extends Google_Model {
-  protected $__formattedResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResults';
+  protected $__formattedResultsType = 'Google_ResultFormattedResults';
   protected $__formattedResultsDataType = '';
   public $formattedResults;
   public $id;
   public $invalidRules;
   public $kind;
-  protected $__pageStatsType = 'Google_Service_Pagespeedonline_ResultPageStats';
+  protected $__pageStatsType = 'Google_ResultPageStats';
   protected $__pageStatsDataType = '';
   public $pageStats;
   public $responseCode;
   public $score;
-  protected $__screenshotType = 'Google_Service_Pagespeedonline_ResultScreenshot';
+  protected $__screenshotType = 'Google_ResultScreenshot';
   protected $__screenshotDataType = '';
   public $screenshot;
   public $title;
-  protected $__versionType = 'Google_Service_Pagespeedonline_ResultVersion';
+  protected $__versionType = 'Google_ResultVersion';
   protected $__versionDataType = '';
   public $version;
-  public function setFormattedResults(Google_Service_Pagespeedonline_ResultFormattedResults$formattedResults) {
+  public function setFormattedResults(Google_ResultFormattedResults $formattedResults) {
     $this->formattedResults = $formattedResults;
   }
   public function getFormattedResults() {
     return $this->formattedResults;
   }
-  public function setId($id) {
+  public function setId( $id) {
     $this->id = $id;
   }
   public function getId() {
@@ -121,43 +121,43 @@ class Google_Result extends Google_Model {
   public function getInvalidRules() {
     return $this->invalidRules;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPageStats(Google_Service_Pagespeedonline_ResultPageStats$pageStats) {
+  public function setPageStats(Google_ResultPageStats $pageStats) {
     $this->pageStats = $pageStats;
   }
   public function getPageStats() {
     return $this->pageStats;
   }
-  public function setResponseCode($responseCode) {
+  public function setResponseCode( $responseCode) {
     $this->responseCode = $responseCode;
   }
   public function getResponseCode() {
     return $this->responseCode;
   }
-  public function setScore($score) {
+  public function setScore( $score) {
     $this->score = $score;
   }
   public function getScore() {
     return $this->score;
   }
-  public function setScreenshot(Google_Service_Pagespeedonline_ResultScreenshot$screenshot) {
+  public function setScreenshot(Google_ResultScreenshot $screenshot) {
     $this->screenshot = $screenshot;
   }
   public function getScreenshot() {
     return $this->screenshot;
   }
-  public function setTitle($title) {
+  public function setTitle( $title) {
     $this->title = $title;
   }
   public function getTitle() {
     return $this->title;
   }
-  public function setVersion(Google_Service_Pagespeedonline_ResultVersion$version) {
+  public function setVersion(Google_ResultVersion $version) {
     $this->version = $version;
   }
   public function getVersion() {
@@ -167,16 +167,16 @@ class Google_Result extends Google_Model {
 
 class Google_ResultFormattedResults extends Google_Model {
   public $locale;
-  protected $__ruleResultsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement';
+  protected $__ruleResultsType = 'Google_ResultFormattedResultsRuleResultsElement';
   protected $__ruleResultsDataType = 'map';
   public $ruleResults;
-  public function setLocale($locale) {
+  public function setLocale( $locale) {
     $this->locale = $locale;
   }
   public function getLocale() {
     return $this->locale;
   }
-  public function setRuleResults(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElement$ruleResults) {
+  public function setRuleResults(Google_ResultFormattedResultsRuleResultsElement $ruleResults) {
     $this->ruleResults = $ruleResults;
   }
   public function getRuleResults() {
@@ -188,22 +188,22 @@ class Google_ResultFormattedResultsRuleResultsElement extends Google_Model {
   public $localizedRuleName;
   public $ruleImpact;
   public $ruleScore;
-  protected $__urlBlocksType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocks';
+  protected $__urlBlocksType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocks';
   protected $__urlBlocksDataType = 'array';
   public $urlBlocks;
-  public function setLocalizedRuleName($localizedRuleName) {
+  public function setLocalizedRuleName( $localizedRuleName) {
     $this->localizedRuleName = $localizedRuleName;
   }
   public function getLocalizedRuleName() {
     return $this->localizedRuleName;
   }
-  public function setRuleImpact($ruleImpact) {
+  public function setRuleImpact( $ruleImpact) {
     $this->ruleImpact = $ruleImpact;
   }
   public function getRuleImpact() {
     return $this->ruleImpact;
   }
-  public function setRuleScore($ruleScore) {
+  public function setRuleScore( $ruleScore) {
     $this->ruleScore = $ruleScore;
   }
   public function getRuleScore() {
@@ -219,13 +219,13 @@ class Google_ResultFormattedResultsRuleResultsElement extends Google_Model {
 }
 
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocks extends Google_Model {
-  protected $__headerType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader';
+  protected $__headerType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeader';
   protected $__headerDataType = '';
   public $header;
-  protected $__urlsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrls';
+  protected $__urlsType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrls';
   protected $__urlsDataType = 'array';
   public $urls;
-  public function setHeader(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeader$header) {
+  public function setHeader(Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeader $header) {
     $this->header = $header;
   }
   public function getHeader() {
@@ -241,7 +241,7 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocks extends Google_Mo
 }
 
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeader extends Google_Model {
-  protected $__argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs';
+  protected $__argsType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs';
   protected $__argsDataType = 'array';
   public $args;
   public $format;
@@ -252,7 +252,7 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeader extends Goo
   public function getArgs() {
     return $this->args;
   }
-  public function setFormat($format) {
+  public function setFormat( $format) {
     $this->format = $format;
   }
   public function getFormat() {
@@ -263,13 +263,13 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeader extends Goo
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs extends Google_Model {
   public $type;
   public $value;
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
     return $this->type;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -278,10 +278,10 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksHeaderArgs extends
 }
 
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrls extends Google_Model {
-  protected $__detailsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails';
+  protected $__detailsType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails';
   protected $__detailsDataType = 'array';
   public $details;
-  protected $__resultType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult';
+  protected $__resultType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult';
   protected $__resultDataType = '';
   public $result;
   public function setDetails(/* array(Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails) */ $details) {
@@ -291,7 +291,7 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrls extends Googl
   public function getDetails() {
     return $this->details;
   }
-  public function setResult(Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult$result) {
+  public function setResult(Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult $result) {
     $this->result = $result;
   }
   public function getResult() {
@@ -300,7 +300,7 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrls extends Googl
 }
 
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails extends Google_Model {
-  protected $__argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs';
+  protected $__argsType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs';
   protected $__argsDataType = 'array';
   public $args;
   public $format;
@@ -311,7 +311,7 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails extend
   public function getArgs() {
     return $this->args;
   }
-  public function setFormat($format) {
+  public function setFormat( $format) {
     $this->format = $format;
   }
   public function getFormat() {
@@ -322,13 +322,13 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetails extend
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs extends Google_Model {
   public $type;
   public $value;
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
     return $this->type;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -337,7 +337,7 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsDetailsArgs ex
 }
 
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult extends Google_Model {
-  protected $__argsType = 'Google_Service_Pagespeedonline_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs';
+  protected $__argsType = 'Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs';
   protected $__argsDataType = 'array';
   public $args;
   public $format;
@@ -348,7 +348,7 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult extends
   public function getArgs() {
     return $this->args;
   }
-  public function setFormat($format) {
+  public function setFormat( $format) {
     $this->format = $format;
   }
   public function getFormat() {
@@ -359,13 +359,13 @@ class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResult extends
 class Google_ResultFormattedResultsRuleResultsElementUrlBlocksUrlsResultArgs extends Google_Model {
   public $type;
   public $value;
-  public function setType($type) {
+  public function setType( $type) {
     $this->type = $type;
   }
   public function getType() {
     return $this->type;
   }
-  public function setValue($value) {
+  public function setValue( $value) {
     $this->value = $value;
   }
   public function getValue() {
@@ -387,79 +387,79 @@ class Google_ResultPageStats extends Google_Model {
   public $otherResponseBytes;
   public $textResponseBytes;
   public $totalRequestBytes;
-  public function setCssResponseBytes($cssResponseBytes) {
+  public function setCssResponseBytes( $cssResponseBytes) {
     $this->cssResponseBytes = $cssResponseBytes;
   }
   public function getCssResponseBytes() {
     return $this->cssResponseBytes;
   }
-  public function setFlashResponseBytes($flashResponseBytes) {
+  public function setFlashResponseBytes( $flashResponseBytes) {
     $this->flashResponseBytes = $flashResponseBytes;
   }
   public function getFlashResponseBytes() {
     return $this->flashResponseBytes;
   }
-  public function setHtmlResponseBytes($htmlResponseBytes) {
+  public function setHtmlResponseBytes( $htmlResponseBytes) {
     $this->htmlResponseBytes = $htmlResponseBytes;
   }
   public function getHtmlResponseBytes() {
     return $this->htmlResponseBytes;
   }
-  public function setImageResponseBytes($imageResponseBytes) {
+  public function setImageResponseBytes( $imageResponseBytes) {
     $this->imageResponseBytes = $imageResponseBytes;
   }
   public function getImageResponseBytes() {
     return $this->imageResponseBytes;
   }
-  public function setJavascriptResponseBytes($javascriptResponseBytes) {
+  public function setJavascriptResponseBytes( $javascriptResponseBytes) {
     $this->javascriptResponseBytes = $javascriptResponseBytes;
   }
   public function getJavascriptResponseBytes() {
     return $this->javascriptResponseBytes;
   }
-  public function setNumberCssResources($numberCssResources) {
+  public function setNumberCssResources( $numberCssResources) {
     $this->numberCssResources = $numberCssResources;
   }
   public function getNumberCssResources() {
     return $this->numberCssResources;
   }
-  public function setNumberHosts($numberHosts) {
+  public function setNumberHosts( $numberHosts) {
     $this->numberHosts = $numberHosts;
   }
   public function getNumberHosts() {
     return $this->numberHosts;
   }
-  public function setNumberJsResources($numberJsResources) {
+  public function setNumberJsResources( $numberJsResources) {
     $this->numberJsResources = $numberJsResources;
   }
   public function getNumberJsResources() {
     return $this->numberJsResources;
   }
-  public function setNumberResources($numberResources) {
+  public function setNumberResources( $numberResources) {
     $this->numberResources = $numberResources;
   }
   public function getNumberResources() {
     return $this->numberResources;
   }
-  public function setNumberStaticResources($numberStaticResources) {
+  public function setNumberStaticResources( $numberStaticResources) {
     $this->numberStaticResources = $numberStaticResources;
   }
   public function getNumberStaticResources() {
     return $this->numberStaticResources;
   }
-  public function setOtherResponseBytes($otherResponseBytes) {
+  public function setOtherResponseBytes( $otherResponseBytes) {
     $this->otherResponseBytes = $otherResponseBytes;
   }
   public function getOtherResponseBytes() {
     return $this->otherResponseBytes;
   }
-  public function setTextResponseBytes($textResponseBytes) {
+  public function setTextResponseBytes( $textResponseBytes) {
     $this->textResponseBytes = $textResponseBytes;
   }
   public function getTextResponseBytes() {
     return $this->textResponseBytes;
   }
-  public function setTotalRequestBytes($totalRequestBytes) {
+  public function setTotalRequestBytes( $totalRequestBytes) {
     $this->totalRequestBytes = $totalRequestBytes;
   }
   public function getTotalRequestBytes() {
@@ -472,25 +472,25 @@ class Google_ResultScreenshot extends Google_Model {
   public $height;
   public $mime_type;
   public $width;
-  public function setData($data) {
+  public function setData( $data) {
     $this->data = $data;
   }
   public function getData() {
     return $this->data;
   }
-  public function setHeight($height) {
+  public function setHeight( $height) {
     $this->height = $height;
   }
   public function getHeight() {
     return $this->height;
   }
-  public function setMime_type($mime_type) {
+  public function setMime_type( $mime_type) {
     $this->mime_type = $mime_type;
   }
   public function getMime_type() {
     return $this->mime_type;
   }
-  public function setWidth($width) {
+  public function setWidth( $width) {
     $this->width = $width;
   }
   public function getWidth() {
@@ -501,13 +501,13 @@ class Google_ResultScreenshot extends Google_Model {
 class Google_ResultVersion extends Google_Model {
   public $major;
   public $minor;
-  public function setMajor($major) {
+  public function setMajor( $major) {
     $this->major = $major;
   }
   public function getMajor() {
     return $this->major;
   }
-  public function setMinor($minor) {
+  public function setMinor( $minor) {
     $this->minor = $minor;
   }
   public function getMinor() {

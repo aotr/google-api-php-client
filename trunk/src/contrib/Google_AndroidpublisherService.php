@@ -134,31 +134,31 @@ class Google_InappPurchase extends Google_Model {
   public $kind;
   public $purchaseState;
   public $purchaseTime;
-  public function setConsumptionState($consumptionState) {
+  public function setConsumptionState( $consumptionState) {
     $this->consumptionState = $consumptionState;
   }
   public function getConsumptionState() {
     return $this->consumptionState;
   }
-  public function setDeveloperPayload($developerPayload) {
+  public function setDeveloperPayload( $developerPayload) {
     $this->developerPayload = $developerPayload;
   }
   public function getDeveloperPayload() {
     return $this->developerPayload;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setPurchaseState($purchaseState) {
+  public function setPurchaseState( $purchaseState) {
     $this->purchaseState = $purchaseState;
   }
   public function getPurchaseState() {
     return $this->purchaseState;
   }
-  public function setPurchaseTime($purchaseTime) {
+  public function setPurchaseTime( $purchaseTime) {
     $this->purchaseTime = $purchaseTime;
   }
   public function getPurchaseTime() {
@@ -171,25 +171,25 @@ class Google_SubscriptionPurchase extends Google_Model {
   public $initiationTimestampMsec;
   public $kind;
   public $validUntilTimestampMsec;
-  public function setAutoRenewing($autoRenewing) {
+  public function setAutoRenewing( $autoRenewing) {
     $this->autoRenewing = $autoRenewing;
   }
   public function getAutoRenewing() {
     return $this->autoRenewing;
   }
-  public function setInitiationTimestampMsec($initiationTimestampMsec) {
+  public function setInitiationTimestampMsec( $initiationTimestampMsec) {
     $this->initiationTimestampMsec = $initiationTimestampMsec;
   }
   public function getInitiationTimestampMsec() {
     return $this->initiationTimestampMsec;
   }
-  public function setKind($kind) {
+  public function setKind( $kind) {
     $this->kind = $kind;
   }
   public function getKind() {
     return $this->kind;
   }
-  public function setValidUntilTimestampMsec($validUntilTimestampMsec) {
+  public function setValidUntilTimestampMsec( $validUntilTimestampMsec) {
     $this->validUntilTimestampMsec = $validUntilTimestampMsec;
   }
   public function getValidUntilTimestampMsec() {
