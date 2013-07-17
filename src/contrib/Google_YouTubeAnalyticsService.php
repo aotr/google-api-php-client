@@ -24,7 +24,6 @@
    */
   class Google_ReportsServiceResource extends Google_ServiceResource {
 
-
     /**
      * Retrieve your YouTube Analytics reports. (reports.query)
      *
@@ -90,7 +89,7 @@ class Google_YouTubeAnalyticsService extends Google_Service {
 
 
 class Google_ResultTable extends Google_Model {
-  protected $__columnHeadersType = 'Google_ResultTableColumnHeaders';
+  protected $__columnHeadersType = 'Google_Service_YouTubeAnalytics_ResultTableColumnHeaders';
   protected $__columnHeadersDataType = 'array';
   public $columnHeaders;
   public $kind;

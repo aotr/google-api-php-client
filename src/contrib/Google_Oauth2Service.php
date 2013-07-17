@@ -24,7 +24,6 @@
    */
   class Google_UserinfoServiceResource extends Google_ServiceResource {
 
-
     /**
      * (userinfo.get)
      *
@@ -53,7 +52,6 @@
    */
   class Google_UserinfoV2ServiceResource extends Google_ServiceResource {
 
-
   }
 
   /**
@@ -65,7 +63,6 @@
    *  </code>
    */
   class Google_UserinfoV2MeServiceResource extends Google_ServiceResource {
-
 
     /**
      * (me.get)
@@ -89,12 +86,12 @@
  * Service definition for Google_Oauth2 (v2).
  *
  * <p>
- * OAuth2 API
+ * Lets you access OAuth2 protocol related APIs.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/accounts/docs/OAuth2" target="_blank">API Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -113,38 +110,24 @@ class Google_Oauth2Service extends Google_Service {
     $this->serviceName = 'oauth2';
 
     $client->addService($this->serviceName, $this->version);
-    $this->userinfo = new Google_UserinfoServiceResource($this, $this->serviceName, 'userinfo', json_decode('{"methods": {"get": {"path": "oauth2/v2/userinfo", "scopes": ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"], "id": "oauth2.userinfo.get", "httpMethod": "GET", "response": {"$ref": "Userinfo"}}}}', true));
-    $this->userinfo_v2_me = new Google_UserinfoV2MeServiceResource($this, $this->serviceName, 'me', json_decode('{"methods": {"get": {"path": "userinfo/v2/me", "scopes": ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"], "id": "oauth2.userinfo.v2.me.get", "httpMethod": "GET", "response": {"$ref": "Userinfo"}}}}', true));
+    $this->userinfo = new Google_UserinfoServiceResource($this, $this->serviceName, 'userinfo', json_decode('{"methods": {"get": {"id": "oauth2.userinfo.get", "path": "oauth2/v2/userinfo", "httpMethod": "GET", "response": {"$ref": "Userinfo"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me", "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"]}}}', true));
+    $this->userinfo_v2_me = new Google_UserinfoV2MeServiceResource($this, $this->serviceName, 'me', json_decode('{"methods": {"get": {"id": "oauth2.userinfo.v2.me.get", "path": "userinfo/v2/me", "httpMethod": "GET", "response": {"$ref": "Userinfo"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me", "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"]}}}', true));
+
+    $this-> = new Google_TokeninfoServiceResource($this, $this->serviceName, 'tokeninfo', json_decode('{"id": "oauth2.tokeninfo", "path": "oauth2/v2/tokeninfo", "parameters": {"access_token": {"type": "string", "location": "query"}, "id_token": {"type": "string", "location": "query"}}, "httpMethod": "POST", "response": {"$ref": "Tokeninfo"}}', true));
   }
 }
 
+
+
 class Google_Tokeninfo extends Google_Model {
-  public $issued_to;
-  public $user_id;
-  public $expires_in;
   public $access_type;
   public $audience;
-  public $scope;
   public $email;
+  public $expires_in;
+  public $issued_to;
+  public $scope;
+  public $user_id;
   public $verified_email;
-  public function setIssued_to($issued_to) {
-    $this->issued_to = $issued_to;
-  }
-  public function getIssued_to() {
-    return $this->issued_to;
-  }
-  public function setUser_id($user_id) {
-    $this->user_id = $user_id;
-  }
-  public function getUser_id() {
-    return $this->user_id;
-  }
-  public function setExpires_in($expires_in) {
-    $this->expires_in = $expires_in;
-  }
-  public function getExpires_in() {
-    return $this->expires_in;
-  }
   public function setAccess_type($access_type) {
     $this->access_type = $access_type;
   }
@@ -157,17 +140,35 @@ class Google_Tokeninfo extends Google_Model {
   public function getAudience() {
     return $this->audience;
   }
+  public function setEmail($email) {
+    $this->email = $email;
+  }
+  public function getEmail() {
+    return $this->email;
+  }
+  public function setExpires_in($expires_in) {
+    $this->expires_in = $expires_in;
+  }
+  public function getExpires_in() {
+    return $this->expires_in;
+  }
+  public function setIssued_to($issued_to) {
+    $this->issued_to = $issued_to;
+  }
+  public function getIssued_to() {
+    return $this->issued_to;
+  }
   public function setScope($scope) {
     $this->scope = $scope;
   }
   public function getScope() {
     return $this->scope;
   }
-  public function setEmail($email) {
-    $this->email = $email;
+  public function setUser_id($user_id) {
+    $this->user_id = $user_id;
   }
-  public function getEmail() {
-    return $this->email;
+  public function getUser_id() {
+    return $this->user_id;
   }
   public function setVerified_email($verified_email) {
     $this->verified_email = $verified_email;
@@ -178,23 +179,72 @@ class Google_Tokeninfo extends Google_Model {
 }
 
 class Google_Userinfo extends Google_Model {
+  public $birthday;
+  public $email;
   public $family_name;
+  public $gender;
+  public $given_name;
+  public $hd;
+  public $id;
+  public $link;
+  public $locale;
   public $name;
   public $picture;
-  public $locale;
-  public $gender;
-  public $email;
-  public $birthday;
-  public $link;
-  public $given_name;
   public $timezone;
-  public $id;
   public $verified_email;
+  public function setBirthday($birthday) {
+    $this->birthday = $birthday;
+  }
+  public function getBirthday() {
+    return $this->birthday;
+  }
+  public function setEmail($email) {
+    $this->email = $email;
+  }
+  public function getEmail() {
+    return $this->email;
+  }
   public function setFamily_name($family_name) {
     $this->family_name = $family_name;
   }
   public function getFamily_name() {
     return $this->family_name;
+  }
+  public function setGender($gender) {
+    $this->gender = $gender;
+  }
+  public function getGender() {
+    return $this->gender;
+  }
+  public function setGiven_name($given_name) {
+    $this->given_name = $given_name;
+  }
+  public function getGiven_name() {
+    return $this->given_name;
+  }
+  public function setHd($hd) {
+    $this->hd = $hd;
+  }
+  public function getHd() {
+    return $this->hd;
+  }
+  public function setId($id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setLink($link) {
+    $this->link = $link;
+  }
+  public function getLink() {
+    return $this->link;
+  }
+  public function setLocale($locale) {
+    $this->locale = $locale;
+  }
+  public function getLocale() {
+    return $this->locale;
   }
   public function setName($name) {
     $this->name = $name;
@@ -208,53 +258,11 @@ class Google_Userinfo extends Google_Model {
   public function getPicture() {
     return $this->picture;
   }
-  public function setLocale($locale) {
-    $this->locale = $locale;
-  }
-  public function getLocale() {
-    return $this->locale;
-  }
-  public function setGender($gender) {
-    $this->gender = $gender;
-  }
-  public function getGender() {
-    return $this->gender;
-  }
-  public function setEmail($email) {
-    $this->email = $email;
-  }
-  public function getEmail() {
-    return $this->email;
-  }
-  public function setBirthday($birthday) {
-    $this->birthday = $birthday;
-  }
-  public function getBirthday() {
-    return $this->birthday;
-  }
-  public function setLink($link) {
-    $this->link = $link;
-  }
-  public function getLink() {
-    return $this->link;
-  }
-  public function setGiven_name($given_name) {
-    $this->given_name = $given_name;
-  }
-  public function getGiven_name() {
-    return $this->given_name;
-  }
   public function setTimezone($timezone) {
     $this->timezone = $timezone;
   }
   public function getTimezone() {
     return $this->timezone;
-  }
-  public function setId($id) {
-    $this->id = $id;
-  }
-  public function getId() {
-    return $this->id;
   }
   public function setVerified_email($verified_email) {
     $this->verified_email = $verified_email;
