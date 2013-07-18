@@ -96,7 +96,7 @@ class Google_HttpStreamIO extends Google_IO {
     $requestSslContext = array_key_exists('ssl', $default_options) ?
         $default_options['ssl'] : array();
 
-    if (array_key_exists("cafile", $requestSslContext)) {
+    if (!array_key_exists("cafile", $requestSslContext)) {
       $requestSslContext["cafile"] = dirname(__FILE__) . '/cacerts.pem';
     }
 
