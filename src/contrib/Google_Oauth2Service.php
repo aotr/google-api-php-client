@@ -113,7 +113,7 @@ class Google_Oauth2Service extends Google_Service {
     $this->userinfo = new Google_UserinfoServiceResource($this, $this->serviceName, 'userinfo', json_decode('{"methods": {"get": {"id": "oauth2.userinfo.get", "path": "oauth2/v2/userinfo", "httpMethod": "GET", "response": {"$ref": "Userinfo"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me", "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"]}}}', true));
     $this->userinfo_v2_me = new Google_UserinfoV2MeServiceResource($this, $this->serviceName, 'me', json_decode('{"methods": {"get": {"id": "oauth2.userinfo.v2.me.get", "path": "userinfo/v2/me", "httpMethod": "GET", "response": {"$ref": "Userinfo"}, "scopes": ["https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/plus.me", "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"]}}}', true));
 
-    $this-> = new Google_TokeninfoServiceResource($this, $this->serviceName, 'tokeninfo', json_decode('{"path": "oauth2/v2/tokeninfo", "parameters": {"access_token": {"type": "string", "location": "query"}, "id_token": {"type": "string", "location": "query"}}, "httpMethod": "POST", "id": "oauth2.tokeninfo", "response": {"$ref": "Tokeninfo"}}', true));
+    $this->tokeninfo = new Google_TokeninfoServiceResource($this, $this->serviceName, 'tokeninfo', json_decode('{"path": "oauth2/v2/tokeninfo", "parameters": {"access_token": {"type": "string", "location": "query"}, "id_token": {"type": "string", "location": "query"}}, "httpMethod": "POST", "id": "oauth2.tokeninfo", "response": {"$ref": "Tokeninfo"}}', true));
   }
 }
 
