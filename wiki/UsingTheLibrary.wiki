@@ -6,8 +6,8 @@ Now that you've got a copy of the library, and included the files in your script
 First you need to initialize the client, and Google Plus service:
 
 {{{
-$client = new apiClient();
-$plus = new apiPlusService($client);
+$client = new Google_Client();
+$plus = new Google_PlusService($client);
 // And then you need to authenticate the user using the OAuth flow, which you do by:
 
 // If a oauth token was stored in the session, use that- and otherwise go through the oauth dance
