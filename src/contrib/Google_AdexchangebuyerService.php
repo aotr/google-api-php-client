@@ -58,7 +58,8 @@
       }
     }
     /**
-     * Updates an existing account. This method supports patch semantics. (accounts.patch)
+     * Updates an existing account. This method supports patch semantics.
+     * (accounts.patch)
      *
      * @param int $id The account id
      * @param Google_Account $postBody
@@ -141,7 +142,8 @@
       }
     }
     /**
-     * Retrieves a list of the authenticated user's active creatives. (creatives.list)
+     * Retrieves a list of the authenticated user's active creatives.
+     * (creatives.list)
      *
      * @param array $optParams Optional parameters.
      *
@@ -218,12 +220,16 @@
   class Google_PerformanceReportServiceResource extends Google_ServiceResource {
 
     /**
-     * Retrieves the authenticated user's list of performance metrics. (performanceReport.list)
+     * Retrieves the authenticated user's list of performance metrics.
+     * (performanceReport.list)
      *
-     * @param string $accountId The account id to get the reports for.
-     * @param string $endDateTime The end time for the reports.
-     * @param string $startDateTime The start time for the reports.
+     * @param string $accountId The account id to get the reports.
+     * @param string $endDateTime The end time of the report in ISO 8601 timestamp format using UTC.
+     * @param string $startDateTime The start time of the report in ISO 8601 timestamp format using UTC.
      * @param array $optParams Optional parameters.
+     *
+     * @opt_param string maxResults Maximum number of entries returned on one result page. If not set, the default is 100. Optional.
+     * @opt_param string pageToken A continuation token, used to page through performance reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. Optional.
      * @return Google_PerformanceReportList
      */
     public function listPerformanceReport($accountId, $endDateTime, $startDateTime, $optParams = array()) {
@@ -239,7 +245,7 @@
   }
 
 /**
- * Service definition for Google_Adexchangebuyer (v1.2).
+ * Service definition for Google_Adexchangebuyer (v1.3).
  *
  * <p>
  * Lets you manage your Ad Exchange Buyer account.
@@ -263,15 +269,15 @@ class Google_AdexchangebuyerService extends Google_Service {
    * @param Google_Client $client
    */
   public function __construct(Google_Client $client) {
-    $this->servicePath = 'adexchangebuyer/v1.2/';
-    $this->version = 'v1.2';
+    $this->servicePath = 'adexchangebuyer/v1.3/';
+    $this->version = 'v1.3';
     $this->serviceName = 'adexchangebuyer';
 
     $client->addService($this->serviceName, $this->version);
     $this->accounts = new Google_AccountsServiceResource($this, $this->serviceName, 'accounts', json_decode('{"methods": {"get": {"id": "adexchangebuyer.accounts.get", "path": "accounts/{id}", "httpMethod": "GET", "parameters": {"id": {"type": "integer", "required": true, "format": "int32", "location": "path"}}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "list": {"id": "adexchangebuyer.accounts.list", "path": "accounts", "httpMethod": "GET", "response": {"$ref": "AccountsList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "patch": {"id": "adexchangebuyer.accounts.patch", "path": "accounts/{id}", "httpMethod": "PATCH", "parameters": {"id": {"type": "integer", "required": true, "format": "int32", "location": "path"}}, "request": {"$ref": "Account"}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "update": {"id": "adexchangebuyer.accounts.update", "path": "accounts/{id}", "httpMethod": "PUT", "parameters": {"id": {"type": "integer", "required": true, "format": "int32", "location": "path"}}, "request": {"$ref": "Account"}, "response": {"$ref": "Account"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
     $this->creatives = new Google_CreativesServiceResource($this, $this->serviceName, 'creatives', json_decode('{"methods": {"get": {"id": "adexchangebuyer.creatives.get", "path": "creatives/{accountId}/{buyerCreativeId}", "httpMethod": "GET", "parameters": {"accountId": {"type": "integer", "required": true, "format": "int32", "location": "path"}, "buyerCreativeId": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Creative"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "insert": {"id": "adexchangebuyer.creatives.insert", "path": "creatives", "httpMethod": "POST", "request": {"$ref": "Creative"}, "response": {"$ref": "Creative"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "list": {"id": "adexchangebuyer.creatives.list", "path": "creatives", "httpMethod": "GET", "parameters": {"maxResults": {"type": "integer", "format": "uint32", "minimum": "1", "maximum": "1000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "statusFilter": {"type": "string", "enum": ["approved", "disapproved", "not_checked"], "location": "query"}}, "response": {"$ref": "CreativesList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
     $this->directDeals = new Google_DirectDealsServiceResource($this, $this->serviceName, 'directDeals', json_decode('{"methods": {"get": {"id": "adexchangebuyer.directDeals.get", "path": "directdeals/{id}", "httpMethod": "GET", "parameters": {"id": {"type": "string", "required": true, "format": "int64", "location": "path"}}, "response": {"$ref": "DirectDeal"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}, "list": {"id": "adexchangebuyer.directDeals.list", "path": "directdeals", "httpMethod": "GET", "response": {"$ref": "DirectDealsList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
-    $this->performanceReport = new Google_PerformanceReportServiceResource($this, $this->serviceName, 'performanceReport', json_decode('{"methods": {"list": {"id": "adexchangebuyer.performanceReport.list", "path": "performancereport", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "format": "int64", "location": "query"}, "endDateTime": {"type": "string", "required": true, "format": "int64", "location": "query"}, "startDateTime": {"type": "string", "required": true, "format": "int64", "location": "query"}}, "response": {"$ref": "PerformanceReportList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
+    $this->performanceReport = new Google_PerformanceReportServiceResource($this, $this->serviceName, 'performanceReport', json_decode('{"methods": {"list": {"id": "adexchangebuyer.performanceReport.list", "path": "performancereport", "httpMethod": "GET", "parameters": {"accountId": {"type": "string", "required": true, "format": "int64", "location": "query"}, "endDateTime": {"type": "string", "required": true, "location": "query"}, "maxResults": {"type": "integer", "format": "uint32", "minimum": "1", "maximum": "1000", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "startDateTime": {"type": "string", "required": true, "location": "query"}}, "response": {"$ref": "PerformanceReportList"}, "scopes": ["https://www.googleapis.com/auth/adexchange.buyer"]}}}', true));
 
   }
 }
@@ -379,12 +385,19 @@ class Google_Creative extends Google_Model {
   public $attribute;
   public $buyerCreativeId;
   public $clickThroughUrl;
+  protected $__correctionsType = 'Google_CreativeCorrections';
+  protected $__correctionsDataType = 'array';
+  public $corrections;
   protected $__disapprovalReasonsType = 'Google_CreativeDisapprovalReasons';
   protected $__disapprovalReasonsDataType = 'array';
   public $disapprovalReasons;
+  protected $__filteringReasonsType = 'Google_CreativeFilteringReasons';
+  protected $__filteringReasonsDataType = '';
+  public $filteringReasons;
   public $height;
   public $kind;
   public $productCategories;
+  public $restrictedCategories;
   public $sensitiveCategories;
   public $status;
   public $vendorType;
@@ -441,12 +454,25 @@ class Google_Creative extends Google_Model {
   public function getClickThroughUrl() {
     return $this->clickThroughUrl;
   }
+  public function setCorrections(/* array(Google_CreativeCorrections) */ $corrections) {
+    $this->assertIsArray($corrections, 'Google_CreativeCorrections', __METHOD__);
+    $this->corrections = $corrections;
+  }
+  public function getCorrections() {
+    return $this->corrections;
+  }
   public function setDisapprovalReasons(/* array(Google_CreativeDisapprovalReasons) */ $disapprovalReasons) {
     $this->assertIsArray($disapprovalReasons, 'Google_CreativeDisapprovalReasons', __METHOD__);
     $this->disapprovalReasons = $disapprovalReasons;
   }
   public function getDisapprovalReasons() {
     return $this->disapprovalReasons;
+  }
+  public function setFilteringReasons(Google_CreativeFilteringReasons $filteringReasons) {
+    $this->filteringReasons = $filteringReasons;
+  }
+  public function getFilteringReasons() {
+    return $this->filteringReasons;
   }
   public function setHeight( $height) {
     $this->height = $height;
@@ -466,6 +492,13 @@ class Google_Creative extends Google_Model {
   }
   public function getProductCategories() {
     return $this->productCategories;
+  }
+  public function setRestrictedCategories(/* array(Google_int) */ $restrictedCategories) {
+    $this->assertIsArray($restrictedCategories, 'Google_int', __METHOD__);
+    $this->restrictedCategories = $restrictedCategories;
+  }
+  public function getRestrictedCategories() {
+    return $this->restrictedCategories;
   }
   public function setSensitiveCategories(/* array(Google_int) */ $sensitiveCategories) {
     $this->assertIsArray($sensitiveCategories, 'Google_int', __METHOD__);
@@ -501,6 +534,24 @@ class Google_Creative extends Google_Model {
   }
 }
 
+class Google_CreativeCorrections extends Google_Model {
+  public $details;
+  public $reason;
+  public function setDetails(/* array(Google_string) */ $details) {
+    $this->assertIsArray($details, 'Google_string', __METHOD__);
+    $this->details = $details;
+  }
+  public function getDetails() {
+    return $this->details;
+  }
+  public function setReason( $reason) {
+    $this->reason = $reason;
+  }
+  public function getReason() {
+    return $this->reason;
+  }
+}
+
 class Google_CreativeDisapprovalReasons extends Google_Model {
   public $details;
   public $reason;
@@ -516,6 +567,43 @@ class Google_CreativeDisapprovalReasons extends Google_Model {
   }
   public function getReason() {
     return $this->reason;
+  }
+}
+
+class Google_CreativeFilteringReasons extends Google_Model {
+  public $date;
+  protected $__reasonsType = 'Google_CreativeFilteringReasonsReasons';
+  protected $__reasonsDataType = 'array';
+  public $reasons;
+  public function setDate( $date) {
+    $this->date = $date;
+  }
+  public function getDate() {
+    return $this->date;
+  }
+  public function setReasons(/* array(Google_CreativeFilteringReasonsReasons) */ $reasons) {
+    $this->assertIsArray($reasons, 'Google_CreativeFilteringReasonsReasons', __METHOD__);
+    $this->reasons = $reasons;
+  }
+  public function getReasons() {
+    return $this->reasons;
+  }
+}
+
+class Google_CreativeFilteringReasonsReasons extends Google_Model {
+  public $filteringCount;
+  public $filteringStatus;
+  public function setFilteringCount( $filteringCount) {
+    $this->filteringCount = $filteringCount;
+  }
+  public function getFilteringCount() {
+    return $this->filteringCount;
+  }
+  public function setFilteringStatus( $filteringStatus) {
+    $this->filteringStatus = $filteringStatus;
+  }
+  public function getFilteringStatus() {
+    return $this->filteringStatus;
   }
 }
 
@@ -639,33 +727,51 @@ class Google_DirectDealsList extends Google_Model {
   }
 }
 
-class Google_PerformanceReportList extends Google_Model {
-  public $kind;
-  protected $__performance_reportType = 'Google_PerformanceReportListPerformanceReport';
-  protected $__performance_reportDataType = 'array';
-  public $performance_report;
-  public function setKind( $kind) {
-    $this->kind = $kind;
-  }
-  public function getKind() {
-    return $this->kind;
-  }
-  public function setPerformance_report(/* array(Google_PerformanceReportListPerformanceReport) */ $performance_report) {
-    $this->assertIsArray($performance_report, 'Google_PerformanceReportListPerformanceReport', __METHOD__);
-    $this->performance_report = $performance_report;
-  }
-  public function getPerformance_report() {
-    return $this->performance_report;
-  }
-}
-
-class Google_PerformanceReportListPerformanceReport extends Google_Model {
+class Google_PerformanceReport extends Google_Model {
+  public $calloutStatusRate;
+  public $cookieMatcherStatusRate;
+  public $creativeStatusRate;
+  public $hostedMatchStatusRate;
   public $kind;
   public $latency50thPercentile;
   public $latency85thPercentile;
   public $latency95thPercentile;
+  public $noQuotaInRegion;
+  public $outOfQuota;
+  public $pixelMatchRequests;
+  public $pixelMatchResponses;
+  public $quotaConfiguredLimit;
+  public $quotaThrottledLimit;
   public $region;
   public $timestamp;
+  public function setCalloutStatusRate(/* array(Google_object) */ $calloutStatusRate) {
+    $this->assertIsArray($calloutStatusRate, 'Google_object', __METHOD__);
+    $this->calloutStatusRate = $calloutStatusRate;
+  }
+  public function getCalloutStatusRate() {
+    return $this->calloutStatusRate;
+  }
+  public function setCookieMatcherStatusRate(/* array(Google_object) */ $cookieMatcherStatusRate) {
+    $this->assertIsArray($cookieMatcherStatusRate, 'Google_object', __METHOD__);
+    $this->cookieMatcherStatusRate = $cookieMatcherStatusRate;
+  }
+  public function getCookieMatcherStatusRate() {
+    return $this->cookieMatcherStatusRate;
+  }
+  public function setCreativeStatusRate(/* array(Google_object) */ $creativeStatusRate) {
+    $this->assertIsArray($creativeStatusRate, 'Google_object', __METHOD__);
+    $this->creativeStatusRate = $creativeStatusRate;
+  }
+  public function getCreativeStatusRate() {
+    return $this->creativeStatusRate;
+  }
+  public function setHostedMatchStatusRate(/* array(Google_object) */ $hostedMatchStatusRate) {
+    $this->assertIsArray($hostedMatchStatusRate, 'Google_object', __METHOD__);
+    $this->hostedMatchStatusRate = $hostedMatchStatusRate;
+  }
+  public function getHostedMatchStatusRate() {
+    return $this->hostedMatchStatusRate;
+  }
   public function setKind( $kind) {
     $this->kind = $kind;
   }
@@ -690,6 +796,42 @@ class Google_PerformanceReportListPerformanceReport extends Google_Model {
   public function getLatency95thPercentile() {
     return $this->latency95thPercentile;
   }
+  public function setNoQuotaInRegion( $noQuotaInRegion) {
+    $this->noQuotaInRegion = $noQuotaInRegion;
+  }
+  public function getNoQuotaInRegion() {
+    return $this->noQuotaInRegion;
+  }
+  public function setOutOfQuota( $outOfQuota) {
+    $this->outOfQuota = $outOfQuota;
+  }
+  public function getOutOfQuota() {
+    return $this->outOfQuota;
+  }
+  public function setPixelMatchRequests( $pixelMatchRequests) {
+    $this->pixelMatchRequests = $pixelMatchRequests;
+  }
+  public function getPixelMatchRequests() {
+    return $this->pixelMatchRequests;
+  }
+  public function setPixelMatchResponses( $pixelMatchResponses) {
+    $this->pixelMatchResponses = $pixelMatchResponses;
+  }
+  public function getPixelMatchResponses() {
+    return $this->pixelMatchResponses;
+  }
+  public function setQuotaConfiguredLimit( $quotaConfiguredLimit) {
+    $this->quotaConfiguredLimit = $quotaConfiguredLimit;
+  }
+  public function getQuotaConfiguredLimit() {
+    return $this->quotaConfiguredLimit;
+  }
+  public function setQuotaThrottledLimit( $quotaThrottledLimit) {
+    $this->quotaThrottledLimit = $quotaThrottledLimit;
+  }
+  public function getQuotaThrottledLimit() {
+    return $this->quotaThrottledLimit;
+  }
   public function setRegion( $region) {
     $this->region = $region;
   }
@@ -701,5 +843,25 @@ class Google_PerformanceReportListPerformanceReport extends Google_Model {
   }
   public function getTimestamp() {
     return $this->timestamp;
+  }
+}
+
+class Google_PerformanceReportList extends Google_Model {
+  public $kind;
+  protected $__performanceReportType = 'Google_PerformanceReport';
+  protected $__performanceReportDataType = 'array';
+  public $performanceReport;
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setPerformanceReport(/* array(Google_PerformanceReport) */ $performanceReport) {
+    $this->assertIsArray($performanceReport, 'Google_PerformanceReport', __METHOD__);
+    $this->performanceReport = $performanceReport;
+  }
+  public function getPerformanceReport() {
+    return $this->performanceReport;
   }
 }
