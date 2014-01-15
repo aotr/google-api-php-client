@@ -31,7 +31,7 @@
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_AddressAggregatedList
      */
@@ -84,8 +84,8 @@
       }
     }
     /**
-     * Creates an address resource in the specified project using the data included in the request.
-     * (addresses.insert)
+     * Creates an address resource in the specified project using the data included
+     * in the request. (addresses.insert)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $region Name of the region scoping this request.
@@ -104,14 +104,15 @@
       }
     }
     /**
-     * Retrieves the list of address resources contained within the specified region. (addresses.list)
+     * Retrieves the list of address resources contained within the specified
+     * region. (addresses.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $region Name of the region scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_AddressList
      */
@@ -144,7 +145,7 @@
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_DiskAggregatedList
      */
@@ -217,8 +218,8 @@
       }
     }
     /**
-     * Creates a persistent disk resource in the specified project using the data included in the
-     * request. (disks.insert)
+     * Creates a persistent disk resource in the specified project using the data
+     * included in the request. (disks.insert)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
@@ -239,14 +240,15 @@
       }
     }
     /**
-     * Retrieves the list of persistent disk resources contained within the specified zone. (disks.list)
+     * Retrieves the list of persistent disk resources contained within the
+     * specified zone. (disks.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_DiskList
      */
@@ -309,8 +311,8 @@
       }
     }
     /**
-     * Creates a firewall resource in the specified project using the data included in the request.
-     * (firewalls.insert)
+     * Creates a firewall resource in the specified project using the data included
+     * in the request. (firewalls.insert)
      *
      * @param string $project Name of the project scoping this request.
      * @param Google_Firewall $postBody
@@ -328,13 +330,14 @@
       }
     }
     /**
-     * Retrieves the list of firewall resources available to the specified project. (firewalls.list)
+     * Retrieves the list of firewall resources available to the specified project.
+     * (firewalls.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_FirewallList
      */
@@ -349,8 +352,8 @@
       }
     }
     /**
-     * Updates the specified firewall resource with the data included in the request. This method
-     * supports patch semantics. (firewalls.patch)
+     * Updates the specified firewall resource with the data included in the
+     * request. This method supports patch semantics. (firewalls.patch)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $firewall Name of the firewall resource to update.
@@ -369,7 +372,8 @@
       }
     }
     /**
-     * Updates the specified firewall resource with the data included in the request. (firewalls.update)
+     * Updates the specified firewall resource with the data included in the
+     * request. (firewalls.update)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $firewall Name of the firewall resource to update.
@@ -390,6 +394,141 @@
   }
 
   /**
+   * The "forwardingRules" collection of methods.
+   * Typical usage is:
+   *  <code>
+   *   $computeService = new Google_ComputeService(...);
+   *   $forwardingRules = $computeService->forwardingRules;
+   *  </code>
+   */
+  class Google_ForwardingRulesServiceResource extends Google_ServiceResource {
+
+    /**
+     * Retrieves the list of forwarding rules grouped by scope.
+     * (forwardingRules.aggregatedList)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string filter Optional. Filter expression for filtering listed resources.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
+     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
+     * @return Google_ForwardingRuleAggregatedList
+     */
+    public function aggregatedList($project, $optParams = array()) {
+      $params = array('project' => $project);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('aggregatedList', array($params));
+      if ($this->useObjects()) {
+        return new Google_ForwardingRuleAggregatedList($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Deletes the specified ForwardingRule resource. (forwardingRules.delete)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $forwardingRule Name of the ForwardingRule resource to delete.
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function delete($project, $region, $forwardingRule, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'forwardingRule' => $forwardingRule);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('delete', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns the specified ForwardingRule resource. (forwardingRules.get)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $forwardingRule Name of the ForwardingRule resource to return.
+     * @param array $optParams Optional parameters.
+     * @return Google_ForwardingRule
+     */
+    public function get($project, $region, $forwardingRule, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'forwardingRule' => $forwardingRule);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('get', array($params));
+      if ($this->useObjects()) {
+        return new Google_ForwardingRule($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Creates a ForwardingRule resource in the specified project and region using
+     * the data included in the request. (forwardingRules.insert)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param Google_ForwardingRule $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function insert($project, $region, Google_ForwardingRule $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('insert', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Retrieves the list of ForwardingRule resources available to the specified
+     * project and region. (forwardingRules.list)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string filter Optional. Filter expression for filtering listed resources.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
+     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
+     * @return Google_ForwardingRuleList
+     */
+    public function listForwardingRules($project, $region, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('list', array($params));
+      if ($this->useObjects()) {
+        return new Google_ForwardingRuleList($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Changes target url for forwarding rule. (forwardingRules.setTarget)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $forwardingRule Name of the ForwardingRule resource in which target is to be set.
+     * @param Google_TargetReference $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function setTarget($project, $region, $forwardingRule, Google_TargetReference $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'forwardingRule' => $forwardingRule, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('setTarget', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+  }
+
+  /**
    * The "globalOperations" collection of methods.
    * Typical usage is:
    *  <code>
@@ -400,13 +539,14 @@
   class Google_GlobalOperationsServiceResource extends Google_ServiceResource {
 
     /**
-     * Retrieves the list of all operations grouped by scope. (globalOperations.aggregatedList)
+     * Retrieves the list of all operations grouped by scope.
+     * (globalOperations.aggregatedList)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_OperationAggregatedList
      */
@@ -452,14 +592,14 @@
       }
     }
     /**
-     * Retrieves the list of operation resources contained within the specified project.
-     * (globalOperations.list)
+     * Retrieves the list of operation resources contained within the specified
+     * project. (globalOperations.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_OperationList
      */
@@ -469,6 +609,136 @@
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
         return new Google_OperationList($data);
+      } else {
+        return $data;
+      }
+    }
+  }
+
+  /**
+   * The "httpHealthChecks" collection of methods.
+   * Typical usage is:
+   *  <code>
+   *   $computeService = new Google_ComputeService(...);
+   *   $httpHealthChecks = $computeService->httpHealthChecks;
+   *  </code>
+   */
+  class Google_HttpHealthChecksServiceResource extends Google_ServiceResource {
+
+    /**
+     * Deletes the specified HttpHealthCheck resource. (httpHealthChecks.delete)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $httpHealthCheck Name of the HttpHealthCheck resource to delete.
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function delete($project, $httpHealthCheck, $optParams = array()) {
+      $params = array('project' => $project, 'httpHealthCheck' => $httpHealthCheck);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('delete', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns the specified HttpHealthCheck resource. (httpHealthChecks.get)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $httpHealthCheck Name of the HttpHealthCheck resource to return.
+     * @param array $optParams Optional parameters.
+     * @return Google_HttpHealthCheck
+     */
+    public function get($project, $httpHealthCheck, $optParams = array()) {
+      $params = array('project' => $project, 'httpHealthCheck' => $httpHealthCheck);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('get', array($params));
+      if ($this->useObjects()) {
+        return new Google_HttpHealthCheck($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Creates a HttpHealthCheck resource in the specified project using the data
+     * included in the request. (httpHealthChecks.insert)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param Google_HttpHealthCheck $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function insert($project, Google_HttpHealthCheck $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('insert', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Retrieves the list of HttpHealthCheck resources available to the specified
+     * project. (httpHealthChecks.list)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string filter Optional. Filter expression for filtering listed resources.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
+     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
+     * @return Google_HttpHealthCheckList
+     */
+    public function listHttpHealthChecks($project, $optParams = array()) {
+      $params = array('project' => $project);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('list', array($params));
+      if ($this->useObjects()) {
+        return new Google_HttpHealthCheckList($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Updates a HttpHealthCheck resource in the specified project using the data
+     * included in the request. This method supports patch semantics.
+     * (httpHealthChecks.patch)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $httpHealthCheck Name of the HttpHealthCheck resource to update.
+     * @param Google_HttpHealthCheck $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function patch($project, $httpHealthCheck, Google_HttpHealthCheck $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'httpHealthCheck' => $httpHealthCheck, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('patch', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Updates a HttpHealthCheck resource in the specified project using the data
+     * included in the request. (httpHealthChecks.update)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $httpHealthCheck Name of the HttpHealthCheck resource to update.
+     * @param Google_HttpHealthCheck $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function update($project, $httpHealthCheck, Google_HttpHealthCheck $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'httpHealthCheck' => $httpHealthCheck, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('update', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
       } else {
         return $data;
       }
@@ -504,8 +774,8 @@
       }
     }
     /**
-     * Sets the deprecation status of an image. If no message body is given, clears the deprecation
-     * status instead. (images.deprecate)
+     * Sets the deprecation status of an image. If no message body is given, clears
+     * the deprecation status instead. (images.deprecate)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $image Image name.
@@ -542,8 +812,8 @@
       }
     }
     /**
-     * Creates an image resource in the specified project using the data included in the request.
-     * (images.insert)
+     * Creates an image resource in the specified project using the data included in
+     * the request. (images.insert)
      *
      * @param string $project Name of the project scoping this request.
      * @param Google_Image $postBody
@@ -561,13 +831,14 @@
       }
     }
     /**
-     * Retrieves the list of image resources available to the specified project. (images.list)
+     * Retrieves the list of image resources available to the specified project.
+     * (images.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_ImageList
      */
@@ -594,7 +865,8 @@
   class Google_InstancesServiceResource extends Google_ServiceResource {
 
     /**
-     * Adds an access config to an instance's network interface. (instances.addAccessConfig)
+     * Adds an access config to an instance's network interface.
+     * (instances.addAccessConfig)
      *
      * @param string $project Project name.
      * @param string $zone Name of the zone scoping this request.
@@ -621,7 +893,7 @@
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_InstanceAggregatedList
      */
@@ -675,7 +947,8 @@
       }
     }
     /**
-     * Deletes an access config from an instance's network interface. (instances.deleteAccessConfig)
+     * Deletes an access config from an instance's network interface.
+     * (instances.deleteAccessConfig)
      *
      * @param string $project Project name.
      * @param string $zone Name of the zone scoping this request.
@@ -735,7 +1008,8 @@
       }
     }
     /**
-     * Returns the specified instance's serial port output. (instances.getSerialPortOutput)
+     * Returns the specified instance's serial port output.
+     * (instances.getSerialPortOutput)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
@@ -754,8 +1028,8 @@
       }
     }
     /**
-     * Creates an instance resource in the specified project using the data included in the request.
-     * (instances.insert)
+     * Creates an instance resource in the specified project using the data included
+     * in the request. (instances.insert)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
@@ -774,14 +1048,15 @@
       }
     }
     /**
-     * Retrieves the list of instance resources contained within the specified zone. (instances.list)
+     * Retrieves the list of instance resources contained within the specified zone.
+     * (instances.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_InstanceList
      */
@@ -836,7 +1111,28 @@
       }
     }
     /**
-     * Sets tags for the specified instance to the data included in the request. (instances.setTags)
+     * Sets an instance's scheduling options. (instances.setScheduling)
+     *
+     * @param string $project Project name.
+     * @param string $zone Name of the zone scoping this request.
+     * @param string $instance Instance name.
+     * @param Google_Scheduling $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function setScheduling($project, $zone, $instance, Google_Scheduling $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('setScheduling', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Sets tags for the specified instance to the data included in the request.
+     * (instances.setTags)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
@@ -858,57 +1154,6 @@
   }
 
   /**
-   * The "kernels" collection of methods.
-   * Typical usage is:
-   *  <code>
-   *   $computeService = new Google_ComputeService(...);
-   *   $kernels = $computeService->kernels;
-   *  </code>
-   */
-  class Google_KernelsServiceResource extends Google_ServiceResource {
-
-    /**
-     * Returns the specified kernel resource. (kernels.get)
-     *
-     * @param string $project Name of the project scoping this request.
-     * @param string $kernel Name of the kernel resource to return.
-     * @param array $optParams Optional parameters.
-     * @return Google_Kernel
-     */
-    public function get($project, $kernel, $optParams = array()) {
-      $params = array('project' => $project, 'kernel' => $kernel);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('get', array($params));
-      if ($this->useObjects()) {
-        return new Google_Kernel($data);
-      } else {
-        return $data;
-      }
-    }
-    /**
-     * Retrieves the list of kernel resources available to the specified project. (kernels.list)
-     *
-     * @param string $project Name of the project scoping this request.
-     * @param array $optParams Optional parameters.
-     *
-     * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
-     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
-     * @return Google_KernelList
-     */
-    public function listKernels($project, $optParams = array()) {
-      $params = array('project' => $project);
-      $params = array_merge($params, $optParams);
-      $data = $this->__call('list', array($params));
-      if ($this->useObjects()) {
-        return new Google_KernelList($data);
-      } else {
-        return $data;
-      }
-    }
-  }
-
-  /**
    * The "machineTypes" collection of methods.
    * Typical usage is:
    *  <code>
@@ -919,13 +1164,14 @@
   class Google_MachineTypesServiceResource extends Google_ServiceResource {
 
     /**
-     * Retrieves the list of machine type resources grouped by scope. (machineTypes.aggregatedList)
+     * Retrieves the list of machine type resources grouped by scope.
+     * (machineTypes.aggregatedList)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_MachineTypeAggregatedList
      */
@@ -959,15 +1205,15 @@
       }
     }
     /**
-     * Retrieves the list of machine type resources available to the specified project.
-     * (machineTypes.list)
+     * Retrieves the list of machine type resources available to the specified
+     * project. (machineTypes.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_MachineTypeList
      */
@@ -1030,8 +1276,8 @@
       }
     }
     /**
-     * Creates a network resource in the specified project using the data included in the request.
-     * (networks.insert)
+     * Creates a network resource in the specified project using the data included
+     * in the request. (networks.insert)
      *
      * @param string $project Name of the project scoping this request.
      * @param Google_Network $postBody
@@ -1049,13 +1295,14 @@
       }
     }
     /**
-     * Retrieves the list of network resources available to the specified project. (networks.list)
+     * Retrieves the list of network resources available to the specified project.
+     * (networks.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_NetworkList
      */
@@ -1099,8 +1346,8 @@
       }
     }
     /**
-     * Sets metadata common to all instances within the specified project using the data included in the
-     * request. (projects.setCommonInstanceMetadata)
+     * Sets metadata common to all instances within the specified project using the
+     * data included in the request. (projects.setCommonInstanceMetadata)
      *
      * @param string $project Name of the project scoping this request.
      * @param Google_Metadata $postBody
@@ -1130,7 +1377,8 @@
   class Google_RegionOperationsServiceResource extends Google_ServiceResource {
 
     /**
-     * Deletes the specified region-specific operation resource. (regionOperations.delete)
+     * Deletes the specified region-specific operation resource.
+     * (regionOperations.delete)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $region Name of the region scoping this request.
@@ -1144,7 +1392,8 @@
       return $data;
     }
     /**
-     * Retrieves the specified region-specific operation resource. (regionOperations.get)
+     * Retrieves the specified region-specific operation resource.
+     * (regionOperations.get)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $region Name of the zone scoping this request.
@@ -1163,15 +1412,15 @@
       }
     }
     /**
-     * Retrieves the list of operation resources contained within the specified region.
-     * (regionOperations.list)
+     * Retrieves the list of operation resources contained within the specified
+     * region. (regionOperations.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $region Name of the region scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_OperationList
      */
@@ -1216,13 +1465,14 @@
       }
     }
     /**
-     * Retrieves the list of region resources available to the specified project. (regions.list)
+     * Retrieves the list of region resources available to the specified project.
+     * (regions.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_RegionList
      */
@@ -1285,8 +1535,8 @@
       }
     }
     /**
-     * Creates a route resource in the specified project using the data included in the request.
-     * (routes.insert)
+     * Creates a route resource in the specified project using the data included in
+     * the request. (routes.insert)
      *
      * @param string $project Name of the project scoping this request.
      * @param Google_Route $postBody
@@ -1304,13 +1554,14 @@
       }
     }
     /**
-     * Retrieves the list of route resources available to the specified project. (routes.list)
+     * Retrieves the list of route resources available to the specified project.
+     * (routes.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_RouteList
      */
@@ -1373,14 +1624,14 @@
       }
     }
     /**
-     * Retrieves the list of persistent disk snapshot resources contained within the specified project.
-     * (snapshots.list)
+     * Retrieves the list of persistent disk snapshot resources contained within the
+     * specified project. (snapshots.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_SnapshotList
      */
@@ -1390,6 +1641,359 @@
       $data = $this->__call('list', array($params));
       if ($this->useObjects()) {
         return new Google_SnapshotList($data);
+      } else {
+        return $data;
+      }
+    }
+  }
+
+  /**
+   * The "targetInstances" collection of methods.
+   * Typical usage is:
+   *  <code>
+   *   $computeService = new Google_ComputeService(...);
+   *   $targetInstances = $computeService->targetInstances;
+   *  </code>
+   */
+  class Google_TargetInstancesServiceResource extends Google_ServiceResource {
+
+    /**
+     * Retrieves the list of target instances grouped by scope.
+     * (targetInstances.aggregatedList)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string filter Optional. Filter expression for filtering listed resources.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
+     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
+     * @return Google_TargetInstanceAggregatedList
+     */
+    public function aggregatedList($project, $optParams = array()) {
+      $params = array('project' => $project);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('aggregatedList', array($params));
+      if ($this->useObjects()) {
+        return new Google_TargetInstanceAggregatedList($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Deletes the specified TargetInstance resource. (targetInstances.delete)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $zone Name of the zone scoping this request.
+     * @param string $targetInstance Name of the TargetInstance resource to delete.
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function delete($project, $zone, $targetInstance, $optParams = array()) {
+      $params = array('project' => $project, 'zone' => $zone, 'targetInstance' => $targetInstance);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('delete', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns the specified TargetInstance resource. (targetInstances.get)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $zone Name of the zone scoping this request.
+     * @param string $targetInstance Name of the TargetInstance resource to return.
+     * @param array $optParams Optional parameters.
+     * @return Google_TargetInstance
+     */
+    public function get($project, $zone, $targetInstance, $optParams = array()) {
+      $params = array('project' => $project, 'zone' => $zone, 'targetInstance' => $targetInstance);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('get', array($params));
+      if ($this->useObjects()) {
+        return new Google_TargetInstance($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Creates a TargetInstance resource in the specified project and zone using the
+     * data included in the request. (targetInstances.insert)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $zone Name of the zone scoping this request.
+     * @param Google_TargetInstance $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function insert($project, $zone, Google_TargetInstance $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'zone' => $zone, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('insert', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Retrieves the list of TargetInstance resources available to the specified
+     * project and zone. (targetInstances.list)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $zone Name of the zone scoping this request.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string filter Optional. Filter expression for filtering listed resources.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
+     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
+     * @return Google_TargetInstanceList
+     */
+    public function listTargetInstances($project, $zone, $optParams = array()) {
+      $params = array('project' => $project, 'zone' => $zone);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('list', array($params));
+      if ($this->useObjects()) {
+        return new Google_TargetInstanceList($data);
+      } else {
+        return $data;
+      }
+    }
+  }
+
+  /**
+   * The "targetPools" collection of methods.
+   * Typical usage is:
+   *  <code>
+   *   $computeService = new Google_ComputeService(...);
+   *   $targetPools = $computeService->targetPools;
+   *  </code>
+   */
+  class Google_TargetPoolsServiceResource extends Google_ServiceResource {
+
+    /**
+     * Adds health check URL to targetPool. (targetPools.addHealthCheck)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource to which health_check_url is to be added.
+     * @param Google_TargetPoolsAddHealthCheckRequest $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function addHealthCheck($project, $region, $targetPool, Google_TargetPoolsAddHealthCheckRequest $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('addHealthCheck', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Adds instance url to targetPool. (targetPools.addInstance)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource to which instance_url is to be added.
+     * @param Google_TargetPoolsAddInstanceRequest $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function addInstance($project, $region, $targetPool, Google_TargetPoolsAddInstanceRequest $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('addInstance', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Retrieves the list of target pools grouped by scope.
+     * (targetPools.aggregatedList)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string filter Optional. Filter expression for filtering listed resources.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
+     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
+     * @return Google_TargetPoolAggregatedList
+     */
+    public function aggregatedList($project, $optParams = array()) {
+      $params = array('project' => $project);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('aggregatedList', array($params));
+      if ($this->useObjects()) {
+        return new Google_TargetPoolAggregatedList($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Deletes the specified TargetPool resource. (targetPools.delete)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource to delete.
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function delete($project, $region, $targetPool, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('delete', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Returns the specified TargetPool resource. (targetPools.get)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource to return.
+     * @param array $optParams Optional parameters.
+     * @return Google_TargetPool
+     */
+    public function get($project, $region, $targetPool, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('get', array($params));
+      if ($this->useObjects()) {
+        return new Google_TargetPool($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Gets the most recent health check results for each IP for the given instance
+     * that is referenced by given TargetPool. (targetPools.getHealth)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource to which the queried instance belongs.
+     * @param Google_InstanceReference $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_TargetPoolInstanceHealth
+     */
+    public function getHealth($project, $region, $targetPool, Google_InstanceReference $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('getHealth', array($params));
+      if ($this->useObjects()) {
+        return new Google_TargetPoolInstanceHealth($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Creates a TargetPool resource in the specified project and region using the
+     * data included in the request. (targetPools.insert)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param Google_TargetPool $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function insert($project, $region, Google_TargetPool $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('insert', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Retrieves the list of TargetPool resources available to the specified project
+     * and region. (targetPools.list)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param string filter Optional. Filter expression for filtering listed resources.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
+     * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
+     * @return Google_TargetPoolList
+     */
+    public function listTargetPools($project, $region, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('list', array($params));
+      if ($this->useObjects()) {
+        return new Google_TargetPoolList($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Removes health check URL from targetPool. (targetPools.removeHealthCheck)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource to which health_check_url is to be removed.
+     * @param Google_TargetPoolsRemoveHealthCheckRequest $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function removeHealthCheck($project, $region, $targetPool, Google_TargetPoolsRemoveHealthCheckRequest $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('removeHealthCheck', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Removes instance URL from targetPool. (targetPools.removeInstance)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource to which instance_url is to be removed.
+     * @param Google_TargetPoolsRemoveInstanceRequest $postBody
+     * @param array $optParams Optional parameters.
+     * @return Google_Operation
+     */
+    public function removeInstance($project, $region, $targetPool, Google_TargetPoolsRemoveInstanceRequest $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('removeInstance', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
+      } else {
+        return $data;
+      }
+    }
+    /**
+     * Changes backup pool configurations. (targetPools.setBackup)
+     *
+     * @param string $project Name of the project scoping this request.
+     * @param string $region Name of the region scoping this request.
+     * @param string $targetPool Name of the TargetPool resource for which the backup is to be set.
+     * @param Google_TargetReference $postBody
+     * @param array $optParams Optional parameters.
+     *
+     * @opt_param float failoverRatio New failoverRatio value for the containing target pool.
+     * @return Google_Operation
+     */
+    public function setBackup($project, $region, $targetPool, Google_TargetReference $postBody, $optParams = array()) {
+      $params = array('project' => $project, 'region' => $region, 'targetPool' => $targetPool, 'postBody' => $postBody);
+      $params = array_merge($params, $optParams);
+      $data = $this->__call('setBackup', array($params));
+      if ($this->useObjects()) {
+        return new Google_Operation($data);
       } else {
         return $data;
       }
@@ -1407,7 +2011,8 @@
   class Google_ZoneOperationsServiceResource extends Google_ServiceResource {
 
     /**
-     * Deletes the specified zone-specific operation resource. (zoneOperations.delete)
+     * Deletes the specified zone-specific operation resource.
+     * (zoneOperations.delete)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
@@ -1421,7 +2026,8 @@
       return $data;
     }
     /**
-     * Retrieves the specified zone-specific operation resource. (zoneOperations.get)
+     * Retrieves the specified zone-specific operation resource.
+     * (zoneOperations.get)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
@@ -1440,15 +2046,15 @@
       }
     }
     /**
-     * Retrieves the list of operation resources contained within the specified zone.
-     * (zoneOperations.list)
+     * Retrieves the list of operation resources contained within the specified
+     * zone. (zoneOperations.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param string $zone Name of the zone scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_OperationList
      */
@@ -1493,13 +2099,14 @@
       }
     }
     /**
-     * Retrieves the list of zone resources available to the specified project. (zones.list)
+     * Retrieves the list of zone resources available to the specified project.
+     * (zones.list)
      *
      * @param string $project Name of the project scoping this request.
      * @param array $optParams Optional parameters.
      *
      * @opt_param string filter Optional. Filter expression for filtering listed resources.
-     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum and default value is 100.
+     * @opt_param string maxResults Optional. Maximum count of results to be returned. Maximum value is 500 and default value is 100.
      * @opt_param string pageToken Optional. Tag returned by a previous list request truncated by maxResults. Used to continue a previous list request.
      * @return Google_ZoneList
      */
@@ -1516,7 +2123,7 @@
   }
 
 /**
- * Service definition for Google_Compute (v1beta15).
+ * Service definition for Google_Compute (v1).
  *
  * <p>
  * API for the Google Compute Engine service.
@@ -1524,7 +2131,7 @@
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/compute/docs/reference/v1beta15" target="_blank">API Documentation</a>
+ * <a href="https://developers.Google.com/compute/docs/reference/latest/" target="_blank">API Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -1533,10 +2140,11 @@ class Google_ComputeService extends Google_Service {
   public $addresses;
   public $disks;
   public $firewalls;
+  public $forwardingRules;
   public $globalOperations;
+  public $httpHealthChecks;
   public $images;
   public $instances;
-  public $kernels;
   public $machineTypes;
   public $networks;
   public $projects;
@@ -1544,6 +2152,8 @@ class Google_ComputeService extends Google_Service {
   public $regions;
   public $routes;
   public $snapshots;
+  public $targetInstances;
+  public $targetPools;
   public $zoneOperations;
   public $zones;
   /**
@@ -1552,27 +2162,30 @@ class Google_ComputeService extends Google_Service {
    * @param Google_Client $client
    */
   public function __construct(Google_Client $client) {
-    $this->servicePath = 'compute/v1beta15/projects/';
-    $this->version = 'v1beta15';
+    $this->servicePath = 'compute/v1/projects/';
+    $this->version = 'v1';
     $this->serviceName = 'compute';
 
     $client->addService($this->serviceName, $this->version);
-    $this->addresses = new Google_AddressesServiceResource($this, $this->serviceName, 'addresses', json_decode('{"methods": {"aggregatedList": {"id": "compute.addresses.aggregatedList", "path": "{project}/aggregated/addresses", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AddressAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "delete": {"id": "compute.addresses.delete", "path": "{project}/regions/{region}/addresses/{address}", "httpMethod": "DELETE", "parameters": {"address": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.addresses.get", "path": "{project}/regions/{region}/addresses/{address}", "httpMethod": "GET", "parameters": {"address": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Address"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.addresses.insert", "path": "{project}/regions/{region}/addresses", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Address"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.addresses.list", "path": "{project}/regions/{region}/addresses", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AddressList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->disks = new Google_DisksServiceResource($this, $this->serviceName, 'disks', json_decode('{"methods": {"aggregatedList": {"id": "compute.disks.aggregatedList", "path": "{project}/aggregated/disks", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "DiskAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "createSnapshot": {"id": "compute.disks.createSnapshot", "path": "{project}/zones/{zone}/disks/{disk}/createSnapshot", "httpMethod": "POST", "parameters": {"disk": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Snapshot"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "delete": {"id": "compute.disks.delete", "path": "{project}/zones/{zone}/disks/{disk}", "httpMethod": "DELETE", "parameters": {"disk": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.disks.get", "path": "{project}/zones/{zone}/disks/{disk}", "httpMethod": "GET", "parameters": {"disk": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Disk"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.disks.insert", "path": "{project}/zones/{zone}/disks", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "sourceImage": {"type": "string", "location": "query"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Disk"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.disks.list", "path": "{project}/zones/{zone}/disks", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "DiskList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->firewalls = new Google_FirewallsServiceResource($this, $this->serviceName, 'firewalls', json_decode('{"methods": {"delete": {"id": "compute.firewalls.delete", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "DELETE", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.firewalls.get", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "GET", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Firewall"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.firewalls.insert", "path": "{project}/global/firewalls", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Firewall"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.firewalls.list", "path": "{project}/global/firewalls", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "FirewallList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "patch": {"id": "compute.firewalls.patch", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "PATCH", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Firewall"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "update": {"id": "compute.firewalls.update", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "PUT", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Firewall"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
-    $this->globalOperations = new Google_GlobalOperationsServiceResource($this, $this->serviceName, 'globalOperations', json_decode('{"methods": {"aggregatedList": {"id": "compute.globalOperations.aggregatedList", "path": "{project}/aggregated/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "delete": {"id": "compute.globalOperations.delete", "path": "{project}/global/operations/{operation}", "httpMethod": "DELETE", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.globalOperations.get", "path": "{project}/global/operations/{operation}", "httpMethod": "GET", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.globalOperations.list", "path": "{project}/global/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->images = new Google_ImagesServiceResource($this, $this->serviceName, 'images', json_decode('{"methods": {"delete": {"id": "compute.images.delete", "path": "{project}/global/images/{image}", "httpMethod": "DELETE", "parameters": {"image": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "deprecate": {"id": "compute.images.deprecate", "path": "{project}/global/images/{image}/deprecate", "httpMethod": "POST", "parameters": {"image": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "DeprecationStatus"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.images.get", "path": "{project}/global/images/{image}", "httpMethod": "GET", "parameters": {"image": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Image"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.images.insert", "path": "{project}/global/images", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Image"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/devstorage.read_only"]}, "list": {"id": "compute.images.list", "path": "{project}/global/images", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ImageList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->instances = new Google_InstancesServiceResource($this, $this->serviceName, 'instances', json_decode('{"methods": {"addAccessConfig": {"id": "compute.instances.addAccessConfig", "path": "{project}/zones/{zone}/instances/{instance}/addAccessConfig", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "networkInterface": {"type": "string", "required": true, "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "AccessConfig"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "aggregatedList": {"id": "compute.instances.aggregatedList", "path": "{project}/aggregated/instances", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "InstanceAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "attachDisk": {"id": "compute.instances.attachDisk", "path": "{project}/zones/{zone}/instances/{instance}/attachDisk", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "AttachedDisk"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "delete": {"id": "compute.instances.delete", "path": "{project}/zones/{zone}/instances/{instance}", "httpMethod": "DELETE", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "deleteAccessConfig": {"id": "compute.instances.deleteAccessConfig", "path": "{project}/zones/{zone}/instances/{instance}/deleteAccessConfig", "httpMethod": "POST", "parameters": {"accessConfig": {"type": "string", "required": true, "location": "query"}, "instance": {"type": "string", "required": true, "location": "path"}, "networkInterface": {"type": "string", "required": true, "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "detachDisk": {"id": "compute.instances.detachDisk", "path": "{project}/zones/{zone}/instances/{instance}/detachDisk", "httpMethod": "POST", "parameters": {"deviceName": {"type": "string", "required": true, "location": "query"}, "instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.instances.get", "path": "{project}/zones/{zone}/instances/{instance}", "httpMethod": "GET", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Instance"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "getSerialPortOutput": {"id": "compute.instances.getSerialPortOutput", "path": "{project}/zones/{zone}/instances/{instance}/serialPort", "httpMethod": "GET", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SerialPortOutput"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.instances.insert", "path": "{project}/zones/{zone}/instances", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Instance"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.instances.list", "path": "{project}/zones/{zone}/instances", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "InstanceList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "reset": {"id": "compute.instances.reset", "path": "{project}/zones/{zone}/instances/{instance}/reset", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "setMetadata": {"id": "compute.instances.setMetadata", "path": "{project}/zones/{zone}/instances/{instance}/setMetadata", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Metadata"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "setTags": {"id": "compute.instances.setTags", "path": "{project}/zones/{zone}/instances/{instance}/setTags", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Tags"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
-    $this->kernels = new Google_KernelsServiceResource($this, $this->serviceName, 'kernels', json_decode('{"methods": {"get": {"id": "compute.kernels.get", "path": "{project}/global/kernels/{kernel}", "httpMethod": "GET", "parameters": {"kernel": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Kernel"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.kernels.list", "path": "{project}/global/kernels", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "KernelList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->machineTypes = new Google_MachineTypesServiceResource($this, $this->serviceName, 'machineTypes', json_decode('{"methods": {"aggregatedList": {"id": "compute.machineTypes.aggregatedList", "path": "{project}/aggregated/machineTypes", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MachineTypeAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "get": {"id": "compute.machineTypes.get", "path": "{project}/zones/{zone}/machineTypes/{machineType}", "httpMethod": "GET", "parameters": {"machineType": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MachineType"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.machineTypes.list", "path": "{project}/zones/{zone}/machineTypes", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MachineTypeList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->networks = new Google_NetworksServiceResource($this, $this->serviceName, 'networks', json_decode('{"methods": {"delete": {"id": "compute.networks.delete", "path": "{project}/global/networks/{network}", "httpMethod": "DELETE", "parameters": {"network": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.networks.get", "path": "{project}/global/networks/{network}", "httpMethod": "GET", "parameters": {"network": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Network"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.networks.insert", "path": "{project}/global/networks", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Network"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.networks.list", "path": "{project}/global/networks", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "NetworkList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->addresses = new Google_AddressesServiceResource($this, $this->serviceName, 'addresses', json_decode('{"methods": {"aggregatedList": {"id": "compute.addresses.aggregatedList", "path": "{project}/aggregated/addresses", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AddressAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "delete": {"id": "compute.addresses.delete", "path": "{project}/regions/{region}/addresses/{address}", "httpMethod": "DELETE", "parameters": {"address": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.addresses.get", "path": "{project}/regions/{region}/addresses/{address}", "httpMethod": "GET", "parameters": {"address": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Address"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.addresses.insert", "path": "{project}/regions/{region}/addresses", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Address"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.addresses.list", "path": "{project}/regions/{region}/addresses", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "AddressList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->disks = new Google_DisksServiceResource($this, $this->serviceName, 'disks', json_decode('{"methods": {"aggregatedList": {"id": "compute.disks.aggregatedList", "path": "{project}/aggregated/disks", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "DiskAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "createSnapshot": {"id": "compute.disks.createSnapshot", "path": "{project}/zones/{zone}/disks/{disk}/createSnapshot", "httpMethod": "POST", "parameters": {"disk": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Snapshot"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "delete": {"id": "compute.disks.delete", "path": "{project}/zones/{zone}/disks/{disk}", "httpMethod": "DELETE", "parameters": {"disk": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.disks.get", "path": "{project}/zones/{zone}/disks/{disk}", "httpMethod": "GET", "parameters": {"disk": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Disk"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.disks.insert", "path": "{project}/zones/{zone}/disks", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "sourceImage": {"type": "string", "location": "query"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Disk"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.disks.list", "path": "{project}/zones/{zone}/disks", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "DiskList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->firewalls = new Google_FirewallsServiceResource($this, $this->serviceName, 'firewalls', json_decode('{"methods": {"delete": {"id": "compute.firewalls.delete", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "DELETE", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.firewalls.get", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "GET", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Firewall"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.firewalls.insert", "path": "{project}/global/firewalls", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Firewall"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.firewalls.list", "path": "{project}/global/firewalls", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "FirewallList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "patch": {"id": "compute.firewalls.patch", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "PATCH", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Firewall"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "update": {"id": "compute.firewalls.update", "path": "{project}/global/firewalls/{firewall}", "httpMethod": "PUT", "parameters": {"firewall": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Firewall"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
+    $this->forwardingRules = new Google_ForwardingRulesServiceResource($this, $this->serviceName, 'forwardingRules', json_decode('{"methods": {"aggregatedList": {"id": "compute.forwardingRules.aggregatedList", "path": "{project}/aggregated/forwardingRules", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ForwardingRuleAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "delete": {"id": "compute.forwardingRules.delete", "path": "{project}/regions/{region}/forwardingRules/{forwardingRule}", "httpMethod": "DELETE", "parameters": {"forwardingRule": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.forwardingRules.get", "path": "{project}/regions/{region}/forwardingRules/{forwardingRule}", "httpMethod": "GET", "parameters": {"forwardingRule": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ForwardingRule"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.forwardingRules.insert", "path": "{project}/regions/{region}/forwardingRules", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "ForwardingRule"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.forwardingRules.list", "path": "{project}/regions/{region}/forwardingRules", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ForwardingRuleList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "setTarget": {"id": "compute.forwardingRules.setTarget", "path": "{project}/regions/{region}/forwardingRules/{forwardingRule}/setTarget", "httpMethod": "POST", "parameters": {"forwardingRule": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetReference"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
+    $this->globalOperations = new Google_GlobalOperationsServiceResource($this, $this->serviceName, 'globalOperations', json_decode('{"methods": {"aggregatedList": {"id": "compute.globalOperations.aggregatedList", "path": "{project}/aggregated/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "delete": {"id": "compute.globalOperations.delete", "path": "{project}/global/operations/{operation}", "httpMethod": "DELETE", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.globalOperations.get", "path": "{project}/global/operations/{operation}", "httpMethod": "GET", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.globalOperations.list", "path": "{project}/global/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->httpHealthChecks = new Google_HttpHealthChecksServiceResource($this, $this->serviceName, 'httpHealthChecks', json_decode('{"methods": {"delete": {"id": "compute.httpHealthChecks.delete", "path": "{project}/global/httpHealthChecks/{httpHealthCheck}", "httpMethod": "DELETE", "parameters": {"httpHealthCheck": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.httpHealthChecks.get", "path": "{project}/global/httpHealthChecks/{httpHealthCheck}", "httpMethod": "GET", "parameters": {"httpHealthCheck": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "HttpHealthCheck"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.httpHealthChecks.insert", "path": "{project}/global/httpHealthChecks", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "HttpHealthCheck"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.httpHealthChecks.list", "path": "{project}/global/httpHealthChecks", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "HttpHealthCheckList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "patch": {"id": "compute.httpHealthChecks.patch", "path": "{project}/global/httpHealthChecks/{httpHealthCheck}", "httpMethod": "PATCH", "parameters": {"httpHealthCheck": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "HttpHealthCheck"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "update": {"id": "compute.httpHealthChecks.update", "path": "{project}/global/httpHealthChecks/{httpHealthCheck}", "httpMethod": "PUT", "parameters": {"httpHealthCheck": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "HttpHealthCheck"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
+    $this->images = new Google_ImagesServiceResource($this, $this->serviceName, 'images', json_decode('{"methods": {"delete": {"id": "compute.images.delete", "path": "{project}/global/images/{image}", "httpMethod": "DELETE", "parameters": {"image": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "deprecate": {"id": "compute.images.deprecate", "path": "{project}/global/images/{image}/deprecate", "httpMethod": "POST", "parameters": {"image": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "DeprecationStatus"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.images.get", "path": "{project}/global/images/{image}", "httpMethod": "GET", "parameters": {"image": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Image"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.images.insert", "path": "{project}/global/images", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Image"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/devstorage.full_control", "https://www.googleapis.com/auth/devstorage.read_only", "https://www.googleapis.com/auth/devstorage.read_write"]}, "list": {"id": "compute.images.list", "path": "{project}/global/images", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ImageList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->instances = new Google_InstancesServiceResource($this, $this->serviceName, 'instances', json_decode('{"methods": {"addAccessConfig": {"id": "compute.instances.addAccessConfig", "path": "{project}/zones/{zone}/instances/{instance}/addAccessConfig", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "networkInterface": {"type": "string", "required": true, "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "AccessConfig"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "aggregatedList": {"id": "compute.instances.aggregatedList", "path": "{project}/aggregated/instances", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "InstanceAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "attachDisk": {"id": "compute.instances.attachDisk", "path": "{project}/zones/{zone}/instances/{instance}/attachDisk", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "AttachedDisk"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "delete": {"id": "compute.instances.delete", "path": "{project}/zones/{zone}/instances/{instance}", "httpMethod": "DELETE", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "deleteAccessConfig": {"id": "compute.instances.deleteAccessConfig", "path": "{project}/zones/{zone}/instances/{instance}/deleteAccessConfig", "httpMethod": "POST", "parameters": {"accessConfig": {"type": "string", "required": true, "location": "query"}, "instance": {"type": "string", "required": true, "location": "path"}, "networkInterface": {"type": "string", "required": true, "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "detachDisk": {"id": "compute.instances.detachDisk", "path": "{project}/zones/{zone}/instances/{instance}/detachDisk", "httpMethod": "POST", "parameters": {"deviceName": {"type": "string", "required": true, "location": "query"}, "instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.instances.get", "path": "{project}/zones/{zone}/instances/{instance}", "httpMethod": "GET", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Instance"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "getSerialPortOutput": {"id": "compute.instances.getSerialPortOutput", "path": "{project}/zones/{zone}/instances/{instance}/serialPort", "httpMethod": "GET", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SerialPortOutput"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.instances.insert", "path": "{project}/zones/{zone}/instances", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Instance"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.instances.list", "path": "{project}/zones/{zone}/instances", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "InstanceList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "reset": {"id": "compute.instances.reset", "path": "{project}/zones/{zone}/instances/{instance}/reset", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "setMetadata": {"id": "compute.instances.setMetadata", "path": "{project}/zones/{zone}/instances/{instance}/setMetadata", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Metadata"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "setScheduling": {"id": "compute.instances.setScheduling", "path": "{project}/zones/{zone}/instances/{instance}/setScheduling", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Scheduling"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "setTags": {"id": "compute.instances.setTags", "path": "{project}/zones/{zone}/instances/{instance}/setTags", "httpMethod": "POST", "parameters": {"instance": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Tags"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
+    $this->machineTypes = new Google_MachineTypesServiceResource($this, $this->serviceName, 'machineTypes', json_decode('{"methods": {"aggregatedList": {"id": "compute.machineTypes.aggregatedList", "path": "{project}/aggregated/machineTypes", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MachineTypeAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "get": {"id": "compute.machineTypes.get", "path": "{project}/zones/{zone}/machineTypes/{machineType}", "httpMethod": "GET", "parameters": {"machineType": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MachineType"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.machineTypes.list", "path": "{project}/zones/{zone}/machineTypes", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "MachineTypeList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->networks = new Google_NetworksServiceResource($this, $this->serviceName, 'networks', json_decode('{"methods": {"delete": {"id": "compute.networks.delete", "path": "{project}/global/networks/{network}", "httpMethod": "DELETE", "parameters": {"network": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.networks.get", "path": "{project}/global/networks/{network}", "httpMethod": "GET", "parameters": {"network": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Network"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.networks.insert", "path": "{project}/global/networks", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Network"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.networks.list", "path": "{project}/global/networks", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "NetworkList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
     $this->projects = new Google_ProjectsServiceResource($this, $this->serviceName, 'projects', json_decode('{"methods": {"get": {"id": "compute.projects.get", "path": "{project}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Project"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "setCommonInstanceMetadata": {"id": "compute.projects.setCommonInstanceMetadata", "path": "{project}/setCommonInstanceMetadata", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Metadata"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
-    $this->regionOperations = new Google_RegionOperationsServiceResource($this, $this->serviceName, 'regionOperations', json_decode('{"methods": {"delete": {"id": "compute.regionOperations.delete", "path": "{project}/regions/{region}/operations/{operation}", "httpMethod": "DELETE", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.regionOperations.get", "path": "{project}/regions/{region}/operations/{operation}", "httpMethod": "GET", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.regionOperations.list", "path": "{project}/regions/{region}/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->regions = new Google_RegionsServiceResource($this, $this->serviceName, 'regions', json_decode('{"methods": {"get": {"id": "compute.regions.get", "path": "{project}/regions/{region}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Region"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.regions.list", "path": "{project}/regions", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "RegionList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->routes = new Google_RoutesServiceResource($this, $this->serviceName, 'routes', json_decode('{"methods": {"delete": {"id": "compute.routes.delete", "path": "{project}/global/routes/{route}", "httpMethod": "DELETE", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "route": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.routes.get", "path": "{project}/global/routes/{route}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "route": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Route"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.routes.insert", "path": "{project}/global/routes", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Route"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.routes.list", "path": "{project}/global/routes", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "RouteList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->snapshots = new Google_SnapshotsServiceResource($this, $this->serviceName, 'snapshots', json_decode('{"methods": {"delete": {"id": "compute.snapshots.delete", "path": "{project}/global/snapshots/{snapshot}", "httpMethod": "DELETE", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "snapshot": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.snapshots.get", "path": "{project}/global/snapshots/{snapshot}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "snapshot": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Snapshot"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.snapshots.list", "path": "{project}/global/snapshots", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SnapshotList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->zoneOperations = new Google_ZoneOperationsServiceResource($this, $this->serviceName, 'zoneOperations', json_decode('{"methods": {"delete": {"id": "compute.zoneOperations.delete", "path": "{project}/zones/{zone}/operations/{operation}", "httpMethod": "DELETE", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.zoneOperations.get", "path": "{project}/zones/{zone}/operations/{operation}", "httpMethod": "GET", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.zoneOperations.list", "path": "{project}/zones/{zone}/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
-    $this->zones = new Google_ZonesServiceResource($this, $this->serviceName, 'zones', json_decode('{"methods": {"get": {"id": "compute.zones.get", "path": "{project}/zones/{zone}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Zone"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.zones.list", "path": "{project}/zones", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "100", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ZoneList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->regionOperations = new Google_RegionOperationsServiceResource($this, $this->serviceName, 'regionOperations', json_decode('{"methods": {"delete": {"id": "compute.regionOperations.delete", "path": "{project}/regions/{region}/operations/{operation}", "httpMethod": "DELETE", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.regionOperations.get", "path": "{project}/regions/{region}/operations/{operation}", "httpMethod": "GET", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.regionOperations.list", "path": "{project}/regions/{region}/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->regions = new Google_RegionsServiceResource($this, $this->serviceName, 'regions', json_decode('{"methods": {"get": {"id": "compute.regions.get", "path": "{project}/regions/{region}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Region"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.regions.list", "path": "{project}/regions", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "RegionList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->routes = new Google_RoutesServiceResource($this, $this->serviceName, 'routes', json_decode('{"methods": {"delete": {"id": "compute.routes.delete", "path": "{project}/global/routes/{route}", "httpMethod": "DELETE", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "route": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.routes.get", "path": "{project}/global/routes/{route}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "route": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Route"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.routes.insert", "path": "{project}/global/routes", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "Route"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.routes.list", "path": "{project}/global/routes", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "RouteList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->snapshots = new Google_SnapshotsServiceResource($this, $this->serviceName, 'snapshots', json_decode('{"methods": {"delete": {"id": "compute.snapshots.delete", "path": "{project}/global/snapshots/{snapshot}", "httpMethod": "DELETE", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "snapshot": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.snapshots.get", "path": "{project}/global/snapshots/{snapshot}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "snapshot": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Snapshot"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.snapshots.list", "path": "{project}/global/snapshots", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "SnapshotList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->targetInstances = new Google_TargetInstancesServiceResource($this, $this->serviceName, 'targetInstances', json_decode('{"methods": {"aggregatedList": {"id": "compute.targetInstances.aggregatedList", "path": "{project}/aggregated/targetInstances", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "TargetInstanceAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "delete": {"id": "compute.targetInstances.delete", "path": "{project}/zones/{zone}/targetInstances/{targetInstance}", "httpMethod": "DELETE", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "targetInstance": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.targetInstances.get", "path": "{project}/zones/{zone}/targetInstances/{targetInstance}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "targetInstance": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "TargetInstance"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.targetInstances.insert", "path": "{project}/zones/{zone}/targetInstances", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetInstance"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.targetInstances.list", "path": "{project}/zones/{zone}/targetInstances", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "TargetInstanceList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->targetPools = new Google_TargetPoolsServiceResource($this, $this->serviceName, 'targetPools', json_decode('{"methods": {"addHealthCheck": {"id": "compute.targetPools.addHealthCheck", "path": "{project}/regions/{region}/targetPools/{targetPool}/addHealthCheck", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetPoolsAddHealthCheckRequest"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "addInstance": {"id": "compute.targetPools.addInstance", "path": "{project}/regions/{region}/targetPools/{targetPool}/addInstance", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetPoolsAddInstanceRequest"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "aggregatedList": {"id": "compute.targetPools.aggregatedList", "path": "{project}/aggregated/targetPools", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "TargetPoolAggregatedList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "delete": {"id": "compute.targetPools.delete", "path": "{project}/regions/{region}/targetPools/{targetPool}", "httpMethod": "DELETE", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.targetPools.get", "path": "{project}/regions/{region}/targetPools/{targetPool}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "TargetPool"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "getHealth": {"id": "compute.targetPools.getHealth", "path": "{project}/regions/{region}/targetPools/{targetPool}/getHealth", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "InstanceReference"}, "response": {"$ref": "TargetPoolInstanceHealth"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "insert": {"id": "compute.targetPools.insert", "path": "{project}/regions/{region}/targetPools", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetPool"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "list": {"id": "compute.targetPools.list", "path": "{project}/regions/{region}/targetPools", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "TargetPoolList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "removeHealthCheck": {"id": "compute.targetPools.removeHealthCheck", "path": "{project}/regions/{region}/targetPools/{targetPool}/removeHealthCheck", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetPoolsRemoveHealthCheckRequest"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "removeInstance": {"id": "compute.targetPools.removeInstance", "path": "{project}/regions/{region}/targetPools/{targetPool}/removeInstance", "httpMethod": "POST", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetPoolsRemoveInstanceRequest"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "setBackup": {"id": "compute.targetPools.setBackup", "path": "{project}/regions/{region}/targetPools/{targetPool}/setBackup", "httpMethod": "POST", "parameters": {"failoverRatio": {"type": "number", "format": "float", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "region": {"type": "string", "required": true, "location": "path"}, "targetPool": {"type": "string", "required": true, "location": "path"}}, "request": {"$ref": "TargetReference"}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute"]}}}', true));
+    $this->zoneOperations = new Google_ZoneOperationsServiceResource($this, $this->serviceName, 'zoneOperations', json_decode('{"methods": {"delete": {"id": "compute.zoneOperations.delete", "path": "{project}/zones/{zone}/operations/{operation}", "httpMethod": "DELETE", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "scopes": ["https://www.googleapis.com/auth/compute"]}, "get": {"id": "compute.zoneOperations.get", "path": "{project}/zones/{zone}/operations/{operation}", "httpMethod": "GET", "parameters": {"operation": {"type": "string", "required": true, "location": "path"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Operation"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.zoneOperations.list", "path": "{project}/zones/{zone}/operations", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "OperationList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
+    $this->zones = new Google_ZonesServiceResource($this, $this->serviceName, 'zones', json_decode('{"methods": {"get": {"id": "compute.zones.get", "path": "{project}/zones/{zone}", "httpMethod": "GET", "parameters": {"project": {"type": "string", "required": true, "location": "path"}, "zone": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "Zone"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}, "list": {"id": "compute.zones.list", "path": "{project}/zones", "httpMethod": "GET", "parameters": {"filter": {"type": "string", "location": "query"}, "maxResults": {"type": "integer", "default": "100", "format": "uint32", "minimum": "0", "maximum": "500", "location": "query"}, "pageToken": {"type": "string", "location": "query"}, "project": {"type": "string", "required": true, "location": "path"}}, "response": {"$ref": "ZoneList"}, "scopes": ["https://www.googleapis.com/auth/compute", "https://www.googleapis.com/auth/compute.readonly"]}}}', true));
 
   }
 }
@@ -1620,7 +2233,7 @@ class Google_Address extends Google_Model {
   public $region;
   public $selfLink;
   public $status;
-  public $user;
+  public $users;
   public function setAddress( $address) {
     $this->address = $address;
   }
@@ -1675,11 +2288,12 @@ class Google_Address extends Google_Model {
   public function getStatus() {
     return $this->status;
   }
-  public function setUser( $user) {
-    $this->user = $user;
+  public function setUsers(/* array(Google_string) */ $users) {
+    $this->assertIsArray($users, 'Google_string', __METHOD__);
+    $this->users = $users;
   }
-  public function getUser() {
-    return $this->user;
+  public function getUsers() {
+    return $this->users;
   }
 }
 
@@ -1929,6 +2543,8 @@ class Google_Disk extends Google_Model {
   public $options;
   public $selfLink;
   public $sizeGb;
+  public $sourceImage;
+  public $sourceImageId;
   public $sourceSnapshot;
   public $sourceSnapshotId;
   public $status;
@@ -1980,6 +2596,18 @@ class Google_Disk extends Google_Model {
   }
   public function getSizeGb() {
     return $this->sizeGb;
+  }
+  public function setSourceImage( $sourceImage) {
+    $this->sourceImage = $sourceImage;
+  }
+  public function getSourceImage() {
+    return $this->sourceImage;
+  }
+  public function setSourceImageId( $sourceImageId) {
+    $this->sourceImageId = $sourceImageId;
+  }
+  public function getSourceImageId() {
+    return $this->sourceImageId;
   }
   public function setSourceSnapshot( $sourceSnapshot) {
     $this->sourceSnapshot = $sourceSnapshot;
@@ -2299,7 +2927,404 @@ class Google_FirewallList extends Google_Model {
   }
 }
 
+class Google_ForwardingRule extends Google_Model {
+  public $IPAddress;
+  public $IPProtocol;
+  public $creationTimestamp;
+  public $description;
+  public $id;
+  public $kind;
+  public $name;
+  public $portRange;
+  public $region;
+  public $selfLink;
+  public $target;
+  public function setIPAddress( $IPAddress) {
+    $this->IPAddress = $IPAddress;
+  }
+  public function getIPAddress() {
+    return $this->IPAddress;
+  }
+  public function setIPProtocol( $IPProtocol) {
+    $this->IPProtocol = $IPProtocol;
+  }
+  public function getIPProtocol() {
+    return $this->IPProtocol;
+  }
+  public function setCreationTimestamp( $creationTimestamp) {
+    $this->creationTimestamp = $creationTimestamp;
+  }
+  public function getCreationTimestamp() {
+    return $this->creationTimestamp;
+  }
+  public function setDescription( $description) {
+    $this->description = $description;
+  }
+  public function getDescription() {
+    return $this->description;
+  }
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setName( $name) {
+    $this->name = $name;
+  }
+  public function getName() {
+    return $this->name;
+  }
+  public function setPortRange( $portRange) {
+    $this->portRange = $portRange;
+  }
+  public function getPortRange() {
+    return $this->portRange;
+  }
+  public function setRegion( $region) {
+    $this->region = $region;
+  }
+  public function getRegion() {
+    return $this->region;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+  public function setTarget( $target) {
+    $this->target = $target;
+  }
+  public function getTarget() {
+    return $this->target;
+  }
+}
+
+class Google_ForwardingRuleAggregatedList extends Google_Model {
+  public $id;
+  protected $__itemsType = 'Google_ForwardingRulesScopedList';
+  protected $__itemsDataType = 'map';
+  public $items;
+  public $kind;
+  public $nextPageToken;
+  public $selfLink;
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setItems(Google_ForwardingRulesScopedList $items) {
+    $this->items = $items;
+  }
+  public function getItems() {
+    return $this->items;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken() {
+    return $this->nextPageToken;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+}
+
+class Google_ForwardingRuleList extends Google_Model {
+  public $id;
+  protected $__itemsType = 'Google_ForwardingRule';
+  protected $__itemsDataType = 'array';
+  public $items;
+  public $kind;
+  public $nextPageToken;
+  public $selfLink;
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setItems(/* array(Google_ForwardingRule) */ $items) {
+    $this->assertIsArray($items, 'Google_ForwardingRule', __METHOD__);
+    $this->items = $items;
+  }
+  public function getItems() {
+    return $this->items;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken() {
+    return $this->nextPageToken;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+}
+
+class Google_ForwardingRulesScopedList extends Google_Model {
+  protected $__forwardingRulesType = 'Google_ForwardingRule';
+  protected $__forwardingRulesDataType = 'array';
+  public $forwardingRules;
+  protected $__warningType = 'Google_ForwardingRulesScopedListWarning';
+  protected $__warningDataType = '';
+  public $warning;
+  public function setForwardingRules(/* array(Google_ForwardingRule) */ $forwardingRules) {
+    $this->assertIsArray($forwardingRules, 'Google_ForwardingRule', __METHOD__);
+    $this->forwardingRules = $forwardingRules;
+  }
+  public function getForwardingRules() {
+    return $this->forwardingRules;
+  }
+  public function setWarning(Google_ForwardingRulesScopedListWarning $warning) {
+    $this->warning = $warning;
+  }
+  public function getWarning() {
+    return $this->warning;
+  }
+}
+
+class Google_ForwardingRulesScopedListWarning extends Google_Model {
+  public $code;
+  protected $__dataType = 'Google_ForwardingRulesScopedListWarningData';
+  protected $__dataDataType = 'array';
+  public $data;
+  public $message;
+  public function setCode( $code) {
+    $this->code = $code;
+  }
+  public function getCode() {
+    return $this->code;
+  }
+  public function setData(/* array(Google_ForwardingRulesScopedListWarningData) */ $data) {
+    $this->assertIsArray($data, 'Google_ForwardingRulesScopedListWarningData', __METHOD__);
+    $this->data = $data;
+  }
+  public function getData() {
+    return $this->data;
+  }
+  public function setMessage( $message) {
+    $this->message = $message;
+  }
+  public function getMessage() {
+    return $this->message;
+  }
+}
+
+class Google_ForwardingRulesScopedListWarningData extends Google_Model {
+  public $key;
+  public $value;
+  public function setKey( $key) {
+    $this->key = $key;
+  }
+  public function getKey() {
+    return $this->key;
+  }
+  public function setValue( $value) {
+    $this->value = $value;
+  }
+  public function getValue() {
+    return $this->value;
+  }
+}
+
+class Google_HealthCheckReference extends Google_Model {
+  public $healthCheck;
+  public function setHealthCheck( $healthCheck) {
+    $this->healthCheck = $healthCheck;
+  }
+  public function getHealthCheck() {
+    return $this->healthCheck;
+  }
+}
+
+class Google_HealthStatus extends Google_Model {
+  public $healthState;
+  public $instance;
+  public $ipAddress;
+  public function setHealthState( $healthState) {
+    $this->healthState = $healthState;
+  }
+  public function getHealthState() {
+    return $this->healthState;
+  }
+  public function setInstance( $instance) {
+    $this->instance = $instance;
+  }
+  public function getInstance() {
+    return $this->instance;
+  }
+  public function setIpAddress( $ipAddress) {
+    $this->ipAddress = $ipAddress;
+  }
+  public function getIpAddress() {
+    return $this->ipAddress;
+  }
+}
+
+class Google_HttpHealthCheck extends Google_Model {
+  public $checkIntervalSec;
+  public $creationTimestamp;
+  public $description;
+  public $healthyThreshold;
+  public $host;
+  public $id;
+  public $kind;
+  public $name;
+  public $port;
+  public $requestPath;
+  public $selfLink;
+  public $timeoutSec;
+  public $unhealthyThreshold;
+  public function setCheckIntervalSec( $checkIntervalSec) {
+    $this->checkIntervalSec = $checkIntervalSec;
+  }
+  public function getCheckIntervalSec() {
+    return $this->checkIntervalSec;
+  }
+  public function setCreationTimestamp( $creationTimestamp) {
+    $this->creationTimestamp = $creationTimestamp;
+  }
+  public function getCreationTimestamp() {
+    return $this->creationTimestamp;
+  }
+  public function setDescription( $description) {
+    $this->description = $description;
+  }
+  public function getDescription() {
+    return $this->description;
+  }
+  public function setHealthyThreshold( $healthyThreshold) {
+    $this->healthyThreshold = $healthyThreshold;
+  }
+  public function getHealthyThreshold() {
+    return $this->healthyThreshold;
+  }
+  public function setHost( $host) {
+    $this->host = $host;
+  }
+  public function getHost() {
+    return $this->host;
+  }
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setName( $name) {
+    $this->name = $name;
+  }
+  public function getName() {
+    return $this->name;
+  }
+  public function setPort( $port) {
+    $this->port = $port;
+  }
+  public function getPort() {
+    return $this->port;
+  }
+  public function setRequestPath( $requestPath) {
+    $this->requestPath = $requestPath;
+  }
+  public function getRequestPath() {
+    return $this->requestPath;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+  public function setTimeoutSec( $timeoutSec) {
+    $this->timeoutSec = $timeoutSec;
+  }
+  public function getTimeoutSec() {
+    return $this->timeoutSec;
+  }
+  public function setUnhealthyThreshold( $unhealthyThreshold) {
+    $this->unhealthyThreshold = $unhealthyThreshold;
+  }
+  public function getUnhealthyThreshold() {
+    return $this->unhealthyThreshold;
+  }
+}
+
+class Google_HttpHealthCheckList extends Google_Model {
+  public $id;
+  protected $__itemsType = 'Google_HttpHealthCheck';
+  protected $__itemsDataType = 'array';
+  public $items;
+  public $kind;
+  public $nextPageToken;
+  public $selfLink;
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setItems(/* array(Google_HttpHealthCheck) */ $items) {
+    $this->assertIsArray($items, 'Google_HttpHealthCheck', __METHOD__);
+    $this->items = $items;
+  }
+  public function getItems() {
+    return $this->items;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken() {
+    return $this->nextPageToken;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+}
+
 class Google_Image extends Google_Model {
+  public $archiveSizeBytes;
   public $creationTimestamp;
   protected $__deprecatedType = 'Google_DeprecationStatus';
   protected $__deprecatedDataType = '';
@@ -2308,13 +3333,18 @@ class Google_Image extends Google_Model {
   public $id;
   public $kind;
   public $name;
-  public $preferredKernel;
   protected $__rawDiskType = 'Google_ImageRawDisk';
   protected $__rawDiskDataType = '';
   public $rawDisk;
   public $selfLink;
   public $sourceType;
   public $status;
+  public function setArchiveSizeBytes( $archiveSizeBytes) {
+    $this->archiveSizeBytes = $archiveSizeBytes;
+  }
+  public function getArchiveSizeBytes() {
+    return $this->archiveSizeBytes;
+  }
   public function setCreationTimestamp( $creationTimestamp) {
     $this->creationTimestamp = $creationTimestamp;
   }
@@ -2350,12 +3380,6 @@ class Google_Image extends Google_Model {
   }
   public function getName() {
     return $this->name;
-  }
-  public function setPreferredKernel( $preferredKernel) {
-    $this->preferredKernel = $preferredKernel;
-  }
-  public function getPreferredKernel() {
-    return $this->preferredKernel;
   }
   public function setRawDisk(Google_ImageRawDisk $rawDisk) {
     $this->rawDisk = $rawDisk;
@@ -2456,8 +3480,6 @@ class Google_Instance extends Google_Model {
   protected $__disksDataType = 'array';
   public $disks;
   public $id;
-  public $image;
-  public $kernel;
   public $kind;
   public $machineType;
   protected $__metadataType = 'Google_Metadata';
@@ -2467,6 +3489,9 @@ class Google_Instance extends Google_Model {
   protected $__networkInterfacesType = 'Google_NetworkInterface';
   protected $__networkInterfacesDataType = 'array';
   public $networkInterfaces;
+  protected $__schedulingType = 'Google_Scheduling';
+  protected $__schedulingDataType = '';
+  public $scheduling;
   public $selfLink;
   protected $__serviceAccountsType = 'Google_ServiceAccount';
   protected $__serviceAccountsDataType = 'array';
@@ -2508,18 +3533,6 @@ class Google_Instance extends Google_Model {
   public function getId() {
     return $this->id;
   }
-  public function setImage( $image) {
-    $this->image = $image;
-  }
-  public function getImage() {
-    return $this->image;
-  }
-  public function setKernel( $kernel) {
-    $this->kernel = $kernel;
-  }
-  public function getKernel() {
-    return $this->kernel;
-  }
   public function setKind( $kind) {
     $this->kind = $kind;
   }
@@ -2550,6 +3563,12 @@ class Google_Instance extends Google_Model {
   }
   public function getNetworkInterfaces() {
     return $this->networkInterfaces;
+  }
+  public function setScheduling(Google_Scheduling $scheduling) {
+    $this->scheduling = $scheduling;
+  }
+  public function getScheduling() {
+    return $this->scheduling;
   }
   public function setSelfLink( $selfLink) {
     $this->selfLink = $selfLink;
@@ -2671,6 +3690,16 @@ class Google_InstanceList extends Google_Model {
   }
 }
 
+class Google_InstanceReference extends Google_Model {
+  public $instance;
+  public function setInstance( $instance) {
+    $this->instance = $instance;
+  }
+  public function getInstance() {
+    return $this->instance;
+  }
+}
+
 class Google_InstancesScopedList extends Google_Model {
   protected $__instancesType = 'Google_Instance';
   protected $__instancesDataType = 'array';
@@ -2734,101 +3763,6 @@ class Google_InstancesScopedListWarningData extends Google_Model {
   }
   public function getValue() {
     return $this->value;
-  }
-}
-
-class Google_Kernel extends Google_Model {
-  public $creationTimestamp;
-  protected $__deprecatedType = 'Google_DeprecationStatus';
-  protected $__deprecatedDataType = '';
-  public $deprecated;
-  public $description;
-  public $id;
-  public $kind;
-  public $name;
-  public $selfLink;
-  public function setCreationTimestamp( $creationTimestamp) {
-    $this->creationTimestamp = $creationTimestamp;
-  }
-  public function getCreationTimestamp() {
-    return $this->creationTimestamp;
-  }
-  public function setDeprecated(Google_DeprecationStatus $deprecated) {
-    $this->deprecated = $deprecated;
-  }
-  public function getDeprecated() {
-    return $this->deprecated;
-  }
-  public function setDescription( $description) {
-    $this->description = $description;
-  }
-  public function getDescription() {
-    return $this->description;
-  }
-  public function setId( $id) {
-    $this->id = $id;
-  }
-  public function getId() {
-    return $this->id;
-  }
-  public function setKind( $kind) {
-    $this->kind = $kind;
-  }
-  public function getKind() {
-    return $this->kind;
-  }
-  public function setName( $name) {
-    $this->name = $name;
-  }
-  public function getName() {
-    return $this->name;
-  }
-  public function setSelfLink( $selfLink) {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink() {
-    return $this->selfLink;
-  }
-}
-
-class Google_KernelList extends Google_Model {
-  public $id;
-  protected $__itemsType = 'Google_Kernel';
-  protected $__itemsDataType = 'array';
-  public $items;
-  public $kind;
-  public $nextPageToken;
-  public $selfLink;
-  public function setId( $id) {
-    $this->id = $id;
-  }
-  public function getId() {
-    return $this->id;
-  }
-  public function setItems(/* array(Google_Kernel) */ $items) {
-    $this->assertIsArray($items, 'Google_Kernel', __METHOD__);
-    $this->items = $items;
-  }
-  public function getItems() {
-    return $this->items;
-  }
-  public function setKind( $kind) {
-    $this->kind = $kind;
-  }
-  public function getKind() {
-    return $this->kind;
-  }
-  public function setNextPageToken( $nextPageToken) {
-    $this->nextPageToken = $nextPageToken;
-  }
-  public function getNextPageToken() {
-    return $this->nextPageToken;
-  }
-  public function setSelfLink( $selfLink) {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink() {
-    return $this->selfLink;
   }
 }
 
@@ -4068,6 +5002,23 @@ class Google_RouteWarningsData extends Google_Model {
   }
 }
 
+class Google_Scheduling extends Google_Model {
+  public $automaticRestart;
+  public $onHostMaintenance;
+  public function setAutomaticRestart( $automaticRestart) {
+    $this->automaticRestart = $automaticRestart;
+  }
+  public function getAutomaticRestart() {
+    return $this->automaticRestart;
+  }
+  public function setOnHostMaintenance( $onHostMaintenance) {
+    $this->onHostMaintenance = $onHostMaintenance;
+  }
+  public function getOnHostMaintenance() {
+    return $this->onHostMaintenance;
+  }
+}
+
 class Google_SerialPortOutput extends Google_Model {
   public $contents;
   public $kind;
@@ -4121,6 +5072,8 @@ class Google_Snapshot extends Google_Model {
   public $sourceDisk;
   public $sourceDiskId;
   public $status;
+  public $storageBytes;
+  public $storageBytesStatus;
   public function setCreationTimestamp( $creationTimestamp) {
     $this->creationTimestamp = $creationTimestamp;
   }
@@ -4180,6 +5133,18 @@ class Google_Snapshot extends Google_Model {
   }
   public function getStatus() {
     return $this->status;
+  }
+  public function setStorageBytes( $storageBytes) {
+    $this->storageBytes = $storageBytes;
+  }
+  public function getStorageBytes() {
+    return $this->storageBytes;
+  }
+  public function setStorageBytesStatus( $storageBytesStatus) {
+    $this->storageBytesStatus = $storageBytesStatus;
+  }
+  public function getStorageBytesStatus() {
+    return $this->storageBytesStatus;
   }
 }
 
@@ -4242,6 +5207,537 @@ class Google_Tags extends Google_Model {
   }
 }
 
+class Google_TargetInstance extends Google_Model {
+  public $creationTimestamp;
+  public $description;
+  public $id;
+  public $instance;
+  public $kind;
+  public $name;
+  public $natPolicy;
+  public $selfLink;
+  public $zone;
+  public function setCreationTimestamp( $creationTimestamp) {
+    $this->creationTimestamp = $creationTimestamp;
+  }
+  public function getCreationTimestamp() {
+    return $this->creationTimestamp;
+  }
+  public function setDescription( $description) {
+    $this->description = $description;
+  }
+  public function getDescription() {
+    return $this->description;
+  }
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setInstance( $instance) {
+    $this->instance = $instance;
+  }
+  public function getInstance() {
+    return $this->instance;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setName( $name) {
+    $this->name = $name;
+  }
+  public function getName() {
+    return $this->name;
+  }
+  public function setNatPolicy( $natPolicy) {
+    $this->natPolicy = $natPolicy;
+  }
+  public function getNatPolicy() {
+    return $this->natPolicy;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+  public function setZone( $zone) {
+    $this->zone = $zone;
+  }
+  public function getZone() {
+    return $this->zone;
+  }
+}
+
+class Google_TargetInstanceAggregatedList extends Google_Model {
+  public $id;
+  protected $__itemsType = 'Google_TargetInstancesScopedList';
+  protected $__itemsDataType = 'map';
+  public $items;
+  public $kind;
+  public $nextPageToken;
+  public $selfLink;
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setItems(Google_TargetInstancesScopedList $items) {
+    $this->items = $items;
+  }
+  public function getItems() {
+    return $this->items;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken() {
+    return $this->nextPageToken;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+}
+
+class Google_TargetInstanceList extends Google_Model {
+  public $id;
+  protected $__itemsType = 'Google_TargetInstance';
+  protected $__itemsDataType = 'array';
+  public $items;
+  public $kind;
+  public $nextPageToken;
+  public $selfLink;
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setItems(/* array(Google_TargetInstance) */ $items) {
+    $this->assertIsArray($items, 'Google_TargetInstance', __METHOD__);
+    $this->items = $items;
+  }
+  public function getItems() {
+    return $this->items;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken() {
+    return $this->nextPageToken;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+}
+
+class Google_TargetInstancesScopedList extends Google_Model {
+  protected $__targetInstancesType = 'Google_TargetInstance';
+  protected $__targetInstancesDataType = 'array';
+  public $targetInstances;
+  protected $__warningType = 'Google_TargetInstancesScopedListWarning';
+  protected $__warningDataType = '';
+  public $warning;
+  public function setTargetInstances(/* array(Google_TargetInstance) */ $targetInstances) {
+    $this->assertIsArray($targetInstances, 'Google_TargetInstance', __METHOD__);
+    $this->targetInstances = $targetInstances;
+  }
+  public function getTargetInstances() {
+    return $this->targetInstances;
+  }
+  public function setWarning(Google_TargetInstancesScopedListWarning $warning) {
+    $this->warning = $warning;
+  }
+  public function getWarning() {
+    return $this->warning;
+  }
+}
+
+class Google_TargetInstancesScopedListWarning extends Google_Model {
+  public $code;
+  protected $__dataType = 'Google_TargetInstancesScopedListWarningData';
+  protected $__dataDataType = 'array';
+  public $data;
+  public $message;
+  public function setCode( $code) {
+    $this->code = $code;
+  }
+  public function getCode() {
+    return $this->code;
+  }
+  public function setData(/* array(Google_TargetInstancesScopedListWarningData) */ $data) {
+    $this->assertIsArray($data, 'Google_TargetInstancesScopedListWarningData', __METHOD__);
+    $this->data = $data;
+  }
+  public function getData() {
+    return $this->data;
+  }
+  public function setMessage( $message) {
+    $this->message = $message;
+  }
+  public function getMessage() {
+    return $this->message;
+  }
+}
+
+class Google_TargetInstancesScopedListWarningData extends Google_Model {
+  public $key;
+  public $value;
+  public function setKey( $key) {
+    $this->key = $key;
+  }
+  public function getKey() {
+    return $this->key;
+  }
+  public function setValue( $value) {
+    $this->value = $value;
+  }
+  public function getValue() {
+    return $this->value;
+  }
+}
+
+class Google_TargetPool extends Google_Model {
+  public $backupPool;
+  public $creationTimestamp;
+  public $description;
+  public $failoverRatio;
+  public $healthChecks;
+  public $id;
+  public $instances;
+  public $kind;
+  public $name;
+  public $region;
+  public $selfLink;
+  public $sessionAffinity;
+  public function setBackupPool( $backupPool) {
+    $this->backupPool = $backupPool;
+  }
+  public function getBackupPool() {
+    return $this->backupPool;
+  }
+  public function setCreationTimestamp( $creationTimestamp) {
+    $this->creationTimestamp = $creationTimestamp;
+  }
+  public function getCreationTimestamp() {
+    return $this->creationTimestamp;
+  }
+  public function setDescription( $description) {
+    $this->description = $description;
+  }
+  public function getDescription() {
+    return $this->description;
+  }
+  public function setFailoverRatio( $failoverRatio) {
+    $this->failoverRatio = $failoverRatio;
+  }
+  public function getFailoverRatio() {
+    return $this->failoverRatio;
+  }
+  public function setHealthChecks(/* array(Google_string) */ $healthChecks) {
+    $this->assertIsArray($healthChecks, 'Google_string', __METHOD__);
+    $this->healthChecks = $healthChecks;
+  }
+  public function getHealthChecks() {
+    return $this->healthChecks;
+  }
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setInstances(/* array(Google_string) */ $instances) {
+    $this->assertIsArray($instances, 'Google_string', __METHOD__);
+    $this->instances = $instances;
+  }
+  public function getInstances() {
+    return $this->instances;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setName( $name) {
+    $this->name = $name;
+  }
+  public function getName() {
+    return $this->name;
+  }
+  public function setRegion( $region) {
+    $this->region = $region;
+  }
+  public function getRegion() {
+    return $this->region;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+  public function setSessionAffinity( $sessionAffinity) {
+    $this->sessionAffinity = $sessionAffinity;
+  }
+  public function getSessionAffinity() {
+    return $this->sessionAffinity;
+  }
+}
+
+class Google_TargetPoolAggregatedList extends Google_Model {
+  public $id;
+  protected $__itemsType = 'Google_TargetPoolsScopedList';
+  protected $__itemsDataType = 'map';
+  public $items;
+  public $kind;
+  public $nextPageToken;
+  public $selfLink;
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setItems(Google_TargetPoolsScopedList $items) {
+    $this->items = $items;
+  }
+  public function getItems() {
+    return $this->items;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken() {
+    return $this->nextPageToken;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+}
+
+class Google_TargetPoolInstanceHealth extends Google_Model {
+  protected $__healthStatusType = 'Google_HealthStatus';
+  protected $__healthStatusDataType = 'array';
+  public $healthStatus;
+  public $kind;
+  public function setHealthStatus(/* array(Google_HealthStatus) */ $healthStatus) {
+    $this->assertIsArray($healthStatus, 'Google_HealthStatus', __METHOD__);
+    $this->healthStatus = $healthStatus;
+  }
+  public function getHealthStatus() {
+    return $this->healthStatus;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+}
+
+class Google_TargetPoolList extends Google_Model {
+  public $id;
+  protected $__itemsType = 'Google_TargetPool';
+  protected $__itemsDataType = 'array';
+  public $items;
+  public $kind;
+  public $nextPageToken;
+  public $selfLink;
+  public function setId( $id) {
+    $this->id = $id;
+  }
+  public function getId() {
+    return $this->id;
+  }
+  public function setItems(/* array(Google_TargetPool) */ $items) {
+    $this->assertIsArray($items, 'Google_TargetPool', __METHOD__);
+    $this->items = $items;
+  }
+  public function getItems() {
+    return $this->items;
+  }
+  public function setKind( $kind) {
+    $this->kind = $kind;
+  }
+  public function getKind() {
+    return $this->kind;
+  }
+  public function setNextPageToken( $nextPageToken) {
+    $this->nextPageToken = $nextPageToken;
+  }
+  public function getNextPageToken() {
+    return $this->nextPageToken;
+  }
+  public function setSelfLink( $selfLink) {
+    $this->selfLink = $selfLink;
+  }
+  public function getSelfLink() {
+    return $this->selfLink;
+  }
+}
+
+class Google_TargetPoolsAddHealthCheckRequest extends Google_Model {
+  protected $__healthChecksType = 'Google_HealthCheckReference';
+  protected $__healthChecksDataType = 'array';
+  public $healthChecks;
+  public function setHealthChecks(/* array(Google_HealthCheckReference) */ $healthChecks) {
+    $this->assertIsArray($healthChecks, 'Google_HealthCheckReference', __METHOD__);
+    $this->healthChecks = $healthChecks;
+  }
+  public function getHealthChecks() {
+    return $this->healthChecks;
+  }
+}
+
+class Google_TargetPoolsAddInstanceRequest extends Google_Model {
+  protected $__instancesType = 'Google_InstanceReference';
+  protected $__instancesDataType = 'array';
+  public $instances;
+  public function setInstances(/* array(Google_InstanceReference) */ $instances) {
+    $this->assertIsArray($instances, 'Google_InstanceReference', __METHOD__);
+    $this->instances = $instances;
+  }
+  public function getInstances() {
+    return $this->instances;
+  }
+}
+
+class Google_TargetPoolsRemoveHealthCheckRequest extends Google_Model {
+  protected $__healthChecksType = 'Google_HealthCheckReference';
+  protected $__healthChecksDataType = 'array';
+  public $healthChecks;
+  public function setHealthChecks(/* array(Google_HealthCheckReference) */ $healthChecks) {
+    $this->assertIsArray($healthChecks, 'Google_HealthCheckReference', __METHOD__);
+    $this->healthChecks = $healthChecks;
+  }
+  public function getHealthChecks() {
+    return $this->healthChecks;
+  }
+}
+
+class Google_TargetPoolsRemoveInstanceRequest extends Google_Model {
+  protected $__instancesType = 'Google_InstanceReference';
+  protected $__instancesDataType = 'array';
+  public $instances;
+  public function setInstances(/* array(Google_InstanceReference) */ $instances) {
+    $this->assertIsArray($instances, 'Google_InstanceReference', __METHOD__);
+    $this->instances = $instances;
+  }
+  public function getInstances() {
+    return $this->instances;
+  }
+}
+
+class Google_TargetPoolsScopedList extends Google_Model {
+  protected $__targetPoolsType = 'Google_TargetPool';
+  protected $__targetPoolsDataType = 'array';
+  public $targetPools;
+  protected $__warningType = 'Google_TargetPoolsScopedListWarning';
+  protected $__warningDataType = '';
+  public $warning;
+  public function setTargetPools(/* array(Google_TargetPool) */ $targetPools) {
+    $this->assertIsArray($targetPools, 'Google_TargetPool', __METHOD__);
+    $this->targetPools = $targetPools;
+  }
+  public function getTargetPools() {
+    return $this->targetPools;
+  }
+  public function setWarning(Google_TargetPoolsScopedListWarning $warning) {
+    $this->warning = $warning;
+  }
+  public function getWarning() {
+    return $this->warning;
+  }
+}
+
+class Google_TargetPoolsScopedListWarning extends Google_Model {
+  public $code;
+  protected $__dataType = 'Google_TargetPoolsScopedListWarningData';
+  protected $__dataDataType = 'array';
+  public $data;
+  public $message;
+  public function setCode( $code) {
+    $this->code = $code;
+  }
+  public function getCode() {
+    return $this->code;
+  }
+  public function setData(/* array(Google_TargetPoolsScopedListWarningData) */ $data) {
+    $this->assertIsArray($data, 'Google_TargetPoolsScopedListWarningData', __METHOD__);
+    $this->data = $data;
+  }
+  public function getData() {
+    return $this->data;
+  }
+  public function setMessage( $message) {
+    $this->message = $message;
+  }
+  public function getMessage() {
+    return $this->message;
+  }
+}
+
+class Google_TargetPoolsScopedListWarningData extends Google_Model {
+  public $key;
+  public $value;
+  public function setKey( $key) {
+    $this->key = $key;
+  }
+  public function getKey() {
+    return $this->key;
+  }
+  public function setValue( $value) {
+    $this->value = $value;
+  }
+  public function getValue() {
+    return $this->value;
+  }
+}
+
+class Google_TargetReference extends Google_Model {
+  public $target;
+  public function setTarget( $target) {
+    $this->target = $target;
+  }
+  public function getTarget() {
+    return $this->target;
+  }
+}
+
 class Google_Zone extends Google_Model {
   public $creationTimestamp;
   protected $__deprecatedType = 'Google_DeprecationStatus';
@@ -4254,9 +5750,6 @@ class Google_Zone extends Google_Model {
   protected $__maintenanceWindowsDataType = 'array';
   public $maintenanceWindows;
   public $name;
-  protected $__quotasType = 'Google_Quota';
-  protected $__quotasDataType = 'array';
-  public $quotas;
   public $region;
   public $selfLink;
   public $status;
@@ -4302,13 +5795,6 @@ class Google_Zone extends Google_Model {
   }
   public function getName() {
     return $this->name;
-  }
-  public function setQuotas(/* array(Google_Quota) */ $quotas) {
-    $this->assertIsArray($quotas, 'Google_Quota', __METHOD__);
-    $this->quotas = $quotas;
-  }
-  public function getQuotas() {
-    return $this->quotas;
   }
   public function setRegion( $region) {
     $this->region = $region;
