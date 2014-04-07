@@ -26,7 +26,7 @@ if (isset($_SESSION['token'])) {
 
 Do note you should replace the session storage of the OAuth key with a real storage (on disk, in your mysql database, etc) before releasing your app.
 
-And you're ready to start making calls, for instance to get the consumption stream (activities from the people you follow) in Plus, you can call:
+And you're ready to start making calls, for instance to get the consumption stream in Plus, you can call:
 
 {{{
 $activities = $plus->activities->listActivities('me', 'public');
