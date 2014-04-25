@@ -7,29 +7,3 @@ Please take a look at the latest version on https://github.com/google/google-api
 
 For information on migrating, please take a look at this guide: https://developers.google.com/api-client-library/php/guide/migration
 Now that you've got a copy of the library, and included the files in your script, you're ready to start using it!
-
-First you need to initialize the client, and Google Plus service:
-
-{{{
-$client = new Google_Client();
-$plus = new Google_PlusService($client);
-// And then you need to authenticate the user using the OAuth flow, which you do by:
-
-// If a oauth token was stored in the session, use that- and otherwise go through the oauth dance
-if (isset($_SESSION['token'])) {
-  $client->setAccessToken($_SESSION['token']);
-} else {
-  // In a real application this would be stored in a database, and not in the session!
-  $_SESSION['auth_token'] = $client->authenticate();
-}
-}}}
-
-Do note you should replace the session storage of the OAuth key with a real storage (on disk, in your mysql database, etc) before releasing your app.
-
-And you're ready to start making calls, for instance to get the consumption stream in Plus, you can call:
-
-{{{
-$activities = $plus->activities->listActivities('me', 'public');
-}}}
-
-Next you should read how to use [OAuth2 OAuth2] in your application.
