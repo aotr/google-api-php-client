@@ -1,0 +1,1 @@
+# This repository is deprecated, please see the latest on [GitHub](https://github.com/google/google-api-php-client) #
